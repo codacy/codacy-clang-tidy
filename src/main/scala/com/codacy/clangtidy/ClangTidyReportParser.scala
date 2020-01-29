@@ -2,7 +2,7 @@ package com.codacy.clangtidy
 
 import java.nio.file.Paths
 
-class ReportParser {
+class ClangTidyReportParser {
 
   private val ResultRegex =
     "(.+|[a-zA-Z]:\\\\.+):([0-9]+):([0-9]+): ([^:]+): (.+) \\[(.+?)\\]".r
