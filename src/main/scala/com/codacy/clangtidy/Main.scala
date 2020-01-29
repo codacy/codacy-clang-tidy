@@ -8,7 +8,6 @@ object Main extends App with AutoDerivation {
   val toolName = "clang-tidy"
 
   val lines = scala.io.Source.stdin.getLines().to(LazyList)
-
   val parsed = new ReportParser().parse(lines)
 
   val grouped = parsed
@@ -21,9 +20,7 @@ object Main extends App with AutoDerivation {
     .to(Set)
 
   val toolResults = ToolResults(toolName, IssuesAnalysis(grouped))
-
   val jsonString = new ReportSerializer().toJsonString(Set(toolResults))
-
   println(jsonString)
 
 }
