@@ -10,13 +10,8 @@ class ReportParserSpecs extends WordSpec with Matchers {
         "/src/main.c:10:6: error: expected expression [readability-else-after-return]"
 
       new ReportParser().parse(Seq(line)) should be(
-        Seq(
-          ClangTidyResult("/src/main.c",
-                          10,
-                          6,
-                          "error",
-                          "expected expression",
-                          "readability-else-after-return")))
+        Seq(ClangTidyResult("/src/main.c", 10, 6, "error", "expected expression", "readability-else-after-return"))
+      )
     }
 
     "parse result which contains multiple 'checks'" in {
@@ -25,12 +20,16 @@ class ReportParserSpecs extends WordSpec with Matchers {
 
       new ReportParser().parse(Seq(line)) should be(
         List(
-          ClangTidyResult("/src/main.c",
-                          15,
-                          3,
-                          "error",
-                          "do not use 'else' after 'return'",
-                          "readability-else-after-return")))
+          ClangTidyResult(
+            "/src/main.c",
+            15,
+            3,
+            "error",
+            "do not use 'else' after 'return'",
+            "readability-else-after-return"
+          )
+        )
+      )
     }
 
     "parse multiple lines correctly" in {
@@ -40,18 +39,15 @@ class ReportParserSpecs extends WordSpec with Matchers {
       )
 
       val expected = Seq(
-        ClangTidyResult("/src/main.c",
-                        17,
-                        1,
-                        "error",
-                        "expected identifier or '['",
-                        "clang-diagnostic-error"),
-        ClangTidyResult("/src/main.c",
-                        15,
-                        3,
-                        "error",
-                        "do not use 'else' after 'return'",
-                        "readability-else-after-return")
+        ClangTidyResult("/src/main.c", 17, 1, "error", "expected identifier or '['", "clang-diagnostic-error"),
+        ClangTidyResult(
+          "/src/main.c",
+          15,
+          3,
+          "error",
+          "do not use 'else' after 'return'",
+          "readability-else-after-return"
+        )
       )
 
       new ReportParser().parse(line) should be(expected)
@@ -92,24 +88,16 @@ class ReportParserSpecs extends WordSpec with Matchers {
           |""".stripMargin
 
       val expected = Seq(
-        ClangTidyResult("/src/main.c",
-                        10,
-                        6,
-                        "error",
-                        "expected expression",
-                        "clang-diagnostic-error"),
-        ClangTidyResult("/src/main.c",
-                        13,
-                        3,
-                        "error",
-                        "do not use 'else' after 'return'",
-                        "readability-else-after-return"),
-        ClangTidyResult("/src/main.c",
-                        17,
-                        1,
-                        "error",
-                        "expected identifier or '('",
-                        "clang-diagnostic-error")
+        ClangTidyResult("/src/main.c", 10, 6, "error", "expected expression", "clang-diagnostic-error"),
+        ClangTidyResult(
+          "/src/main.c",
+          13,
+          3,
+          "error",
+          "do not use 'else' after 'return'",
+          "readability-else-after-return"
+        ),
+        ClangTidyResult("/src/main.c", 17, 1, "error", "expected identifier or '('", "clang-diagnostic-error")
       )
 
       new ReportParser().parse(output.split("\n")) should be(expected)
