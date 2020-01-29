@@ -13,7 +13,7 @@ TODO
 
 `sbt compile`
 
-##### Formatting
+##### Format
 
 `sbt ";scalafmt;test:scalafmt;sbt:scalafmt"`
 
@@ -21,9 +21,13 @@ TODO
 
 `sbt test`
 
-##### Building native image (requires docker)
+##### Build native image (requires docker)
 
 `sbt "graalvm-native-image:packageBin"`
+
+##### Build fat-jar
+
+`sbt assembly`
 
 ## What is Codacy?
 

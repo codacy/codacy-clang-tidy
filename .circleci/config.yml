@@ -43,8 +43,10 @@ workflows:
           persist_to_workspace: true
           cmd: |
             sbt "graalvm-native-image:packageBin"
+            sbt "assembly"
 
             mkdir -p ~/workdir/artifacts/
+            mv target/scala-2.13/codacy-clang-tidy-assembly-$(cat .version).jar ~/workdir/artifacts/codacy-clang-tidy-$(cat .version).jar
             mv target/graalvm-native-image/codacy-clang-tidy ~/workdir/artifacts/codacy-clang-tidy-$(cat .version)
           requires:
             - check_fmt
