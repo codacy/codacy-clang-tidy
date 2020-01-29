@@ -3,16 +3,6 @@ version: 2.1
 orbs:
   codacy: codacy/base@2.2.1
 
-jobs:
-  publish_circleci_artifacts:
-    machine: true
-    working_directory: ~/workdir
-    steps:
-      - attach_workspace:
-          at: ~/
-      - store_artifacts:
-          path: ~/workdir/artifacts/
-
 workflows:
   version: 2
   compile_test_deploy:
@@ -63,42 +53,6 @@ workflows:
             branches:
               only:
                 - master
-#      - codacy/sbt:
-#          name: publish
-#          cmd: |
-#            sbt ";clean;retrieveGPGKeys;publishSigned;sonatypeRelease"
-#
-#            ./scripts/publish-native.sh -n codacy-coverage-reporter -m com.codacy.CodacyCoverageReporter -t docker $(cat .version)
-#
-#            mkdir -p ~/workdir/artifacts/
-#            mv codacy-coverage-reporter-linux-$(cat .version) ~/workdir/artifacts/
-#            mv ~/workdir/target/codacy-coverage-reporter-assembly-$(cat .version).jar ~/workdir/artifacts/
-#          persist_to_workspace: true
-#          requires:
-#            - check_fmt
-#            - test_and_coverage
-#          context: CodacyAWS
-#          filters:
-#            branches:
-#              only:
-#                - master
-      - publish_circleci_artifacts:
-          requires:
-            - package_artifacts
-#      #TODO: Add bintray orb
-#      - codacy/shell:
-#          name: publish_bintray
-#          cmd: |
-#            curl -T ~/workdir/artifacts/codacy-coverage-reporter-linux-$(cat .version) -ucodacy-ci:$BINTRAY_API_KEY -H "X-Bintray-Package:codacy-coverage-reporter" -H "X-Bintray-Version:$(cat .version)" https://api.bintray.com/content/codacy/Binaries/$(cat .version)/codacy-coverage-reporter-linux
-#            curl -T ~/workdir/artifacts/codacy-coverage-reporter-assembly-$(cat .version).jar -ucodacy-ci:$BINTRAY_API_KEY -H "X-Bintray-Package:codacy-coverage-reporter" -H "X-Bintray-Version:$(cat .version)" https://api.bintray.com/content/codacy/Binaries/$(cat .version)/codacy-coverage-reporter-assembly.jar
-#            curl -X POST -ucodacy-ci:$BINTRAY_API_KEY https://api.bintray.com/content/codacy/Binaries/codacy-coverage-reporter/$(cat .version)/publish
-#          filters:
-#            branches:
-#              only:
-#                - master
-#          context: CodacyBintray
-#          requires:
-#            - publish
       - codacy/publish_ghr:
           name: publish_ghr
           path: ~/workdir/artifacts/
