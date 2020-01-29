@@ -1,5 +1,7 @@
 package com.codacy.clangtidy
 
+import java.nio.file.Paths
+
 import org.scalatest.{Matchers, WordSpec}
 
 class ReportParserSpecs extends WordSpec with Matchers {
@@ -10,7 +12,16 @@ class ReportParserSpecs extends WordSpec with Matchers {
         "/src/main.c:10:6: error: expected expression [readability-else-after-return]"
 
       new ReportParser().parse(Seq(line)) should be(
-        Seq(ClangTidyResult("/src/main.c", 10, 6, "error", "expected expression", "readability-else-after-return"))
+        Seq(
+          ClangTidyResult(
+            Paths.get("/src/main.c"),
+            10,
+            6,
+            "error",
+            "expected expression",
+            "readability-else-after-return"
+          )
+        )
       )
     }
 
@@ -21,7 +32,7 @@ class ReportParserSpecs extends WordSpec with Matchers {
       new ReportParser().parse(Seq(line)) should be(
         List(
           ClangTidyResult(
-            "/src/main.c",
+            Paths.get("/src/main.c"),
             15,
             3,
             "error",
@@ -39,9 +50,16 @@ class ReportParserSpecs extends WordSpec with Matchers {
       )
 
       val expected = Seq(
-        ClangTidyResult("/src/main.c", 17, 1, "error", "expected identifier or '['", "clang-diagnostic-error"),
         ClangTidyResult(
-          "/src/main.c",
+          Paths.get("/src/main.c"),
+          17,
+          1,
+          "error",
+          "expected identifier or '['",
+          "clang-diagnostic-error"
+        ),
+        ClangTidyResult(
+          Paths.get("/src/main.c"),
           15,
           3,
           "error",
@@ -88,19 +106,26 @@ class ReportParserSpecs extends WordSpec with Matchers {
           |""".stripMargin
 
       val expected = Seq(
-        ClangTidyResult("/src/main.c", 10, 6, "error", "expected expression", "clang-diagnostic-error"),
+        ClangTidyResult(Paths.get("/src/main.c"), 10, 6, "error", "expected expression", "clang-diagnostic-error"),
         ClangTidyResult(
-          "/src/main.c",
+          Paths.get("/src/main.c"),
           13,
           3,
           "error",
           "do not use 'else' after 'return'",
           "readability-else-after-return"
         ),
-        ClangTidyResult("/src/main.c", 17, 1, "error", "expected identifier or '('", "clang-diagnostic-error")
+        ClangTidyResult(
+          Paths.get("/src/main.c"),
+          17,
+          1,
+          "error",
+          "expected identifier or '('",
+          "clang-diagnostic-error"
+        )
       )
 
-      new ReportParser().parse(output.split("\n")) should be(expected)
+      new ReportParser().parse(output.split("\n").toSeq) should be(expected)
     }
   }
 
