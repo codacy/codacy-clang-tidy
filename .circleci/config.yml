@@ -45,7 +45,7 @@ workflows:
             sbt "graalvm-native-image:packageBin"
 
             mkdir -p ~/workdir/artifacts/
-            mv target/graalvm-native-image ~/workdir/artifacts/codacy-clang-tidy-$(cat .version)
+            mv target/graalvm-native-image/codacy-clang-tidy ~/workdir/artifacts/codacy-clang-tidy-$(cat .version)
           requires:
             - check_fmt
             - test_and_coverage
