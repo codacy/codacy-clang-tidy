@@ -1,4 +1,5 @@
 resolvers += Resolver.typesafeRepo("releases")
+resolvers += Resolver.JCenterRepository
 
 addSbtPlugin("com.codacy" % "codacy-sbt-plugin" % "18.0.0")
 
