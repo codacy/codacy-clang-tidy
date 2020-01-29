@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@1.0.2
+  codacy: codacy/base@2.2.1
 
 jobs:
   publish_circleci_artifacts:
@@ -49,13 +49,13 @@ workflows:
           requires:
             - compile
       - codacy/sbt:
-          name: publish
+          name: package_artifacts
           persist_to_workspace: true
           cmd: |
             sbt "graalvm-native-image:packageBin"
 
             mkdir -p ~/workdir/artifacts/
-            mv target/graalvm-native-image ~/workdir/artifacts/target/codacy-clang-tidy-$(cat .version)
+            mv target/graalvm-native-image ~/workdir/artifacts/codacy-clang-tidy-$(cat .version)
           requires:
             - check_fmt
             - test_and_coverage
@@ -84,7 +84,7 @@ workflows:
 #                - master
       - publish_circleci_artifacts:
           requires:
-            - publish
+            - package_artifacts
 #      #TODO: Add bintray orb
 #      - codacy/shell:
 #          name: publish_bintray
@@ -108,4 +108,4 @@ workflows:
                 - master
           context: CodacyGitHub
           requires:
-            - publish
+            - package_artifacts
