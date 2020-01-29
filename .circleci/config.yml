@@ -51,10 +51,6 @@ workflows:
           requires:
             - check_fmt
             - test_and_coverage
-          filters:
-            branches:
-              only:
-                - master
       - codacy/publish_ghr:
           name: publish_ghr
           path: ~/workdir/artifacts/
