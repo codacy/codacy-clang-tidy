@@ -13,6 +13,7 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(pluginsApi) ++ circe,
     libraryDependencies += scalaTest % Test,
     scalacOptions += "-Ywarn-macros:after", // checks for unused implicits after macro expansion
+    addCompilerPlugin("io.tryp" % "splain" % "0.5.0" cross CrossVersion.patch),
     test in assembly := {},
     // Graal vm build options
     graalVMNativeImageGraalVersion := Some(graalVersion),
