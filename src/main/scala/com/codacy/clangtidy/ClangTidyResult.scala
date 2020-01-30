@@ -3,7 +3,6 @@ import java.nio.file.Path
 
 import com.codacy.model.IssueResult
 import com.codacy.plugins.api.results
-import com.codacy.plugins.api.results.Result
 
 case class ClangTidyResult(path: Path, line: Int, column: Int, level: String, message: String, check: String)
 
@@ -20,7 +19,7 @@ object ClangTidyResult {
     )
   }
 
-  private def convertLevel(level: String): Result.Level.Value = level match {
+  private def convertLevel(level: String): results.Result.Level.Value = level match {
     case "error" => results.Result.Level.Err
     case "warning" => results.Result.Level.Warn
     case "note" => results.Result.Level.Info

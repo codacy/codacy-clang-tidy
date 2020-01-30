@@ -2,16 +2,17 @@ package com.codacy.clangtidy
 
 import java.nio.file.Paths
 
-import org.scalatest.{Matchers, WordSpec}
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpec
 
-class ClangTidyReportParserSpecs extends WordSpec with Matchers {
+class ClangTidyReportParserSpecs extends AnyWordSpec with Matchers {
 
   "ReportParser::parse" should {
     "parse simple result" in {
       val line =
         "/src/main.c:10:6: error: expected expression [readability-else-after-return]"
 
-      new ClangTidyReportParser().parse(Seq(line)) should be(
+      ClangTidyReportParser.parse(Seq(line)) should be(
         Seq(
           ClangTidyResult(
             Paths.get("/src/main.c"),
@@ -29,7 +30,7 @@ class ClangTidyReportParserSpecs extends WordSpec with Matchers {
       val line =
         "/src/main.c:15:3: error: do not use 'else' after 'return' [readability-else-after-return,-warnings-as-errors]"
 
-      new ClangTidyReportParser().parse(Seq(line)) should be(
+      ClangTidyReportParser.parse(Seq(line)) should be(
         List(
           ClangTidyResult(
             Paths.get("/src/main.c"),
@@ -68,7 +69,7 @@ class ClangTidyReportParserSpecs extends WordSpec with Matchers {
         )
       )
 
-      new ClangTidyReportParser().parse(line) should be(expected)
+      ClangTidyReportParser.parse(line) should be(expected)
     }
 
     "ignore lines that don't match " in {
@@ -78,7 +79,7 @@ class ClangTidyReportParserSpecs extends WordSpec with Matchers {
         "Suppressed 17 warnings (17 in non-user code)."
       )
 
-      new ClangTidyReportParser().parse(line) should be(empty)
+      ClangTidyReportParser.parse(line) should be(empty)
     }
 
     "parse a full output correctly" in {
@@ -125,7 +126,7 @@ class ClangTidyReportParserSpecs extends WordSpec with Matchers {
         )
       )
 
-      new ClangTidyReportParser().parse(output.split("\n").toSeq) should be(expected)
+      ClangTidyReportParser.parse(output.split("\n").toSeq) should be(expected)
     }
   }
 

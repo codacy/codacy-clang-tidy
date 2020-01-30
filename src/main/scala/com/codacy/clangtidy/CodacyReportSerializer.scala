@@ -7,7 +7,7 @@ import io.circe.generic.AutoDerivation
 import io.circe.syntax._
 import io.circe.{Encoder, Printer}
 
-class CodacyReportSerializer extends AutoDerivation {
+object CodacyReportSerializer extends AutoDerivation {
   private implicit val levelEncoder: Encoder[com.codacy.plugins.api.results.Result.Level.Value] =
     Encoder.encodeEnumeration(com.codacy.plugins.api.results.Result.Level)
 
