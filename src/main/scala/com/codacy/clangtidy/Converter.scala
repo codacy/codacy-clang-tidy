@@ -16,7 +16,7 @@ class Converter(toolName: String) {
       }
       .to(Set)
 
-    val toolResults = ToolResults(toolName, IssuesAnalysis(grouped))
+    val toolResults = ToolResults(toolName, IssuesAnalysis.Success(grouped))
     new CodacyReportSerializer().toJsonString(Set(toolResults))
   }
 

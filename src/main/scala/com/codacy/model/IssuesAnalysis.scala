@@ -4,6 +4,10 @@ import java.nio.file.Path
 
 final case class ToolResults(tool: String, issues: IssuesAnalysis)
 
-final case class IssuesAnalysis(results: Set[FileResults])
+sealed trait IssuesAnalysis
 
-final case class FileResults(filename: Path, results: Set[Issue])
+object IssuesAnalysis {
+  final case class Success(results: Set[FileResults]) extends IssuesAnalysis
+}
+
+final case class FileResults(filename: Path, results: Set[IssueResult])
