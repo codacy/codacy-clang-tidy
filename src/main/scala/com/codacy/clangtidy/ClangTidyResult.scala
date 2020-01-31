@@ -26,6 +26,7 @@ object ClangTidyResult {
     case _ => results.Result.Level.Info
   }
 
+  // TODO use patterns.json to get the category CY-357
   private def convertCategory(checkName: String): Option[results.Pattern.Category] =
     None
 }
