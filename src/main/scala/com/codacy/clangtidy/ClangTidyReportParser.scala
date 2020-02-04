@@ -8,16 +8,19 @@ object ClangTidyReportParser {
     "(.+|[a-zA-Z]:\\\\.+):([0-9]+):([0-9]+): ([^:]+): (.+) \\[(.+?)\\]".r
 
   def parse(lines: Seq[String]): Seq[ClangTidyResult] = {
-    lines.collect {
+    lines.flatMap {
       case result @ ResultRegex(pathStr, line, column, level, txt, checksList) =>
         val path = Paths.get(pathStr)
-        val check =
-          checksList
-            .split(",")
-            .headOption
-            .getOrElse(throw new Exception(s"Result does not contain checks: '$result''"))
+        val firstCheck = checksList.split(",").headOption
 
-        ClangTidyResult(path, line.toInt, column.toInt, level, txt, check)
+        firstCheck
+          .map(check => ClangTidyResult(path, line.toInt, column.toInt, level, txt, check))
+          .orElse {
+            System.err.println(s"Result does not contain checks: '$result''")
+            None
+          }
+
+      case _ => None
     }
   }
 
