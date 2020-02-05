@@ -1,11 +1,52 @@
 # codacy-clang-tidy
 
+**Warning: This is a work in progress, it is not yet usable.**
+
 A standalone tool that converts [Clang-Tidy](https://clang.llvm.org/extra/clang-tidy/)
-reports to Codacy's format. It allows the integration of Clang-Tidy into your Codacy workflow.
+diagnostics to Codacy's format. It allows the integration of Clang-Tidy into your Codacy workflow.
+
+TODO CY-629: Add link explaining how custom tools integrate with codacy
 
 ## Usage
 
-TODO
+The upload of results for a commit is done in two steps:
+ - uploading all results
+ - telling Codacy that it can run the rest of the analysis
+
+For this a [project API](https://support.codacy.com/hc/en-us/articles/207994675-Project-API) token is required.
+
+```bash
+export PROJECT_TOKEN="YOUR-TOKEN"
+export COMMIT="COMMIT-UUID"
+
+clang-tidy "<clang-tidy-configs>" | \
+./codacy-clang-tidy-"<version>" | \
+curl -XPOST -L -H "project_token: $PROJECT_TOKEN"
+    -H "Content-type: application/json" -d @- \
+    "https://api.codacy.com/2.0/commit/$COMMIT/issuesRemoteResults"
+
+curl -XPOST -L -H 'project_token: $PROJECT_TOKEN' \
+	-H "Content-type: application/json" \
+	"https://api.codacy.com/2.0/commit/$COMMIT/resultsFinal"
+```
+
+For self-hosted instalations:
+
+```bash
+export PROJECT_TOKEN="YOUR-TOKEN"
+export COMMIT="COMMIT-UUID"
+export CODACY_URL="CODACY-INSTALLATION-URL"
+
+clang-tidy "<clang-tidy-configs>" | \
+./codacy-clang-tidy-"<version>" | \
+curl -XPOST -L -H "project_token: $PROJECT_TOKEN"
+    -H "Content-type: application/json" -d @- \
+    "$CODACY_URL/2.0/commit/$COMMIT/issuesRemoteResults"
+
+curl -XPOST -L -H 'project_token: $PROJECT_TOKEN' \
+	-H "Content-type: application/json" \
+	"$CODACY_URL/2.0/commit/$COMMIT/resultsFinal"
+```
 
 ## Building
 
