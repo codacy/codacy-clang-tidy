@@ -3,7 +3,7 @@
 **Warning: This is a work in progress, it is not yet usable.**
 
 A standalone tool that converts [Clang-Tidy](https://clang.llvm.org/extra/clang-tidy/)
-reports to Codacy's format. It allows the integration of Clang-Tidy into your Codacy workflow.
+diagnostics to Codacy's format. It allows the integration of Clang-Tidy into your Codacy workflow.
 
 ## Usage
 
