@@ -5,6 +5,8 @@
 A standalone tool that converts [Clang-Tidy](https://clang.llvm.org/extra/clang-tidy/)
 diagnostics to Codacy's format. It allows the integration of Clang-Tidy into your Codacy workflow.
 
+TODO CY-629: Add link explaining how custom tools integrate with codacy
+
 ## Usage
 
 The upload of results for a commit is done in two steps:
