@@ -1,3 +1,6 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/925c0ee779c34261b7d1c2935ca95ae5)](https://www.codacy.com/gh/codacy/codacy-clang-tidy?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-clang-tidy&utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/925c0ee779c34261b7d1c2935ca95ae5)](https://www.codacy.com/gh/codacy/codacy-clang-tidy?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-clang-tidy&utm_campaign=Badge_Coverage)
+
 # codacy-clang-tidy
 
 **Warning: This is a work in progress, it is not yet usable.**
@@ -10,8 +13,9 @@ TODO CY-629: Add link explaining how custom tools integrate with codacy
 ## Usage
 
 The upload of results for a commit is done in two steps:
- - uploading all results
- - telling Codacy that it can run the rest of the analysis
+
+-   uploading all results
+-   telling Codacy that it can run the rest of the analysis
 
 For this a [project API](https://support.codacy.com/hc/en-us/articles/207994675-Project-API) token is required.
 
@@ -76,11 +80,11 @@ curl -XPOST -L -H 'project_token: $PROJECT_TOKEN' \
 
 ### Among Codacy’s features:
 
-- Identify new Static Analysis issues
-- Commit and Pull Request Analysis with GitHub, BitBucket/Stash, GitLab (and also direct git repositories)
-- Auto-comments on Commits and Pull Requests
-- Integrations with Slack, HipChat, Jira, YouTrack
-- Track issues Code Style, Security, Error Proneness, Performance, Unused Code and other categories
+-   Identify new Static Analysis issues
+-   Commit and Pull Request Analysis with GitHub, BitBucket/Stash, GitLab (and also direct git repositories)
+-   Auto-comments on Commits and Pull Requests
+-   Integrations with Slack, HipChat, Jira, YouTrack
+-   Track issues Code Style, Security, Error Proneness, Performance, Unused Code and other categories
 
 Codacy also helps keep track of Code Coverage, Code Duplication, and Code Complexity.
 
