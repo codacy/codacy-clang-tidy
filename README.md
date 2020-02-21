@@ -25,7 +25,7 @@ export COMMIT="COMMIT-UUID"
 
 clang-tidy "<clang-tidy-configs>" | \
 ./codacy-clang-tidy-"<version>" | \
-curl -XPOST -L -H "project_token: $PROJECT_TOKEN"
+curl -XPOST -L -H "project_token: $PROJECT_TOKEN" \
     -H "Content-type: application/json" -d @- \
     "https://api.codacy.com/2.0/commit/$COMMIT/issuesRemoteResults"
 
@@ -43,7 +43,7 @@ export CODACY_URL="CODACY-INSTALLATION-URL"
 
 clang-tidy "<clang-tidy-configs>" | \
 ./codacy-clang-tidy-"<version>" | \
-curl -XPOST -L -H "project_token: $PROJECT_TOKEN"
+curl -XPOST -L -H "project_token: $PROJECT_TOKEN" \
     -H "Content-type: application/json" -d @- \
     "$CODACY_URL/2.0/commit/$COMMIT/issuesRemoteResults"
 
