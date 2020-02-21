@@ -29,7 +29,7 @@ curl -XPOST -L -H "project_token: $PROJECT_TOKEN" \
     -H "Content-type: application/json" -d @- \
     "https://api.codacy.com/2.0/commit/$COMMIT/issuesRemoteResults"
 
-curl -XPOST -L -H 'project_token: $PROJECT_TOKEN' \
+curl -XPOST -L -H "project_token: $PROJECT_TOKEN" \
 	-H "Content-type: application/json" \
 	"https://api.codacy.com/2.0/commit/$COMMIT/resultsFinal"
 ```
@@ -47,7 +47,7 @@ curl -XPOST -L -H "project_token: $PROJECT_TOKEN" \
     -H "Content-type: application/json" -d @- \
     "$CODACY_URL/2.0/commit/$COMMIT/issuesRemoteResults"
 
-curl -XPOST -L -H 'project_token: $PROJECT_TOKEN' \
+curl -XPOST -L -H "project_token: $PROJECT_TOKEN" \
 	-H "Content-type: application/json" \
 	"$CODACY_URL/2.0/commit/$COMMIT/resultsFinal"
 ```
