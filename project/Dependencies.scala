@@ -1,11 +1,10 @@
 import sbt._
 
 object Dependencies {
-  lazy val scalaTest = "org.scalatest" %% "scalatest" % "3.1.0"
-  lazy val pluginsApi = "com.codacy" %% "codacy-plugins-api" % "4.0.1"
+  val scalaTest = "org.scalatest" %% "scalatest" % "3.1.0"
+  val codacyCliModel = "com.codacy" %% "codacy-analysis-cli-model" % "2.2.0"
 
   val circeVersion = "0.12.3"
-
-  lazy val circe = List("io.circe" %% "circe-core" % circeVersion,
-                        "io.circe" %% "circe-generic" % circeVersion)
+  val circe = List("io.circe" %% "circe-core" % circeVersion,
+                   "io.circe" %% "circe-generic" % circeVersion)
 }
