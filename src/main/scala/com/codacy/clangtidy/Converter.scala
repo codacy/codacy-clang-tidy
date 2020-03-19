@@ -1,6 +1,8 @@
 package com.codacy.clangtidy
 
-import com.codacy.model.{FileResults, IssuesAnalysis, ToolResults}
+import com.codacy.analysis.core.model.{IssuesAnalysis, ToolResults}
+import com.codacy.analysis.core.model.IssuesAnalysis.FileResults
+import com.codacy.analysis.core.serializer.IssuesReportSerializer
 
 class Converter(toolName: String) {
 
@@ -17,7 +19,7 @@ class Converter(toolName: String) {
       .to(Set)
 
     val toolResults = ToolResults(toolName, IssuesAnalysis.Success(grouped))
-    CodacyReportSerializer.toJsonString(Set(toolResults))
+    IssuesReportSerializer.toJsonString(Set(toolResults))
   }
 
 }

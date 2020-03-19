@@ -1,21 +1,21 @@
 package com.codacy.clangtidy
 import java.nio.file.Path
 
-import com.codacy.model.IssueResult
 import com.codacy.plugins.api.results
+import com.codacy.analysis.core.model.{FullLocation, Issue}
 
 case class ClangTidyResult(path: Path, line: Int, column: Int, level: String, message: String, check: String)
 
 object ClangTidyResult {
 
-  def toIssue(result: ClangTidyResult): IssueResult = {
-    IssueResult.Issue(
+  def toIssue(result: ClangTidyResult): Issue = {
+    Issue(
       results.Pattern.Id(result.check),
       result.path,
-      IssueResult.Issue.Message(result.message),
+      Issue.Message(result.message),
       ClangTidyResult.convertLevel(result.level),
       ClangTidyResult.convertCategory(result.check),
-      IssueResult.Issue.FullLocation(result.line, result.column)
+      FullLocation(result.line, result.column)
     )
   }
 
