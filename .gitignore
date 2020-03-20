@@ -2,4 +2,3 @@ target/
 .idea/
 .codacy-coverage/
 .metals
-/clang-tools-extra
