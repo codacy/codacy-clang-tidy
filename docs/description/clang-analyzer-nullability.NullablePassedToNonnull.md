@@ -1,5 +1,5 @@
-clang-analyzer-nullability
-==========================
+clang-analyzer-nullability.NullablePassedToNonnull
+==================================================
 
 The clang-analyzer-nullability.NullablePassedToNonnull check is an
 alias, please see

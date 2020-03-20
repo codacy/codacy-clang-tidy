@@ -21,14 +21,13 @@ object Main extends App {
     Seq("git", "pull").!
   } */
 
-
   val patternsWithDocs: Seq[(String, String)] = {
     def isNotSeparator(s: String) = !s.startsWith("====")
     val iterator = for {
       file <- (clangExtraDir / "docs" / "clang-tidy" / "checks").children
-      if file.extension.exists(_ == ".rst") && file.name != "list.rst"
+      patternId = file.nameWithoutExtension(includeAll = false)
+      if file.extension.exists(_ == ".rst") && file.nameWithoutExtension != "list"
       linesSeq = file.lines.toSeq
-      patternId = file.nameWithoutExtension
       content = linesSeq.dropWhile(isNotSeparator)
       toCovert = (patternId +: content).mkString(System.lineSeparator)
       converted = (Seq("pandoc", "-t", "markdown_strict") #< toInputStream(toCovert)).!!
@@ -36,7 +35,9 @@ object Main extends App {
     iterator.toSeq
   }
 
-  val docsDir = mkdirs(pwd / "docs")
+  val docsDir = pwd / "docs"
+  rm(docsDir)
+  mkdirs(docsDir)
   val descriptionDir = mkdirs(docsDir / "description")
 
   for ((pattern, markdown) <- patternsWithDocs) (descriptionDir / s"$pattern.md").writeText(markdown)

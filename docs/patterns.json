@@ -422,39 +422,339 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "clang-analyzer-core",
+    "patternId" : "clang-analyzer-core.CallAndMessage",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "clang-analyzer-cplusplus",
+    "patternId" : "clang-analyzer-core.DivideZero",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "clang-analyzer-deadcode",
+    "patternId" : "clang-analyzer-core.DynamicTypePropagation",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "clang-analyzer-nullability",
+    "patternId" : "clang-analyzer-core.NonNullParamChecker",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "clang-analyzer-optin",
+    "patternId" : "clang-analyzer-core.NullDereference",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "clang-analyzer-osx",
+    "patternId" : "clang-analyzer-core.StackAddressEscape",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "clang-analyzer-security",
+    "patternId" : "clang-analyzer-core.UndefinedBinaryOperatorResult",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "clang-analyzer-unix",
+    "patternId" : "clang-analyzer-core.VLASize",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "clang-analyzer-valist",
+    "patternId" : "clang-analyzer-core.uninitialized.ArraySubscript",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-core.uninitialized.Assign",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-core.uninitialized.Branch",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-core.uninitialized.CapturedBlockVariable",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-core.uninitialized.UndefReturn",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-cplusplus.InnerPointer",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-cplusplus.Move",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-cplusplus.NewDelete",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-cplusplus.NewDeleteLeaks",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-deadcode.DeadStores",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-nullability.NullPassedToNonnull",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-nullability.NullReturnedFromNonnull",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-nullability.NullableDereferenced",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-nullability.NullablePassedToNonnull",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-nullability.NullableReturnedFromNonnull",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-optin.cplusplus.UninitializedObject",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-optin.cplusplus.VirtualCall",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-optin.mpi.MPI-Checker",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-optin.osx.OSObjectCStyleCast",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-optin.performance.GCDAntipattern",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-optin.performance.Padding",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-optin.portability.UnixAPI",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.API",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.MIG",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.NumberObjectConversion",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.OSObjectRetainCount",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.ObjCProperty",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.SecKeychainAPI",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.AtSync",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.AutoreleaseWrite",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.ClassRelease",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.Dealloc",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.IncompatibleMethodTypes",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.Loops",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.MissingSuperCall",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.NSAutoreleasePool",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.NSError",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.NilArg",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.NonNilReturnValue",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.ObjCGenerics",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.RetainCount",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.RunLoopAutoreleaseLeak",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.SelfInit",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.SuperDealloc",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.UnusedIvars",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.cocoa.VariadicMethodTypes",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.coreFoundation.CFError",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.coreFoundation.CFNumber",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.coreFoundation.CFRetainRelease",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.coreFoundation.containers.OutOfBounds",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-osx.coreFoundation.containers.PointerSizedValues",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.FloatLoopCounter",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.UncheckedReturn",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.bcmp",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.bcopy",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.bzero",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.getpw",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.gets",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.mkstemp",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.mktemp",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.rand",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.strcpy",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.vfork",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-unix.API",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-unix.Malloc",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-unix.MallocSizeof",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-unix.MismatchedDeallocator",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-unix.Vfork",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-unix.cstring.BadSizeArg",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-unix.cstring.NullArg",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-valist.CopyToSelf",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-valist.Uninitialized",
+    "level" : "Info",
+    "category" : "CodeStyle"
+  }, {
+    "patternId" : "clang-analyzer-valist.Unterminated",
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
