@@ -5,6 +5,7 @@ import com.codacy.plugins.api.results.Result.Level
 import com.codacy.plugins.api.results.Tool
 import play.api.libs.json.Json
 import com.codacy.plugins.api.results.Pattern.Subcategory
+import com.codacy.plugins.api.results.Pattern.Description
 
 object Main extends App {
 
@@ -15,14 +16,18 @@ object Main extends App {
   val clangExtraDir = targetDir / "clang-tools-extra"
 
   if (!(clangExtraDir).exists && clangExtraDir.nonEmpty) {
-    val processBuilder = Process(command = Seq("git", "clone", "--depth", "1", "https://github.com/llvm-mirror/clang-tools-extra.git"), cwd = Some(targetDir.toJava))
+    val processBuilder = Process(
+      command = Seq("git", "clone", "--depth", "1", "https://github.com/llvm-mirror/clang-tools-extra.git"),
+      cwd = Some(targetDir.toJava)
+    )
     require(processBuilder.! == 0, "git clone failed")
   } /* else {
     Seq("git", "pull").!
   } */
 
+  def isNotSeparator(s: String) = !s.startsWith("====")
+
   val patternsWithDocs: Seq[(String, String)] = {
-    def isNotSeparator(s: String) = !s.startsWith("====")
     val iterator = for {
       file <- (clangExtraDir / "docs" / "clang-tidy" / "checks").children
       patternId = file.nameWithoutExtension(includeAll = false)
@@ -53,6 +58,23 @@ object Main extends App {
     case _ => (Pattern.Category.CodeStyle, None)
   }
 
+  def withoutFamily(patternId: String): String = {
+    Seq(
+      "bugprone",
+      "cppcoreguidelines",
+      "clang-analyzer-cplusplus",
+      "clang-analyzer-core",
+      "hicpp",
+      "misc",
+      "modernize",
+      "objc",
+      "performance",
+      "portability",
+      "readability",
+      "zircon"
+    ).map(s => s"$s-").foldLeft(patternId)((acc, prefix) => acc.stripPrefix(prefix))
+  }
+
   val patterns = patternsWithDocs.map {
     case (patternId, _) =>
       val (category, subcategory) = categoryFromPatternId(patternId)
@@ -60,10 +82,24 @@ object Main extends App {
   }
 
   val specification = Tool.Specification(Tool.Name("Clang Tidy"), Some(Tool.Version("10.0.0")), patterns.toSet)
-  val specificationJson = Json.toJson(specification)
 
-  val specificationJsonString = Json.prettyPrint(specificationJson)
+  val descriptions: Seq[Description] = patternsWithDocs.map {
+    case (patternId, doc) =>
+      Description(
+        patternId = Pattern.Id(patternId),
+        title = Pattern.Title(withoutFamily(patternId).split("[-\\.]").mkString(" ").capitalize),
+        description = None,
+        timeToFix = None,
+        parameters = None
+      )
+  }
+
+  val specificationJsonString = Json.prettyPrint(Json.toJson(specification))
+  val descriptionsJsonString = Json.prettyPrint(Json.toJson(descriptions))
 
   val patternJsonFile = docsDir / "patterns.json"
   patternJsonFile.writeText(specificationJsonString)
+
+  val descriptionJsonFile = docsDir / "description" / "description.json"
+  descriptionJsonFile.writeText(descriptionsJsonString)
 }

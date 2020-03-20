@@ -1,0 +1,1138 @@
+[ {
+  "patternId" : "clang-analyzer-core.uninitialized.UndefReturn",
+  "title" : "Clang analyzer core uninitialized UndefReturn"
+}, {
+  "patternId" : "bugprone-argument-comment",
+  "title" : "Argument comment"
+}, {
+  "patternId" : "readability-simplify-subscript-expr",
+  "title" : "Simplify subscript expr"
+}, {
+  "patternId" : "clang-analyzer-deadcode.DeadStores",
+  "title" : "Clang analyzer deadcode DeadStores"
+}, {
+  "patternId" : "clang-analyzer-osx.NumberObjectConversion",
+  "title" : "Clang analyzer osx NumberObjectConversion"
+}, {
+  "patternId" : "cppcoreguidelines-pro-type-cstyle-cast",
+  "title" : "Pro type cstyle cast"
+}, {
+  "patternId" : "misc-throw-by-value-catch-by-reference",
+  "title" : "Throw by value catch by reference"
+}, {
+  "patternId" : "bugprone-swapped-arguments",
+  "title" : "Swapped arguments"
+}, {
+  "patternId" : "readability-redundant-member-init",
+  "title" : "Redundant member init"
+}, {
+  "patternId" : "misc-unconventional-assign-operator",
+  "title" : "Unconventional assign operator"
+}, {
+  "patternId" : "misc-non-private-member-variables-in-classes",
+  "title" : "Non private member variables in classes"
+}, {
+  "patternId" : "readability-identifier-naming",
+  "title" : "Identifier naming"
+}, {
+  "patternId" : "hicpp-use-equals-default",
+  "title" : "Use equals default"
+}, {
+  "patternId" : "google-objc-avoid-nsobject-new",
+  "title" : "Google objc avoid nsobject new"
+}, {
+  "patternId" : "readability-named-parameter",
+  "title" : "Named parameter"
+}, {
+  "patternId" : "bugprone-integer-division",
+  "title" : "Integer division"
+}, {
+  "patternId" : "cert-msc50-cpp",
+  "title" : "Cert msc50 cpp"
+}, {
+  "patternId" : "modernize-replace-auto-ptr",
+  "title" : "Replace auto ptr"
+}, {
+  "patternId" : "readability-uniqueptr-delete-release",
+  "title" : "Uniqueptr delete release"
+}, {
+  "patternId" : "bugprone-incorrect-roundings",
+  "title" : "Incorrect roundings"
+}, {
+  "patternId" : "android-cloexec-pipe2",
+  "title" : "Android cloexec pipe2"
+}, {
+  "patternId" : "abseil-time-subtraction",
+  "title" : "Abseil time subtraction"
+}, {
+  "patternId" : "readability-static-accessed-through-instance",
+  "title" : "Static accessed through instance"
+}, {
+  "patternId" : "modernize-avoid-c-arrays",
+  "title" : "Avoid c arrays"
+}, {
+  "patternId" : "bugprone-sizeof-container",
+  "title" : "Sizeof container"
+}, {
+  "patternId" : "llvm-prefer-register-over-unsigned",
+  "title" : "Llvm prefer register over unsigned"
+}, {
+  "patternId" : "cppcoreguidelines-pro-type-static-cast-downcast",
+  "title" : "Pro type static cast downcast"
+}, {
+  "patternId" : "clang-analyzer-nullability.NullReturnedFromNonnull",
+  "title" : "Clang analyzer nullability NullReturnedFromNonnull"
+}, {
+  "patternId" : "cppcoreguidelines-owning-memory",
+  "title" : "Owning memory"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.NonNilReturnValue",
+  "title" : "Clang analyzer osx cocoa NonNilReturnValue"
+}, {
+  "patternId" : "hicpp-member-init",
+  "title" : "Member init"
+}, {
+  "patternId" : "android-cloexec-accept4",
+  "title" : "Android cloexec accept4"
+}, {
+  "patternId" : "clang-analyzer-unix.Malloc",
+  "title" : "Clang analyzer unix Malloc"
+}, {
+  "patternId" : "bugprone-exception-escape",
+  "title" : "Exception escape"
+}, {
+  "patternId" : "modernize-use-transparent-functors",
+  "title" : "Use transparent functors"
+}, {
+  "patternId" : "modernize-use-nullptr",
+  "title" : "Use nullptr"
+}, {
+  "patternId" : "bugprone-string-literal-with-embedded-nul",
+  "title" : "String literal with embedded nul"
+}, {
+  "patternId" : "cert-err60-cpp",
+  "title" : "Cert err60 cpp"
+}, {
+  "patternId" : "clang-analyzer-security.insecureAPI.gets",
+  "title" : "Clang analyzer security insecureAPI gets"
+}, {
+  "patternId" : "fuchsia-default-arguments-calls",
+  "title" : "Fuchsia default arguments calls"
+}, {
+  "patternId" : "portability-simd-intrinsics",
+  "title" : "Simd intrinsics"
+}, {
+  "patternId" : "clang-analyzer-security.insecureAPI.getpw",
+  "title" : "Clang analyzer security insecureAPI getpw"
+}, {
+  "patternId" : "misc-misplaced-const",
+  "title" : "Misplaced const"
+}, {
+  "patternId" : "readability-braces-around-statements",
+  "title" : "Braces around statements"
+}, {
+  "patternId" : "bugprone-dangling-handle",
+  "title" : "Dangling handle"
+}, {
+  "patternId" : "readability-redundant-control-flow",
+  "title" : "Redundant control flow"
+}, {
+  "patternId" : "google-readability-namespace-comments",
+  "title" : "Google readability namespace comments"
+}, {
+  "patternId" : "readability-redundant-string-cstr",
+  "title" : "Redundant string cstr"
+}, {
+  "patternId" : "readability-container-size-empty",
+  "title" : "Container size empty"
+}, {
+  "patternId" : "android-cloexec-accept",
+  "title" : "Android cloexec accept"
+}, {
+  "patternId" : "cert-dcl21-cpp",
+  "title" : "Cert dcl21 cpp"
+}, {
+  "patternId" : "hicpp-signed-bitwise",
+  "title" : "Signed bitwise"
+}, {
+  "patternId" : "abseil-duration-conversion-cast",
+  "title" : "Abseil duration conversion cast"
+}, {
+  "patternId" : "modernize-make-shared",
+  "title" : "Make shared"
+}, {
+  "patternId" : "readability-string-compare",
+  "title" : "String compare"
+}, {
+  "patternId" : "cppcoreguidelines-pro-bounds-constant-array-index",
+  "title" : "Pro bounds constant array index"
+}, {
+  "patternId" : "modernize-use-default",
+  "title" : "Use default"
+}, {
+  "patternId" : "bugprone-multiple-statement-macro",
+  "title" : "Multiple statement macro"
+}, {
+  "patternId" : "modernize-use-nodiscard",
+  "title" : "Use nodiscard"
+}, {
+  "patternId" : "bugprone-string-integer-assignment",
+  "title" : "String integer assignment"
+}, {
+  "patternId" : "clang-analyzer-cplusplus.NewDelete",
+  "title" : "Clang analyzer cplusplus NewDelete"
+}, {
+  "patternId" : "cert-err61-cpp",
+  "title" : "Cert err61 cpp"
+}, {
+  "patternId" : "abseil-no-internal-dependencies",
+  "title" : "Abseil no internal dependencies"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.SelfInit",
+  "title" : "Clang analyzer osx cocoa SelfInit"
+}, {
+  "patternId" : "readability-redundant-preprocessor",
+  "title" : "Redundant preprocessor"
+}, {
+  "patternId" : "misc-static-assert",
+  "title" : "Static assert"
+}, {
+  "patternId" : "hicpp-avoid-goto",
+  "title" : "Avoid goto"
+}, {
+  "patternId" : "bugprone-dynamic-static-initializers",
+  "title" : "Dynamic static initializers"
+}, {
+  "patternId" : "cert-flp30-c",
+  "title" : "Cert flp30 c"
+}, {
+  "patternId" : "clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker",
+  "title" : "Clang analyzer optin osx cocoa localizability NonLocalizedStringChecker"
+}, {
+  "patternId" : "cppcoreguidelines-no-malloc",
+  "title" : "No malloc"
+}, {
+  "patternId" : "hicpp-function-size",
+  "title" : "Function size"
+}, {
+  "patternId" : "bugprone-copy-constructor-init",
+  "title" : "Copy constructor init"
+}, {
+  "patternId" : "modernize-avoid-bind",
+  "title" : "Avoid bind"
+}, {
+  "patternId" : "clang-analyzer-optin.performance.GCDAntipattern",
+  "title" : "Clang analyzer optin performance GCDAntipattern"
+}, {
+  "patternId" : "hicpp-multiway-paths-covered",
+  "title" : "Multiway paths covered"
+}, {
+  "patternId" : "performance-for-range-copy",
+  "title" : "For range copy"
+}, {
+  "patternId" : "readability-inconsistent-declaration-parameter-name",
+  "title" : "Inconsistent declaration parameter name"
+}, {
+  "patternId" : "modernize-use-trailing-return-type",
+  "title" : "Use trailing return type"
+}, {
+  "patternId" : "readability-isolate-declaration",
+  "title" : "Isolate declaration"
+}, {
+  "patternId" : "misc-unused-using-decls",
+  "title" : "Unused using decls"
+}, {
+  "patternId" : "hicpp-use-noexcept",
+  "title" : "Use noexcept"
+}, {
+  "patternId" : "google-readability-casting",
+  "title" : "Google readability casting"
+}, {
+  "patternId" : "hicpp-avoid-c-arrays",
+  "title" : "Avoid c arrays"
+}, {
+  "patternId" : "modernize-use-auto",
+  "title" : "Use auto"
+}, {
+  "patternId" : "llvm-header-guard",
+  "title" : "Llvm header guard"
+}, {
+  "patternId" : "hicpp-undelegated-constructor",
+  "title" : "Undelegated constructor"
+}, {
+  "patternId" : "performance-unnecessary-value-param",
+  "title" : "Unnecessary value param"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.NilArg",
+  "title" : "Clang analyzer osx cocoa NilArg"
+}, {
+  "patternId" : "misc-unused-parameters",
+  "title" : "Unused parameters"
+}, {
+  "patternId" : "clang-analyzer-nullability.NullPassedToNonnull",
+  "title" : "Clang analyzer nullability NullPassedToNonnull"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.NSAutoreleasePool",
+  "title" : "Clang analyzer osx cocoa NSAutoreleasePool"
+}, {
+  "patternId" : "abseil-no-namespace",
+  "title" : "Abseil no namespace"
+}, {
+  "patternId" : "performance-implicit-cast-in-loop",
+  "title" : "Implicit cast in loop"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.ObjCGenerics",
+  "title" : "Clang analyzer osx cocoa ObjCGenerics"
+}, {
+  "patternId" : "cppcoreguidelines-pro-bounds-pointer-arithmetic",
+  "title" : "Pro bounds pointer arithmetic"
+}, {
+  "patternId" : "bugprone-misplaced-operator-in-strlen-in-alloc",
+  "title" : "Misplaced operator in strlen in alloc"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.MissingSuperCall",
+  "title" : "Clang analyzer osx cocoa MissingSuperCall"
+}, {
+  "patternId" : "objc-avoid-nserror-init",
+  "title" : "Avoid nserror init"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.ClassRelease",
+  "title" : "Clang analyzer osx cocoa ClassRelease"
+}, {
+  "patternId" : "clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker",
+  "title" : "Clang analyzer optin osx cocoa localizability EmptyLocalizationContextChecker"
+}, {
+  "patternId" : "hicpp-vararg",
+  "title" : "Vararg"
+}, {
+  "patternId" : "cert-msc51-cpp",
+  "title" : "Cert msc51 cpp"
+}, {
+  "patternId" : "abseil-str-cat-append",
+  "title" : "Abseil str cat append"
+}, {
+  "patternId" : "llvm-prefer-isa-or-dyn-cast-in-conditionals",
+  "title" : "Llvm prefer isa or dyn cast in conditionals"
+}, {
+  "patternId" : "cppcoreguidelines-avoid-goto",
+  "title" : "Avoid goto"
+}, {
+  "patternId" : "bugprone-suspicious-semicolon",
+  "title" : "Suspicious semicolon"
+}, {
+  "patternId" : "performance-inefficient-string-concatenation",
+  "title" : "Inefficient string concatenation"
+}, {
+  "patternId" : "performance-inefficient-vector-operation",
+  "title" : "Inefficient vector operation"
+}, {
+  "patternId" : "google-runtime-references",
+  "title" : "Google runtime references"
+}, {
+  "patternId" : "modernize-unary-static-assert",
+  "title" : "Unary static assert"
+}, {
+  "patternId" : "clang-analyzer-core.DynamicTypePropagation",
+  "title" : "Clang analyzer core DynamicTypePropagation"
+}, {
+  "patternId" : "bugprone-terminating-continue",
+  "title" : "Terminating continue"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.UnusedIvars",
+  "title" : "Clang analyzer osx cocoa UnusedIvars"
+}, {
+  "patternId" : "cppcoreguidelines-avoid-magic-numbers",
+  "title" : "Avoid magic numbers"
+}, {
+  "patternId" : "clang-analyzer-core.NonNullParamChecker",
+  "title" : "Clang analyzer core NonNullParamChecker"
+}, {
+  "patternId" : "clang-analyzer-security.insecureAPI.mkstemp",
+  "title" : "Clang analyzer security insecureAPI mkstemp"
+}, {
+  "patternId" : "google-readability-function-size",
+  "title" : "Google readability function size"
+}, {
+  "patternId" : "modernize-return-braced-init-list",
+  "title" : "Return braced init list"
+}, {
+  "patternId" : "clang-analyzer-nullability.NullableReturnedFromNonnull",
+  "title" : "Clang analyzer nullability NullableReturnedFromNonnull"
+}, {
+  "patternId" : "android-cloexec-inotify-init1",
+  "title" : "Android cloexec inotify init1"
+}, {
+  "patternId" : "google-global-names-in-headers",
+  "title" : "Google global names in headers"
+}, {
+  "patternId" : "clang-analyzer-valist.Unterminated",
+  "title" : "Clang analyzer valist Unterminated"
+}, {
+  "patternId" : "hicpp-no-assembler",
+  "title" : "No assembler"
+}, {
+  "patternId" : "hicpp-new-delete-operators",
+  "title" : "New delete operators"
+}, {
+  "patternId" : "android-cloexec-creat",
+  "title" : "Android cloexec creat"
+}, {
+  "patternId" : "abseil-duration-unnecessary-conversion",
+  "title" : "Abseil duration unnecessary conversion"
+}, {
+  "patternId" : "android-comparison-in-temp-failure-retry",
+  "title" : "Android comparison in temp failure retry"
+}, {
+  "patternId" : "android-cloexec-dup",
+  "title" : "Android cloexec dup"
+}, {
+  "patternId" : "android-cloexec-epoll-create",
+  "title" : "Android cloexec epoll create"
+}, {
+  "patternId" : "clang-analyzer-unix.MallocSizeof",
+  "title" : "Clang analyzer unix MallocSizeof"
+}, {
+  "patternId" : "bugprone-too-small-loop-variable",
+  "title" : "Too small loop variable"
+}, {
+  "patternId" : "fuchsia-virtual-inheritance",
+  "title" : "Fuchsia virtual inheritance"
+}, {
+  "patternId" : "cert-oop11-cpp",
+  "title" : "Cert oop11 cpp"
+}, {
+  "patternId" : "llvm-namespace-comment",
+  "title" : "Llvm namespace comment"
+}, {
+  "patternId" : "readability-uppercase-literal-suffix",
+  "title" : "Uppercase literal suffix"
+}, {
+  "patternId" : "google-runtime-int",
+  "title" : "Google runtime int"
+}, {
+  "patternId" : "hicpp-exception-baseclass",
+  "title" : "Exception baseclass"
+}, {
+  "patternId" : "bugprone-undefined-memory-manipulation",
+  "title" : "Undefined memory manipulation"
+}, {
+  "patternId" : "google-readability-avoid-underscore-in-googletest-name",
+  "title" : "Google readability avoid underscore in googletest name"
+}, {
+  "patternId" : "modernize-use-equals-default",
+  "title" : "Use equals default"
+}, {
+  "patternId" : "clang-analyzer-security.insecureAPI.bcopy",
+  "title" : "Clang analyzer security insecureAPI bcopy"
+}, {
+  "patternId" : "readability-else-after-return",
+  "title" : "Else after return"
+}, {
+  "patternId" : "modernize-use-noexcept",
+  "title" : "Use noexcept"
+}, {
+  "patternId" : "google-build-namespaces",
+  "title" : "Google build namespaces"
+}, {
+  "patternId" : "abseil-duration-addition",
+  "title" : "Abseil duration addition"
+}, {
+  "patternId" : "cert-dcl58-cpp",
+  "title" : "Cert dcl58 cpp"
+}, {
+  "patternId" : "clang-analyzer-osx.coreFoundation.containers.PointerSizedValues",
+  "title" : "Clang analyzer osx coreFoundation containers PointerSizedValues"
+}, {
+  "patternId" : "bugprone-forward-declaration-namespace",
+  "title" : "Forward declaration namespace"
+}, {
+  "patternId" : "llvm-twine-local",
+  "title" : "Llvm twine local"
+}, {
+  "patternId" : "performance-noexcept-move-constructor",
+  "title" : "Noexcept move constructor"
+}, {
+  "patternId" : "clang-analyzer-core.UndefinedBinaryOperatorResult",
+  "title" : "Clang analyzer core UndefinedBinaryOperatorResult"
+}, {
+  "patternId" : "clang-analyzer-nullability.NullableDereferenced",
+  "title" : "Clang analyzer nullability NullableDereferenced"
+}, {
+  "patternId" : "google-runtime-operator",
+  "title" : "Google runtime operator"
+}, {
+  "patternId" : "clang-analyzer-security.insecureAPI.rand",
+  "title" : "Clang analyzer security insecureAPI rand"
+}, {
+  "patternId" : "readability-implicit-bool-conversion",
+  "title" : "Implicit bool conversion"
+}, {
+  "patternId" : "performance-move-constructor-init",
+  "title" : "Move constructor init"
+}, {
+  "patternId" : "bugprone-virtual-near-miss",
+  "title" : "Virtual near miss"
+}, {
+  "patternId" : "cppcoreguidelines-slicing",
+  "title" : "Slicing"
+}, {
+  "patternId" : "linuxkernel-must-use-errs",
+  "title" : "Linuxkernel must use errs"
+}, {
+  "patternId" : "bugprone-suspicious-missing-comma",
+  "title" : "Suspicious missing comma"
+}, {
+  "patternId" : "misc-new-delete-overloads",
+  "title" : "New delete overloads"
+}, {
+  "patternId" : "cert-oop54-cpp",
+  "title" : "Cert oop54 cpp"
+}, {
+  "patternId" : "cert-dcl16-c",
+  "title" : "Cert dcl16 c"
+}, {
+  "patternId" : "bugprone-parent-virtual-call",
+  "title" : "Parent virtual call"
+}, {
+  "patternId" : "cert-dcl59-cpp",
+  "title" : "Cert dcl59 cpp"
+}, {
+  "patternId" : "objc-super-self",
+  "title" : "Super self"
+}, {
+  "patternId" : "hicpp-explicit-conversions",
+  "title" : "Explicit conversions"
+}, {
+  "patternId" : "clang-analyzer-optin.cplusplus.UninitializedObject",
+  "title" : "Clang analyzer optin cplusplus UninitializedObject"
+}, {
+  "patternId" : "modernize-make-unique",
+  "title" : "Make unique"
+}, {
+  "patternId" : "hicpp-no-malloc",
+  "title" : "No malloc"
+}, {
+  "patternId" : "cert-err09-cpp",
+  "title" : "Cert err09 cpp"
+}, {
+  "patternId" : "clang-analyzer-security.insecureAPI.vfork",
+  "title" : "Clang analyzer security insecureAPI vfork"
+}, {
+  "patternId" : "google-readability-braces-around-statements",
+  "title" : "Google readability braces around statements"
+}, {
+  "patternId" : "modernize-concat-nested-namespaces",
+  "title" : "Concat nested namespaces"
+}, {
+  "patternId" : "bugprone-fold-init-type",
+  "title" : "Fold init type"
+}, {
+  "patternId" : "android-cloexec-socket",
+  "title" : "Android cloexec socket"
+}, {
+  "patternId" : "mpi-buffer-deref",
+  "title" : "Mpi buffer deref"
+}, {
+  "patternId" : "bugprone-suspicious-string-compare",
+  "title" : "Suspicious string compare"
+}, {
+  "patternId" : "cert-dcl50-cpp",
+  "title" : "Cert dcl50 cpp"
+}, {
+  "patternId" : "modernize-use-equals-delete",
+  "title" : "Use equals delete"
+}, {
+  "patternId" : "abseil-redundant-strcat-calls",
+  "title" : "Abseil redundant strcat calls"
+}, {
+  "patternId" : "cppcoreguidelines-special-member-functions",
+  "title" : "Special member functions"
+}, {
+  "patternId" : "bugprone-unused-return-value",
+  "title" : "Unused return value"
+}, {
+  "patternId" : "readability-misleading-indentation",
+  "title" : "Misleading indentation"
+}, {
+  "patternId" : "clang-analyzer-unix.API",
+  "title" : "Clang analyzer unix API"
+}, {
+  "patternId" : "modernize-use-bool-literals",
+  "title" : "Use bool literals"
+}, {
+  "patternId" : "modernize-loop-convert",
+  "title" : "Loop convert"
+}, {
+  "patternId" : "readability-function-size",
+  "title" : "Function size"
+}, {
+  "patternId" : "performance-faster-string-find",
+  "title" : "Faster string find"
+}, {
+  "patternId" : "cert-fio38-c",
+  "title" : "Cert fio38 c"
+}, {
+  "patternId" : "clang-analyzer-core.StackAddressEscape",
+  "title" : "Clang analyzer core StackAddressEscape"
+}, {
+  "patternId" : "openmp-exception-escape",
+  "title" : "Openmp exception escape"
+}, {
+  "patternId" : "modernize-pass-by-value",
+  "title" : "Pass by value"
+}, {
+  "patternId" : "hicpp-noexcept-move",
+  "title" : "Noexcept move"
+}, {
+  "patternId" : "modernize-use-emplace",
+  "title" : "Use emplace"
+}, {
+  "patternId" : "modernize-use-uncaught-exceptions",
+  "title" : "Use uncaught exceptions"
+}, {
+  "patternId" : "clang-analyzer-nullability.NullablePassedToNonnull",
+  "title" : "Clang analyzer nullability NullablePassedToNonnull"
+}, {
+  "patternId" : "cppcoreguidelines-non-private-member-variables-in-classes",
+  "title" : "Non private member variables in classes"
+}, {
+  "patternId" : "misc-definitions-in-headers",
+  "title" : "Definitions in headers"
+}, {
+  "patternId" : "zircon-temporary-objects",
+  "title" : "Temporary objects"
+}, {
+  "patternId" : "bugprone-forwarding-reference-overload",
+  "title" : "Forwarding reference overload"
+}, {
+  "patternId" : "cppcoreguidelines-pro-type-reinterpret-cast",
+  "title" : "Pro type reinterpret cast"
+}, {
+  "patternId" : "cert-err34-c",
+  "title" : "Cert err34 c"
+}, {
+  "patternId" : "cert-msc30-c",
+  "title" : "Cert msc30 c"
+}, {
+  "patternId" : "readability-implicit-bool-cast",
+  "title" : "Implicit bool cast"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.AutoreleaseWrite",
+  "title" : "Clang analyzer osx cocoa AutoreleaseWrite"
+}, {
+  "patternId" : "readability-avoid-const-params-in-decls",
+  "title" : "Avoid const params in decls"
+}, {
+  "patternId" : "bugprone-undelegated-constructor",
+  "title" : "Undelegated constructor"
+}, {
+  "patternId" : "bugprone-suspicious-enum-usage",
+  "title" : "Suspicious enum usage"
+}, {
+  "patternId" : "cppcoreguidelines-pro-type-member-init",
+  "title" : "Pro type member init"
+}, {
+  "patternId" : "fuchsia-multiple-inheritance",
+  "title" : "Fuchsia multiple inheritance"
+}, {
+  "patternId" : "google-build-using-namespace",
+  "title" : "Google build using namespace"
+}, {
+  "patternId" : "hicpp-static-assert",
+  "title" : "Static assert"
+}, {
+  "patternId" : "cppcoreguidelines-avoid-c-arrays",
+  "title" : "Avoid c arrays"
+}, {
+  "patternId" : "clang-analyzer-osx.coreFoundation.CFError",
+  "title" : "Clang analyzer osx coreFoundation CFError"
+}, {
+  "patternId" : "modernize-raw-string-literal",
+  "title" : "Raw string literal"
+}, {
+  "patternId" : "objc-missing-hash",
+  "title" : "Missing hash"
+}, {
+  "patternId" : "hicpp-special-member-functions",
+  "title" : "Special member functions"
+}, {
+  "patternId" : "clang-analyzer-valist.Uninitialized",
+  "title" : "Clang analyzer valist Uninitialized"
+}, {
+  "patternId" : "readability-simplify-boolean-expr",
+  "title" : "Simplify boolean expr"
+}, {
+  "patternId" : "cert-err58-cpp",
+  "title" : "Cert err58 cpp"
+}, {
+  "patternId" : "hicpp-uppercase-literal-suffix",
+  "title" : "Uppercase literal suffix"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.RunLoopAutoreleaseLeak",
+  "title" : "Clang analyzer osx cocoa RunLoopAutoreleaseLeak"
+}, {
+  "patternId" : "clang-analyzer-core.uninitialized.ArraySubscript",
+  "title" : "Clang analyzer core uninitialized ArraySubscript"
+}, {
+  "patternId" : "misc-uniqueptr-reset-release",
+  "title" : "Uniqueptr reset release"
+}, {
+  "patternId" : "cert-dcl03-c",
+  "title" : "Cert dcl03 c"
+}, {
+  "patternId" : "abseil-duration-factory-float",
+  "title" : "Abseil duration factory float"
+}, {
+  "patternId" : "modernize-shrink-to-fit",
+  "title" : "Shrink to fit"
+}, {
+  "patternId" : "bugprone-infinite-loop",
+  "title" : "Infinite loop"
+}, {
+  "patternId" : "readability-delete-null-pointer",
+  "title" : "Delete null pointer"
+}, {
+  "patternId" : "readability-redundant-smartptr-get",
+  "title" : "Redundant smartptr get"
+}, {
+  "patternId" : "clang-analyzer-security.FloatLoopCounter",
+  "title" : "Clang analyzer security FloatLoopCounter"
+}, {
+  "patternId" : "performance-type-promotion-in-math-fn",
+  "title" : "Type promotion in math fn"
+}, {
+  "patternId" : "cppcoreguidelines-pro-bounds-array-to-pointer-decay",
+  "title" : "Pro bounds array to pointer decay"
+}, {
+  "patternId" : "bugprone-suspicious-memset-usage",
+  "title" : "Suspicious memset usage"
+}, {
+  "patternId" : "objc-forbidden-subclassing",
+  "title" : "Forbidden subclassing"
+}, {
+  "patternId" : "android-cloexec-inotify-init",
+  "title" : "Android cloexec inotify init"
+}, {
+  "patternId" : "clang-analyzer-optin.cplusplus.VirtualCall",
+  "title" : "Clang analyzer optin cplusplus VirtualCall"
+}, {
+  "patternId" : "llvm-include-order",
+  "title" : "Llvm include order"
+}, {
+  "patternId" : "bugprone-throw-keyword-missing",
+  "title" : "Throw keyword missing"
+}, {
+  "patternId" : "hicpp-use-override",
+  "title" : "Use override"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.RetainCount",
+  "title" : "Clang analyzer osx cocoa RetainCount"
+}, {
+  "patternId" : "clang-analyzer-optin.portability.UnixAPI",
+  "title" : "Clang analyzer optin portability UnixAPI"
+}, {
+  "patternId" : "cert-msc32-c",
+  "title" : "Cert msc32 c"
+}, {
+  "patternId" : "clang-analyzer-optin.performance.Padding",
+  "title" : "Clang analyzer optin performance Padding"
+}, {
+  "patternId" : "bugprone-branch-clone",
+  "title" : "Branch clone"
+}, {
+  "patternId" : "objc-property-declaration",
+  "title" : "Property declaration"
+}, {
+  "patternId" : "clang-analyzer-osx.API",
+  "title" : "Clang analyzer osx API"
+}, {
+  "patternId" : "clang-analyzer-osx.ObjCProperty",
+  "title" : "Clang analyzer osx ObjCProperty"
+}, {
+  "patternId" : "darwin-avoid-spinlock",
+  "title" : "Darwin avoid spinlock"
+}, {
+  "patternId" : "misc-redundant-expression",
+  "title" : "Redundant expression"
+}, {
+  "patternId" : "readability-non-const-parameter",
+  "title" : "Non const parameter"
+}, {
+  "patternId" : "readability-convert-member-functions-to-static",
+  "title" : "Convert member functions to static"
+}, {
+  "patternId" : "clang-analyzer-core.NullDereference",
+  "title" : "Clang analyzer core NullDereference"
+}, {
+  "patternId" : "cppcoreguidelines-pro-type-vararg",
+  "title" : "Pro type vararg"
+}, {
+  "patternId" : "google-upgrade-googletest-case",
+  "title" : "Google upgrade googletest case"
+}, {
+  "patternId" : "modernize-replace-random-shuffle",
+  "title" : "Replace random shuffle"
+}, {
+  "patternId" : "fuchsia-header-anon-namespaces",
+  "title" : "Fuchsia header anon namespaces"
+}, {
+  "patternId" : "modernize-redundant-void-arg",
+  "title" : "Redundant void arg"
+}, {
+  "patternId" : "google-objc-avoid-throwing-exception",
+  "title" : "Google objc avoid throwing exception"
+}, {
+  "patternId" : "clang-analyzer-osx.MIG",
+  "title" : "Clang analyzer osx MIG"
+}, {
+  "patternId" : "modernize-deprecated-ios-base-aliases",
+  "title" : "Deprecated ios base aliases"
+}, {
+  "patternId" : "clang-analyzer-valist.CopyToSelf",
+  "title" : "Clang analyzer valist CopyToSelf"
+}, {
+  "patternId" : "clang-analyzer-unix.cstring.NullArg",
+  "title" : "Clang analyzer unix cstring NullArg"
+}, {
+  "patternId" : "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling",
+  "title" : "Clang analyzer security insecureAPI DeprecatedOrUnsafeBufferHandling"
+}, {
+  "patternId" : "cert-env33-c",
+  "title" : "Cert env33 c"
+}, {
+  "patternId" : "hicpp-use-nullptr",
+  "title" : "Use nullptr"
+}, {
+  "patternId" : "bugprone-misplaced-widening-cast",
+  "title" : "Misplaced widening cast"
+}, {
+  "patternId" : "cppcoreguidelines-c-copy-assignment-signature",
+  "title" : "C copy assignment signature"
+}, {
+  "patternId" : "hicpp-deprecated-headers",
+  "title" : "Deprecated headers"
+}, {
+  "patternId" : "bugprone-lambda-function-name",
+  "title" : "Lambda function name"
+}, {
+  "patternId" : "cert-dcl54-cpp",
+  "title" : "Cert dcl54 cpp"
+}, {
+  "patternId" : "clang-analyzer-core.VLASize",
+  "title" : "Clang analyzer core VLASize"
+}, {
+  "patternId" : "bugprone-macro-parentheses",
+  "title" : "Macro parentheses"
+}, {
+  "patternId" : "hicpp-use-auto",
+  "title" : "Use auto"
+}, {
+  "patternId" : "bugprone-not-null-terminated-result",
+  "title" : "Not null terminated result"
+}, {
+  "patternId" : "performance-move-const-arg",
+  "title" : "Move const arg"
+}, {
+  "patternId" : "bugprone-posix-return",
+  "title" : "Posix return"
+}, {
+  "patternId" : "google-default-arguments",
+  "title" : "Google default arguments"
+}, {
+  "patternId" : "cppcoreguidelines-narrowing-conversions",
+  "title" : "Narrowing conversions"
+}, {
+  "patternId" : "clang-analyzer-security.insecureAPI.mktemp",
+  "title" : "Clang analyzer security insecureAPI mktemp"
+}, {
+  "patternId" : "clang-analyzer-core.DivideZero",
+  "title" : "Clang analyzer core DivideZero"
+}, {
+  "patternId" : "cppcoreguidelines-interfaces-global-init",
+  "title" : "Interfaces global init"
+}, {
+  "patternId" : "performance-implicit-conversion-in-loop",
+  "title" : "Implicit conversion in loop"
+}, {
+  "patternId" : "misc-unused-alias-decls",
+  "title" : "Unused alias decls"
+}, {
+  "patternId" : "google-objc-global-variable-declaration",
+  "title" : "Google objc global variable declaration"
+}, {
+  "patternId" : "cppcoreguidelines-pro-type-const-cast",
+  "title" : "Pro type const cast"
+}, {
+  "patternId" : "clang-analyzer-core.CallAndMessage",
+  "title" : "Clang analyzer core CallAndMessage"
+}, {
+  "patternId" : "clang-analyzer-optin.mpi.MPI-Checker",
+  "title" : "Clang analyzer optin mpi MPI Checker"
+}, {
+  "patternId" : "readability-const-return-type",
+  "title" : "Const return type"
+}, {
+  "patternId" : "clang-analyzer-osx.coreFoundation.CFNumber",
+  "title" : "Clang analyzer osx coreFoundation CFNumber"
+}, {
+  "patternId" : "bugprone-macro-repeated-side-effects",
+  "title" : "Macro repeated side effects"
+}, {
+  "patternId" : "openmp-use-default-none",
+  "title" : "Openmp use default none"
+}, {
+  "patternId" : "fuchsia-overloaded-operator",
+  "title" : "Fuchsia overloaded operator"
+}, {
+  "patternId" : "clang-analyzer-security.insecureAPI.bcmp",
+  "title" : "Clang analyzer security insecureAPI bcmp"
+}, {
+  "patternId" : "abseil-duration-subtraction",
+  "title" : "Abseil duration subtraction"
+}, {
+  "patternId" : "fuchsia-trailing-return",
+  "title" : "Fuchsia trailing return"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.VariadicMethodTypes",
+  "title" : "Clang analyzer osx cocoa VariadicMethodTypes"
+}, {
+  "patternId" : "android-cloexec-fopen",
+  "title" : "Android cloexec fopen"
+}, {
+  "patternId" : "clang-analyzer-cplusplus.InnerPointer",
+  "title" : "Clang analyzer cplusplus InnerPointer"
+}, {
+  "patternId" : "bugprone-use-after-move",
+  "title" : "Use after move"
+}, {
+  "patternId" : "clang-analyzer-core.uninitialized.Branch",
+  "title" : "Clang analyzer core uninitialized Branch"
+}, {
+  "patternId" : "performance-unnecessary-copy-initialization",
+  "title" : "Unnecessary copy initialization"
+}, {
+  "patternId" : "cppcoreguidelines-init-variables",
+  "title" : "Init variables"
+}, {
+  "patternId" : "cert-err52-cpp",
+  "title" : "Cert err52 cpp"
+}, {
+  "patternId" : "abseil-faster-strsplit-delimiter",
+  "title" : "Abseil faster strsplit delimiter"
+}, {
+  "patternId" : "clang-analyzer-security.insecureAPI.UncheckedReturn",
+  "title" : "Clang analyzer security insecureAPI UncheckedReturn"
+}, {
+  "patternId" : "readability-redundant-declaration",
+  "title" : "Redundant declaration"
+}, {
+  "patternId" : "abseil-duration-factory-scale",
+  "title" : "Abseil duration factory scale"
+}, {
+  "patternId" : "fuchsia-default-arguments-declarations",
+  "title" : "Fuchsia default arguments declarations"
+}, {
+  "patternId" : "clang-analyzer-unix.MismatchedDeallocator",
+  "title" : "Clang analyzer unix MismatchedDeallocator"
+}, {
+  "patternId" : "hicpp-use-equals-delete",
+  "title" : "Use equals delete"
+}, {
+  "patternId" : "clang-analyzer-cplusplus.NewDeleteLeaks",
+  "title" : "Clang analyzer cplusplus NewDeleteLeaks"
+}, {
+  "patternId" : "clang-analyzer-core.uninitialized.Assign",
+  "title" : "Clang analyzer core uninitialized Assign"
+}, {
+  "patternId" : "hicpp-move-const-arg",
+  "title" : "Move const arg"
+}, {
+  "patternId" : "bugprone-assert-side-effect",
+  "title" : "Assert side effect"
+}, {
+  "patternId" : "google-readability-todo",
+  "title" : "Google readability todo"
+}, {
+  "patternId" : "fuchsia-statically-constructed-objects",
+  "title" : "Fuchsia statically constructed objects"
+}, {
+  "patternId" : "abseil-time-comparison",
+  "title" : "Abseil time comparison"
+}, {
+  "patternId" : "bugprone-inaccurate-erase",
+  "title" : "Inaccurate erase"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.AtSync",
+  "title" : "Clang analyzer osx cocoa AtSync"
+}, {
+  "patternId" : "readability-magic-numbers",
+  "title" : "Magic numbers"
+}, {
+  "patternId" : "hicpp-use-emplace",
+  "title" : "Use emplace"
+}, {
+  "patternId" : "darwin-dispatch-once-nonstatic",
+  "title" : "Darwin dispatch once nonstatic"
+}, {
+  "patternId" : "clang-analyzer-osx.coreFoundation.CFRetainRelease",
+  "title" : "Clang analyzer osx coreFoundation CFRetainRelease"
+}, {
+  "patternId" : "hicpp-no-array-decay",
+  "title" : "No array decay"
+}, {
+  "patternId" : "google-explicit-constructor",
+  "title" : "Google explicit constructor"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.NSError",
+  "title" : "Clang analyzer osx cocoa NSError"
+}, {
+  "patternId" : "hicpp-braces-around-statements",
+  "title" : "Braces around statements"
+}, {
+  "patternId" : "clang-analyzer-security.insecureAPI.bzero",
+  "title" : "Clang analyzer security insecureAPI bzero"
+}, {
+  "patternId" : "android-cloexec-epoll-create1",
+  "title" : "Android cloexec epoll create1"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.IncompatibleMethodTypes",
+  "title" : "Clang analyzer osx cocoa IncompatibleMethodTypes"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.SuperDealloc",
+  "title" : "Clang analyzer osx cocoa SuperDealloc"
+}, {
+  "patternId" : "modernize-use-default-member-init",
+  "title" : "Use default member init"
+}, {
+  "patternId" : "google-objc-function-naming",
+  "title" : "Google objc function naming"
+}, {
+  "patternId" : "clang-analyzer-osx.coreFoundation.containers.OutOfBounds",
+  "title" : "Clang analyzer osx coreFoundation containers OutOfBounds"
+}, {
+  "patternId" : "readability-misplaced-array-index",
+  "title" : "Misplaced array index"
+}, {
+  "patternId" : "cppcoreguidelines-pro-type-union-access",
+  "title" : "Pro type union access"
+}, {
+  "patternId" : "android-cloexec-open",
+  "title" : "Android cloexec open"
+}, {
+  "patternId" : "android-cloexec-pipe",
+  "title" : "Android cloexec pipe"
+}, {
+  "patternId" : "fuchsia-restrict-system-includes",
+  "title" : "Fuchsia restrict system includes"
+}, {
+  "patternId" : "cppcoreguidelines-macro-usage",
+  "title" : "Macro usage"
+}, {
+  "patternId" : "modernize-use-using",
+  "title" : "Use using"
+}, {
+  "patternId" : "readability-static-definition-in-anonymous-namespace",
+  "title" : "Static definition in anonymous namespace"
+}, {
+  "patternId" : "clang-analyzer-optin.osx.OSObjectCStyleCast",
+  "title" : "Clang analyzer optin osx OSObjectCStyleCast"
+}, {
+  "patternId" : "performance-inefficient-algorithm",
+  "title" : "Inefficient algorithm"
+}, {
+  "patternId" : "clang-analyzer-core.uninitialized.CapturedBlockVariable",
+  "title" : "Clang analyzer core uninitialized CapturedBlockVariable"
+}, {
+  "patternId" : "bugprone-move-forwarding-reference",
+  "title" : "Move forwarding reference"
+}, {
+  "patternId" : "modernize-deprecated-headers",
+  "title" : "Deprecated headers"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.Dealloc",
+  "title" : "Clang analyzer osx cocoa Dealloc"
+}, {
+  "patternId" : "cppcoreguidelines-explicit-virtual-functions",
+  "title" : "Explicit virtual functions"
+}, {
+  "patternId" : "google-build-explicit-make-pair",
+  "title" : "Google build explicit make pair"
+}, {
+  "patternId" : "boost-use-to-string",
+  "title" : "Boost use to string"
+}, {
+  "patternId" : "bugprone-bool-pointer-implicit-conversion",
+  "title" : "Bool pointer implicit conversion"
+}, {
+  "patternId" : "bugprone-string-constructor",
+  "title" : "String constructor"
+}, {
+  "patternId" : "bugprone-unhandled-self-assignment",
+  "title" : "Unhandled self assignment"
+}, {
+  "patternId" : "abseil-string-find-startswith",
+  "title" : "Abseil string find startswith"
+}, {
+  "patternId" : "mpi-type-mismatch",
+  "title" : "Mpi type mismatch"
+}, {
+  "patternId" : "misc-non-copyable-objects",
+  "title" : "Non copyable objects"
+}, {
+  "patternId" : "clang-analyzer-unix.Vfork",
+  "title" : "Clang analyzer unix Vfork"
+}, {
+  "patternId" : "hicpp-invalid-access-moved",
+  "title" : "Invalid access moved"
+}, {
+  "patternId" : "abseil-upgrade-duration-conversions",
+  "title" : "Abseil upgrade duration conversions"
+}, {
+  "patternId" : "android-cloexec-memfd-create",
+  "title" : "Android cloexec memfd create"
+}, {
+  "patternId" : "abseil-duration-comparison",
+  "title" : "Abseil duration comparison"
+}, {
+  "patternId" : "modernize-use-override",
+  "title" : "Use override"
+}, {
+  "patternId" : "clang-analyzer-osx.cocoa.Loops",
+  "title" : "Clang analyzer osx cocoa Loops"
+}, {
+  "patternId" : "clang-analyzer-unix.cstring.BadSizeArg",
+  "title" : "Clang analyzer unix cstring BadSizeArg"
+}, {
+  "patternId" : "clang-analyzer-cplusplus.Move",
+  "title" : "Clang analyzer cplusplus Move"
+}, {
+  "patternId" : "readability-deleted-default",
+  "title" : "Deleted default"
+}, {
+  "patternId" : "abseil-duration-division",
+  "title" : "Abseil duration division"
+}, {
+  "patternId" : "readability-redundant-string-init",
+  "title" : "Redundant string init"
+}, {
+  "patternId" : "bugprone-unused-raii",
+  "title" : "Unused raii"
+}, {
+  "patternId" : "clang-analyzer-osx.SecKeychainAPI",
+  "title" : "Clang analyzer osx SecKeychainAPI"
+}, {
+  "patternId" : "clang-analyzer-security.insecureAPI.strcpy",
+  "title" : "Clang analyzer security insecureAPI strcpy"
+}, {
+  "patternId" : "hicpp-named-parameter",
+  "title" : "Named parameter"
+}, {
+  "patternId" : "readability-redundant-function-ptr-dereference",
+  "title" : "Redundant function ptr dereference"
+}, {
+  "patternId" : "clang-analyzer-osx.OSObjectRetainCount",
+  "title" : "Clang analyzer osx OSObjectRetainCount"
+}, {
+  "patternId" : "bugprone-sizeof-expression",
+  "title" : "Sizeof expression"
+} ]
