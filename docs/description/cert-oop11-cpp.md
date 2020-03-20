@@ -1,6 +1,3 @@
-.. meta:: :http-equiv=refresh:
-5;URL=performance-move-constructor-init.html
-
 cert-oop11-cpp
 ==============
 

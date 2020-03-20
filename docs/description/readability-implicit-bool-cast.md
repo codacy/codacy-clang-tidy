@@ -1,6 +1,3 @@
-.. title:: clang-tidy - readability-implicit-bool-cast .. meta::
-:http-equiv=refresh: 5;URL=readability-implicit-bool-conversion.html
-
 readability-implicit-bool-cast
 ==============================
 

@@ -1,6 +1,3 @@
-.. meta:: :http-equiv=refresh:
-5;URL=misc-non-private-member-variables-in-classes.html
-
 cppcoreguidelines-non-private-member-variables-in-classes
 =========================================================
 

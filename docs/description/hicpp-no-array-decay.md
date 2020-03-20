@@ -1,6 +1,3 @@
-.. meta:: :http-equiv=refresh:
-5;URL=cppcoreguidelines-pro-bounds-array-to-pointer-decay.html
-
 hicpp-no-array-decay
 ====================
 

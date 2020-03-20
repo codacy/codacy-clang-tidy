@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=modernize-avoid-c-arrays.html
-
 cppcoreguidelines-avoid-c-arrays
 ================================
 

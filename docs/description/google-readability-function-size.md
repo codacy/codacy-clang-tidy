@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=readability-function-size.html
-
 google-readability-function-size
 ================================
 

@@ -11,22 +11,29 @@ object Main extends App {
   def toInputStream(s: String) =
     new java.io.ByteArrayInputStream(s.getBytes(java.nio.charset.StandardCharsets.UTF_8.name))
 
-  val clangExtraDir = pwd / "clang-tools-extra"
+  val targetDir = pwd / "doc-generator" / "target"
+  val clangExtraDir = targetDir / "clang-tools-extra"
 
   if (!(clangExtraDir).exists && clangExtraDir.nonEmpty) {
-    Seq("git", "clone", "--depth", "1", "https://github.com/llvm-mirror/clang-tools-extra.git").!
+    val processBuilder = Process(command = Seq("git", "clone", "--depth", "1", "https://github.com/llvm-mirror/clang-tools-extra.git"), cwd = Some(targetDir.toJava))
+    require(processBuilder.! == 0, "git clone failed")
   } /* else {
     Seq("git", "pull").!
   } */
 
 
-  val patternsWithDocs = {
-    val it = for {
-      file <- (clangExtraDir / "docs" / "clang-tidy" / "checks").children.filter(_.extension.exists(_ == ".rst"))
-      content = file.lines.tail.mkString(System.lineSeparator)
-      converted = (Seq("pandoc", "-t", "markdown_strict") #< toInputStream(content)).!!
-    } yield (file.nameWithoutExtension, converted)
-    it.toSeq
+  val patternsWithDocs: Seq[(String, String)] = {
+    def isNotSeparator(s: String) = !s.startsWith("====")
+    val iterator = for {
+      file <- (clangExtraDir / "docs" / "clang-tidy" / "checks").children
+      if file.extension.exists(_ == ".rst") && file.name != "list.rst"
+      linesSeq = file.lines.toSeq
+      patternId = file.nameWithoutExtension
+      content = linesSeq.dropWhile(isNotSeparator)
+      toCovert = (patternId +: content).mkString(System.lineSeparator)
+      converted = (Seq("pandoc", "-t", "markdown_strict") #< toInputStream(toCovert)).!!
+    } yield (patternId, converted)
+    iterator.toSeq
   }
 
   val docsDir = mkdirs(pwd / "docs")
@@ -46,7 +53,7 @@ object Main extends App {
   }
 
   val patterns = patternsWithDocs.map {
-    case (patternId, doc) =>
+    case (patternId, _) =>
       val (category, subcategory) = categoryFromPatternId(patternId)
       Pattern.Specification(Pattern.Id(patternId), Level.Info, category, subcategory, None)
   }

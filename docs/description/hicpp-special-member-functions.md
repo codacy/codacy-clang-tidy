@@ -1,6 +1,3 @@
-.. meta:: :http-equiv=refresh:
-5;URL=cppcoreguidelines-special-member-functions.html
-
 hicpp-special-member-functions
 ==============================
 

@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=google-build-namespaces.html
-
 fuchsia-header-anon-namespaces
 ==============================
 

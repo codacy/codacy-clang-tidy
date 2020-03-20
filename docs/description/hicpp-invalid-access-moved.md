@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=bugprone-use-after-move.html
-
 hicpp-invalid-access-moved
 ==========================
 

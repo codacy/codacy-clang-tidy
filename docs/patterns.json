@@ -802,10 +802,6 @@
     "level" : "Info",
     "category" : "CodeStyle"
   }, {
-    "patternId" : "list",
-    "level" : "Info",
-    "category" : "CodeStyle"
-  }, {
     "patternId" : "llvm-header-guard",
     "level" : "Info",
     "category" : "CodeStyle"

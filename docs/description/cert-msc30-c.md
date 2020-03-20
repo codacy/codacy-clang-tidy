@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=cert-msc50-cpp.html
-
 cert-msc30-c
 ============
 

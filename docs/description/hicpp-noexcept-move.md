@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=misc-noexcept-moveconstructor.html
-
 hicpp-noexcept-move
 ===================
 

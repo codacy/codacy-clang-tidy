@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=modernize-use-override.html
-
 cppcoreguidelines-explicit-virtual-functions
 ============================================
 

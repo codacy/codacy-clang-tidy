@@ -1,6 +1,3 @@
-.. meta:: :http-equiv=refresh:
-5;URL=bugprone-undelegated-constructor.html
-
 hicpp-undelegated-constructor
 =============================
 

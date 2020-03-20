@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=misc-new-delete-overloads.html
-
 hicpp-new-delete-operators
 ==========================
 

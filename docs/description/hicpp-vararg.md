@@ -1,6 +1,3 @@
-.. meta:: :http-equiv=refresh:
-5;URL=cppcoreguidelines-pro-type-vararg.html
-
 hicpp-vararg
 ============
 

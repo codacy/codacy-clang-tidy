@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=readability-magic-numbers.html
-
 cppcoreguidelines-avoid-magic-numbers
 =====================================
 

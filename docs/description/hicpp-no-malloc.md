@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=cppcoreguidelines-no-malloc.html
-
 hicpp-no-malloc
 ===============
 

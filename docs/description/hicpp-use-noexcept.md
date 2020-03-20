@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=modernize-use-noexcept.html
-
 hicpp-use-noexcept
 ==================
 

@@ -1,4 +1,4 @@
-clang-analyzer-core.uninitialized.CapturedBlockVariable
-=======================================================
+clang-analyzer-core
+===================
 
 Check for blocks that capture uninitialized values

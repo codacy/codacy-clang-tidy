@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=modernize-use-auto.html
-
 hicpp-use-auto
 ==============
 

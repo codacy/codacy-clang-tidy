@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=google-explicit-constructor.html
-
 hicpp-explicit-conversions
 ==========================
 

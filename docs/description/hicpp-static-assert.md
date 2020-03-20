@@ -1,5 +1,3 @@
-.. meta:: :http-equiv=refresh: 5;URL=misc-static-assert.html
-
 hicpp-static-assert
 ===================
 

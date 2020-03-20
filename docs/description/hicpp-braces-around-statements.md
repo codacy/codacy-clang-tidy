@@ -1,6 +1,3 @@
-.. meta:: :http-equiv=refresh:
-5;URL=readability-braces-around-statements.html
-
 hicpp-braces-around-statements
 ==============================
 
