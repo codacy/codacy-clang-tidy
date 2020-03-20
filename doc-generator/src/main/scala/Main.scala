@@ -50,6 +50,8 @@ object Main extends App {
   def categoryFromPatternId(patternId: String): (Pattern.Category, Option[Subcategory]) = patternId match {
     case s"android-$_" => (Pattern.Category.Security, Some(Pattern.Subcategory.Android))
     case "cert-err52-cpp" => (Pattern.Category.Security, Some(Pattern.Subcategory.DoS))
+    case s"clang-analyzer-security.insecureAPI$_" => (Pattern.Category.Security, Some(Pattern.Subcategory.InsecureModulesLibraries))
+    case "clang-analyzer-security" => (Pattern.Category.Security, None)
     case "misc-unused-alias-decls" => (Pattern.Category.UnusedCode, None)
     case s"bugprone-$_" => (Pattern.Category.ErrorProne, None)
     case s"readability-$_" => (Pattern.Category.Comprehensibility, None)
@@ -64,6 +66,7 @@ object Main extends App {
       "cppcoreguidelines",
       "clang-analyzer-cplusplus",
       "clang-analyzer-core",
+      "clang-analyzer-osx",
       "hicpp",
       "misc",
       "modernize",

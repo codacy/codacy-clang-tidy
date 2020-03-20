@@ -672,51 +672,63 @@
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.UncheckedReturn",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.bcmp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.bcopy",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.bzero",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.getpw",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.gets",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.mkstemp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.mktemp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.rand",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.strcpy",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.vfork",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-unix.API",
     "level" : "Info",
