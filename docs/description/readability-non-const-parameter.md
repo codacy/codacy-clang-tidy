@@ -18,17 +18,17 @@ constness will make the function interface safer.
 
 .. code-block:: c++
 
-// warning here; the declaration "const char *p" would make the function
-// interface safer. char f1(char *p) { return \*p; }
+// warning here; the declaration \"const char *p\" would make the
+function // interface safer. char f1(char *p) { return \*p; }
 
-// no warning; the declaration could be more const “const int \* const
-p” but // that does not make the function interface safer. int f2(const
+// no warning; the declaration could be more const "const int \* const
+p" but // that does not make the function interface safer. int f2(const
 int *p) { return *p; }
 
 // no warning; making x const does not make the function interface safer
 int f3(int x) { return x; }
 
-// no warning; Technically, *p can be const ("const struct S *p"). But
-making // *p const could be misleading. People might think that it’s
+// no warning; Technically, *p can be const (\"const struct S *p\"). But
+making // *p const could be misleading. People might think that it's
 safe to pass // const data to this function. struct S { int *a; int *b;
-}; int f3(struct S *p) { \*(p-&gt;a) = 0; }
+}; int f3(struct S *p) { \*(p-\>a) = 0; }

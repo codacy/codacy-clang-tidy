@@ -6,8 +6,8 @@ should be generally avoided.
 
 .. code-block:: c++
 
-static Twine Moo = Twine(“bark”) + “bah”;
+static Twine Moo = Twine("bark") + "bah";
 
 // becomes
 
-static std::string Moo = (Twine(“bark”) + “bah”).str();
+static std::string Moo = (Twine("bark") + "bah").str();

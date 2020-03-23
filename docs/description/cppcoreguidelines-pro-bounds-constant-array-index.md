@@ -6,7 +6,7 @@ This check flags all array subscript expressions on static arrays and
 index or are out of bounds (for `std::array`). For out-of-bounds
 checking of static arrays, see the `-Warray-bounds` Clang diagnostic.
 
-This rule is part of the “Bounds safety” profile of the C++ Core
+This rule is part of the "Bounds safety" profile of the C++ Core
 Guidelines, see
 https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md\#Pro-bounds-arrayindex.
 

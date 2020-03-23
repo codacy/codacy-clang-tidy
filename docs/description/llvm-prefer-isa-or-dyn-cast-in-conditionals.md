@@ -9,15 +9,18 @@ twice.
 
 .. code-block:: c++
 
-// Finds these: if (auto x = cast<X>(y)) {} // is replaced by: if (auto
-x = dyn\_cast<X>(y)) {}
+// Finds these: if (auto x = cast`<X>`{=html}(y)) {} // is replaced by:
+if (auto x = dyn\_cast`<X>`{=html}(y)) {}
 
-if (cast<X>(y)) {} // is replaced by: if (isa<X>(y)) {}
+if (cast[<X>`{=html}(y)) {} // is replaced by: if (isa`](https://clang.llvm.org/extra/clang-tidy/checks/X){=html}(y))
+{}
 
-if (dyn\_cast<X>(y)) {} // is replaced by: if (isa<X>(y)) {}
+if (dyn\_cast`<X>`{=html}(y)) {} // is replaced by: if
+(isa`<X>`{=html}(y)) {}
 
-if (var && isa<T>(var)) {} // is replaced by: if
-(isa\_and\_nonnull<T>(var.foo())) {}
+if (var && isa`<T>`{=html}(var)) {} // is replaced by: if
+(isa\_and\_nonnull`<T>`{=html}(var.foo())) {}
 
-// Other cases are ignored, e.g.: if (auto f = cast<Z>(y)-&gt;foo()) {}
-if (cast<Z>(y)-&gt;foo()) {} if (X.cast(y)) {}
+// Other cases are ignored, e.g.: if (auto f =
+cast[<Z>`{=html}(y)->foo()) {} if (cast`](https://clang.llvm.org/extra/clang-tidy/checks/Z){=html}(y)-\>foo()) {} if
+(X.cast(y)) {}

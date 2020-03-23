@@ -18,11 +18,11 @@ All valid combinations of suffixes are supported.
 
 auto x = 1; // OK, no suffix.
 
-auto x = 1u; // warning: integer literal suffix ‘u’ is not upper-case
+auto x = 1u; // warning: integer literal suffix 'u' is not upper-case
 
 auto x = 1U; // OK, suffix is uppercase.
 
-…
+...
 
 Options
 -------
@@ -35,15 +35,15 @@ a replacement is found that is different from the current suffix, then
 the diagnostic is issued. This allows for fine-grained control of what
 suffixes to consider and what their replacements should be.
 
-Example ^^^^^^^
+Example \^\^\^\^\^\^\^
 
 Given a list `L;uL`:
 
--   `l` -&gt; `L`
+-   `l` -\> `L`
 -   `L` will be kept as is.
--   `ul` -&gt; `uL`
--   `Ul` -&gt; `uL`
--   `UL` -&gt; `uL`
+-   `ul` -\> `uL`
+-   `Ul` -\> `uL`
+-   `UL` -\> `uL`
 -   `uL` will be kept as is.
 -   `ull` will be kept as is, since it is not in the list
 -   and so on.

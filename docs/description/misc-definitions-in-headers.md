@@ -12,12 +12,12 @@ OK: extern variable.
 
 namespace N { int e = 2; // Warning: variable definition. }
 
-// Warning: variable definition. const char\* str = “foo”;
+// Warning: variable definition. const char\* str = "foo";
 
 // OK: internal linkage variable definitions are ignored for now. //
 Although these might also cause ODR violations, we can be less certain
 and // should try to keep the false-positive rate down. static int b =
-1; const int c = 1; const char\* const str2 = “foo”; constexpr int k =
+1; const int c = 1; const char\* const str2 = "foo"; constexpr int k =
 1;
 
 // Warning: function definition. int g() { return 1; }
@@ -37,16 +37,16 @@ return 1; }
 
 // OK: class static data member declaration is allowed. int A::d = 1;
 
-// OK: function template is allowed. template<typename T> T f3() { T a =
-1; return a; }
+// OK: function template is allowed. template`<typename T>`{=html} T
+f3() { T a = 1; return a; }
 
 // Warning: full specialization of a function template is not allowed.
-template &lt;&gt; int f3() { int a = 1; return a; }
+template \<\> int f3() { int a = 1; return a; }
 
-template <typename T> struct B { void f1(); };
+template `<typename T>`{=html} struct B { void f1(); };
 
 // OK: member function definition of a class template is allowed.
-template <typename T> void B<T>::f1() {}
+template [<typename T>`{=html} void B`](https://clang.llvm.org/extra/clang-tidy/checks/T){=html}::f1() {}
 
 class CE { constexpr static int i = 5; // OK: inline variable
 definition. };
@@ -62,10 +62,10 @@ Options
 .. option:: HeaderFileExtensions
 
 A comma-separated list of filename extensions of header files (the
-filename extensions should not include “.” prefix). Default is
-“h,hh,hpp,hxx”. For header files without an extension, use an empty
+filename extensions should not include "." prefix). Default is
+"h,hh,hpp,hxx". For header files without an extension, use an empty
 string (if there are no other desired extensions) or leave an empty
-element in the list. e.g., “h,hh,hpp,hxx,” (note the trailing comma).
+element in the list. e.g., "h,hh,hpp,hxx," (note the trailing comma).
 
 .. option:: UseHeaderFileExtension
 

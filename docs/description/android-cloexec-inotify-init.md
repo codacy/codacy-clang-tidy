@@ -1,7 +1,7 @@
 android-cloexec-inotify-init
 ============================
 
-The usage of `inotify_init()` is not recommended, it’s better to use
+The usage of `inotify_init()` is not recommended, it's better to use
 `inotify_init1()`.
 
 Examples:

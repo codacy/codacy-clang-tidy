@@ -6,7 +6,7 @@ kernel. If the object should be flagged, If the object should be
 flagged, the fully qualified type name must be explicitly passed to the
 check.
 
-For example, given the list of classes “Foo” and “NS::Bar”, all of the
+For example, given the list of classes "Foo" and "NS::Bar", all of the
 following will trigger the warning:
 
 .. code-block:: c++

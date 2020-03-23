@@ -13,11 +13,12 @@ For example, the following code erases only one element:
 
 .. code-block:: c++
 
-std::vector<int> xs; … xs.erase(std::remove(xs.begin(), xs.end(), 10));
+std::vector`<int>`{=html} xs; ... xs.erase(std::remove(xs.begin(),
+xs.end(), 10));
 
 Call the two-argument overload of `erase()` to remove the subrange:
 
 .. code-block:: c++
 
-std::vector<int> xs; … xs.erase(std::remove(xs.begin(), xs.end(), 10),
-xs.end());
+std::vector`<int>`{=html} xs; ... xs.erase(std::remove(xs.begin(),
+xs.end(), 10), xs.end());

@@ -26,10 +26,10 @@ The following function `k` contains a redundant `continue` statement:
 
 .. code-block:: c++
 
-void k() { for (int i = 0; i &lt; 10; ++i) { continue; } }
+void k() { for (int i = 0; i \< 10; ++i) { continue; } }
 
 becomes
 
 .. code-block:: c++
 
-void k() { for (int i = 0; i &lt; 10; ++i) { } }
+void k() { for (int i = 0; i \< 10; ++i) { } }

@@ -25,4 +25,4 @@ changed in the body:
 
 .. code-block:: c++
 
-int i = 0, j = 0; while (i &lt; 10) { ++j; }
+int i = 0, j = 0; while (i \< 10) { ++j; }

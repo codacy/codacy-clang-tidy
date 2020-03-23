@@ -39,8 +39,8 @@ as it directly references parameter names in its body. Example:
 
 .. code-block:: c++
 
-void foo(int a); // warning and fix-it hint (replace “a” to “b”) int
-foo(int b) { return b + 2; } // definition with use of “b”
+void foo(int a); // warning and fix-it hint (replace "a" to "b") int
+foo(int b) { return b + 2; } // definition with use of "b"
 
 In the case of multiple redeclarations or function template
 specializations, a warning is issued for every redeclaration or

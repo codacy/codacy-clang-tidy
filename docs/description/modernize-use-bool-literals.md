@@ -5,7 +5,7 @@ Finds integer literals which are cast to `bool`.
 
 .. code-block:: c++
 
-bool p = 1; bool f = static\_cast<bool>(1);
+bool p = 1; bool f = static\_cast`<bool>`{=html}(1);
 std::ios\_base::sync\_with\_stdio(0); bool x = p ? 1 : 0;
 
 // transforms to

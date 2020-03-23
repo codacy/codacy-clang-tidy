@@ -13,8 +13,9 @@ like this `\0x42` where the `\0` stands for the NUL character.
 
 .. code-block:: c++
 
-const char\* Example\[\] = “Invalid character: \\0x12 should be ”; const
-char\* Bytes\[\] = “\\0x02\\0x01\\0x00\\0xFF\\0xFF\\0xFF”;
+const char\* Example\[\] = "Invalid character: \\0x12 should be
+`\x12`{=tex}"; const char\* Bytes\[\] =
+"`\x03`{=tex}\\0x02\\0x01\\0x00\\0xFF\\0xFF\\0xFF";
 
 Truncated literal
 -----------------
@@ -29,6 +30,6 @@ the first NUL character are truncated.
 
 .. code-block:: c++
 
-std::string str(“abc\\0def”); // “def” is truncated str += “\\0”; //
-This statement is doing nothing if (str == “\\0abc”) return; // This
+std::string str("abc\\0def"); // "def" is truncated str += "\\0"; //
+This statement is doing nothing if (str == "\\0abc") return; // This
 expression is always true

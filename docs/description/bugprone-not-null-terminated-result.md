@@ -42,7 +42,7 @@ allocations.
 
 .. \_MemcpyTransformation:
 
-Transformation rules of ‘memcpy()’
+Transformation rules of 'memcpy()'
 ----------------------------------
 
 It is possible to rewrite the `memcpy()` and `memcpy_s()` calls as the
@@ -52,7 +52,7 @@ two. It rewrites the `wchar_t` based memory handler functions
 respectively.
 
 Rewrite based on the destination array
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
 
 -   If copy to the destination array cannot overflow \[1\] the new
     function should be the older copy function (ending with `cpy`),
@@ -73,34 +73,35 @@ Rewrite based on the destination array
 
 \[1\] It is possible to overflow: - If the capacity of the destination
 array is unknown. - If the given length is equal to the destination
-array’s capacity.
+array's capacity.
 
 Rewrite based on the length of the source string
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
 
 -   If the given length is `strlen(source)` or equal length of this
     expression then the new function should be the older copy function
     (ending with `cpy`), as it is more efficient than the safe version
     (ending with `cpy_s`).
 
--   Otherwise we assume that the programmer wanted to copy ‘N’
-    characters, so the new function is `ncpy`-like which copies ‘N’
+-   Otherwise we assume that the programmer wanted to copy 'N'
+    characters, so the new function is `ncpy`-like which copies 'N'
     characters.
 
-Transformations with ‘strlen()’ or equal length of this expression
+Transformations with 'strlen()' or equal length of this expression
 ------------------------------------------------------------------
 
 It transforms the `wchar_t` based memory and string handler functions
 respectively (where only `strerror_s` does not have `wchar_t` based
 alias).
 
-Memory handler functions ^^^^^^^^^^^^^^^^^^^^^^^^
+Memory handler functions
+\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
 
 `memcpy` Please visit the
 :ref:[Transformation rules of 'memcpy()'](https://clang.llvm.org/extra/clang-tidy/checks/MemcpyTransformation) section.
 
 `memchr` Usually there is a C-style cast and it is needed to be removed,
-because the new function `strchr`’s return type is correct. The given
+because the new function `strchr`'s return type is correct. The given
 length is going to be removed.
 
 `memmove` If safe functions are available the new function is
@@ -111,11 +112,12 @@ length is incremented by one.
 
 `memmove_s` The given length is incremented by one.
 
-String handler functions ^^^^^^^^^^^^^^^^^^^^^^^^
+String handler functions
+\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
 
 `strerror_s` The given length is incremented by one.
 
-`strncmp` If the third argument is the first or the second argument’s
+`strncmp` If the third argument is the first or the second argument's
 `length + 1` it has to be truncated without the `+ 1` operation.
 
 `strxfrm` The given length is incremented by one.
@@ -126,6 +128,6 @@ Options
 .. option:: WantToUseSafeFunctions
 
 An integer non-zero value specifying if the target environment is
-considered to implement ’\_s’ suffixed memory and string handler
-functions which are safer than older versions (e.g. ‘memcpy\_s()’). The
+considered to implement '\_s' suffixed memory and string handler
+functions which are safer than older versions (e.g. 'memcpy\_s()'). The
 default value is `1`.

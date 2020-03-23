@@ -7,9 +7,10 @@ them to use the appropriate boolean expression directly.
 Examples:
 
 =========================================== ================ Initial
-expression Result ——————————————- —————- `if (b == true)` `if (b)`
-`if (b == false)` `if (!b)` `if (b && true)` `if (b)` `if (b && false)`
-`if (false)` `if (b || true)` `if (true)` `if (b || false)` `if (b)`
+expression Result -------------------------------------------
+---------------- `if (b == true)` `if (b)` `if (b == false)` `if (!b)`
+`if (b && true)` `if (b)` `if (b && false)` `if (false)`
+`if (b || true)` `if (true)` `if (b || false)` `if (b)`
 `e ? true : false` `e` `e ? false : true` `!e`
 `if (true) t(); else f();` `t();` `if (false) t(); else f();` `f();`
 `if (e) return true; else return false;` `return e;`
@@ -34,16 +35,16 @@ integral types to `bool` are replaced with explicit comparisons to `0`.
 Examples: 1. The ternary assignment `bool b = (i < 0) ? true : false;`
 has redundant parentheses and becomes `bool b = i < 0;`.
 
-1.  The conditional return `if (!b) return false; return true;` has an
+2.  The conditional return `if (!b) return false; return true;` has an
     implied double negation and becomes `return b;`.
 
-2.  The conditional return `if (i < 0) return false; return true;`
+3.  The conditional return `if (i < 0) return false; return true;`
     becomes `return i >= 0;`.
 
     The conditional return `if (i != 0) return false; return true;`
     becomes `return i == 0;`.
 
-3.  The conditional return `if (p) return true; return false;` has an
+4.  The conditional return `if (p) return true; return false;` has an
     implicit conversion of a pointer to `bool` and becomes
     `return p != nullptr;`.
 
@@ -51,11 +52,11 @@ has redundant parentheses and becomes `bool b = i < 0;`.
     implicit conversion of `i & 1` to `bool` and becomes
     `bool b = (i & 1) != 0;`.
 
-4.  The conditional return `if (i & 1) return true; else return false;`
+5.  The conditional return `if (i & 1) return true; else return false;`
     has an implicit conversion of an integer quantity `i & 1` to `bool`
     and becomes `return (i & 1) != 0;`
 
-5.  Given `struct X { explicit operator bool(); };`, and an instance `x`
+6.  Given `struct X { explicit operator bool(); };`, and an instance `x`
     of `struct X`, the conditional return
     `if (x) return true; return false;` becomes
     `return static_cast<bool>(x);`

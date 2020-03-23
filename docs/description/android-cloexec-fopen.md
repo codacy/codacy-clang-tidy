@@ -8,8 +8,8 @@ Examples:
 
 .. code-block:: c++
 
-fopen(“fn”, “r”);
+fopen("fn", "r");
 
 // becomes
 
-fopen(“fn”, “re”);
+fopen("fn", "re");

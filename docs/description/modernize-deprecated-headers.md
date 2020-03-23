@@ -8,7 +8,7 @@ refer to the C++ 14 Standard \[depr.c.headers\] section.
 This check replaces C standard library headers with their C++
 alternatives and removes redundant ones.
 
-Improtant note: the Standard doesn’t guarantee that the C++ headers
+Improtant note: the Standard doesn't guarantee that the C++ headers
 declare all the same functions in the global namespace. The check in its
 current form can break the code that uses library symbols from the
 global namespace.
@@ -38,10 +38,10 @@ global namespace.
 -   `<wctype.h>`
 
 If the specified standard is older than C++11 the check will only
-replace headers deprecated before C++11, otherwise – every header that
+replace headers deprecated before C++11, otherwise -- every header that
 appeared in the previous list.
 
-These headers don’t have effect in C++:
+These headers don't have effect in C++:
 
 -   `<iso646.h>`
 -   `<stdalign.h>`

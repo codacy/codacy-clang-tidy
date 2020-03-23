@@ -7,7 +7,7 @@ For example:
 
 .. code-block:: c++
 
-std::vector<int>::iterator I = my\_container.begin();
+std::vector`<int>`{=html}::iterator I = my\_container.begin();
 
 // transforms to:
 
@@ -27,7 +27,7 @@ int val = 42; InfoStruct &I = SomeObject.getInfo();
 
 auto val = 42; auto &I = SomeObject.getInfo();
 
-In this example using `auto` for builtins doesn’t improve readability.
+In this example using `auto` for builtins doesn't improve readability.
 In other situations it makes the code less self-documenting impairing
 readability and maintainability. As a result, `auto` is used only
 introduced in specific situations described below.
@@ -42,7 +42,7 @@ meaning of code while improving readability and maintainability.
 
 .. code-block:: c++
 
-for (std::vector<int>::iterator I = my\_container.begin(), E =
+for (std::vector`<int>`{=html}::iterator I = my\_container.begin(), E =
 my\_container.end(); I != E; ++I) { }
 
 // becomes
@@ -90,18 +90,18 @@ following conditions are satisfied:
 .. code-block:: c++
 
 // The following direct uses of iterator types will be transformed.
-std::vector<int>::iterator I = MyVec.begin(); { using namespace std;
-list<int>::iterator I = MyList.begin(); }
+std::vector`<int>`{=html}::iterator I = MyVec.begin(); { using namespace
+std; list`<int>`{=html}::iterator I = MyList.begin(); }
 
-// The type specifier for J would transform to auto since it’s a typedef
-// to a standard iterator type. typedef std::map&lt;int,
-std::string&gt;::const\_iterator map\_iterator; map\_iterator J =
+// The type specifier for J would transform to auto since it's a typedef
+// to a standard iterator type. typedef std::map\<int,
+std::string\>::const\_iterator map\_iterator; map\_iterator J =
 MyMap.begin();
 
 // The following implementation-specific iterator type for which //
-std::vector<int>::iterator could be a typedef would not be transformed.
-\_\_gnu\_cxx::\_\_normal\_iterator&lt;int\*, std::vector&gt; K =
-MyVec.begin();
+std::vector`<int>`{=html}::iterator could be a typedef would not be
+transformed. \_\_gnu\_cxx::\_\_normal\_iterator\<int\*, std::vector\> K
+= MyVec.begin();
 
 -   The initializer for the variable being declared is not a braced
     initializer list. Otherwise, use of `auto` would cause the type of
@@ -152,11 +152,11 @@ expression. In this cases, the declaration type can be replaced with
 
 .. code-block:: c++
 
-TypeName \*my\_pointer = static\_cast<TypeName>(my\_param);
+TypeName \*my\_pointer = static\_cast`<TypeName>`{=html}(my\_param);
 
 // becomes
 
-auto \*my\_pointer = static\_cast<TypeName>(my\_param);
+auto \*my\_pointer = static\_cast`<TypeName>`{=html}(my\_param);
 
 The check handles `static_cast`, `dynamic_cast`, `const_cast`,
 `reinterpret_cast`, functional casts, C-style casts and function
@@ -191,27 +191,28 @@ as a part of the type name.
 
 // MinTypeNameLength = 0, RemoveStars=0
 
-int a = static\_cast<int>(foo()); // —&gt; auto a = … // length(bool *)
-= 4 bool *b = new bool; // —&gt; auto \*b = … unsigned c =
-static\_cast<unsigned>(foo()); // —&gt; auto c = …
+int a = static\_cast`<int>`{=html}(foo()); // ---\> auto a = ... //
+length(bool *) = 4 bool *b = new bool; // ---\> auto \*b = ... unsigned
+c = static\_cast`<unsigned>`{=html}(foo()); // ---\> auto c = ...
 
 // MinTypeNameLength = 5, RemoveStars=0
 
-int a = static\_cast<int>(foo()); // —&gt; int a = … bool b =
-static\_cast<bool>(foo()); // —&gt; bool b = … bool *pb =
-static\_cast&lt;bool*&gt;(foo()); // —&gt; bool \*pb = … unsigned c =
-static\_cast<unsigned>(foo()); // —&gt; auto c = … // length(long
-<on-or-more-spaces> int) = 8 long int d = static\_cast<long int>(foo());
-// —&gt; auto d = …
+int a = static\_cast`<int>`{=html}(foo()); // ---\> int a = ... bool b =
+static\_cast`<bool>`{=html}(foo()); // ---\> bool b = ... bool *pb =
+static\_cast\<bool*\>(foo()); // ---\> bool \*pb = ... unsigned c =
+static\_cast`<unsigned>`{=html}(foo()); // ---\> auto c = ... //
+length(long `<on-or-more-spaces>`{=html} int) = 8 long int d =
+static\_cast`<long int>`{=html}(foo()); // ---\> auto d = ...
 
 // MinTypeNameLength = 5, RemoveStars=1
 
-int a = static\_cast<int>(foo()); // —&gt; int a = … // length(int \* \*
-) = 5 int **pa = static\_cast&lt;int**&gt;(foo()); // —&gt; auto pa = …
-bool b = static\_cast<bool>(foo()); // —&gt; bool b = … bool *pb =
-static\_cast&lt;bool*&gt;(foo()); // —&gt; auto pb = … unsigned c =
-static\_cast<unsigned>(foo()); // —&gt; auto c = … long int d =
-static\_cast<long int>(foo()); // —&gt; auto d = …
+int a = static\_cast`<int>`{=html}(foo()); // ---\> int a = ... //
+length(int \* \* ) = 5 int **pa = static\_cast\<int**\>(foo()); // ---\>
+auto pa = ... bool b = static\_cast`<bool>`{=html}(foo()); // ---\> bool
+b = ... bool *pb = static\_cast\<bool*\>(foo()); // ---\> auto pb = ...
+unsigned c = static\_cast`<unsigned>`{=html}(foo()); // ---\> auto c =
+... long int d = static\_cast`<long int>`{=html}(foo()); // ---\> auto d
+= ...
 
 .. option:: RemoveStars
 

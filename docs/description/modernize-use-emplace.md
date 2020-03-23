@@ -5,8 +5,8 @@ The check flags insertions to an STL-style container done by calling the
 `push_back` method with an explicitly-constructed temporary of the
 container element type. In this case, the corresponding `emplace_back`
 method results in less verbose and potentially more efficient code.
-Right now the check doesn’t support `push_front` and `insert`. It also
-doesn’t support `insert` functions for associative containers because
+Right now the check doesn't support `push_front` and `insert`. It also
+doesn't support `insert` functions for associative containers because
 replacing `insert` with `emplace` may result in
 [speed regression](https://htmlpreview.github.io/?https://github.com/HowardHinnant/papers/blob/master/insert_vs_emplace.html),
 but it might get support with some addition flag in the future.
@@ -61,8 +61,8 @@ After:
     std::vector<boost::optional<std::string> > v;
     v.emplace_back("abc");
 
-In some cases the transformation would be valid, but the code wouldn’t
-be exception safe. In this case the calls of `push_back` won’t be
+In some cases the transformation would be valid, but the code wouldn't
+be exception safe. In this case the calls of `push_back` won't be
 replaced.
 
 .. code-block:: c++
@@ -76,17 +76,17 @@ This is because replacing it with `emplace_back` could cause a leak of
 this pointer if `emplace_back` would throw exception before emplacement
 (e.g. not enough memory to add a new element).
 
-For more info read item 42 - “Consider emplacement instead of
-insertion.” of Scott Meyers “Effective Modern C++”.
+For more info read item 42 - "Consider emplacement instead of
+insertion." of Scott Meyers "Effective Modern C++".
 
 The default smart pointers that are considered are `std::unique_ptr`,
 `std::shared_ptr`, `std::auto_ptr`. To specify other smart pointers or
 other classes use the :option:`SmartPointers` option.
 
-Check also doesn’t fire if any argument of the constructor call would
+Check also doesn't fire if any argument of the constructor call would
 be:
 
--   a bit-field (bit-fields can’t bind to rvalue/universal reference)
+-   a bit-field (bit-fields can't bind to rvalue/universal reference)
 
 -   a `new` expression (to avoid leak)
 
@@ -128,19 +128,19 @@ Semicolon-separated list of class names of custom smart pointers.
     function calls will be removed from ``push_back`` calls and turned into
     ``emplace_back``.
 
-Example ^^^^^^^
+Example \^\^\^\^\^\^\^
 
 .. code-block:: c++
 
-std::vector&lt;MyTuple&lt;int, bool, char&gt;&gt; x;
-x.push\_back(MakeMyTuple(1, false, ‘x’));
+std::vector\<MyTuple\<int, bool, char\>\> x; x.push\_back(MakeMyTuple(1,
+false, 'x'));
 
 transforms to:
 
 .. code-block:: c++
 
-std::vector&lt;MyTuple&lt;int, bool, char&gt;&gt; x; x.emplace\_back(1,
-false, ‘x’);
+std::vector\<MyTuple\<int, bool, char\>\> x; x.emplace\_back(1, false,
+'x');
 
 when :option:`TupleTypes` is set to `MyTuple` and
 :option:`TupleMakeFunctions` is set to `MakeMyTuple`.

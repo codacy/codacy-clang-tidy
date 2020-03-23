@@ -9,8 +9,9 @@ Example:
 
 .. code-block:: c++
 
-void FancyFunction() { \[\] { printf(“Called from %s”, **func**); }();
-\[\] { printf(“Now called from %s”, **FUNCTION**); }(); }
+void FancyFunction() { \[\] { printf("Called from %s`\n`{=tex}",
+**func**); }(); \[\] { printf("Now called from %s`\n`{=tex}",
+**FUNCTION**); }(); }
 
 Output::
 

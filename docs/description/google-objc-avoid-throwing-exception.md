@@ -16,16 +16,16 @@ A counterexample:
 
 .. code-block:: objc
 
--   (void)readFile { if (\[self isError\]) { @throw \[NSException
-    exceptionWithName:...\]; } }
+-   (void)readFile { if (\[self isError\]) { @throw [NSException
+    exceptionWithName:...]; } }
 
 Instead, returning an error via `NSError **` is preferred:
 
 .. code-block:: objc
 
 -   (BOOL)readFileWithError:(NSError \*\*)error { if (\[self isError\])
-    { \*error = \[NSError errorWithDomain:…\]; return NO; } return YES;
-    }
+    { \*error = \[NSError errorWithDomain:...\]; return NO; } return
+    YES; }
 
 The corresponding style guide rule:
 https://google.github.io/styleguide/objcguide.html\#avoid-throwing-exceptions

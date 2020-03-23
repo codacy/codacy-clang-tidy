@@ -4,7 +4,7 @@ cppcoreguidelines-interfaces-global-init
 This check flags initializers of globals that access extern objects, and
 therefore can lead to order-of-initialization problems.
 
-This rule is part of the “Interfaces” profile of the C++ Core
+This rule is part of the "Interfaces" profile of the C++ Core
 Guidelines, see
 https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md\#Ri-global-init
 

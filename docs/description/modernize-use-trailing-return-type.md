@@ -18,8 +18,8 @@ transforms to:
 
 .. code-block:: c++
 
-auto f1() -&gt; int; inline auto f2(int arg) -&gt; int noexcept; virtual
-auto f3() const && -&gt; float = delete;
+auto f1() -\> int; inline auto f2(int arg) -\> int noexcept; virtual
+auto f3() const && -\> float = delete;
 
 Known Limitations
 -----------------
@@ -48,9 +48,9 @@ a careless rewrite would produce the following output:
 
 .. code-block:: c++
 
-struct Object { long long value; }; auto f(unsigned Object) -&gt; Object
-{ return {Object \* 2}; } // error class CC { int Object; auto m() -&gt;
-struct Object; }; auto CC::m() -&gt; Object { return {0}; } // error
+struct Object { long long value; }; auto f(unsigned Object) -\> Object {
+return {Object \* 2}; } // error class CC { int Object; auto m() -\>
+struct Object; }; auto CC::m() -\> Object { return {0}; } // error
 
 This code fails to compile because the Object in the context of f refers
 to the equally named function parameter. Similarly, the Object in the

@@ -11,11 +11,11 @@ Examples:
 
 .. code-block:: c++
 
-std::string s = absl::StrCat(“A”, absl::StrCat(“B”, absl::StrCat(“C”,
-“D”))); //before
+std::string s = absl::StrCat("A", absl::StrCat("B", absl::StrCat("C",
+"D"))); //before
 
-std::string s = absl::StrCat(“A”, “B”, “C”, “D”); //after
+std::string s = absl::StrCat("A", "B", "C", "D"); //after
 
-absl::StrAppend(&s, absl::StrCat(“E”, “F”, “G”)); //before
+absl::StrAppend(&s, absl::StrCat("E", "F", "G")); //before
 
-absl::StrAppend(&s, “E”, “F”, “G”); //after
+absl::StrAppend(&s, "E", "F", "G"); //after

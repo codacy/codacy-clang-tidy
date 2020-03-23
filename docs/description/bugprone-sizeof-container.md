@@ -12,7 +12,7 @@ Examples:
 
 .. code-block:: c++
 
-std::string s; int a = 47 + sizeof(s); // warning: sizeof() doesn’t
+std::string s; int a = 47 + sizeof(s); // warning: sizeof() doesn't
 return the size of the container. Did you mean .size()?
 
 int b = sizeof(std::string); // no warning, probably intended.
@@ -20,5 +20,5 @@ int b = sizeof(std::string); // no warning, probably intended.
 std::string array\_of\_strings\[10\]; int c = sizeof(array\_of\_strings)
 / sizeof(array\_of\_strings\[0\]); // no warning, definitely intended.
 
-std::array&lt;int, 3&gt; std\_array; int d = sizeof(std\_array); // no
+std::array\<int, 3\> std\_array; int d = sizeof(std\_array); // no
 warning, probably intended.

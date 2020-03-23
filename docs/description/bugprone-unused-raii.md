@@ -19,9 +19,9 @@ this check:
     of this.
 
 -   Ignore types with trivial destructors. They are very unlikely to be
-    RAII objects and there’s no difference when they are deleted.
+    RAII objects and there's no difference when they are deleted.
 
--   Ignore objects at the end of a compound statement (doesn’t change
+-   Ignore objects at the end of a compound statement (doesn't change
     behavior).
 
 -   Ignore objects returned from a call.

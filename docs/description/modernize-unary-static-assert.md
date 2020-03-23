@@ -11,10 +11,10 @@ The following code:
 
 .. code-block:: c++
 
-void f\_textless(int a) { static\_assert(sizeof(a) &lt;= 10, ""); }
+void f\_textless(int a) { static\_assert(sizeof(a) \<= 10, \"\"); }
 
 is replaced by:
 
 .. code-block:: c++
 
-void f\_textless(int a) { static\_assert(sizeof(a) &lt;= 10); }
+void f\_textless(int a) { static\_assert(sizeof(a) \<= 10); }

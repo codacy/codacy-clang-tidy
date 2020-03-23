@@ -13,6 +13,6 @@ means to perform the first of the following that is possible: a
 a `const_cast`. This rule bans `(T)expression` only when used to perform
 an unsafe cast.
 
-This rule is part of the “Type safety” profile of the C++ Core
+This rule is part of the "Type safety" profile of the C++ Core
 Guidelines, see
 https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md\#Pro-type-cstylecast.

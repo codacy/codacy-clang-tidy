@@ -9,13 +9,13 @@ Examples:
 .. code-block:: c++
 
 // Original - Cast from a double to an integer absl::Duration d; int i =
-static\_cast<int>(absl::ToDoubleSeconds(d));
+static\_cast`<int>`{=html}(absl::ToDoubleSeconds(d));
 
 // Suggested - Use the integer conversion function directly. int i =
 absl::ToInt64Seconds(d);
 
 // Original - Cast from a double to an integer absl::Duration d; double
-x = static\_cast<double>(absl::ToInt64Seconds(d));
+x = static\_cast`<double>`{=html}(absl::ToInt64Seconds(d));
 
 // Suggested - Use the integer conversion function directly. double x =
 absl::ToDoubleSeconds(d);

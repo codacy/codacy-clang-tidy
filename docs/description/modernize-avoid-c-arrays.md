@@ -15,33 +15,33 @@ therefore not emitted right now.
 .. code:: c++
 
 int a\[\] = {1, 2}; // warning: do not declare C-style arrays, use
-std::array&lt;&gt; instead
+std::array\<\> instead
 
 int b\[1\]; // warning: do not declare C-style arrays, use
-std::array&lt;&gt; instead
+std::array\<\> instead
 
 void foo() { int c\[b\[0\]\]; // warning: do not declare C VLA arrays,
-use std::vector&lt;&gt; instead }
+use std::vector\<\> instead }
 
-template &lt;typename T, int Size&gt; class array { T d\[Size\]; //
-warning: do not declare C-style arrays, use std::array&lt;&gt; instead
+template \<typename T, int Size\> class array { T d\[Size\]; // warning:
+do not declare C-style arrays, use std::array\<\> instead
 
     int e[1]; // warning: do not declare C-style arrays, use std::array<> instead
 
 };
 
-array&lt;int\[4\], 2&gt; d; // warning: do not declare C-style arrays,
-use std::array&lt;&gt; instead
+array\<int\[4\], 2\> d; // warning: do not declare C-style arrays, use
+std::array\<\> instead
 
 using k = int\[4\]; // warning: do not declare C-style arrays, use
-std::array&lt;&gt; instead
+std::array\<\> instead
 
 However, the `extern "C"` code is ignored, since it is common to share
 such headers between C code, and C++ code.
 
 .. code:: c++
 
-// Some header extern “C” {
+// Some header extern "C" {
 
 int f\[\] = {1, 2}; // not diagnosed
 

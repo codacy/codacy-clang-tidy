@@ -14,4 +14,4 @@ socket(domain, type, SOCK\_STREAM);
 
 // becomes
 
-socket(domain, type, SOCK\_STREAM | SOCK\_CLOEXEC);
+socket(domain, type, SOCK\_STREAM \| SOCK\_CLOEXEC);

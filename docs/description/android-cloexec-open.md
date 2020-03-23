@@ -12,10 +12,10 @@ Examples:
 
 .. code-block:: c++
 
-open(“filename”, O\_RDWR); open64(“filename”, O\_RDWR); openat(0,
-“filename”, O\_RDWR);
+open("filename", O\_RDWR); open64("filename", O\_RDWR); openat(0,
+"filename", O\_RDWR);
 
 // becomes
 
-open(“filename”, O\_RDWR | O\_CLOEXEC); open64(“filename”, O\_RDWR |
-O\_CLOEXEC); openat(0, “filename”, O\_RDWR | O\_CLOEXEC);
+open("filename", O\_RDWR \| O\_CLOEXEC); open64("filename", O\_RDWR \|
+O\_CLOEXEC); openat(0, "filename", O\_RDWR \| O\_CLOEXEC);

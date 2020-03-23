@@ -1,7 +1,7 @@
 bugprone-copy-constructor-init
 ==============================
 
-Finds copy constructors where the constructor doesn’t call the copy
+Finds copy constructors where the constructor doesn't call the copy
 constructor of the base class.
 
 .. code-block:: c++
@@ -16,7 +16,7 @@ constructor of the base class.
     };
 
 Also finds copy constructors where the constructor of the base class
-don’t have parameter.
+don't have parameter.
 
 .. code-block:: c++
 

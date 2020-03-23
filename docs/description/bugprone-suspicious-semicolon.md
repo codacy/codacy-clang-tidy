@@ -57,7 +57,7 @@ Either remove the indentation from the second line:
     while (readWhitespace());
     Token t = readNextToken();
 
-… or move the semicolon from the end of the first line to a new line:
+... or move the semicolon from the end of the first line to a new line:
 
 .. code-block:: c++
 

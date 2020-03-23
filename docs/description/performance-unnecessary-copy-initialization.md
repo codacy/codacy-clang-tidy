@@ -21,7 +21,7 @@ constReference(); }
 
 struct Foo { const string& name() const; }; void Function(const Foo&
 foo) { // The warning will suggest making this a const reference. string
-UnnecessaryCopy1 = foo.name(); UnnecessaryCopy1.find(“bar”);
+UnnecessaryCopy1 = foo.name(); UnnecessaryCopy1.find("bar");
 
     // The warning will suggest making this a const reference.
     string UnnecessaryCopy2 = UnnecessaryCopy1;

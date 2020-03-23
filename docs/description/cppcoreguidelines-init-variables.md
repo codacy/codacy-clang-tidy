@@ -23,7 +23,7 @@ Would be rewritten to look like this:
 
 .. code-block:: c++
 
-\#include &lt;math.h&gt;
+\#include \<math.h\>
 
 void function() { int x = 0; char \*txt = nullptr; double d = NAN;
 

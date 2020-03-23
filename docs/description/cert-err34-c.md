@@ -8,7 +8,7 @@ conversion functions that do perform better error checking.
 
 .. code-block:: c
 
-\#include &lt;stdlib.h&gt;
+\#include \<stdlib.h\>
 
 void func(const char \*buff) { int si;
 

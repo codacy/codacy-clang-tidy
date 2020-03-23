@@ -48,7 +48,7 @@ object Main extends App {
       linesSeq = file.lines.toSeq
       content = linesSeq.dropWhile(isNotSeparator)
       toCovert = (patternId +: content).mkString(System.lineSeparator)
-      converted = (Seq("pandoc", "-t", "markdown_strict") #< toInputStream(toCovert)).!!
+      converted = (Seq("pandoc", "-t", "markdown") #< toInputStream(toCovert)).!!
       withPrettyLinks = prettifyLinks(converted)
     } yield (patternId, withPrettyLinks)
     iterator.toSeq

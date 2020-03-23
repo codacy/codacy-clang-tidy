@@ -17,4 +17,4 @@ Suggested replacement:
 
 .. code-block:: c++
 
-pipe2(pipefd, O\_NONBLOCK | O\_CLOEXEC);
+pipe2(pipefd, O\_NONBLOCK \| O\_CLOEXEC);

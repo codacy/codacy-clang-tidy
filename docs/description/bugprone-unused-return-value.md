@@ -17,13 +17,13 @@ This means that the calls to following functions are checked by default:
     synchronous.
 -   `std::launder()`. Not using the return value usually means that the
     function interface was misunderstood by the programmer. Only the
-    returned pointer is “laundered”, not the argument.
+    returned pointer is "laundered", not the argument.
 -   `std::remove()`, `std::remove_if()` and `std::unique()`. The
     returned iterator indicates the boundary between elements to keep
     and elements to be removed. Not using the return value means that
     the information about which elements to remove is lost.
 -   `std::unique_ptr::release()`. Not using the return value can lead to
-    resource leaks if the same pointer isn’t stored anywhere else.
+    resource leaks if the same pointer isn't stored anywhere else.
     Often, ignoring the `release()` return value indicates that the
     programmer confused the function with `reset()`.
 -   `std::basic_string::empty()` and `std::vector::empty()`. Not using

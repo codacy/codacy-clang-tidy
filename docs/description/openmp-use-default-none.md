@@ -2,7 +2,7 @@ openmp-use-default-none
 =======================
 
 Finds OpenMP directives that are allowed to contain a `default` clause,
-but either don’t specify it or the clause is specified but with the kind
+but either don't specify it or the clause is specified but with the kind
 other than `none`, and suggests to use the `default(none)` clause.
 
 Using `default(none)` clause forces developers to explicitly specify
@@ -17,7 +17,7 @@ Example
 .. code-block:: c++
 
 // `for` directive can not have `default` clause, no diagnostics. void
-n0(const int a) { \#pragma omp for for (int b = 0; b &lt; a; b++) ; }
+n0(const int a) { \#pragma omp for for (int b = 0; b \< a; b++) ; }
 
 // `parallel` directive.
 

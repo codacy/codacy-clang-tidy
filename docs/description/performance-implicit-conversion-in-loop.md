@@ -10,10 +10,10 @@ Example:
 
 .. code-block:: c++
 
-map&lt;int, vector<string>&gt; my\_map; for (const pair&lt;int,
-vector<string>&gt;& p : my\_map) {} // The iterator type is in fact
-pair&lt;const int, vector<string>&gt;, which means // that the compiler
-added a conversion, resulting in a copy of the vectors.
+map\<int, vector`<string>`{=html}\> my\_map; for (const pair\<int,
+vector`<string>`{=html}\>& p : my\_map) {} // The iterator type is in
+fact pair\<const int, vector`<string>`{=html}\>, which means // that the
+compiler added a conversion, resulting in a copy of the vectors.
 
 The easiest solution is usually to use `const auto&` instead of writing
 the type manually.

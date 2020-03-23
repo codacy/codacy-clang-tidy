@@ -22,16 +22,16 @@ These should be replaced with `C/C++` looping constructs.
 // Bad, handwritten for loop. int i = 0; // Jump label for the loop
 loop\_start: do\_some\_operation();
 
-if (i &lt; 100) { ++i; goto loop\_start; }
+if (i \< 100) { ++i; goto loop\_start; }
 
-// Better for(int i = 0; i &lt; 100; ++i) do\_some\_operation();
+// Better for(int i = 0; i \< 100; ++i) do\_some\_operation();
 
 Modern C++ needs `goto` only to jump out of nested loops.
 
 .. code-block:: c++
 
-for(int i = 0; i &lt; 100; ++i) { for(int j = 0; j &lt; 100; ++j) { if
-(i \* j &gt; 500) goto early\_exit; } }
+for(int i = 0; i \< 100; ++i) { for(int j = 0; j \< 100; ++j) { if (i \*
+j \> 500) goto early\_exit; } }
 
 early\_exit: some\_operation();
 

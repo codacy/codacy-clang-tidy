@@ -2,7 +2,7 @@ google-objc-global-variable-declaration
 =======================================
 
 Finds global variable declarations in Objective-C files that do not
-follow the pattern of variable names in Google’s Objective-C Style
+follow the pattern of variable names in Google's Objective-C Style
 Guide.
 
 The corresponding style guide rule:
@@ -17,31 +17,31 @@ For code:
 
 .. code-block:: objc
 
-static NSString\* myString = @“hello”;
+static NSString\* myString = @"hello";
 
 The fix will be:
 
 .. code-block:: objc
 
-static NSString\* gMyString = @“hello”;
+static NSString\* gMyString = @"hello";
 
 Another example of constant:
 
 .. code-block:: objc
 
-static NSString\* const myConstString = @“hello”;
+static NSString\* const myConstString = @"hello";
 
 The fix will be:
 
 .. code-block:: objc
 
-static NSString\* const kMyConstString = @“hello”;
+static NSString\* const kMyConstString = @"hello";
 
 However for code that prefixed with non-alphabetical characters like:
 
 .. code-block:: objc
 
-static NSString\* \_\_anotherString = @“world”;
+static NSString\* \_\_anotherString = @"world";
 
 The check will give a warning message but will not be able to suggest a
 fix. The user need to fix it on his own.

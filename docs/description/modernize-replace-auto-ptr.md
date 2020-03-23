@@ -10,12 +10,12 @@ Migration example:
 
 .. code-block:: c++
 
--void take\_ownership\_fn(std::auto\_ptr<int> int\_ptr); +void
-take\_ownership\_fn(std::unique\_ptr<int> int\_ptr);
+-void take\_ownership\_fn(std::auto\_ptr`<int>`{=html} int\_ptr); +void
+take\_ownership\_fn(std::unique\_ptr`<int>`{=html} int\_ptr);
 
-void f(int x) { - std::auto\_ptr<int> a(new int(x)); -
-std::auto\_ptr<int> b; + std::unique\_ptr<int> a(new int(x)); +
-std::unique\_ptr<int> b;
+void f(int x) { - std::auto\_ptr`<int>`{=html} a(new int(x)); -
+std::auto\_ptr[<int>`{=html} b; + std::unique_ptr`](https://clang.llvm.org/extra/clang-tidy/checks/int){=html} a(new
+int(x)); + std::unique\_ptr`<int>`{=html} b;
 
 -   b = a;
 -   take\_ownership\_fn(b);
@@ -31,16 +31,16 @@ Known Limitations
 
 -   If headers modification is not activated or if a header is not
     allowed to be changed this check will produce broken code
-    (compilation error), where the headers’ code will stay unchanged
+    (compilation error), where the headers' code will stay unchanged
     while the code using them will be changed.
 
 -   Client code that declares a reference to an `std::auto_ptr` coming
-    from code that can’t be migrated (such as a header coming from a
+    from code that can't be migrated (such as a header coming from a
     3 :sup:`rd` party library) will produce a compilation error after
     migration. This is because the type of the reference will be changed
-    to `std::unique_ptr` but the type returned by the library won’t
+    to `std::unique_ptr` but the type returned by the library won't
     change, binding a reference to `std::unique_ptr` from an
-    `std::auto_ptr`. This pattern doesn’t make much sense and usually
+    `std::auto_ptr`. This pattern doesn't make much sense and usually
     `std::auto_ptr` are stored by value (otherwise what is the point in
     using them instead of a reference or a pointer?).
 
@@ -57,7 +57,7 @@ Known Limitations
     -const std::auto_ptr<int> & p = get_ptr();
     +const std::unique_ptr<int> & p = get_ptr(); // won't compile
 
--   Non-instantiated templates aren’t modified.
+-   Non-instantiated templates aren't modified.
 
 .. code-block:: c++
 

@@ -14,4 +14,4 @@ accept4(sockfd, addr, addrlen, SOCK\_NONBLOCK);
 
 // becomes
 
-accept4(sockfd, addr, addrlen, SOCK\_NONBLOCK | SOCK\_CLOEXEC);
+accept4(sockfd, addr, addrlen, SOCK\_NONBLOCK \| SOCK\_CLOEXEC);

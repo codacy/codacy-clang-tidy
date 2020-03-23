@@ -8,11 +8,11 @@ explicitly defaulted functions as trivial.
 
 .. code-block:: c++
 
-struct A { A() {} ~A(); }; A::~A() {}
+struct A { A() {} \~A(); }; A::\~A() {}
 
 // becomes
 
-struct A { A() = default; ~A(); }; A::~A() = default;
+struct A { A() = default; \~A(); }; A::\~A() = default;
 
 .. note:: Move-constructor and move-assignment operator are not
 supported yet.

@@ -7,13 +7,14 @@ and performance issue.
 
 .. code-block:: c++
 
-string s = “…”; if (s.find(“Hello World”) == 0) { /\* do something \*/ }
+string s = "..."; if (s.find("Hello World") == 0) { /\* do something \*/
+}
 
 becomes
 
 .. code-block:: c++
 
-string s = “…”; if (absl::StartsWith(s, “Hello World”)) { /\* do
+string s = "..."; if (absl::StartsWith(s, "Hello World")) { /\* do
 something \*/ }
 
 Options
@@ -32,5 +33,5 @@ Default is `llvm`.
 
 .. option:: AbseilStringsMatchHeader
 
-The location of Abseil’s `strings/match.h`. Defaults to
+The location of Abseil's `strings/match.h`. Defaults to
 `absl/strings/match.h`.

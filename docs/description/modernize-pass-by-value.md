@@ -69,7 +69,7 @@ will be left untouched:
 
 .. code-block:: c++
 
-\#include <string>
+\#include `<string>`{=html}
 
 void pass(const std::string &S);
 
@@ -79,19 +79,19 @@ struct Foo { Foo(const std::string &S) : Str(S) { pass(S); }
 
 };
 
-Known limitations ^^^^^^^^^^^^^^^^^
+Known limitations \^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
 
 A situation where the generated code can be wrong is when the object
 referenced is modified before the assignment in the init-list through a
-“hidden” reference.
+"hidden" reference.
 
 Example:
 
 .. code-block:: c++
 
-std::string s(“foo”);
+std::string s("foo");
 
-struct Base { Base() { s = “bar”; } };
+struct Base { Base() { s = "bar"; } };
 
 struct Derived : Base { - Derived(const std::string &S) : Field(S) +
 Derived(std::string S) : Field(std::move(S)) { }
@@ -100,10 +100,11 @@ Derived(std::string S) : Field(std::move(S)) { }
 
 };
 
-void f() { - Derived d(s); // d.Field holds “bar” + Derived d(s); //
-d.Field holds “foo” }
+void f() { - Derived d(s); // d.Field holds "bar" + Derived d(s); //
+d.Field holds "foo" }
 
-Note about delayed template parsing ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Note about delayed template parsing
+\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
 
 When delayed template parsing is enabled, constructors part of templated
 contexts; templated constructors, constructors in class templates,
@@ -120,7 +121,7 @@ Example:
 
 .. code-block:: c++
 
-template <typename T> class C { std::string S;
+template `<typename T>`{=html} class C { std::string S;
 
 public: = // using -fdelayed-template-parsing (default on Windows) =
 C(const std::string &S) : S(S) {}
@@ -129,7 +130,7 @@ C(const std::string &S) : S(S) {}
     systems)
 -   C(std::string S) : S(std::move(S)) {} };
 
-.. \_Clang Compiler User’s Manual - Microsoft extensions:
+.. \_Clang Compiler User's Manual - Microsoft extensions:
 https://clang.llvm.org/docs/UsersManual.html\#microsoft-extensions
 
 .. seealso::

@@ -25,13 +25,13 @@ considered.
 
 // It is not possible to transform this declaration and doing the
 declaration // before the loop will increase the scope of the variable
-‘Begin’ and ‘End’ // which is undesirable. for (int Begin = 0, End =
-100; Begin &lt; End; ++Begin); if (int Begin = 42, Result =
+'Begin' and 'End' // which is undesirable. for (int Begin = 0, End =
+100; Begin \< End; ++Begin); if (int Begin = 42, Result =
 some\_function(Begin); Begin == Result);
 
 // It is not possible to transform this declaration because the result
-is // not functionality preserving as ‘j’ and ‘k’ would not be part of
-the // ‘if’ statement anymore. if (SomeCondition()) int i = 42, j = 43,
+is // not functionality preserving as 'j' and 'k' would not be part of
+the // 'if' statement anymore. if (SomeCondition()) int i = 42, j = 43,
 k = function(i,j);
 
 Limitations
@@ -77,4 +77,4 @@ int *p1 = NULL; // int *p2 = NULL;
     int Unconditional,
 
 \#if CONFIGURATION IfConfigured = 42, \#else IfConfigured = 0; \#endif
-// Won’t be transformed, but a diagnostic is emitted. }
+// Won't be transformed, but a diagnostic is emitted. }

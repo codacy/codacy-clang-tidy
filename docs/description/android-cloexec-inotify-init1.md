@@ -14,4 +14,4 @@ inotify\_init1(IN\_NONBLOCK);
 
 // becomes
 
-inotify\_init1(IN\_NONBLOCK | IN\_CLOEXEC);
+inotify\_init1(IN\_NONBLOCK \| IN\_CLOEXEC);

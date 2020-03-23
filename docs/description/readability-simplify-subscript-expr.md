@@ -10,7 +10,7 @@ Examples:
 
 .. code-block:: c++
 
-std::string s = …; char c = s.data()\[i\]; // char c = s\[i\];
+std::string s = ...; char c = s.data()\[i\]; // char c = s\[i\];
 
 Options
 -------

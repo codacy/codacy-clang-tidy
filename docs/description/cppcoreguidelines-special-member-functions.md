@@ -14,7 +14,7 @@ or explicitly defined.
 Note that defining a function with `= delete` is considered to be a
 definition.
 
-This rule is part of the “Constructors, assignments, and destructors”
+This rule is part of the "Constructors, assignments, and destructors"
 profile of the C++ Core Guidelines, corresponding to rule C.21. See
 
 https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md\#c21-if-you-define-or-delete-any-default-operation-define-or-delete-them-all.
@@ -24,7 +24,7 @@ Options
 
 .. option:: AllowSoleDefaultDtor
 
-When set to `1` (default is `0`), this check doesn’t flag classes with a
+When set to `1` (default is `0`), this check doesn't flag classes with a
 sole, explicitly defaulted destructor. An example for such a class is:
 
 .. code-block:: c++
@@ -35,10 +35,10 @@ sole, explicitly defaulted destructor. An example for such a class is:
 
 .. option:: AllowMissingMoveFunctions
 
-When set to `1` (default is `0`), this check doesn’t flag classes which
+When set to `1` (default is `0`), this check doesn't flag classes which
 define no move operations at all. It still flags classes which define
 only one of either move constructor or move assignment operator. With
-this option enabled, the following class won’t be flagged:
+this option enabled, the following class won't be flagged:
 
 .. code-block:: c++
 

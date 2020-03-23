@@ -7,11 +7,11 @@ call to `std::make_unique`, introduced in C++14.
 
 .. code-block:: c++
 
-auto my\_ptr = std::unique\_ptr<MyPair>(new MyPair(1, 2));
+auto my\_ptr = std::unique\_ptr`<MyPair>`{=html}(new MyPair(1, 2));
 
 // becomes
 
-auto my\_ptr = std::make\_unique<MyPair>(1, 2);
+auto my\_ptr = std::make\_unique`<MyPair>`{=html}(1, 2);
 
 This check also finds calls to `std::unique_ptr::reset()` with a `new`
 expression, and replaces it with a call to `std::make_unique`.
@@ -22,7 +22,7 @@ my\_ptr.reset(new MyPair(1, 2));
 
 // becomes
 
-my\_ptr = std::make\_unique<MyPair>(1, 2);
+my\_ptr = std::make\_unique`<MyPair>`{=html}(1, 2);
 
 Options
 -------

@@ -185,7 +185,7 @@ cases:
 
 If the variable in question is a struct and an individual member
 variable of that struct is written to, the check does not consider this
-to be a reinitialization – even if, eventually, all member variables of
+to be a reinitialization -- even if, eventually, all member variables of
 the struct are written to. For example:
 
 .. code-block:: c++

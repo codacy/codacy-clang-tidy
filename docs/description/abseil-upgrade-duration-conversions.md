@@ -26,15 +26,16 @@ Here are example fixes created by this check:
 
 .. code-block:: c++
 
-std::atomic<int> a; absl::Duration d = absl::Milliseconds(a); d \*= a;
+std::atomic`<int>`{=html} a; absl::Duration d = absl::Milliseconds(a); d
+\*= a;
 
 becomes
 
 .. code-block:: c++
 
-std::atomic<int> a; absl::Duration d =
-absl::Milliseconds(static\_cast<int64_t>(a)); d \*=
-static\_cast<int64_t>(a);
+std::atomic`<int>`{=html} a; absl::Duration d =
+absl::Milliseconds(static\_cast`<int64_t>`{=html}(a)); d \*=
+static\_cast`<int64_t>`{=html}(a);
 
 Note that this check always adds a cast to `int64_t` in order to
 preserve the current behavior of user code. It is possible that this

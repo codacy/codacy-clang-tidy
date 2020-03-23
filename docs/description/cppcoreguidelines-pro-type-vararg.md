@@ -11,6 +11,6 @@ Passing to varargs assumes the correct type will be read. This is
 fragile because it cannot generally be enforced to be safe in the
 language and so relies on programmer discipline to get it right.
 
-This rule is part of the “Type safety” profile of the C++ Core
+This rule is part of the "Type safety" profile of the C++ Core
 Guidelines, see
 https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md\#Pro-type-varargs.

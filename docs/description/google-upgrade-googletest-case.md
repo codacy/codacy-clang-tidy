@@ -5,7 +5,7 @@ Finds uses of deprecated Google Test version 1.9 APIs with names
 containing `case` and replaces them with equivalent APIs with `suite`.
 
 All names containing `case` are being replaced to be consistent with the
-meanings of “test case” and “test suite” as used by the International
+meanings of "test case" and "test suite" as used by the International
 Software Testing Qualifications Board and ISO 29119.
 
 The new names are a part of Google Test version 1.9 (release pending).

@@ -20,7 +20,7 @@ absl::Seconds(10.0);
 absl::Seconds(10);
 
 // Original - Explicitly casting to a floating-point type.
-absl::Duration d = absl::Seconds(static\_cast<double>(10));
+absl::Duration d = absl::Seconds(static\_cast`<double>`{=html}(10));
 
 // Suggested - Remove the explicit cast absl::Duration d =
 absl::Seconds(10);

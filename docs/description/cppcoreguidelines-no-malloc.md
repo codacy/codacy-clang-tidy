@@ -9,7 +9,7 @@ used for memory management (e.g. `posix_memalign()`). See
 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-mallocfree).
 
 There is no attempt made to provide fix-it hints, since manual resource
-management isn’t easily transformed automatically into RAII.
+management isn't easily transformed automatically into RAII.
 
 .. code-block:: c++
 

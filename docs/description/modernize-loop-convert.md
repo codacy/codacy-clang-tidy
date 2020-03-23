@@ -13,7 +13,7 @@ Three kinds of loops can be converted:
 MinConfidence option
 --------------------
 
-risky ^^^^^
+risky \^\^\^\^\^
 
 In loops where the container expression is more complex than just a
 reference to a declared expression (a variable, function, enum, etc.),
@@ -27,18 +27,18 @@ set to `risky`.
 
 int arr\[10\]\[20\]; int l = 5;
 
-for (int j = 0; j &lt; 20; ++j) int k = arr\[l\]\[j\] + l; // using l
+for (int j = 0; j \< 20; ++j) int k = arr\[l\]\[j\] + l; // using l
 outside arr\[l\] is considered risky
 
-for (int i = 0; i &lt; obj.getVector().size(); ++i) obj.foo(10); //
-using ‘obj’ is considered risky
+for (int i = 0; i \< obj.getVector().size(); ++i) obj.foo(10); // using
+'obj' is considered risky
 
 See
 :ref:[Range-based loops evaluate end() only once](https://clang.llvm.org/extra/clang-tidy/checks/IncorrectRiskyTransformation)
 for an example of an incorrect transformation when the minimum required
 confidence level is set to `risky`.
 
-reasonable (Default) ^^^^^^^^^^^^^^^^^^^^
+reasonable (Default) \^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
 
 If a loop calls `.end()` or `.size()` after each iteration, the
 transformation for that loop is marked as `reasonable`, and thus will be
@@ -47,10 +47,10 @@ converted if the required confidence level is set to `reasonable`
 
 .. code-block:: c++
 
-// using size() is considered reasonable for (int i = 0; i &lt;
-container.size(); ++i) cout &lt;&lt; container\[i\];
+// using size() is considered reasonable for (int i = 0; i \<
+container.size(); ++i) cout \<\< container\[i\];
 
-safe ^^^^
+safe \^\^\^\^
 
 Any other loops that do not match the above criteria to be marked as
 `risky` or `reasonable` are marked `safe`, and thus will be converted if
@@ -60,7 +60,7 @@ the required confidence level is set to `safe` or lower.
 
 int arr\[\] = {1,2,3};
 
-for (int i = 0; i &lt; 3; ++i) cout &lt;&lt; arr\[i\];
+for (int i = 0; i \< 3; ++i) cout \<\< arr\[i\];
 
 Example
 -------
@@ -69,31 +69,30 @@ Original:
 
 .. code-block:: c++
 
-const int N = 5; int arr\[\] = {1,2,3,4,5}; vector<int> v;
+const int N = 5; int arr\[\] = {1,2,3,4,5}; vector`<int>`{=html} v;
 v.push\_back(1); v.push\_back(2); v.push\_back(3);
 
-// safe conversion for (int i = 0; i &lt; N; ++i) cout &lt;&lt;
-arr\[i\];
+// safe conversion for (int i = 0; i \< N; ++i) cout \<\< arr\[i\];
 
-// reasonable conversion for (vector<int>::iterator it = v.begin(); it
-!= v.end(); ++it) cout &lt;&lt; \*it;
+// reasonable conversion for (vector`<int>`{=html}::iterator it =
+v.begin(); it != v.end(); ++it) cout \<\< \*it;
 
-// reasonable conversion for (int i = 0; i &lt; v.size(); ++i) cout
-&lt;&lt; v\[i\];
+// reasonable conversion for (int i = 0; i \< v.size(); ++i) cout \<\<
+v\[i\];
 
 After applying the check with minimum confidence level set to
 `reasonable` (default):
 
 .. code-block:: c++
 
-const int N = 5; int arr\[\] = {1,2,3,4,5}; vector<int> v;
+const int N = 5; int arr\[\] = {1,2,3,4,5}; vector`<int>`{=html} v;
 v.push\_back(1); v.push\_back(2); v.push\_back(3);
 
-// safe conversion for (auto & elem : arr) cout &lt;&lt; elem;
+// safe conversion for (auto & elem : arr) cout \<\< elem;
 
-// reasonable conversion for (auto & elem : v) cout &lt;&lt; elem;
+// reasonable conversion for (auto & elem : v) cout \<\< elem;
 
-// reasonable conversion for (auto & elem : v) cout &lt;&lt; elem;
+// reasonable conversion for (auto & elem : v) cout \<\< elem;
 
 Limitations
 -----------
@@ -103,17 +102,18 @@ transformations that remove information and change semantics. Users of
 the tool should be aware of the behaviour and limitations of the check
 outlined by the cases below.
 
-Comments inside loop headers ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Comments inside loop headers
+\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
 
 Comments inside the original loop header are ignored and deleted when
 transformed.
 
 .. code-block:: c++
 
-for (int i = 0; i &lt; N; /\* This will be deleted \*/ ++i) { }
+for (int i = 0; i \< N; /\* This will be deleted \*/ ++i) { }
 
 Range-based loops evaluate end() only once
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
 
 The C++11 range-based for loop calls `.end()` only once during the
 initialization of the loop. If in the original loop `.end()` is called
@@ -140,10 +140,10 @@ due to `.end()` being called only once.
 
 .. code-block:: c++
 
-bool flag = false; for (vector<T>::iterator it = vec.begin(); it !=
-vec.end(); ++it) { // Add a copy of the first element to the end of the
-vector. if (!flag) { // This line makes this transformation ‘risky’.
-vec.push\_back(*it); flag = true; } cout &lt;&lt; *it; }
+bool flag = false; for (vector`<T>`{=html}::iterator it = vec.begin();
+it != vec.end(); ++it) { // Add a copy of the first element to the end
+of the vector. if (!flag) { // This line makes this transformation
+'risky'. vec.push\_back(*it); flag = true; } cout \<\< *it; }
 
 The original code above prints out the contents of the container
 including the newly added element while the converted loop, shown below,
@@ -153,8 +153,8 @@ will only print the original contents and not the newly added element.
 
 bool flag = false; for (auto & elem : vec) { // Add a copy of the first
 element to the end of the vector. if (!flag) { // This line makes this
-transformation ‘risky’ vec.push\_back(elem); flag = true; } cout
-&lt;&lt; elem; }
+transformation 'risky' vec.push\_back(elem); flag = true; } cout \<\<
+elem; }
 
 Semantics will also be affected if `.end()` has side effects. For
 example, in the case where calls to `.end()` are logged the semantics
@@ -165,11 +165,11 @@ after each iteration.
 
 iterator end() { num\_of\_end\_calls++; return container.end(); }
 
-Overloaded operator-&gt;() with side effects
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Overloaded operator-\>() with side effects
+\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
 
 Similarly, if `operator->()` was overloaded to have side effects, such
-as logging, the semantics will change. If the iterator’s `operator->()`
+as logging, the semantics will change. If the iterator's `operator->()`
 was used in the original loop it will be replaced with
 [<container element>.](https://clang.llvm.org/extra/clang-tidy/checks/member) instead due to the implicit dereference
 as part of the range-based for loop. Therefore any side effect of the
@@ -177,14 +177,14 @@ overloaded `operator->()` will no longer be performed.
 
 .. code-block:: c++
 
-for (iterator it = c.begin(); it != c.end(); ++it) { it-&gt;func(); //
-Using operator-&gt;() } // Will be transformed to: for (auto & elem : c)
-{ elem.func(); // No longer using operator-&gt;() }
+for (iterator it = c.begin(); it != c.end(); ++it) { it-\>func(); //
+Using operator-\>() } // Will be transformed to: for (auto & elem : c) {
+elem.func(); // No longer using operator-\>() }
 
 Pointers and references to containers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
 
-While most of the check’s risk analysis is dedicated to determining
+While most of the check's risk analysis is dedicated to determining
 whether the iterator or container was modified within the loop, it is
 possible to circumvent the analysis by accessing and modifying the
 container through a pointer or reference.
@@ -199,16 +199,16 @@ the `safe` level.
 
 .. code-block:: c++
 
-vector<int> vec;
+vector`<int>`{=html} vec;
 
-vector<int> \*ptr = &vec; vector<int> &ref = vec;
+vector[<int>`{=html} *ptr = &vec; vector`](https://clang.llvm.org/extra/clang-tidy/checks/int){=html} &ref = vec;
 
-for (vector<int>::iterator it = vec.begin(), e = vec.end(); it != e;
-++it) { if (!flag) { // Accessing and modifying the container is
+for (vector`<int>`{=html}::iterator it = vec.begin(), e = vec.end(); it
+!= e; ++it) { if (!flag) { // Accessing and modifying the container is
 considered risky, but the risk // level is not raised here.
-ptr-&gt;push\_back(*it); ref.push\_back(*it); flag = true; } }
+ptr-\>push\_back(*it); ref.push\_back(*it); flag = true; } }
 
-OpenMP ^^^^^^
+OpenMP \^\^\^\^\^\^
 
 As range-based for loops are only available since OpenMP 5, this check
 should not been used on code with a compatibility requirements of OpenMP

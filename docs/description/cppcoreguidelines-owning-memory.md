@@ -3,7 +3,7 @@ cppcoreguidelines-owning-memory
 
 This check implements the type-based semantics of [gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*),
 which allows static analysis on code, that uses raw pointers to handle
-resources like dynamic memory, but won’t introduce RAII concepts.
+resources like dynamic memory, but won't introduce RAII concepts.
 
 The relevant sections in the
 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)
@@ -12,7 +12,7 @@ is straight forward
 
 .. code-block:: c++
 
-namespace gsl { template <typename T> owner = T; }
+namespace gsl { template `<typename T>`{=html} owner = T; }
 
 It is therefore simple to introduce the owner even without using an
 implementation of the
@@ -28,21 +28,20 @@ produce resources.
 .. code-block:: c++
 
 // Creating an owner with factory functions is checked.
-gsl::owner&lt;int*&gt; function\_that\_returns\_owner() { return
-gsl::owner&lt;int*&gt;(new int(42)); }
+gsl::owner\<int*\> function\_that\_returns\_owner() { return
+gsl::owner\<int*\>(new int(42)); }
 
 // Dynamic memory must be assigned to an owner int\* Something = new
-int(42); // BAD, will be caught gsl::owner&lt;int*&gt; Owner = new
-int(42); // Good gsl::owner&lt;int*&gt; Owner = new int\[42\]; // Good
-as well
+int(42); // BAD, will be caught gsl::owner\<int*\> Owner = new int(42);
+// Good gsl::owner\<int*\> Owner = new int\[42\]; // Good as well
 
 // Returned owner must be assigned to an owner int\* Something =
 function\_that\_returns\_owner(); // Bad, factory function
-gsl::owner&lt;int\*&gt; Owner = function\_that\_returns\_owner(); //
-Good, result lands in owner
+gsl::owner\<int\*\> Owner = function\_that\_returns\_owner(); // Good,
+result lands in owner
 
 // Something not a resource or owner should not be assigned to owners
-int Stack = 42; gsl::owner&lt;int\*&gt; Owned = &Stack; // Bad, not a
+int Stack = 42; gsl::owner\<int\*\> Owned = &Stack; // Bad, not a
 resource assigned
 
 In the case of dynamic memory as resource, only [gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*)
@@ -55,9 +54,9 @@ NonOwner = new int(42); // First warning here, since new must land in an
 owner delete NonOwner; // Second warning here, since only owners are
 allowed to be deleted
 
-// Example Good, Ownership correctly stated gsl::owner&lt;int\*&gt;
-Owner = new int(42); // Good delete Owner; // Good as well, statically
-enforced, that only owners get deleted
+// Example Good, Ownership correctly stated gsl::owner\<int\*\> Owner =
+new int(42); // Good delete Owner; // Good as well, statically enforced,
+that only owners get deleted
 
 The check will furthermore ensure, that functions, that expect a
 [gsl::owner<T*>` as argument get called with either a `gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*)
@@ -65,23 +64,23 @@ or a newly created resource.
 
 .. code-block:: c++
 
-void expects\_owner(gsl::owner&lt;int\*&gt; o) { delete o; }
+void expects\_owner(gsl::owner\<int\*\> o) { delete o; }
 
 // Bad Code int NonOwner = 42; expects\_owner(&NonOwner); // Bad, will
 get caught
 
-// Good Code gsl::owner&lt;int\*&gt; Owner = new int(42);
+// Good Code gsl::owner\<int\*\> Owner = new int(42);
 expects\_owner(Owner); // Good expects\_owner(new int(42)); // Good as
 well, recognized created resource
 
-// Port legacy code for better resource-safety gsl::owner&lt;FILE*&gt;
-File = fopen(“my\_file.txt”, “rw+”); FILE* BadFile =
-fopen(“another\_file.txt”, “w”); // Bad, warned
+// Port legacy code for better resource-safety gsl::owner\<FILE*\> File
+= fopen("my\_file.txt", "rw+"); FILE* BadFile =
+fopen("another\_file.txt", "w"); // Bad, warned
 
-// … use the file
+// ... use the file
 
-fclose(File); // Ok, File is annotated as ‘owner&lt;&gt;’
-fclose(BadFile); // BadFile is not an ‘owner&lt;&gt;’, will be warned
+fclose(File); // Ok, File is annotated as 'owner\<\>' fclose(BadFile);
+// BadFile is not an 'owner\<\>', will be warned
 
 Options
 -------
@@ -105,7 +104,7 @@ Using [gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*) in a typed
 
 .. code-block:: c++
 
-using heap\_int = gsl::owner&lt;int\*&gt;; heap\_int allocated = new
+using heap\_int = gsl::owner\<int\*\>; heap\_int allocated = new
 int(42); // False positive!
 
 The [gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*) is declared as a templated type alias. In template
@@ -120,42 +119,42 @@ Known code constructs that do not get diagnosed correctly are:
 
 .. code-block:: c++
 
-// This template function works as expected. Type information doesn’t
-get lost. template <typename T> void delete\_owner(gsl::owner&lt;T\*&gt;
-owned\_object) { delete owned\_object; // Everything alright }
+// This template function works as expected. Type information doesn't
+get lost. template `<typename T>`{=html} void
+delete\_owner(gsl::owner\<T\*\> owned\_object) { delete owned\_object;
+// Everything alright }
 
-gsl::owner&lt;int*&gt; function\_that\_returns\_owner() { return
-gsl::owner&lt;int*&gt;(new int(42)); }
+gsl::owner\<int*\> function\_that\_returns\_owner() { return
+gsl::owner\<int*\>(new int(42)); }
 
 // Type deduction does not work for auto variables. // This is caught by
 the check and will be noted accordingly. auto OwnedObject =
 function\_that\_returns\_owner(); // Type of OwnedObject will be int\*
 
 // Problematic function template that looses the typeinformation on
-owner template <typename T> void bad\_template\_function(T some\_object)
-{ // This line will trigger the warning, that a non-owner is assigned to
-an owner gsl::owner&lt;T\*&gt; new\_owner = some\_object; }
+owner template `<typename T>`{=html} void bad\_template\_function(T
+some\_object) { // This line will trigger the warning, that a non-owner
+is assigned to an owner gsl::owner\<T\*\> new\_owner = some\_object; }
 
 // Calling the function with an owner still yields a false positive.
-bad\_template\_function(gsl::owner&lt;int\*&gt;(new int(42)));
+bad\_template\_function(gsl::owner\<int\*\>(new int(42)));
 
 // The same issue occurs with templated classes like the following.
-template <typename T> class OwnedValue { public: const T getValue()
-const { return \_val; } private: T \_val; };
+template `<typename T>`{=html} class OwnedValue { public: const T
+getValue() const { return \_val; } private: T \_val; };
 
-// Code, that yields a false positive.
-OwnedValue&lt;gsl::owner&lt;int*&gt;&gt; Owner(new int(42)); // Type
-deduction yield T -&gt; int * // False positive, getValue returns int\*
-and not gsl::owner&lt;int*&gt; gsl::owner&lt;int*&gt; OwnedInt =
-Owner.getValue();
+// Code, that yields a false positive. OwnedValue\<gsl::owner\<int*\>\>
+Owner(new int(42)); // Type deduction yield T -\> int * // False
+positive, getValue returns int\* and not gsl::owner\<int*\>
+gsl::owner\<int*\> OwnedInt = Owner.getValue();
 
 Another limitation of the current implementation is only the type based
 checking. Suppose you have code like the following:
 
 .. code-block:: c++
 
-// Two owners with assigned resources gsl::owner&lt;int*&gt; Owner1 =
-new int(42); gsl::owner&lt;int*&gt; Owner2 = new int(42);
+// Two owners with assigned resources gsl::owner\<int*\> Owner1 = new
+int(42); gsl::owner\<int*\> Owner2 = new int(42);
 
 Owner2 = Owner1; // Conceptual Leak of initial resource of Owner2!
 Owner1 = nullptr;

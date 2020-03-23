@@ -14,12 +14,12 @@ The following code sample does not follow this pattern:
 
 .. code-block:: objc
 
-static bool is\_positive(int i) { return i &gt; 0; } bool IsNegative(int
-i) { return i &lt; 0; }
+static bool is\_positive(int i) { return i \> 0; } bool IsNegative(int
+i) { return i \< 0; }
 
 The sample above might be corrected to the following code:
 
 .. code-block:: objc
 
-static bool IsPositive(int i) { return i &gt; 0; } bool
-\*ABCIsNegative(int i) { return i &lt; 0; }
+static bool IsPositive(int i) { return i \> 0; } bool
+\*ABCIsNegative(int i) { return i \< 0; }

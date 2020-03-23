@@ -10,10 +10,10 @@ The check understands argument comments in the form
 
 void f(bool foo);
 
-…
+...
 
-f(/*bar=*/true); // warning: argument name ‘bar’ in comment does not
-match parameter name ‘foo’
+f(/*bar=*/true); // warning: argument name 'bar' in comment does not
+match parameter name 'foo'
 
 The check tries to detect typos and suggest automated fixes for them.
 
@@ -23,7 +23,7 @@ Options
 .. option:: StrictMode
 
 When zero (default value), the check will ignore leading and trailing
-underscores and case when comparing names – otherwise they are taken
+underscores and case when comparing names -- otherwise they are taken
 into account.
 
 .. option:: IgnoreSingleArgument When true, the check will ignore the
@@ -103,7 +103,7 @@ Before:
 
 void foo(const char *String); void foo(const wchar\_t *WideString);
 
-foo(“Hello World”); foo(L“Hello World”);
+foo("Hello World"); foo(L"Hello World");
 
 After:
 
@@ -111,7 +111,7 @@ After:
 
 void foo(const char *String); void foo(const wchar\_t *WideString);
 
-foo(/*String=*/“Hello World”); foo(/*WideString=*/L“Hello World”);
+foo(/*String=*/"Hello World"); foo(/*WideString=*/L"Hello World");
 
 .. option:: CommentCharacterLiterals
 
@@ -124,7 +124,7 @@ Before:
 
 void foo(char \*Character);
 
-foo(‘A’);
+foo('A');
 
 After:
 
@@ -132,7 +132,7 @@ After:
 
 void foo(char \*Character);
 
-foo(/*Character=*/‘A’);
+foo(/*Character=*/'A');
 
 .. option:: CommentUserDefinedLiterals
 
@@ -145,7 +145,7 @@ Before:
 
 void foo(double Distance);
 
-double operator"" \_km(long double);
+double operator\"\" \_km(long double);
 
 foo(402.0\_km);
 
@@ -155,7 +155,7 @@ After:
 
 void foo(double Distance);
 
-double operator"" \_km(long double);
+double operator\"\" \_km(long double);
 
 foo(/*Distance=*/402.0\_km);
 

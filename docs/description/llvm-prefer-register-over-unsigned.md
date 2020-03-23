@@ -10,10 +10,10 @@ whose initializer begins with an implicit cast from `Register` to
 
 .. code-block:: c++
 
-void example(MachineOperand &MO) { unsigned Reg = MO.getReg(); … }
+void example(MachineOperand &MO) { unsigned Reg = MO.getReg(); ... }
 
 becomes:
 
 .. code-block:: c++
 
-void example(MachineOperand &MO) { Register Reg = MO.getReg(); … }
+void example(MachineOperand &MO) { Register Reg = MO.getReg(); ... }

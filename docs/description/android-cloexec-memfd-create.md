@@ -14,4 +14,4 @@ memfd\_create(name, MFD\_ALLOW\_SEALING);
 
 // becomes
 
-memfd\_create(name, MFD\_ALLOW\_SEALING | MFD\_CLOEXEC);
+memfd\_create(name, MFD\_ALLOW\_SEALING \| MFD\_CLOEXEC);

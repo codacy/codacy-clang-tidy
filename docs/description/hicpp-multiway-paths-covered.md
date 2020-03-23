@@ -40,7 +40,7 @@ break; } // All other numbers? }
 
 // Violates this rule as well, but already emits a compiler warning
 (-Wswitch). enum Color { Red, Green, Blue, Yellow }; void f3(enum Color
-c) { switch (c) { case Red: // We can’t drive for now. break; case
+c) { switch (c) { case Red: // We can't drive for now. break; case
 Green: // We are allowed to drive. break; } // Other cases missing }
 
 The

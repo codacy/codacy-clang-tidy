@@ -10,7 +10,7 @@ explicitly or using the copy-and-swap or the copy-and-move method.
 
 By default, this check searches only those classes which have any
 pointer or C array field to avoid false positives. In case of a pointer
-or a C array, it’s likely that self-copy assignment breaks the object if
+or a C array, it's likely that self-copy assignment breaks the object if
 the copy assignment operator was not written with care.
 
 See also:
@@ -25,7 +25,7 @@ and then tries to assign it:
 
 class T { int\* p;
 
-public: T(const T &rhs) : p(rhs.p ? new int(\*rhs.p) : nullptr) {} ~T()
+public: T(const T &rhs) : p(rhs.p ? new int(\*rhs.p) : nullptr) {} \~T()
 { delete p; }
 
     // ...
@@ -45,7 +45,7 @@ the self-assignment check:
 
 class T { int\* p;
 
-public: T(const T &rhs) : p(rhs.p ? new int(\*rhs.p) : nullptr) {} ~T()
+public: T(const T &rhs) : p(rhs.p ? new int(\*rhs.p) : nullptr) {} \~T()
 { delete p; }
 
     // ...
@@ -69,7 +69,7 @@ with `this`:
 
 class T { int\* p;
 
-public: T(const T &rhs) : p(rhs.p ? new int(\*rhs.p) : nullptr) {} ~T()
+public: T(const T &rhs) : p(rhs.p ? new int(\*rhs.p) : nullptr) {} \~T()
 { delete p; }
 
     // ...
@@ -86,7 +86,7 @@ public: T(const T &rhs) : p(rhs.p ? new int(\*rhs.p) : nullptr) {} ~T()
 
 };
 
-There is a third pattern which is less common. Let’s call it the
+There is a third pattern which is less common. Let's call it the
 copy-and-move method when we create a temporary copy (using the copy
 constructor) and then move this temporary object into `this` (needs a
 move assignment operator):
@@ -95,7 +95,7 @@ move assignment operator):
 
 class T { int\* p;
 
-public: T(const T &rhs) : p(rhs.p ? new int(\*rhs.p) : nullptr) {} ~T()
+public: T(const T &rhs) : p(rhs.p ? new int(\*rhs.p) : nullptr) {} \~T()
 { delete p; }
 
     // ...

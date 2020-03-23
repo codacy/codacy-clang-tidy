@@ -9,11 +9,11 @@ Example buggy usage looks like:
 
 .. code-block:: c
 
-if (posix\_fadvise(…) &lt; 0) {
+if (posix\_fadvise(...) \< 0) {
 
 This will never happen as the return value is always non-negative. A
 simple fix could be:
 
 .. code-block:: c
 
-if (posix\_fadvise(…) &gt; 0) {
+if (posix\_fadvise(...) \> 0) {

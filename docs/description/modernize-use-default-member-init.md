@@ -1,10 +1,10 @@
 modernize-use-default-member-init
 =================================
 
-This check converts a default constructor’s member initializers into the
+This check converts a default constructor's member initializers into the
 new default member initializers in C++11. Other member initializers that
 match the default member initializer are removed. This can reduce
-repeated code or allow use of ‘= default’.
+repeated code or allow use of '= default'.
 
 .. code-block:: c++
 

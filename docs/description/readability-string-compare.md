@@ -3,7 +3,7 @@ readability-string-compare
 
 Finds string comparisons using the compare method.
 
-A common mistake is to use the string’s `compare` method instead of
+A common mistake is to use the string's `compare` method instead of
 using the equality or inequality operators. The compare method is
 intended for sorting functions and thus returns a negative number, a
 positive number or zero depending on the lexicographical relationship
@@ -17,7 +17,7 @@ Examples:
 
 .. code-block:: c++
 
-std::string str1{“a”}; std::string str2{“b”};
+std::string str1{"a"}; std::string str2{"b"};
 
 // use str1 != str2 instead. if (str1.compare(str2)) { }
 
@@ -31,7 +31,7 @@ std::string str1{“a”}; std::string str2{“b”};
 
 // use str1 != str2 instead. if (0 != str1.compare(str2)) { }
 
-// Use str1 == “foo” instead. if (str1.compare(“foo”) == 0) { }
+// Use str1 == "foo" instead. if (str1.compare("foo") == 0) { }
 
 The above code examples shows the list of if-statements that this check
 will give a warning for. All of them uses `compare` to check if equality

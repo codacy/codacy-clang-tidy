@@ -8,7 +8,7 @@ The `sizeof` operator yields the size (in bytes) of its operand, which
 may be an expression or the parenthesized name of a type. Misuse of this
 operator may be leading to errors and possible software vulnerabilities.
 
-Suspicious usage of ‘sizeof(K)’
+Suspicious usage of 'sizeof(K)'
 -------------------------------
 
 A common mistake is to query the `sizeof` of an integer literal. This is
@@ -18,9 +18,9 @@ the programmer was probably to simply get the integer and not its size.
 .. code-block:: c++
 
 \#define BUFLEN 42 char buf\[BUFLEN\]; memset(buf, 0, sizeof(BUFLEN));
-// sizeof(42) ==&gt; sizeof(int)
+// sizeof(42) ==\> sizeof(int)
 
-Suspicious usage of ‘sizeof(expr)’
+Suspicious usage of 'sizeof(expr)'
 ----------------------------------
 
 In cases, where there is an enum or integer to represent a type, a
@@ -37,9 +37,9 @@ return type; } };
 
 void f(data d, int numElements) { // should be sizeof(float) or
 sizeof(double), depending on d.get\_type() int numBytes = numElements \*
-sizeof(d.get\_type()); … }
+sizeof(d.get\_type()); ... }
 
-Suspicious usage of ‘sizeof(this)’
+Suspicious usage of 'sizeof(this)'
 ----------------------------------
 
 The `this` keyword is evaluated to a pointer to an object of a given
@@ -49,10 +49,10 @@ size of the pointer.
 
 .. code-block:: c++
 
-class Point { \[…\] size\_t size() { return sizeof(this); } // should
-probably be sizeof(\*this) \[…\] };
+class Point { \[...\] size\_t size() { return sizeof(this); } // should
+probably be sizeof(\*this) \[...\] };
 
-Suspicious usage of ’sizeof(char\*)’
+Suspicious usage of 'sizeof(char\*)'
 ------------------------------------
 
 There is a subtle difference between declaring a string literal with
@@ -63,11 +63,11 @@ the number of characters (bytes) in the string literal.
 
 .. code-block:: c++
 
-const char\* kMessage = “Hello World!”; // const char kMessage\[\] =
-“…”; void getMessage(char\* buf) { memcpy(buf, kMessage,
+const char\* kMessage = "Hello World!"; // const char kMessage\[\] =
+"..."; void getMessage(char\* buf) { memcpy(buf, kMessage,
 sizeof(kMessage)); // sizeof(char\*) }
 
-Suspicious usage of ’sizeof(A\*)’
+Suspicious usage of 'sizeof(A\*)'
 ---------------------------------
 
 A common mistake is to compute the size of a pointer instead of its
@@ -80,8 +80,8 @@ int A\[10\]; memset(A, 0, sizeof(A + 0));
 
 struct Point point; memset(point, 0, sizeof(&point));
 
-Suspicious usage of ‘sizeof(…)/sizeof(…)’
------------------------------------------
+Suspicious usage of 'sizeof(...)/sizeof(...)'
+---------------------------------------------
 
 Dividing `sizeof` expressions is typically used to retrieve the number
 of elements of an aggregate. This check warns on incompatible or
@@ -92,23 +92,23 @@ with the type `int` which has 4 bytes.
 
 .. code-block:: c++
 
-char buf\[\] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }; // sizeof(buf) =&gt; 10
+char buf\[\] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }; // sizeof(buf) =\> 10
 void getMessage(char\* dst) { memcpy(dst, buf, sizeof(buf) /
-sizeof(int)); // sizeof(int) =&gt; 4 \[incompatible sizes\] }
+sizeof(int)); // sizeof(int) =\> 4 \[incompatible sizes\] }
 
 In the following example, the expression `sizeof(Values)` is returning
 the size of `char*`. One can easily be fooled by its declaration, but in
-parameter declaration the size ‘10’ is ignored and the function is
+parameter declaration the size '10' is ignored and the function is
 receiving a `char*`.
 
 .. code-block:: c++
 
 char OrderedValues\[10\] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }; return
 CompareArray(char Values\[10\]) { return memcmp(OrderedValues, Values,
-sizeof(Values)) == 0; // sizeof(Values) ==&gt; sizeof(char\*) \[implicit
+sizeof(Values)) == 0; // sizeof(Values) ==\> sizeof(char\*) \[implicit
 cast to char\*\] }
 
-Suspicious ‘sizeof’ by ‘sizeof’ expression
+Suspicious 'sizeof' by 'sizeof' expression
 ------------------------------------------
 
 Multiplying `sizeof` expressions typically makes no sense and is
@@ -117,7 +117,7 @@ probably a logic error. In the following example, the programmer used
 
 .. code-block:: c++
 
-const char kMessage\[\] = “Hello World!”; void getMessage(char\* buf) {
+const char kMessage\[\] = "Hello World!"; void getMessage(char\* buf) {
 memcpy(buf, kMessage, sizeof(kMessage) \* sizeof(char)); //
 sizeof(kMessage) / sizeof(char) }
 
@@ -130,8 +130,8 @@ code is working correctly but should be simplified by using only the
 extern Object objects\[100\]; void InitializeObjects() { memset(objects,
 0, arraysize(objects) \* sizeof(Object)); // sizeof(objects) }
 
-Suspicious usage of ‘sizeof(sizeof(…))’
----------------------------------------
+Suspicious usage of 'sizeof(sizeof(...))'
+-----------------------------------------
 
 Getting the `sizeof` of a `sizeof` makes no sense and is typically an
 error hidden through macros.

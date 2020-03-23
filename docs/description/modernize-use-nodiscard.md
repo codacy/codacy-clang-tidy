@@ -51,7 +51,7 @@ Options
     Specifies a macro to use instead of ``[[nodiscard]]``. This is useful when
     maintaining source code that needs to compile with a pre-C++17 compiler.
 
-Example ^^^^^^^
+Example \^\^\^\^\^\^\^
 
 .. code-block:: c++
 

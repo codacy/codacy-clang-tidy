@@ -2,7 +2,7 @@ readability-convert-member-functions-to-static
 ==============================================
 
 Finds non-static member functions that can be made `static` because the
-functions don’t use `this`.
+functions don't use `this`.
 
 After applying modifications as suggested by the check, runnnig the
 check again might find more opportunities to mark member functions

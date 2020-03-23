@@ -14,10 +14,10 @@ implicit `bool` conversion:
 class Foo { int m\_foo;
 
 public: void setFoo(bool foo) { m\_foo = foo; } // warning: implicit
-conversion bool -&gt; int int getFoo() { return m\_foo; } };
+conversion bool -\> int int getFoo() { return m\_foo; } };
 
 void use(Foo& foo) { bool value = foo.getFoo(); // warning: implicit
-conversion int -&gt; bool }
+conversion int -\> bool }
 
 This code is the result of unsuccessful refactoring, where type of
 `m_foo` changed from `bool` to `int`. The programmer forgot to change
@@ -30,8 +30,8 @@ for example:
 
 .. code-block:: c++
 
-void conversionsToBool() { float floating; bool boolean = floating; // ^
-propose replacement: bool boolean = floating != 0.0f;
+void conversionsToBool() { float floating; bool boolean = floating; //
+\^ propose replacement: bool boolean = floating != 0.0f;
 
     int integer;
     if (integer) {}
@@ -49,7 +49,8 @@ propose replacement: bool boolean = floating != 0.0f;
 void functionTakingInt(int param);
 
 void conversionsFromBool() { bool boolean; functionTakingInt(boolean);
-// ^ propose replacement: functionTakingInt(static\_cast<int>(boolean));
+// \^ propose replacement:
+functionTakingInt(static\_cast`<int>`{=html}(boolean));
 
     functionTakingInt(true);
     // ^ propose replacement: functionTakingInt(1);
@@ -59,7 +60,7 @@ void conversionsFromBool() { bool boolean; functionTakingInt(boolean);
 In general, the following conversion types are checked:
 
 -   integer expression/literal to boolean (conversion from a single bit
-    bitfield to boolean is explicitly allowed, since there’s no
+    bitfield to boolean is explicitly allowed, since there's no
     ambiguity / information loss in this case),
 
 -   floating expression/literal to boolean,

@@ -10,7 +10,7 @@ examples of what it will be replaced with.
 
 .. code-block:: c++
 
-std::vector<int> v;
+std::vector`<int>`{=html} v;
 
 // First example std::random\_shuffle(vec.begin(), vec.end());
 
@@ -41,7 +41,7 @@ randomness, you should consider seeding better, for example:
 
 std::shuffle(v.begin(), v.end(), []() { std::mt19937::result\_type
 seeds\[std::mt19937::state\_size\]; std::random\_device device;
-std::uniform\_int\_distribution<typename std::mt19937::result_type>
+std::uniform\_int\_distribution`<typename std::mt19937::result_type>`{=html}
 dist; std::generate(std::begin(seeds), std::end(seeds), \[&\] { return
 dist(device); }); std::seed\_seq seq(std::begin(seeds),
 std::end(seeds)); return std::mt19937(seq); }());

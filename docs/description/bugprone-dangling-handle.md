@@ -11,10 +11,10 @@ Examples:
 .. code-block:: c++
 
 string\_view View = string(); // View will dangle. string A; View = A +
-“A”; // still dangle.
+"A"; // still dangle.
 
-vector<string_view> V; V.push\_back(string()); // V\[0\] is dangling.
-V.resize(3, string()); // V\[1\] and V\[2\] will also dangle.
+vector`<string_view>`{=html} V; V.push\_back(string()); // V\[0\] is
+dangling. V.resize(3, string()); // V\[1\] and V\[2\] will also dangle.
 
 string\_view f() { // All these return values will dangle. return
 string(); string S; return S; char Array10; return Array; }

@@ -7,11 +7,11 @@ call to `std::make_shared`.
 
 .. code-block:: c++
 
-auto my\_ptr = std::shared\_ptr<MyPair>(new MyPair(1, 2));
+auto my\_ptr = std::shared\_ptr`<MyPair>`{=html}(new MyPair(1, 2));
 
 // becomes
 
-auto my\_ptr = std::make\_shared<MyPair>(1, 2);
+auto my\_ptr = std::make\_shared`<MyPair>`{=html}(1, 2);
 
 This check also finds calls to `std::shared_ptr::reset()` with a `new`
 expression, and replaces it with a call to `std::make_shared`.
@@ -22,7 +22,7 @@ my\_ptr.reset(new MyPair(1, 2));
 
 // becomes
 
-my\_ptr = std::make\_shared<MyPair>(1, 2);
+my\_ptr = std::make\_shared`<MyPair>`{=html}(1, 2);
 
 Options
 -------

@@ -6,7 +6,7 @@ the return type is not a const object. This also warns if the return
 type is a reference type.
 
 The object returned by a postfix increment or decrement operator is
-supposed to be a snapshot of the object’s value prior to modification.
+supposed to be a snapshot of the object's value prior to modification.
 With such an implementation, any modifications made to the resulting
 object from calling operator++(int) would be modifying a temporary
 object. Thus, such an implementation of a postfix increment or decrement

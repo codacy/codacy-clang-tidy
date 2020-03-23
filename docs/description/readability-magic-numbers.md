@@ -9,11 +9,11 @@ constants to improve readability. Here are a few references:
 
 -   [Rule ES.45: Avoid “magic constants”; use symbolic constants in C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Res-magic)
 -   [Rule 5.1.1 Use symbolic names instead of literal values in code in High Integrity C++](http://www.codingstandard.com/rule/5-1-1-use-symbolic-names-instead-of-literal-values-in-code/)
--   Item 17 in “C++ Coding Standards: 101 Rules, Guidelines and Best
-    Practices” by Herb Sutter and Andrei Alexandrescu
--   Chapter 17 in “Clean Code - A handbook of agile software
-    craftsmanship.” by Robert C. Martin
--   Rule 20701 in “TRAIN REAL TIME DATA PROTOCOL Coding Rules” by
+-   Item 17 in "C++ Coding Standards: 101 Rules, Guidelines and Best
+    Practices" by Herb Sutter and Andrei Alexandrescu
+-   Chapter 17 in "Clean Code - A handbook of agile software
+    craftsmanship." by Robert C. Martin
+-   Rule 20701 in "TRAIN REAL TIME DATA PROTOCOL Coding Rules" by
     Armin-Hagen Weiss, Bombardier
 -   http://wiki.c2.com/?MagicNumber
 
@@ -27,8 +27,8 @@ double totalCharge = 1.08 \* itemPrice;
 
 int getAnswer() { return -3; // FILENOTFOUND }
 
-for (int mm = 1; mm &lt;= 12; ++mm) { std::cout &lt;&lt; month\[mm\]
-&lt;&lt; ‘’; }
+for (int mm = 1; mm \<= 12; ++mm) { std::cout \<\< month\[mm\] \<\<
+'`\n`{=tex}'; }
 
 Example with magic values refactored:
 
@@ -43,8 +43,8 @@ double totalCharge = (1.0 + TAX\_RATE) \* itemPrice;
 
 int getAnswer() { return E\_FILE\_NOT\_FOUND; }
 
-for (int mm = 1; mm &lt;= MONTHS\_IN\_A\_YEAR; ++mm) { std::cout
-&lt;&lt; month\[mm\] &lt;&lt; ‘’; }
+for (int mm = 1; mm \<= MONTHS\_IN\_A\_YEAR; ++mm) { std::cout \<\<
+month\[mm\] \<\< '`\n`{=tex}'; }
 
 For integral literals by default only `0` and `1` (and `-1`) integer
 values are accepted without a warning. This can be overridden with the

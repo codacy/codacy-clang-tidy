@@ -7,7 +7,7 @@ Example:
 
 .. code-block:: c++
 
-std::unique\_ptr<Foo> x, y; x.reset(y.release()); -&gt; x =
+std::unique\_ptr`<Foo>`{=html} x, y; x.reset(y.release()); -\> x =
 std::move(y);
 
 If `y` is already rvalue, `std::move()` is not added. `x` and `y` can

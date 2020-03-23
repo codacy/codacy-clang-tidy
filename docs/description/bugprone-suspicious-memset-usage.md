@@ -31,7 +31,7 @@ Examples:
 
 .. code-block:: c++
 
-void foo() { int i\[5\] = {1, 2, 3, 4, 5}; int *ip = i; char c = ‘1’;
+void foo() { int i\[5\] = {1, 2, 3, 4, 5}; int *ip = i; char c = '1';
 char *cp = &c; int v = 0;
 
     // Case 1

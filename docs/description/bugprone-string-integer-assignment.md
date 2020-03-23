@@ -19,10 +19,10 @@ Use the appropriate conversion functions or character literals.
 
 .. code-block:: c++
 
-std::string s; int x = 5965; s = ‘6’; s = std::to\_string(x);
+std::string s; int x = 5965; s = '6'; s = std::to\_string(x);
 
 In order to suppress false positives, use an explicit cast.
 
 .. code-block:: c++
 
-std::string s; s = static\_cast<char>(6);
+std::string s; s = static\_cast`<char>`{=html}(6);

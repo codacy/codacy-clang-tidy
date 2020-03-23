@@ -12,7 +12,7 @@ The following code:
 
 struct C { static void foo(); static int x; };
 
-C \*c1 = new C(); c1-&gt;foo(); c1-&gt;x;
+C \*c1 = new C(); c1-\>foo(); c1-\>x;
 
 is changed to:
 

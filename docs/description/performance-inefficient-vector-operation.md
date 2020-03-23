@@ -15,15 +15,15 @@ statement body:
 
 .. code-block:: c++
 
-std::vector<int> v; for (int i = 0; i &lt; n; ++i) { v.push\_back(n); //
-This will trigger the warning since the push\_back may cause multiple //
-memory reallocations in v. This can be avoid by inserting a ‘reserve(n)’
-// statement before the for statement. }
+std::vector`<int>`{=html} v; for (int i = 0; i \< n; ++i) {
+v.push\_back(n); // This will trigger the warning since the push\_back
+may cause multiple // memory reallocations in v. This can be avoid by
+inserting a 'reserve(n)' // statement before the for statement. }
 
-SomeProto p; for (int i = 0; i &lt; n; ++i) { p.add\_xxx(n); // This
-will trigger the warning since the add\_xxx may cause multiple memory //
+SomeProto p; for (int i = 0; i \< n; ++i) { p.add\_xxx(n); // This will
+trigger the warning since the add\_xxx may cause multiple memory //
 relloacations. This can be avoid by inserting a //
-‘p.mutable\_xxx().Reserve(n)’ statement before the for statement. }
+'p.mutable\_xxx().Reserve(n)' statement before the for statement. }
 
 -   For-range loops like `for (range-declaration : range_expression)`,
     the type of `range_expression` can be `std::vector`, `std::array`,
@@ -32,12 +32,12 @@ relloacations. This can be avoid by inserting a //
 
 .. code-block:: c++
 
-std::vector<int> data; std::vector<int> v;
+std::vector[<int>`{=html} data; std::vector`](https://clang.llvm.org/extra/clang-tidy/checks/int){=html} v;
 
 for (auto element : data) { v.push\_back(element); // This will trigger
-the warning since the ‘push\_back’ may cause multiple // memory
+the warning since the 'push\_back' may cause multiple // memory
 reallocations in v. This can be avoid by inserting a //
-‘reserve(data.size())’ statement before the for statement. }
+'reserve(data.size())' statement before the for statement. }
 
 Options
 -------

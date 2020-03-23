@@ -42,10 +42,10 @@ surprising to the caller of `foo()` because no `std::move` was used when
 calling `foo()`.
 
 The reason for this behavior lies in the special rule for template
-argument deduction on function templates like `foo()` – i.e. on function
-templates that take an rvalue reference argument of a type that is a
-deduced function template argument. (See section \[temp.deduct.call\]/3
-in the C++11 standard.)
+argument deduction on function templates like `foo()` -- i.e. on
+function templates that take an rvalue reference argument of a type that
+is a deduced function template argument. (See section
+\[temp.deduct.call\]/3 in the C++11 standard.)
 
 If `foo()` is called on an lvalue (as in the example above), then `T` is
 deduced to be an lvalue reference. In the example, `T` is deduced to be

@@ -26,14 +26,14 @@ This code:
 
 .. code-block:: c++
 
-struct S { S(int a); explicit S(const S&); operator bool() const; …
+struct S { S(int a); explicit S(const S&); operator bool() const; ...
 
 will become
 
 .. code-block:: c++
 
 struct S { explicit S(int a); S(const S&); explicit operator bool()
-const; …
+const; ...
 
 See
 https://google.github.io/styleguide/cppguide.html\#Explicit\_Constructors

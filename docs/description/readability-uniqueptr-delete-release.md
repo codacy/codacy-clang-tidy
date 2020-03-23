@@ -7,8 +7,8 @@ APIs.
 
 .. code-block:: c++
 
-std::unique\_ptr<int> P; delete P.release();
+std::unique\_ptr`<int>`{=html} P; delete P.release();
 
 // becomes
 
-std::unique\_ptr<int> P; P = nullptr;
+std::unique\_ptr`<int>`{=html} P; P = nullptr;

@@ -9,11 +9,11 @@ Examples:
 
 .. code-block:: c++
 
-str.find(“A”);
+str.find("A");
 
 // becomes
 
-str.find(‘A’);
+str.find('A');
 
 Options
 -------

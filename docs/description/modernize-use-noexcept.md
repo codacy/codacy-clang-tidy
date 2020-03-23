@@ -29,7 +29,7 @@ instead of `noexcept`. This is useful when maintaining source code that
 uses custom exception specification marking other than `noexcept`.
 Fix-it hints will only be generated for non-throwing specifications.
 
-Example ^^^^^^^
+Example \^\^\^\^\^\^\^
 
 .. code-block:: c++
 
@@ -50,14 +50,14 @@ throwing dynamic exception specs, e.g., `throw(<something>)`, completely
 without providing a replacement text, except for destructors and delete
 operators that are `noexcept(true)` by default.
 
-Example ^^^^^^^
+Example \^\^\^\^\^\^\^
 
 .. code-block:: c++
 
 void foo() throw(int) {}
 
 struct bar { void foobar() throw(int); void operator delete(void \*ptr)
-throw(int); void operator delete[](void%20*ptr) throw(int); ~bar()
+throw(int); void operator delete[](void%20*ptr) throw(int); \~bar()
 throw(int); }
 
 transforms to:
@@ -68,6 +68,6 @@ void foo() {}
 
 struct bar { void foobar(); void operator delete(void \*ptr)
 noexcept(false); void operator delete[](void%20*ptr) noexcept(false);
-~bar() noexcept(false); }
+\~bar() noexcept(false); }
 
 if the :option:`UseNoexceptFalse` option is set to `0`.

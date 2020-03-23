@@ -9,7 +9,7 @@ methods can take advanatage of the order of the elements.
 
 .. code-block:: c++
 
-std::set<int> s; auto it = std::find(s.begin(), s.end(), 43);
+std::set`<int>`{=html} s; auto it = std::find(s.begin(), s.end(), 43);
 
 // becomes
 
@@ -17,7 +17,7 @@ auto it = s.find(43);
 
 .. code-block:: c++
 
-std::set<int> s; auto c = std::count(s.begin(), s.end(), 43);
+std::set`<int>`{=html} s; auto c = std::count(s.begin(), s.end(), 43);
 
 // becomes
 
