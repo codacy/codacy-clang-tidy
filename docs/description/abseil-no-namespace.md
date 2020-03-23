@@ -15,5 +15,5 @@ namespace absl { … }
 will be prompted with a warning.
 
 See
-`the full Abseil compatibility guidelines <https:// abseil.io/about/compatibility>`\_
+[the full Abseil compatibility guidelines](https:// abseil.io/about/compatibility)
 for more information.

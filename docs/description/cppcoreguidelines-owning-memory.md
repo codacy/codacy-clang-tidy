@@ -1,13 +1,13 @@
 cppcoreguidelines-owning-memory
 ===============================
 
-This check implements the type-based semantics of `gsl::owner<T*>`,
+This check implements the type-based semantics of [gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*),
 which allows static analysis on code, that uses raw pointers to handle
 resources like dynamic memory, but won’t introduce RAII concepts.
 
 The relevant sections in the
-`C++ Core Guidelines <https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md>`\_
-are I.11, C.33, R.3 and GSL.Views The definition of a `gsl::owner<T*>`
+[C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md)
+are I.11, C.33, R.3 and GSL.Views The definition of a [gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*)
 is straight forward
 
 .. code-block:: c++
@@ -16,7 +16,7 @@ namespace gsl { template <typename T> owner = T; }
 
 It is therefore simple to introduce the owner even without using an
 implementation of the
-`Guideline Support Library <https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gsl-guideline-support-library>`\_.
+[Guideline Support Library](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gsl-guideline-support-library).
 
 All checks are purely type based and not (yet) flow sensitive.
 
@@ -45,7 +45,7 @@ Good, result lands in owner
 int Stack = 42; gsl::owner&lt;int\*&gt; Owned = &Stack; // Bad, not a
 resource assigned
 
-In the case of dynamic memory as resource, only `gsl::owner<T*>`
+In the case of dynamic memory as resource, only [gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*)
 variables are allowed to be deleted.
 
 .. code-block:: c++
@@ -60,7 +60,7 @@ Owner = new int(42); // Good delete Owner; // Good as well, statically
 enforced, that only owners get deleted
 
 The check will furthermore ensure, that functions, that expect a
-`gsl::owner<T*>` as argument get called with either a `gsl::owner<T*>`
+[gsl::owner<T*>` as argument get called with either a `gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*)
 or a newly created resource.
 
 .. code-block:: c++
@@ -101,22 +101,22 @@ expecting resource owners as pointer arguments but cannot introduce
 Limitations
 -----------
 
-Using `gsl::owner<T*>` in a typedef or alias is not handled correctly.
+Using [gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*) in a typedef or alias is not handled correctly.
 
 .. code-block:: c++
 
 using heap\_int = gsl::owner&lt;int\*&gt;; heap\_int allocated = new
 int(42); // False positive!
 
-The `gsl::owner<T*>` is declared as a templated type alias. In template
+The [gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*) is declared as a templated type alias. In template
 functions and classes, like in the example below, the information of the
-type aliases gets lost. Therefore using `gsl::owner<T*>` in a heavy
+type aliases gets lost. Therefore using [gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*) in a heavy
 templated code base might lead to false positives.
 
 Known code constructs that do not get diagnosed correctly are:
 
 -   `std::exchange`
--   `std::vector<gsl::owner<T*>>`
+-   [std::vector<gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*>)
 
 .. code-block:: c++
 
@@ -160,8 +160,8 @@ new int(42); gsl::owner&lt;int*&gt; Owner2 = new int(42);
 Owner2 = Owner1; // Conceptual Leak of initial resource of Owner2!
 Owner1 = nullptr;
 
-The semantic of a `gsl::owner<T*>` is mostly like a
-`std::unique_ptr<T>`, therefore assignment of two `gsl::owner<T*>` is
+The semantic of a [gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*) is mostly like a
+[std::unique_ptr<T>`, therefore assignment of two `gsl::owner](https://clang.llvm.org/extra/clang-tidy/checks/T*) is
 considered a move, which requires that the resource `Owner2` must have
 been released before the assignment. This kind of condition could be
 catched in later improvements of this check with flowsensitive analysis.

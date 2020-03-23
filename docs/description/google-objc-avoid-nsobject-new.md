@@ -21,4 +21,4 @@ Instead, code should use `+alloc`/`-init` or class factory methods.
 NSDate *now = \[NSDate date\]; Foo *bar = \[\[Foo alloc\] init\];
 
 This check corresponds to the Google Objective-C Style Guide rule
-`Do Not Use +new <https://google.github.io/styleguide/objcguide.html#do-not-use-new>`\_.
+[Do Not Use +new](https://google.github.io/styleguide/objcguide.html#do-not-use-new).

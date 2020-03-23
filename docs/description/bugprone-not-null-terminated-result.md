@@ -97,7 +97,7 @@ alias).
 Memory handler functions ^^^^^^^^^^^^^^^^^^^^^^^^
 
 `memcpy` Please visit the
-:ref:`Transformation rules of 'memcpy()'<MemcpyTransformation>` section.
+:ref:[Transformation rules of 'memcpy()'](https://clang.llvm.org/extra/clang-tidy/checks/MemcpyTransformation) section.
 
 `memchr` Usually there is a C-style cast and it is needed to be removed,
 because the new function `strchr`’s return type is correct. The given

@@ -11,4 +11,4 @@ Examples:
 namespace std { int x; // May cause undefined behavior. }
 
 This check corresponds to the CERT C++ Coding Standard rule
-`DCL58-CPP. Do not modify the standard namespaces <https://www.securecoding.cert.org/confluence/display/cplusplus/DCL58-CPP.+Do+not+modify+the+standard+namespaces>`\_.
+[DCL58-CPP. Do not modify the standard namespaces](https://www.securecoding.cert.org/confluence/display/cplusplus/DCL58-CPP.+Do+not+modify+the+standard+namespaces).

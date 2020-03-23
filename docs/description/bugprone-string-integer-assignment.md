@@ -1,9 +1,9 @@
 bugprone-string-integer-assignment
 ==================================
 
-The check finds assignments of an integer to `std::basic_string<CharT>`
+The check finds assignments of an integer to [std::basic_string](https://clang.llvm.org/extra/clang-tidy/checks/CharT)
 (`std::string`, `std::wstring`, etc.). The source of the problem is the
-following assignment operator of `std::basic_string<CharT>`:
+following assignment operator of [std::basic_string](https://clang.llvm.org/extra/clang-tidy/checks/CharT):
 
 .. code-block:: c++
 

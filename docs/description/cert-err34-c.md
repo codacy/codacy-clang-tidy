@@ -22,4 +22,4 @@ void func(const char \*buff) { int si;
 }
 
 This check corresponds to the CERT C Coding Standard rule
-`ERR34-C. Detect errors when converting a string to a number <https://www.securecoding.cert.org/confluence/display/c/ERR34-C.+Detect+errors+when+converting+a+string+to+a+number>`\_.
+[ERR34-C. Detect errors when converting a string to a number](https://www.securecoding.cert.org/confluence/display/c/ERR34-C.+Detect+errors+when+converting+a+string+to+a+number).

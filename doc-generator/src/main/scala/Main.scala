@@ -27,6 +27,19 @@ object Main extends App {
 
   def isNotSeparator(s: String) = !s.startsWith("====")
 
+  def prettifyLinks(s: String) = {
+    val linkRegex = """`(.+)<(.+)>`(?:\\_)?""".r("name", "link")
+    linkRegex.replaceAllIn(s, matching => {
+      val name = matching.group("name")
+      val link = matching.group("link")
+      val linkToClangTidy =
+        if (link.startsWith("http")) link else s"https://clang.llvm.org/extra/clang-tidy/checks/$link"
+      val linkEscaped = linkToClangTidy.replaceAllLiterally(")", "\\)").trim
+      val nameEscaped = name.replaceAllLiterally("]", "\\]").trim
+      s"[$nameEscaped]($linkEscaped)"
+    })
+  }
+
   val patternsWithDocs: Seq[(String, String)] = {
     val iterator = for {
       file <- (clangExtraDir / "docs" / "clang-tidy" / "checks").children
@@ -36,21 +49,24 @@ object Main extends App {
       content = linesSeq.dropWhile(isNotSeparator)
       toCovert = (patternId +: content).mkString(System.lineSeparator)
       converted = (Seq("pandoc", "-t", "markdown_strict") #< toInputStream(toCovert)).!!
-    } yield (patternId, converted)
+      withPrettyLinks = prettifyLinks(converted)
+    } yield (patternId, withPrettyLinks)
     iterator.toSeq
   }
 
   val docsDir = pwd / "docs"
-  rm(docsDir)
   mkdirs(docsDir)
-  val descriptionDir = mkdirs(docsDir / "description")
+  val descriptionDir = docsDir / "description"
+  rm(descriptionDir)
+  mkdirs(descriptionDir)
 
   for ((pattern, markdown) <- patternsWithDocs) (descriptionDir / s"$pattern.md").writeText(markdown)
 
   def categoryFromPatternId(patternId: String): (Pattern.Category, Option[Subcategory]) = patternId match {
     case s"android-$_" => (Pattern.Category.Security, Some(Pattern.Subcategory.Android))
     case "cert-err52-cpp" => (Pattern.Category.Security, Some(Pattern.Subcategory.DoS))
-    case s"clang-analyzer-security.insecureAPI$_" => (Pattern.Category.Security, Some(Pattern.Subcategory.InsecureModulesLibraries))
+    case s"clang-analyzer-security.insecureAPI$_" =>
+      (Pattern.Category.Security, Some(Pattern.Subcategory.InsecureModulesLibraries))
     case "clang-analyzer-security" => (Pattern.Category.Security, None)
     case "misc-unused-alias-decls" => (Pattern.Category.UnusedCode, None)
     case s"bugprone-$_" => (Pattern.Category.ErrorProne, None)

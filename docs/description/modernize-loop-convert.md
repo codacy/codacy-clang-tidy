@@ -34,7 +34,7 @@ for (int i = 0; i &lt; obj.getVector().size(); ++i) obj.foo(10); //
 using ‘obj’ is considered risky
 
 See
-:ref:`Range-based loops evaluate end() only once<IncorrectRiskyTransformation>`
+:ref:[Range-based loops evaluate end() only once](https://clang.llvm.org/extra/clang-tidy/checks/IncorrectRiskyTransformation)
 for an example of an incorrect transformation when the minimum required
 confidence level is set to `risky`.
 
@@ -171,7 +171,7 @@ Overloaded operator-&gt;() with side effects
 Similarly, if `operator->()` was overloaded to have side effects, such
 as logging, the semantics will change. If the iterator’s `operator->()`
 was used in the original loop it will be replaced with
-`<container element>.<member>` instead due to the implicit dereference
+[<container element>.](https://clang.llvm.org/extra/clang-tidy/checks/member) instead due to the implicit dereference
 as part of the range-based for loop. Therefore any side effect of the
 overloaded `operator->()` will no longer be performed.
 

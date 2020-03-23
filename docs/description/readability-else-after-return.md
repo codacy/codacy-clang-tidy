@@ -1,7 +1,7 @@
 readability-else-after-return
 =============================
 
-`LLVM Coding Standards <https://llvm.org/docs/CodingStandards.html>`\_
+[LLVM Coding Standards](https://llvm.org/docs/CodingStandards.html)
 advises to reduce indentation where possible and where it makes
 understanding code easier. Early exit is one of the suggested
 enforcements of that. Please do not use `else` or `else if` after
@@ -59,4 +59,4 @@ Would be transformed into:
     }
 
 This check helps to enforce this
-`LLVM Coding Standards recommendation <https://llvm.org/docs/CodingStandards.html#don-t-use-else-after-a-return>`\_.
+[LLVM Coding Standards recommendation](https://llvm.org/docs/CodingStandards.html#don-t-use-else-after-a-return).

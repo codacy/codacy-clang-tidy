@@ -5,7 +5,7 @@ Ensure that every value that in a `throw` expression is an instance of
 `std::exception`.
 
 This enforces
-`rule 15.1 <http://www.codingstandard.com/section/15-1-throwing-an-exception/>`\_
+[rule 15.1](http://www.codingstandard.com/section/15-1-throwing-an-exception/)
 of the High Integrity C++ Coding Standard.
 
 .. code-block:: c++

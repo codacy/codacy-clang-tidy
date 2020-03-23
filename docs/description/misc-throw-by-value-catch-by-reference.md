@@ -7,7 +7,7 @@ misc-throw-by-value-catch-by-reference
 Finds violations of the rule “Throw by value, catch by reference”
 presented for example in “C++ Coding Standards” by H. Sutter and A.
 Alexandrescu, as well as the CERT C++ Coding Standard rule
-`ERR61-CPP. Catch exceptions by lvalue reference <https://wiki.sei.cmu.edu/confluence/display/cplusplus/ERR61-CPP.+Catch+exceptions+by+lvalue+reference>`\_.
+[ERR61-CPP. Catch exceptions by lvalue reference](https://wiki.sei.cmu.edu/confluence/display/cplusplus/ERR61-CPP.+Catch+exceptions+by+lvalue+reference).
 
 Exceptions: \* Throwing string literals will not be flagged despite
 being a pointer. They are not susceptible to slicing and the usage of

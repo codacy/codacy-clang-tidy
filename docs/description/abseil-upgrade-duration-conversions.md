@@ -8,7 +8,7 @@ changes.
 The operators `*=`, `/=`, `*`, and `/` for `absl::Duration` currently
 accept an argument of class type that is convertible to an arithmetic
 type. Such a call currently converts the value to an `int64_t`, even in
-a case such as `std::atomic<float>` that would result in lossy
+a case such as [std::atomic](https://clang.llvm.org/extra/clang-tidy/checks/float) that would result in lossy
 conversion.
 
 Additionally, the `absl::Duration` factory functions (`absl::Hours`,

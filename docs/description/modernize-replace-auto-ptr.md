@@ -22,7 +22,7 @@ std::unique\_ptr<int> b;
 -   b = std::move(a);
 -   take\_ownership\_fn(std::move(b)); }
 
-Since `std::move()` is a library function declared in `<utility>` it may
+Since [std::move()` is a library function declared in `](https://clang.llvm.org/extra/clang-tidy/checks/utility) it may
 be necessary to add this include. The check will add the include
 directive when necessary.
 

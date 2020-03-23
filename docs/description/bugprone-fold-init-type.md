@@ -2,7 +2,7 @@ bugprone-fold-init-type
 =======================
 
 The check flags type mismatches in
-`folds <https://en.wikipedia.org/wiki/Fold_(higher-order_function)>`\_
+[folds](https://en.wikipedia.org/wiki/Fold_(higher-order_function))
 like `std::accumulate` that might result in loss of precision.
 `std::accumulate` folds an input range into an initial value using the
 type of the latter, with `operator+` by default. This can cause loss of

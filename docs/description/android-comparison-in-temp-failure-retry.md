@@ -7,7 +7,7 @@ incorrect in the vast majority of cases, and will often silently defeat
 the purpose of the `TEMP_FAILURE_RETRY` macro.
 
 For context, `TEMP_FAILURE_RETRY` is
-`a convenience macro <https://www.gnu.org/software/libc/manual/html_node/Interrupted-Primitives.html>`\_
+[a convenience macro](https://www.gnu.org/software/libc/manual/html_node/Interrupted-Primitives.html)
 provided by both glibc and Bionic. Its purpose is to repeatedly run a
 syscall until it either succeeds, or fails for reasons other than being
 interrupted.

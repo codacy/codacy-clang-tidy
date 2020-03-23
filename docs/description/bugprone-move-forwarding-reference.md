@@ -10,7 +10,7 @@ Warns if `std::move` is called on a forwarding reference, for example:
       bar(std::move(t));
     }
 
-`Forwarding references <http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4164.pdf>`\_
+[Forwarding references](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4164.pdf)
 should typically be passed to `std::forward` instead of `std::move`, and
 this is the fix that will be suggested.
 

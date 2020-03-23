@@ -7,9 +7,9 @@ argument, constant expression or any user-configurable type.
 Pseudo-random number engines seeded with a predictable value may cause
 vulnerabilities e.g. in security protocols. This is a CERT security
 rule, see
-`MSC51-CPP. Ensure your random number generator is properly seeded <https://wiki.sei.cmu.edu/confluence/display/cplusplus/MSC51-CPP.+Ensure+your+random+number+generator+is+properly+seeded>`\_
+[MSC51-CPP. Ensure your random number generator is properly seeded](https://wiki.sei.cmu.edu/confluence/display/cplusplus/MSC51-CPP.+Ensure+your+random+number+generator+is+properly+seeded)
 and
-`MSC32-C. Properly seed pseudorandom number generators <https://wiki.sei.cmu.edu/confluence/display/c/MSC32-C.+Properly+seed+pseudorandom+number+generators>`\_.
+[MSC32-C. Properly seed pseudorandom number generators](https://wiki.sei.cmu.edu/confluence/display/c/MSC32-C.+Properly+seed+pseudorandom+number+generators).
 
 Examples:
 

@@ -2,6 +2,6 @@ hicpp-use-noexcept
 ==================
 
 The `hicpp-use-noexcept` check is an alias, please see
-`modernize-use-noexcept <modernize-use-noexcept.html>`\_ for more
+[modernize-use-noexcept](https://clang.llvm.org/extra/clang-tidy/checks/modernize-use-noexcept.html) for more
 information. It enforces the
-`rule 1.3.5 <http://www.codingstandard.com/rule/1-3-5-do-not-use-throw-exception-specifications/>`\_.
+[rule 1.3.5](http://www.codingstandard.com/rule/1-3-5-do-not-use-throw-exception-specifications/).

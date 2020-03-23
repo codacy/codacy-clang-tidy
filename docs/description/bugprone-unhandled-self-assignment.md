@@ -14,7 +14,7 @@ or a C array, it’s likely that self-copy assignment breaks the object if
 the copy assignment operator was not written with care.
 
 See also:
-`OOP54-CPP. Gracefully handle self-copy assignment <https://wiki.sei.cmu.edu/confluence/display/cplusplus/OOP54-CPP.+Gracefully+handle+self-copy+assignment>`\_
+[OOP54-CPP. Gracefully handle self-copy assignment](https://wiki.sei.cmu.edu/confluence/display/cplusplus/OOP54-CPP.+Gracefully+handle+self-copy+assignment)
 
 A copy assignment operator must prevent that self-copy assignment ruins
 the object state. A typical use case is when the class has a pointer

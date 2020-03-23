@@ -4,9 +4,9 @@ hicpp-multiway-paths-covered
 This check discovers situations where code paths are not fully-covered.
 It furthermore suggests using `if` instead of `switch` if the code will
 be more clear. The
-`rule 6.1.2 <http://www.codingstandard.com/rule/6-1-2-explicitly-cover-all-paths-through-multi-way-selection-statements/>`*
+[rule 6.1.2](http://www.codingstandard.com/rule/6-1-2-explicitly-cover-all-paths-through-multi-way-selection-statements/)*
 and
-`rule 6.1.4 <http://www.codingstandard.com/rule/6-1-4-ensure-that-a-switch-statement-has-at-least-two-case-labels-distinct-from-the-default-label/>`*
+[rule 6.1.4](http://www.codingstandard.com/rule/6-1-4-ensure-that-a-switch-statement-has-at-least-two-case-labels-distinct-from-the-default-label/)*
 of the High Integrity C++ Coding Standard are enforced.
 
 `if-else if` chains that miss a final `else` branch might lead to
@@ -44,7 +44,7 @@ c) { switch (c) { case Red: // We can’t drive for now. break; case
 Green: // We are allowed to drive. break; } // Other cases missing }
 
 The
-`rule 6.1.4 <http://www.codingstandard.com/rule/6-1-4-ensure-that-a-switch-statement-has-at-least-two-case-labels-distinct-from-the-default-label/>`\_
+[rule 6.1.4](http://www.codingstandard.com/rule/6-1-4-ensure-that-a-switch-statement-has-at-least-two-case-labels-distinct-from-the-default-label/)
 requires every `switch` statement to have at least two `case` labels
 other than a `default` label. Otherwise, the `switch` could be better
 expressed with an `if` statement. Degenerated `switch` statements
