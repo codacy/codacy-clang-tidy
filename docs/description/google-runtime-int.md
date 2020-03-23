@@ -1,25 +1,38 @@
-google-runtime-int
-==================
+# google-runtime-int
 
 Finds uses of `short`, `long` and `long long` and suggest replacing them
 with `u?intXX(_t)?`.
 
 The corresponding style guide rule:
-https://google.github.io/styleguide/cppguide.html\#Integer\_Types.
+<https://google.github.io/styleguide/cppguide.html#Integer_Types>.
 
-Correspondig cpplint.py check: `runtime/int`.
+Correspondig cpplint.py check:
+<span class="title-ref">runtime/int</span>.
 
-Options
--------
+## Options
 
-.. option:: UnsignedTypePrefix
+<div class="option">
 
-A string specifying the unsigned type prefix. Default is `uint`.
+UnsignedTypePrefix
 
-.. option:: SignedTypePrefix
+A string specifying the unsigned type prefix. Default is
+<span class="title-ref">uint</span>.
 
-A string specifying the signed type prefix. Default is `int`.
+</div>
 
-.. option:: TypeSuffix
+<div class="option">
+
+SignedTypePrefix
+
+A string specifying the signed type prefix. Default is
+<span class="title-ref">int</span>.
+
+</div>
+
+<div class="option">
+
+TypeSuffix
 
 A string specifying the type suffix. Default is an empty string.
+
+</div>

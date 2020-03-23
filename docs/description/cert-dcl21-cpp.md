@@ -1,5 +1,4 @@
-cert-dcl21-cpp
-==============
+# cert-dcl21-cpp
 
 This check flags postfix `operator++` and `operator--` declarations if
 the return type is not a const object. This also warns if the return

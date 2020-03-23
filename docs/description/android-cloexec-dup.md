@@ -1,5 +1,4 @@
-android-cloexec-dup
-===================
+# android-cloexec-dup
 
 The usage of `dup()` is not recommended, it's better to use `fcntl()`,
 which can set the close-on-exec flag. Otherwise, an opened sensitive
@@ -8,10 +7,10 @@ domain.
 
 Examples:
 
-.. code-block:: c++
-
+``` c++
 int fd = dup(oldfd);
 
 // becomes
 
-int fd = fcntl(oldfd, F\_DUPFD\_CLOEXEC);
+int fd = fcntl(oldfd, F_DUPFD_CLOEXEC);
+```

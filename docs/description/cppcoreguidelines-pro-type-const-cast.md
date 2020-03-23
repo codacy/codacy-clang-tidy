@@ -1,5 +1,4 @@
-cppcoreguidelines-pro-type-const-cast
-=====================================
+# cppcoreguidelines-pro-type-const-cast
 
 This check flags all uses of `const_cast` in C++ code.
 
@@ -8,4 +7,4 @@ with `const_cast`.
 
 This rule is part of the "Type safety" profile of the C++ Core
 Guidelines, see
-https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md\#Pro-type-constcast.
+<https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast>.

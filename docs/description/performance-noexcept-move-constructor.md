@@ -1,5 +1,4 @@
-performance-noexcept-move-constructor
-=====================================
+# performance-noexcept-move-constructor
 
 The check flags user-defined move constructors and assignment operators
 not marked with `noexcept` or marked with `noexcept(expr)` where `expr`

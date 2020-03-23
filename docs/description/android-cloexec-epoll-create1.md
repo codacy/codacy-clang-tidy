@@ -1,5 +1,4 @@
-android-cloexec-epoll-create1
-=============================
+# android-cloexec-epoll-create1
 
 `epoll_create1()` should include `EPOLL_CLOEXEC` in its type argument to
 avoid the file descriptor leakage. Without this flag, an opened
@@ -8,10 +7,10 @@ lower-privileged SELinux domain.
 
 Examples:
 
-.. code-block:: c++
-
-epoll\_create1(0);
+``` c++
+epoll_create1(0);
 
 // becomes
 
-epoll\_create1(EPOLL\_CLOEXEC);
+epoll_create1(EPOLL_CLOEXEC);
+```

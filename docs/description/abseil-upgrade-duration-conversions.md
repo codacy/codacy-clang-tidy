@@ -1,5 +1,4 @@
-abseil-upgrade-duration-conversions
-===================================
+# abseil-upgrade-duration-conversions
 
 Finds calls to `absl::Duration` arithmetic operators and factories whose
 argument needs an explicit cast to continue compiling after upcoming API
@@ -8,7 +7,7 @@ changes.
 The operators `*=`, `/=`, `*`, and `/` for `absl::Duration` currently
 accept an argument of class type that is convertible to an arithmetic
 type. Such a call currently converts the value to an `int64_t`, even in
-a case such as [std::atomic](https://clang.llvm.org/extra/clang-tidy/checks/float) that would result in lossy
+a case such as `std::atomic<float>` that would result in lossy
 conversion.
 
 Additionally, the `absl::Duration` factory functions (`absl::Hours`,
@@ -24,18 +23,19 @@ type is implicitly convertible to an arithmetic type.
 
 Here are example fixes created by this check:
 
-.. code-block:: c++
-
-std::atomic`<int>`{=html} a; absl::Duration d = absl::Milliseconds(a); d
-\*= a;
+``` c++
+std::atomic<int> a;
+absl::Duration d = absl::Milliseconds(a);
+d *= a;
+```
 
 becomes
 
-.. code-block:: c++
-
-std::atomic`<int>`{=html} a; absl::Duration d =
-absl::Milliseconds(static\_cast`<int64_t>`{=html}(a)); d \*=
-static\_cast`<int64_t>`{=html}(a);
+``` c++
+std::atomic<int> a;
+absl::Duration d = absl::Milliseconds(static_cast<int64_t>(a));
+d *= static_cast<int64_t>(a);
+```
 
 Note that this check always adds a cast to `int64_t` in order to
 preserve the current behavior of user code. It is possible that this

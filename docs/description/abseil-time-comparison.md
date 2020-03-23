@@ -1,5 +1,4 @@
-abseil-time-comparison
-======================
+# abseil-time-comparison
 
 Prefer comparisons in the `absl::Time` domain instead of the integer
 domain.
@@ -12,10 +11,12 @@ fixed.
 
 Examples:
 
-.. code-block:: c++
+``` c++
+// Original - Comparison in the integer domain
+int x;
+absl::Time t;
+if (x < absl::ToUnixSeconds(t)) ...
 
-// Original - Comparison in the integer domain int x; absl::Time t; if
-(x \< absl::ToUnixSeconds(t)) ...
-
-// Suggested - Compare in the absl::Time domain instead if
-(absl::FromUnixSeconds(x) \< t) ...
+// Suggested - Compare in the absl::Time domain instead
+if (absl::FromUnixSeconds(x) < t) ...
+```

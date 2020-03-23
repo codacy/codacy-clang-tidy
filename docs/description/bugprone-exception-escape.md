@@ -1,5 +1,4 @@
-bugprone-exception-escape
-=========================
+# bugprone-exception-escape
 
 Finds functions which may throw an exception directly or indirectly, but
 they should not. The functions which should not throw exceptions are the
@@ -16,19 +15,26 @@ way. Non throwing `swap()` operations are also used to create move
 operations. A throwing `main()` function also results in unexpected
 termination.
 
-WARNING! This check may be expensive on large source files.
+WARNING\! This check may be expensive on large source files.
 
-Options
--------
+## Options
 
-.. option:: FunctionsThatShouldNotThrow
+<div class="option">
+
+FunctionsThatShouldNotThrow
 
 Comma separated list containing function names which should not throw.
 An example value for this parameter can be `WinMain` which adds function
 `WinMain()` in the Windows API to the list of the funcions which should
 not throw. Default value is an empty string.
 
-.. option:: IgnoredExceptions
+</div>
+
+<div class="option">
+
+IgnoredExceptions
 
 Comma separated list containing type names which are not counted as
 thrown exceptions in the check. Default value is an empty string.
+
+</div>

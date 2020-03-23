@@ -1,5 +1,4 @@
-performance-for-range-copy
-==========================
+# performance-for-range-copy
 
 Finds C++11 for ranges where the loop variable is copied in each
 iteration but it would suffice to obtain it by const reference.
@@ -16,17 +15,28 @@ following heuristic is employed:
     are invoked on it, or it is used as const reference or value
     argument in constructors or function calls.
 
-Options
--------
+## Options
 
-.. option:: WarnOnAllAutoCopies
+<div class="option">
 
-When non-zero, warns on any use of `auto` as the type of the range-based
-for loop variable. Default is `0`.
+WarnOnAllAutoCopies
 
-.. option:: AllowedTypes
+When non-zero, warns on any use of <span class="title-ref">auto</span>
+as the type of the range-based for loop variable. Default is
+<span class="title-ref">0</span>.
+
+</div>
+
+<div class="option">
+
+AllowedTypes
 
 A semicolon-separated list of names of types allowed to be copied in
-each iteration. Regular expressions are accepted,
-e.g. `[Rr]ef(erence)?$` matches every type with suffix `Ref`, `ref`,
-`Reference` and `reference`. The default is empty.
+each iteration. Regular expressions are accepted, e.g.
+<span class="title-ref">\[Rr\]ef(erence)?$</span> matches every type
+with suffix <span class="title-ref">Ref</span>,
+<span class="title-ref">ref</span>,
+<span class="title-ref">Reference</span> and
+<span class="title-ref">reference</span>. The default is empty.
+
+</div>

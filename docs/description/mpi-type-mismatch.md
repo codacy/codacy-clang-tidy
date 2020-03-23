@@ -1,5 +1,4 @@
-mpi-type-mismatch
-=================
+# mpi-type-mismatch
 
 This check verifies if buffer type and MPI (Message Passing Interface)
 datatype pairs match for used MPI functions. All MPI datatypes defined
@@ -9,10 +8,12 @@ in the course of verification.
 
 Example:
 
-.. code-block:: c++
-
-// In this case, the buffer type matches MPI datatype. char buf;
-MPI\_Send(&buf, 1, MPI\_CHAR, 0, 0, MPI\_COMM\_WORLD);
+``` c++
+// In this case, the buffer type matches MPI datatype.
+char buf;
+MPI_Send(&buf, 1, MPI_CHAR, 0, 0, MPI_COMM_WORLD);
 
 // In the following case, the buffer type does not match MPI datatype.
-int buf; MPI\_Send(&buf, 1, MPI\_CHAR, 0, 0, MPI\_COMM\_WORLD);
+int buf;
+MPI_Send(&buf, 1, MPI_CHAR, 0, 0, MPI_COMM_WORLD);
+```

@@ -1,5 +1,4 @@
-readability-identifier-naming
-=============================
+# readability-identifier-naming
 
 Checks for identifiers naming style mismatch.
 
@@ -9,13 +8,13 @@ convert from one to another if a mismatch is detected
 
 Casing types inclde:
 
--   `lower_case`,
--   `UPPER_CASE`,
--   `camelBack`,
--   `CamelCase`,
--   `camel_Snake_Back`,
--   `Camel_Snake_Case`,
--   `aNy_CasE`.
+>   - `lower_case`,
+>   - `UPPER_CASE`,
+>   - `camelBack`,
+>   - `CamelCase`,
+>   - `camel_Snake_Back`,
+>   - `Camel_Snake_Case`,
+>   - `aNy_CasE`.
 
 It also supports a fixed prefix and suffix that will be prepended or
 appended to the identifiers, regardless of the casing.
@@ -29,1949 +28,2509 @@ The naming of virtual methods is reported where they occur in the base
 class, but not where they are overridden, as it can't be fixed locally
 there. This also applies for pseudo-override patterns like CRTP.
 
-Options
--------
+## Options
 
 The following options are describe below:
 
--   :option:`AbstractClassCase`, :option:`AbstractClassPrefix`,
-    :option:`AbstractClassSuffix`
--   :option:`ClassCase`, :option:`ClassPrefix`, :option:`ClassSuffix`
--   :option:`ClassConstantCase`, :option:`ClassConstantPrefix`,
-    :option:`ClassConstantSuffix`
--   :option:`ClassMemberCase`, :option:`ClassMemberPrefix`,
-    :option:`ClassMemberSuffix`
--   :option:`ClassMethodCase`, :option:`ClassMethodPrefix`,
-    :option:`ClassMethodSuffix`
--   :option:`ConstantCase`, :option:`ConstantPrefix`,
-    :option:`ConstantSuffix`
--   :option:`ConstantMemberCase`, :option:`ConstantMemberPrefix`,
-    :option:`ConstantMemberSuffix`
--   :option:`ConstantParameterCase`, :option:`ConstantParameterPrefix`,
-    :option:`ConstantParameterSuffix`
--   :option:`ConstantPointerParameterCase`,
-    :option:`ConstantPointerParameterPrefix`,
-    :option:`ConstantPointerParameterSuffix`
--   :option:`ConstexprFunctionCase`, :option:`ConstexprFunctionPrefix`,
-    :option:`ConstexprFunctionSuffix`
--   :option:`ConstexprMethodCase`, :option:`ConstexprMethodPrefix`,
-    :option:`ConstexprMethodSuffix`
--   :option:`ConstexprVariableCase`, :option:`ConstexprVariablePrefix`,
-    :option:`ConstexprVariableSuffix`
--   :option:`EnumCase`, :option:`EnumPrefix`, :option:`EnumSuffix`
--   :option:`EnumConstantCase`, :option:`EnumConstantPrefix`,
-    :option:`EnumConstantSuffix`
--   :option:`FunctionCase`, :option:`FunctionPrefix`,
-    :option:`FunctionSuffix`
--   :option:`GlobalConstantCase`, :option:`GlobalConstantPrefix`,
-    :option:`GlobalConstantSuffix`
--   :option:`GlobalConstantPointerCase`,
-    :option:`GlobalConstantPointerPrefix`,
-    :option:`GlobalConstantPointerSuffix`
--   :option:`GlobalFunctionCase`, :option:`GlobalFunctionPrefix`,
-    :option:`GlobalFunctionSuffix`
--   :option:`GlobalPointerCase`, :option:`GlobalPointerPrefix`,
-    :option:`GlobalPointerSuffix`
--   :option:`GlobalVariableCase`, :option:`GlobalVariablePrefix`,
-    :option:`GlobalVariableSuffix`
--   :option:`InlineNamespaceCase`, :option:`InlineNamespacePrefix`,
-    :option:`InlineNamespaceSuffix`
--   :option:`LocalConstantCase`, :option:`LocalConstantPrefix`,
-    :option:`LocalConstantSuffix`
--   :option:`LocalConstantPointerCase`,
-    :option:`LocalConstantPointerPrefix`,
-    :option:`LocalConstantPointerSuffix`
--   :option:`LocalPointerCase`, :option:`LocalPointerPrefix`,
-    :option:`LocalPointerSuffix`
--   :option:`LocalVariableCase`, :option:`LocalVariablePrefix`,
-    :option:`LocalVariableSuffix`
--   :option:`MemberCase`, :option:`MemberPrefix`, :option:`MemberSuffix`
--   :option:`MethodCase`, :option:`MethodPrefix`, :option:`MethodSuffix`
--   :option:`NamespaceCase`, :option:`NamespacePrefix`,
-    :option:`NamespaceSuffix`
--   :option:`ParameterCase`, :option:`ParameterPrefix`,
-    :option:`ParameterSuffix`
--   :option:`ParameterPackCase`, :option:`ParameterPackPrefix`,
-    :option:`ParameterPackSuffix`
--   :option:`PointerParameterCase`, :option:`PointerParameterPrefix`,
-    :option:`PointerParameterSuffix`
--   :option:`PrivateMemberCase`, :option:`PrivateMemberPrefix`,
-    :option:`PrivateMemberSuffix`
--   :option:`PrivateMethodCase`, :option:`PrivateMethodPrefix`,
-    :option:`PrivateMethodSuffix`
--   :option:`ProtectedMemberCase`, :option:`ProtectedMemberPrefix`,
-    :option:`ProtectedMemberSuffix`
--   :option:`ProtectedMethodCase`, :option:`ProtectedMethodPrefix`,
-    :option:`ProtectedMethodSuffix`
--   :option:`PublicMemberCase`, :option:`PublicMemberPrefix`,
-    :option:`PublicMemberSuffix`
--   :option:`PublicMethodCase`, :option:`PublicMethodPrefix`,
-    :option:`PublicMethodSuffix`
--   :option:`StaticConstantCase`, :option:`StaticConstantPrefix`,
-    :option:`StaticConstantSuffix`
--   :option:`StaticVariableCase`, :option:`StaticVariablePrefix`,
-    :option:`StaticVariableSuffix`
--   :option:`StructCase`, :option:`StructPrefix`, :option:`StructSuffix`
--   :option:`TemplateParameterCase`, :option:`TemplateParameterPrefix`,
-    :option:`TemplateParameterSuffix`
--   :option:`TemplateTemplateParameterCase`,
-    :option:`TemplateTemplateParameterPrefix`,
-    :option:`TemplateTemplateParameterSuffix`
--   :option:`TypeAliasCase`, :option:`TypeAliasPrefix`,
-    :option:`TypeAliasSuffix`
--   :option:`TypedefCase`, :option:`TypedefPrefix`,
-    :option:`TypedefSuffix`
--   :option:`TypeTemplateParameterCase`,
-    :option:`TypeTemplateParameterPrefix`,
-    :option:`TypeTemplateParameterSuffix`
--   :option:`UnionCase`, :option:`UnionPrefix`, :option:`UnionSuffix`
--   :option:`ValueTemplateParameterCase`,
-    :option:`ValueTemplateParameterPrefix`,
-    :option:`ValueTemplateParameterSuffix`
--   :option:`VariableCase`, :option:`VariablePrefix`,
-    :option:`VariableSuffix`
--   :option:`VirtualMethodCase`, :option:`VirtualMethodPrefix`,
-    :option:`VirtualMethodSuffix`
+>   - `AbstractClassCase`, `AbstractClassPrefix`, `AbstractClassSuffix`
+>   - `ClassCase`, `ClassPrefix`, `ClassSuffix`
+>   - `ClassConstantCase`, `ClassConstantPrefix`, `ClassConstantSuffix`
+>   - `ClassMemberCase`, `ClassMemberPrefix`, `ClassMemberSuffix`
+>   - `ClassMethodCase`, `ClassMethodPrefix`, `ClassMethodSuffix`
+>   - `ConstantCase`, `ConstantPrefix`, `ConstantSuffix`
+>   - `ConstantMemberCase`, `ConstantMemberPrefix`,
+>     `ConstantMemberSuffix`
+>   - `ConstantParameterCase`, `ConstantParameterPrefix`,
+>     `ConstantParameterSuffix`
+>   - `ConstantPointerParameterCase`, `ConstantPointerParameterPrefix`,
+>     `ConstantPointerParameterSuffix`
+>   - `ConstexprFunctionCase`, `ConstexprFunctionPrefix`,
+>     `ConstexprFunctionSuffix`
+>   - `ConstexprMethodCase`, `ConstexprMethodPrefix`,
+>     `ConstexprMethodSuffix`
+>   - `ConstexprVariableCase`, `ConstexprVariablePrefix`,
+>     `ConstexprVariableSuffix`
+>   - `EnumCase`, `EnumPrefix`, `EnumSuffix`
+>   - `EnumConstantCase`, `EnumConstantPrefix`, `EnumConstantSuffix`
+>   - `FunctionCase`, `FunctionPrefix`, `FunctionSuffix`
+>   - `GlobalConstantCase`, `GlobalConstantPrefix`,
+>     `GlobalConstantSuffix`
+>   - `GlobalConstantPointerCase`, `GlobalConstantPointerPrefix`,
+>     `GlobalConstantPointerSuffix`
+>   - `GlobalFunctionCase`, `GlobalFunctionPrefix`,
+>     `GlobalFunctionSuffix`
+>   - `GlobalPointerCase`, `GlobalPointerPrefix`, `GlobalPointerSuffix`
+>   - `GlobalVariableCase`, `GlobalVariablePrefix`,
+>     `GlobalVariableSuffix`
+>   - `InlineNamespaceCase`, `InlineNamespacePrefix`,
+>     `InlineNamespaceSuffix`
+>   - `LocalConstantCase`, `LocalConstantPrefix`, `LocalConstantSuffix`
+>   - `LocalConstantPointerCase`, `LocalConstantPointerPrefix`,
+>     `LocalConstantPointerSuffix`
+>   - `LocalPointerCase`, `LocalPointerPrefix`, `LocalPointerSuffix`
+>   - `LocalVariableCase`, `LocalVariablePrefix`, `LocalVariableSuffix`
+>   - `MemberCase`, `MemberPrefix`, `MemberSuffix`
+>   - `MethodCase`, `MethodPrefix`, `MethodSuffix`
+>   - `NamespaceCase`, `NamespacePrefix`, `NamespaceSuffix`
+>   - `ParameterCase`, `ParameterPrefix`, `ParameterSuffix`
+>   - `ParameterPackCase`, `ParameterPackPrefix`, `ParameterPackSuffix`
+>   - `PointerParameterCase`, `PointerParameterPrefix`,
+>     `PointerParameterSuffix`
+>   - `PrivateMemberCase`, `PrivateMemberPrefix`, `PrivateMemberSuffix`
+>   - `PrivateMethodCase`, `PrivateMethodPrefix`, `PrivateMethodSuffix`
+>   - `ProtectedMemberCase`, `ProtectedMemberPrefix`,
+>     `ProtectedMemberSuffix`
+>   - `ProtectedMethodCase`, `ProtectedMethodPrefix`,
+>     `ProtectedMethodSuffix`
+>   - `PublicMemberCase`, `PublicMemberPrefix`, `PublicMemberSuffix`
+>   - `PublicMethodCase`, `PublicMethodPrefix`, `PublicMethodSuffix`
+>   - `StaticConstantCase`, `StaticConstantPrefix`,
+>     `StaticConstantSuffix`
+>   - `StaticVariableCase`, `StaticVariablePrefix`,
+>     `StaticVariableSuffix`
+>   - `StructCase`, `StructPrefix`, `StructSuffix`
+>   - `TemplateParameterCase`, `TemplateParameterPrefix`,
+>     `TemplateParameterSuffix`
+>   - `TemplateTemplateParameterCase`,
+>     `TemplateTemplateParameterPrefix`,
+>     `TemplateTemplateParameterSuffix`
+>   - `TypeAliasCase`, `TypeAliasPrefix`, `TypeAliasSuffix`
+>   - `TypedefCase`, `TypedefPrefix`, `TypedefSuffix`
+>   - `TypeTemplateParameterCase`, `TypeTemplateParameterPrefix`,
+>     `TypeTemplateParameterSuffix`
+>   - `UnionCase`, `UnionPrefix`, `UnionSuffix`
+>   - `ValueTemplateParameterCase`, `ValueTemplateParameterPrefix`,
+>     `ValueTemplateParameterSuffix`
+>   - `VariableCase`, `VariablePrefix`, `VariableSuffix`
+>   - `VirtualMethodCase`, `VirtualMethodPrefix`, `VirtualMethodSuffix`
 
-.. option:: AbstractClassCase
+<div class="option">
 
-    When defined, the check will ensure abstract class names conform to the
-    selected casing.
+AbstractClassCase
 
-.. option:: AbstractClassPrefix
+When defined, the check will ensure abstract class names conform to the
+selected casing.
 
-    When defined, the check will ensure abstract class names will add the
-    prefixed with the given value (regardless of casing).
+</div>
 
-.. option:: AbstractClassSuffix
+<div class="option">
 
-    When defined, the check will ensure abstract class names will add the
-    suffix with the given value (regardless of casing).
+AbstractClassPrefix
+
+When defined, the check will ensure abstract class names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+AbstractClassSuffix
+
+When defined, the check will ensure abstract class names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   AbstractClassCase of `lower_case`
--   AbstractClassPrefix of `pre_`
--   AbstractClassSuffix of `_post`
+>   - AbstractClassCase of `lower_case`
+>   - AbstractClassPrefix of `pre_`
+>   - AbstractClassSuffix of `_post`
 
 Identifies and/or transforms abstract class names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class ABSTRACT_CLASS {
-    public:
-      ABSTRACT_CLASS();
-    };
+``` c++
+class ABSTRACT_CLASS {
+public:
+  ABSTRACT_CLASS();
+};
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class pre_abstract_class_post {
+public:
+  pre_abstract_class_post();
+};
+```
 
-    class pre_abstract_class_post {
-    public:
-      pre_abstract_class_post();
-    };
+<div class="option">
 
-.. option:: ClassCase
+ClassCase
 
-    When defined, the check will ensure class names conform to the
-    selected casing.
+When defined, the check will ensure class names conform to the selected
+casing.
 
-.. option:: ClassPrefix
+</div>
 
-    When defined, the check will ensure class names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ClassSuffix
+ClassPrefix
 
-    When defined, the check will ensure class names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure class names will add the prefixed
+with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ClassSuffix
+
+When defined, the check will ensure class names will add the suffix with
+the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ClassCase of `lower_case`
--   ClassPrefix of `pre_`
--   ClassSuffix of `_post`
+>   - ClassCase of `lower_case`
+>   - ClassPrefix of `pre_`
+>   - ClassSuffix of `_post`
 
 Identifies and/or transforms class names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class FOO {
-    public:
-      FOO();
-      ~FOO();
-    };
+``` c++
+class FOO {
+public:
+  FOO();
+  ~FOO();
+};
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class pre_foo_post {
+public:
+  pre_foo_post();
+  ~pre_foo_post();
+};
+```
 
-    class pre_foo_post {
-    public:
-      pre_foo_post();
-      ~pre_foo_post();
-    };
+<div class="option">
 
-.. option:: ClassConstantCase
+ClassConstantCase
 
-    When defined, the check will ensure class constant names conform to the
-    selected casing.
+When defined, the check will ensure class constant names conform to the
+selected casing.
 
-.. option:: ClassConstantPrefix
+</div>
 
-    When defined, the check will ensure class constant names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ClassConstantSuffix
+ClassConstantPrefix
 
-    When defined, the check will ensure class constant names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure class constant names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ClassConstantSuffix
+
+When defined, the check will ensure class constant names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ClassConstantCase of `lower_case`
--   ClassConstantPrefix of `pre_`
--   ClassConstantSuffix of `_post`
+>   - ClassConstantCase of `lower_case`
+>   - ClassConstantPrefix of `pre_`
+>   - ClassConstantSuffix of `_post`
 
 Identifies and/or transforms class constant names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class FOO {
-    public:
-      static const int CLASS_CONSTANT;
-    };
+``` c++
+class FOO {
+public:
+  static const int CLASS_CONSTANT;
+};
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class FOO {
+public:
+  static const int pre_class_constant_post;
+};
+```
 
-    class FOO {
-    public:
-      static const int pre_class_constant_post;
-    };
+<div class="option">
 
-.. option:: ClassMemberCase
+ClassMemberCase
 
-    When defined, the check will ensure class member names conform to the
-    selected casing.
+When defined, the check will ensure class member names conform to the
+selected casing.
 
-.. option:: ClassMemberPrefix
+</div>
 
-    When defined, the check will ensure class member names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ClassMemberSuffix
+ClassMemberPrefix
 
-    When defined, the check will ensure class member names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure class member names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ClassMemberSuffix
+
+When defined, the check will ensure class member names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ClassMemberCase of `lower_case`
--   ClassMemberPrefix of `pre_`
--   ClassMemberSuffix of `_post`
+>   - ClassMemberCase of `lower_case`
+>   - ClassMemberPrefix of `pre_`
+>   - ClassMemberSuffix of `_post`
 
 Identifies and/or transforms class member names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class FOO {
-    public:
-      static int CLASS_CONSTANT;
-    };
+``` c++
+class FOO {
+public:
+  static int CLASS_CONSTANT;
+};
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class FOO {
+public:
+  static int pre_class_constant_post;
+};
+```
 
-    class FOO {
-    public:
-      static int pre_class_constant_post;
-    };
+<div class="option">
 
-.. option:: ClassMethodCase
+ClassMethodCase
 
-    When defined, the check will ensure class method names conform to the
-    selected casing.
+When defined, the check will ensure class method names conform to the
+selected casing.
 
-.. option:: ClassMethodPrefix
+</div>
 
-    When defined, the check will ensure class method names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ClassMethodSuffix
+ClassMethodPrefix
 
-    When defined, the check will ensure class method names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure class method names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ClassMethodSuffix
+
+When defined, the check will ensure class method names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ClassMethodCase of `lower_case`
--   ClassMethodPrefix of `pre_`
--   ClassMethodSuffix of `_post`
+>   - ClassMethodCase of `lower_case`
+>   - ClassMethodPrefix of `pre_`
+>   - ClassMethodSuffix of `_post`
 
 Identifies and/or transforms class method names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class FOO {
-    public:
-      int CLASS_MEMBER();
-    };
+``` c++
+class FOO {
+public:
+  int CLASS_MEMBER();
+};
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class FOO {
+public:
+  int pre_class_member_post();
+};
+```
 
-    class FOO {
-    public:
-      int pre_class_member_post();
-    };
+<div class="option">
 
-.. option:: ConstantCase
+ConstantCase
 
-    When defined, the check will ensure constant names conform to the
-    selected casing.
+When defined, the check will ensure constant names conform to the
+selected casing.
 
-.. option:: ConstantPrefix
+</div>
 
-    When defined, the check will ensure constant names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ConstantSuffix
+ConstantPrefix
 
-    When defined, the check will ensure constant names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure constant names will add the prefixed
+with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ConstantSuffix
+
+When defined, the check will ensure constant names will add the suffix
+with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ConstantCase of `lower_case`
--   ConstantPrefix of `pre_`
--   ConstantSuffix of `_post`
+>   - ConstantCase of `lower_case`
+>   - ConstantPrefix of `pre_`
+>   - ConstantSuffix of `_post`
 
 Identifies and/or transforms constant names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    void function() { unsigned const MyConst_array[] = {1, 2, 3}; }
+``` c++
+void function() { unsigned const MyConst_array[] = {1, 2, 3}; }
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+void function() { unsigned const pre_myconst_array_post[] = {1, 2, 3}; }
+```
 
-    void function() { unsigned const pre_myconst_array_post[] = {1, 2, 3}; }
+<div class="option">
 
-.. option:: ConstantMemberCase
+ConstantMemberCase
 
-    When defined, the check will ensure constant member names conform to the
-    selected casing.
+When defined, the check will ensure constant member names conform to the
+selected casing.
 
-.. option:: ConstantMemberPrefix
+</div>
 
-    When defined, the check will ensure constant member names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ConstantMemberSuffix
+ConstantMemberPrefix
 
-    When defined, the check will ensure constant member names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure constant member names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ConstantMemberSuffix
+
+When defined, the check will ensure constant member names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ConstantMemberCase of `lower_case`
--   ConstantMemberPrefix of `pre_`
--   ConstantMemberSuffix of `_post`
+>   - ConstantMemberCase of `lower_case`
+>   - ConstantMemberPrefix of `pre_`
+>   - ConstantMemberSuffix of `_post`
 
 Identifies and/or transforms constant member names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class Foo {
-      char const MY_ConstMember_string[4] = "123";
-    }
+``` c++
+class Foo {
+  char const MY_ConstMember_string[4] = "123";
+}
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class Foo {
+  char const pre_my_constmember_string_post[4] = "123";
+}
+```
 
-    class Foo {
-      char const pre_my_constmember_string_post[4] = "123";
-    }
+<div class="option">
 
-.. option:: ConstantParameterCase
+ConstantParameterCase
 
-    When defined, the check will ensure constant parameter names conform to the
-    selected casing.
+When defined, the check will ensure constant parameter names conform to
+the selected casing.
 
-.. option:: ConstantParameterPrefix
+</div>
 
-    When defined, the check will ensure constant parameter names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ConstantParameterSuffix
+ConstantParameterPrefix
 
-    When defined, the check will ensure constant parameter names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure constant parameter names will add
+the prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ConstantParameterSuffix
+
+When defined, the check will ensure constant parameter names will add
+the suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ConstantParameterCase of `lower_case`
--   ConstantParameterPrefix of `pre_`
--   ConstantParameterSuffix of `_post`
+>   - ConstantParameterCase of `lower_case`
+>   - ConstantParameterPrefix of `pre_`
+>   - ConstantParameterSuffix of `_post`
 
 Identifies and/or transforms constant parameter names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    void GLOBAL_FUNCTION(int PARAMETER_1, int const CONST_parameter);
+``` c++
+void GLOBAL_FUNCTION(int PARAMETER_1, int const CONST_parameter);
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+void GLOBAL_FUNCTION(int PARAMETER_1, int const pre_const_parameter_post);
+```
 
-    void GLOBAL_FUNCTION(int PARAMETER_1, int const pre_const_parameter_post);
+<div class="option">
 
-.. option:: ConstantPointerParameterCase
+ConstantPointerParameterCase
 
-    When defined, the check will ensure constant pointer parameter names conform to the
-    selected casing.
+When defined, the check will ensure constant pointer parameter names
+conform to the selected casing.
 
-.. option:: ConstantPointerParameterPrefix
+</div>
 
-    When defined, the check will ensure constant pointer parameter names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ConstantPointerParameterSuffix
+ConstantPointerParameterPrefix
 
-    When defined, the check will ensure constant pointer parameter names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure constant pointer parameter names
+will add the prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ConstantPointerParameterSuffix
+
+When defined, the check will ensure constant pointer parameter names
+will add the suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ConstantPointerParameterCase of `lower_case`
--   ConstantPointerParameterPrefix of `pre_`
--   ConstantPointerParameterSuffix of `_post`
+>   - ConstantPointerParameterCase of `lower_case`
+>   - ConstantPointerParameterPrefix of `pre_`
+>   - ConstantPointerParameterSuffix of `_post`
 
 Identifies and/or transforms constant pointer parameter names as
 follows:
 
 Before:
 
-.. code-block:: c++
-
-    void GLOBAL_FUNCTION(int const *CONST_parameter);
+``` c++
+void GLOBAL_FUNCTION(int const *CONST_parameter);
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+void GLOBAL_FUNCTION(int const *pre_const_parameter_post);
+```
 
-    void GLOBAL_FUNCTION(int const *pre_const_parameter_post);
+<div class="option">
 
-.. option:: ConstexprFunctionCase
+ConstexprFunctionCase
 
-    When defined, the check will ensure constexpr function names conform to the
-    selected casing.
+When defined, the check will ensure constexpr function names conform to
+the selected casing.
 
-.. option:: ConstexprFunctionPrefix
+</div>
 
-    When defined, the check will ensure constexpr function names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ConstexprFunctionSuffix
+ConstexprFunctionPrefix
 
-    When defined, the check will ensure constexpr function names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure constexpr function names will add
+the prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ConstexprFunctionSuffix
+
+When defined, the check will ensure constexpr function names will add
+the suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ConstexprFunctionCase of `lower_case`
--   ConstexprFunctionPrefix of `pre_`
--   ConstexprFunctionSuffix of `_post`
+>   - ConstexprFunctionCase of `lower_case`
+>   - ConstexprFunctionPrefix of `pre_`
+>   - ConstexprFunctionSuffix of `_post`
 
 Identifies and/or transforms constexpr function names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    constexpr int CE_function() { return 3; }
+``` c++
+constexpr int CE_function() { return 3; }
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+constexpr int pre_ce_function_post() { return 3; }
+```
 
-    constexpr int pre_ce_function_post() { return 3; }
+<div class="option">
 
-.. option:: ConstexprMethodCase
+ConstexprMethodCase
 
-    When defined, the check will ensure constexpr method names conform to the
-    selected casing.
+When defined, the check will ensure constexpr method names conform to
+the selected casing.
 
-.. option:: ConstexprMethodPrefix
+</div>
 
-    When defined, the check will ensure constexpr method names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ConstexprMethodSuffix
+ConstexprMethodPrefix
 
-    When defined, the check will ensure constexpr method names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure constexpr method names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ConstexprMethodSuffix
+
+When defined, the check will ensure constexpr method names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ConstexprMethodCase of `lower_case`
--   ConstexprMethodPrefix of `pre_`
--   ConstexprMethodSuffix of `_post`
+>   - ConstexprMethodCase of `lower_case`
+>   - ConstexprMethodPrefix of `pre_`
+>   - ConstexprMethodSuffix of `_post`
 
 Identifies and/or transforms constexpr method names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class Foo {
-    public:
-      constexpr int CST_expr_Method() { return 2; }
-    }
+``` c++
+class Foo {
+public:
+  constexpr int CST_expr_Method() { return 2; }
+}
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class Foo {
+public:
+  constexpr int pre_cst_expr_method_post() { return 2; }
+}
+```
 
-    class Foo {
-    public:
-      constexpr int pre_cst_expr_method_post() { return 2; }
-    }
+<div class="option">
 
-.. option:: ConstexprVariableCase
+ConstexprVariableCase
 
-    When defined, the check will ensure constexpr variable names conform to the
-    selected casing.
+When defined, the check will ensure constexpr variable names conform to
+the selected casing.
 
-.. option:: ConstexprVariablePrefix
+</div>
 
-    When defined, the check will ensure constexpr variable names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ConstexprVariableSuffix
+ConstexprVariablePrefix
 
-    When defined, the check will ensure constexpr variable names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure constexpr variable names will add
+the prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ConstexprVariableSuffix
+
+When defined, the check will ensure constexpr variable names will add
+the suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ConstexprVariableCase of `lower_case`
--   ConstexprVariablePrefix of `pre_`
--   ConstexprVariableSuffix of `_post`
+>   - ConstexprVariableCase of `lower_case`
+>   - ConstexprVariablePrefix of `pre_`
+>   - ConstexprVariableSuffix of `_post`
 
 Identifies and/or transforms constexpr variable names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    constexpr int ConstExpr_variable = MyConstant;
+``` c++
+constexpr int ConstExpr_variable = MyConstant;
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+constexpr int pre_constexpr_variable_post = MyConstant;
+```
 
-    constexpr int pre_constexpr_variable_post = MyConstant;
+<div class="option">
 
-.. option:: EnumCase
+EnumCase
 
-    When defined, the check will ensure enumeration names conform to the
-    selected casing.
+When defined, the check will ensure enumeration names conform to the
+selected casing.
 
-.. option:: EnumPrefix
+</div>
 
-    When defined, the check will ensure enumeration names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: EnumSuffix
+EnumPrefix
 
-    When defined, the check will ensure enumeration names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure enumeration names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+EnumSuffix
+
+When defined, the check will ensure enumeration names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   EnumCase of `lower_case`
--   EnumPrefix of `pre_`
--   EnumSuffix of `_post`
+>   - EnumCase of `lower_case`
+>   - EnumPrefix of `pre_`
+>   - EnumSuffix of `_post`
 
 Identifies and/or transforms enumeration names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    enum FOO { One, Two, Three };
+``` c++
+enum FOO { One, Two, Three };
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+enum pre_foo_post { One, Two, Three };
+```
 
-    enum pre_foo_post { One, Two, Three };
+<div class="option">
 
-.. option:: EnumConstantCase
+EnumConstantCase
 
-    When defined, the check will ensure enumeration constant names conform to the
-    selected casing.
+When defined, the check will ensure enumeration constant names conform
+to the selected casing.
 
-.. option:: EnumConstantPrefix
+</div>
 
-    When defined, the check will ensure enumeration constant names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: EnumConstantSuffix
+EnumConstantPrefix
 
-    When defined, the check will ensure enumeration constant names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure enumeration constant names will add
+the prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+EnumConstantSuffix
+
+When defined, the check will ensure enumeration constant names will add
+the suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   EnumConstantCase of `lower_case`
--   EnumConstantPrefix of `pre_`
--   EnumConstantSuffix of `_post`
+>   - EnumConstantCase of `lower_case`
+>   - EnumConstantPrefix of `pre_`
+>   - EnumConstantSuffix of `_post`
 
 Identifies and/or transforms enumeration constant names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    enum FOO { One, Two, Three };
+``` c++
+enum FOO { One, Two, Three };
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+enum FOO { pre_One_post, pre_Two_post, pre_Three_post };
+```
 
-    enum FOO { pre_One_post, pre_Two_post, pre_Three_post };
+<div class="option">
 
-.. option:: FunctionCase
+FunctionCase
 
-    When defined, the check will ensure function names conform to the
-    selected casing.
+When defined, the check will ensure function names conform to the
+selected casing.
 
-.. option:: FunctionPrefix
+</div>
 
-    When defined, the check will ensure function names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: FunctionSuffix
+FunctionPrefix
 
-    When defined, the check will ensure function names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure function names will add the prefixed
+with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+FunctionSuffix
+
+When defined, the check will ensure function names will add the suffix
+with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   FunctionCase of `lower_case`
--   FunctionPrefix of `pre_`
--   FunctionSuffix of `_post`
+>   - FunctionCase of `lower_case`
+>   - FunctionPrefix of `pre_`
+>   - FunctionSuffix of `_post`
 
 Identifies and/or transforms function names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    char MY_Function_string();
+``` c++
+char MY_Function_string();
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+char pre_my_function_string_post();
+```
 
-    char pre_my_function_string_post();
+<div class="option">
 
-.. option:: GlobalConstantCase
+GlobalConstantCase
 
-    When defined, the check will ensure global constant names conform to the
-    selected casing.
+When defined, the check will ensure global constant names conform to the
+selected casing.
 
-.. option:: GlobalConstantPrefix
+</div>
 
-    When defined, the check will ensure global constant names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: GlobalConstantSuffix
+GlobalConstantPrefix
 
-    When defined, the check will ensure global constant names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure global constant names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+GlobalConstantSuffix
+
+When defined, the check will ensure global constant names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   GlobalConstantCase of `lower_case`
--   GlobalConstantPrefix of `pre_`
--   GlobalConstantSuffix of `_post`
+>   - GlobalConstantCase of `lower_case`
+>   - GlobalConstantPrefix of `pre_`
+>   - GlobalConstantSuffix of `_post`
 
 Identifies and/or transforms global constant names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    unsigned const MyConstGlobal_array[] = {1, 2, 3};
+``` c++
+unsigned const MyConstGlobal_array[] = {1, 2, 3};
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+unsigned const pre_myconstglobal_array_post[] = {1, 2, 3};
+```
 
-    unsigned const pre_myconstglobal_array_post[] = {1, 2, 3};
+<div class="option">
 
-.. option:: GlobalConstantPointerCase
+GlobalConstantPointerCase
 
-    When defined, the check will ensure global constant pointer names conform to the
-    selected casing.
+When defined, the check will ensure global constant pointer names
+conform to the selected casing.
 
-.. option:: GlobalConstantPointerPrefix
+</div>
 
-    When defined, the check will ensure global constant pointer names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: GlobalConstantPointerSuffix
+GlobalConstantPointerPrefix
 
-    When defined, the check will ensure global constant pointer names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure global constant pointer names will
+add the prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+GlobalConstantPointerSuffix
+
+When defined, the check will ensure global constant pointer names will
+add the suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   GlobalConstantPointerCase of `lower_case`
--   GlobalConstantPointerPrefix of `pre_`
--   GlobalConstantPointerSuffix of `_post`
+>   - GlobalConstantPointerCase of `lower_case`
+>   - GlobalConstantPointerPrefix of `pre_`
+>   - GlobalConstantPointerSuffix of `_post`
 
 Identifies and/or transforms global constant pointer names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    int *const MyConstantGlobalPointer = nullptr;
+``` c++
+int *const MyConstantGlobalPointer = nullptr;
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+int *const pre_myconstantglobalpointer_post = nullptr;
+```
 
-    int *const pre_myconstantglobalpointer_post = nullptr;
+<div class="option">
 
-.. option:: GlobalFunctionCase
+GlobalFunctionCase
 
-    When defined, the check will ensure global function names conform to the
-    selected casing.
+When defined, the check will ensure global function names conform to the
+selected casing.
 
-.. option:: GlobalFunctionPrefix
+</div>
 
-    When defined, the check will ensure global function names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: GlobalFunctionSuffix
+GlobalFunctionPrefix
 
-    When defined, the check will ensure global function names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure global function names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+GlobalFunctionSuffix
+
+When defined, the check will ensure global function names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   GlobalFunctionCase of `lower_case`
--   GlobalFunctionPrefix of `pre_`
--   GlobalFunctionSuffix of `_post`
+>   - GlobalFunctionCase of `lower_case`
+>   - GlobalFunctionPrefix of `pre_`
+>   - GlobalFunctionSuffix of `_post`
 
 Identifies and/or transforms global function names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    void GLOBAL_FUNCTION(int PARAMETER_1, int const CONST_parameter);
+``` c++
+void GLOBAL_FUNCTION(int PARAMETER_1, int const CONST_parameter);
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+void pre_global_function_post(int PARAMETER_1, int const CONST_parameter);
+```
 
-    void pre_global_function_post(int PARAMETER_1, int const CONST_parameter);
+<div class="option">
 
-.. option:: GlobalPointerCase
+GlobalPointerCase
 
-    When defined, the check will ensure global pointer names conform to the
-    selected casing.
+When defined, the check will ensure global pointer names conform to the
+selected casing.
 
-.. option:: GlobalPointerPrefix
+</div>
 
-    When defined, the check will ensure global pointer names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: GlobalPointerSuffix
+GlobalPointerPrefix
 
-    When defined, the check will ensure global pointer names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure global pointer names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+GlobalPointerSuffix
+
+When defined, the check will ensure global pointer names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   GlobalPointerCase of `lower_case`
--   GlobalPointerPrefix of `pre_`
--   GlobalPointerSuffix of `_post`
+>   - GlobalPointerCase of `lower_case`
+>   - GlobalPointerPrefix of `pre_`
+>   - GlobalPointerSuffix of `_post`
 
 Identifies and/or transforms global pointer names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    int *GLOBAL3;
+``` c++
+int *GLOBAL3;
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+int *pre_global3_post;
+```
 
-    int *pre_global3_post;
+<div class="option">
 
-.. option:: GlobalVariableCase
+GlobalVariableCase
 
-    When defined, the check will ensure global variable names conform to the
-    selected casing.
+When defined, the check will ensure global variable names conform to the
+selected casing.
 
-.. option:: GlobalVariablePrefix
+</div>
 
-    When defined, the check will ensure global variable names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: GlobalVariableSuffix
+GlobalVariablePrefix
 
-    When defined, the check will ensure global variable names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure global variable names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+GlobalVariableSuffix
+
+When defined, the check will ensure global variable names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   GlobalVariableCase of `lower_case`
--   GlobalVariablePrefix of `pre_`
--   GlobalVariableSuffix of `_post`
+>   - GlobalVariableCase of `lower_case`
+>   - GlobalVariablePrefix of `pre_`
+>   - GlobalVariableSuffix of `_post`
 
 Identifies and/or transforms global variable names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    int GLOBAL3;
+``` c++
+int GLOBAL3;
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+int pre_global3_post;
+```
 
-    int pre_global3_post;
+<div class="option">
 
-.. option:: InlineNamespaceCase
+InlineNamespaceCase
 
-    When defined, the check will ensure inline namespaces names conform to the
-    selected casing.
+When defined, the check will ensure inline namespaces names conform to
+the selected casing.
 
-.. option:: InlineNamespacePrefix
+</div>
 
-    When defined, the check will ensure inline namespaces names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: InlineNamespaceSuffix
+InlineNamespacePrefix
 
-    When defined, the check will ensure inline namespaces names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure inline namespaces names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+InlineNamespaceSuffix
+
+When defined, the check will ensure inline namespaces names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   InlineNamespaceCase of `lower_case`
--   InlineNamespacePrefix of `pre_`
--   InlineNamespaceSuffix of `_post`
+>   - InlineNamespaceCase of `lower_case`
+>   - InlineNamespacePrefix of `pre_`
+>   - InlineNamespaceSuffix of `_post`
 
 Identifies and/or transforms inline namespaces names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    namespace FOO_NS {
-    inline namespace InlineNamespace {
-    ...
-    }
-    } // namespace FOO_NS
+``` c++
+namespace FOO_NS {
+inline namespace InlineNamespace {
+...
+}
+} // namespace FOO_NS
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+namespace FOO_NS {
+inline namespace pre_inlinenamespace_post {
+...
+}
+} // namespace FOO_NS
+```
 
-    namespace FOO_NS {
-    inline namespace pre_inlinenamespace_post {
-    ...
-    }
-    } // namespace FOO_NS
+<div class="option">
 
-.. option:: LocalConstantCase
+LocalConstantCase
 
-    When defined, the check will ensure local constant names conform to the
-    selected casing.
+When defined, the check will ensure local constant names conform to the
+selected casing.
 
-.. option:: LocalConstantPrefix
+</div>
 
-    When defined, the check will ensure local constant names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: LocalConstantSuffix
+LocalConstantPrefix
 
-    When defined, the check will ensure local constant names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure local constant names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+LocalConstantSuffix
+
+When defined, the check will ensure local constant names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   LocalConstantCase of `lower_case`
--   LocalConstantPrefix of `pre_`
--   LocalConstantSuffix of `_post`
+>   - LocalConstantCase of `lower_case`
+>   - LocalConstantPrefix of `pre_`
+>   - LocalConstantSuffix of `_post`
 
 Identifies and/or transforms local constant names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    void foo() { int const local_Constant = 3; }
+``` c++
+void foo() { int const local_Constant = 3; }
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+void foo() { int const pre_local_constant_post = 3; }
+```
 
-    void foo() { int const pre_local_constant_post = 3; }
+<div class="option">
 
-.. option:: LocalConstantPointerCase
+LocalConstantPointerCase
 
-    When defined, the check will ensure local constant pointer names conform to the
-    selected casing.
+When defined, the check will ensure local constant pointer names conform
+to the selected casing.
 
-.. option:: LocalConstantPointerPrefix
+</div>
 
-    When defined, the check will ensure local constant pointer names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: LocalConstantPointerSuffix
+LocalConstantPointerPrefix
 
-    When defined, the check will ensure local constant pointer names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure local constant pointer names will
+add the prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+LocalConstantPointerSuffix
+
+When defined, the check will ensure local constant pointer names will
+add the suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   LocalConstantPointerCase of `lower_case`
--   LocalConstantPointerPrefix of `pre_`
--   LocalConstantPointerSuffix of `_post`
+>   - LocalConstantPointerCase of `lower_case`
+>   - LocalConstantPointerPrefix of `pre_`
+>   - LocalConstantPointerSuffix of `_post`
 
 Identifies and/or transforms local constant pointer names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    void foo() { int const *local_Constant = 3; }
+``` c++
+void foo() { int const *local_Constant = 3; }
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+void foo() { int const *pre_local_constant_post = 3; }
+```
 
-    void foo() { int const *pre_local_constant_post = 3; }
+<div class="option">
 
-.. option:: LocalPointerCase
+LocalPointerCase
 
-    When defined, the check will ensure local pointer names conform to the
-    selected casing.
+When defined, the check will ensure local pointer names conform to the
+selected casing.
 
-.. option:: LocalPointerPrefix
+</div>
 
-    When defined, the check will ensure local pointer names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: LocalPointerSuffix
+LocalPointerPrefix
 
-    When defined, the check will ensure local pointer names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure local pointer names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+LocalPointerSuffix
+
+When defined, the check will ensure local pointer names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   LocalPointerCase of `lower_case`
--   LocalPointerPrefix of `pre_`
--   LocalPointerSuffix of `_post`
+>   - LocalPointerCase of `lower_case`
+>   - LocalPointerPrefix of `pre_`
+>   - LocalPointerSuffix of `_post`
 
 Identifies and/or transforms local pointer names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    void foo() { int *local_Constant; }
+``` c++
+void foo() { int *local_Constant; }
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+void foo() { int *pre_local_constant_post; }
+```
 
-    void foo() { int *pre_local_constant_post; }
+<div class="option">
 
-.. option:: LocalVariableCase
+LocalVariableCase
 
-    When defined, the check will ensure local variable names conform to the
-    selected casing.
+When defined, the check will ensure local variable names conform to the
+selected casing.
 
-.. option:: LocalVariablePrefix
+</div>
 
-    When defined, the check will ensure local variable names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: LocalVariableSuffix
+LocalVariablePrefix
 
-    When defined, the check will ensure local variable names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure local variable names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+LocalVariableSuffix
+
+When defined, the check will ensure local variable names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   LocalVariableCase of `lower_case`
--   LocalVariablePrefix of `pre_`
--   LocalVariableSuffix of `_post`
+>   - LocalVariableCase of `lower_case`
+>   - LocalVariablePrefix of `pre_`
+>   - LocalVariableSuffix of `_post`
 
 Identifies and/or transforms local variable names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    void foo() { int local_Constant; }
+``` c++
+void foo() { int local_Constant; }
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+void foo() { int pre_local_constant_post; }
+```
 
-    void foo() { int pre_local_constant_post; }
+<div class="option">
 
-.. option:: MemberCase
+MemberCase
 
-    When defined, the check will ensure member names conform to the
-    selected casing.
+When defined, the check will ensure member names conform to the selected
+casing.
 
-.. option:: MemberPrefix
+</div>
 
-    When defined, the check will ensure member names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: MemberSuffix
+MemberPrefix
 
-    When defined, the check will ensure member names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure member names will add the prefixed
+with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+MemberSuffix
+
+When defined, the check will ensure member names will add the suffix
+with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   MemberCase of `lower_case`
--   MemberPrefix of `pre_`
--   MemberSuffix of `_post`
+>   - MemberCase of `lower_case`
+>   - MemberPrefix of `pre_`
+>   - MemberSuffix of `_post`
 
 Identifies and/or transforms member names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class Foo {
-      char MY_ConstMember_string[4];
-    }
+``` c++
+class Foo {
+  char MY_ConstMember_string[4];
+}
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class Foo {
+  char pre_my_constmember_string_post[4];
+}
+```
 
-    class Foo {
-      char pre_my_constmember_string_post[4];
-    }
+<div class="option">
 
-.. option:: MethodCase
+MethodCase
 
-    When defined, the check will ensure method names conform to the
-    selected casing.
+When defined, the check will ensure method names conform to the selected
+casing.
 
-.. option:: MethodPrefix
+</div>
 
-    When defined, the check will ensure method names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: MethodSuffix
+MethodPrefix
 
-    When defined, the check will ensure method names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure method names will add the prefixed
+with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+MethodSuffix
+
+When defined, the check will ensure method names will add the suffix
+with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   MethodCase of `lower_case`
--   MethodPrefix of `pre_`
--   MethodSuffix of `_post`
+>   - MethodCase of `lower_case`
+>   - MethodPrefix of `pre_`
+>   - MethodSuffix of `_post`
 
 Identifies and/or transforms method names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class Foo {
-      char MY_Method_string();
-    }
+``` c++
+class Foo {
+  char MY_Method_string();
+}
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class Foo {
+  char pre_my_method_string_post();
+}
+```
 
-    class Foo {
-      char pre_my_method_string_post();
-    }
+<div class="option">
 
-.. option:: NamespaceCase
+NamespaceCase
 
-    When defined, the check will ensure namespace names conform to the
-    selected casing.
+When defined, the check will ensure namespace names conform to the
+selected casing.
 
-.. option:: NamespacePrefix
+</div>
 
-    When defined, the check will ensure namespace names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: NamespaceSuffix
+NamespacePrefix
 
-    When defined, the check will ensure namespace names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure namespace names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+NamespaceSuffix
+
+When defined, the check will ensure namespace names will add the suffix
+with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   NamespaceCase of `lower_case`
--   NamespacePrefix of `pre_`
--   NamespaceSuffix of `_post`
+>   - NamespaceCase of `lower_case`
+>   - NamespacePrefix of `pre_`
+>   - NamespaceSuffix of `_post`
 
 Identifies and/or transforms namespace names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    namespace FOO_NS {
-    ...
-    }
+``` c++
+namespace FOO_NS {
+...
+}
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+namespace pre_foo_ns_post {
+...
+}
+```
 
-    namespace pre_foo_ns_post {
-    ...
-    }
+<div class="option">
 
-.. option:: ParameterCase
+ParameterCase
 
-    When defined, the check will ensure parameter names conform to the
-    selected casing.
+When defined, the check will ensure parameter names conform to the
+selected casing.
 
-.. option:: ParameterPrefix
+</div>
 
-    When defined, the check will ensure parameter names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ParameterSuffix
+ParameterPrefix
 
-    When defined, the check will ensure parameter names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure parameter names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ParameterSuffix
+
+When defined, the check will ensure parameter names will add the suffix
+with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ParameterCase of `lower_case`
--   ParameterPrefix of `pre_`
--   ParameterSuffix of `_post`
+>   - ParameterCase of `lower_case`
+>   - ParameterPrefix of `pre_`
+>   - ParameterSuffix of `_post`
 
 Identifies and/or transforms parameter names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    void GLOBAL_FUNCTION(int PARAMETER_1, int const CONST_parameter);
+``` c++
+void GLOBAL_FUNCTION(int PARAMETER_1, int const CONST_parameter);
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+void GLOBAL_FUNCTION(int pre_parameter_post, int const CONST_parameter);
+```
 
-    void GLOBAL_FUNCTION(int pre_parameter_post, int const CONST_parameter);
+<div class="option">
 
-.. option:: ParameterPackCase
+ParameterPackCase
 
-    When defined, the check will ensure parameter pack names conform to the
-    selected casing.
+When defined, the check will ensure parameter pack names conform to the
+selected casing.
 
-.. option:: ParameterPackPrefix
+</div>
 
-    When defined, the check will ensure parameter pack names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ParameterPackSuffix
+ParameterPackPrefix
 
-    When defined, the check will ensure parameter pack names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure parameter pack names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ParameterPackSuffix
+
+When defined, the check will ensure parameter pack names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ParameterPackCase of `lower_case`
--   ParameterPackPrefix of `pre_`
--   ParameterPackSuffix of `_post`
+>   - ParameterPackCase of `lower_case`
+>   - ParameterPackPrefix of `pre_`
+>   - ParameterPackSuffix of `_post`
 
 Identifies and/or transforms parameter pack names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    template <typename... TYPE_parameters> {
-      void FUNCTION(int... TYPE_parameters);
-    }
+``` c++
+template <typename... TYPE_parameters> {
+  void FUNCTION(int... TYPE_parameters);
+}
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+template <typename... TYPE_parameters> {
+  void FUNCTION(int... pre_type_parameters_post);
+}
+```
 
-    template <typename... TYPE_parameters> {
-      void FUNCTION(int... pre_type_parameters_post);
-    }
+<div class="option">
 
-.. option:: PointerParameterCase
+PointerParameterCase
 
-    When defined, the check will ensure pointer parameter names conform to the
-    selected casing.
+When defined, the check will ensure pointer parameter names conform to
+the selected casing.
 
-.. option:: PointerParameterPrefix
+</div>
 
-    When defined, the check will ensure pointer parameter names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: PointerParameterSuffix
+PointerParameterPrefix
 
-    When defined, the check will ensure pointer parameter names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure pointer parameter names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+PointerParameterSuffix
+
+When defined, the check will ensure pointer parameter names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   PointerParameterCase of `lower_case`
--   PointerParameterPrefix of `pre_`
--   PointerParameterSuffix of `_post`
+>   - PointerParameterCase of `lower_case`
+>   - PointerParameterPrefix of `pre_`
+>   - PointerParameterSuffix of `_post`
 
 Identifies and/or transforms pointer parameter names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    void FUNCTION(int *PARAMETER);
+``` c++
+void FUNCTION(int *PARAMETER);
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+void FUNCTION(int *pre_parameter_post);
+```
 
-    void FUNCTION(int *pre_parameter_post);
+<div class="option">
 
-.. option:: PrivateMemberCase
+PrivateMemberCase
 
-    When defined, the check will ensure private member names conform to the
-    selected casing.
+When defined, the check will ensure private member names conform to the
+selected casing.
 
-.. option:: PrivateMemberPrefix
+</div>
 
-    When defined, the check will ensure private member names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: PrivateMemberSuffix
+PrivateMemberPrefix
 
-    When defined, the check will ensure private member names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure private member names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+PrivateMemberSuffix
+
+When defined, the check will ensure private member names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   PrivateMemberCase of `lower_case`
--   PrivateMemberPrefix of `pre_`
--   PrivateMemberSuffix of `_post`
+>   - PrivateMemberCase of `lower_case`
+>   - PrivateMemberPrefix of `pre_`
+>   - PrivateMemberSuffix of `_post`
 
 Identifies and/or transforms private member names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class Foo {
-    private:
-      int Member_Variable;
-    }
+``` c++
+class Foo {
+private:
+  int Member_Variable;
+}
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class Foo {
+private:
+  int pre_member_variable_post;
+}
+```
 
-    class Foo {
-    private:
-      int pre_member_variable_post;
-    }
+<div class="option">
 
-.. option:: PrivateMethodCase
+PrivateMethodCase
 
-    When defined, the check will ensure private method names conform to the
-    selected casing.
+When defined, the check will ensure private method names conform to the
+selected casing.
 
-.. option:: PrivateMethodPrefix
+</div>
 
-    When defined, the check will ensure private method names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: PrivateMethodSuffix
+PrivateMethodPrefix
 
-    When defined, the check will ensure private method names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure private method names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+PrivateMethodSuffix
+
+When defined, the check will ensure private method names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   PrivateMethodCase of `lower_case`
--   PrivateMethodPrefix of `pre_`
--   PrivateMethodSuffix of `_post`
+>   - PrivateMethodCase of `lower_case`
+>   - PrivateMethodPrefix of `pre_`
+>   - PrivateMethodSuffix of `_post`
 
 Identifies and/or transforms private method names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class Foo {
-    private:
-      int Member_Method();
-    }
+``` c++
+class Foo {
+private:
+  int Member_Method();
+}
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class Foo {
+private:
+  int pre_member_method_post();
+}
+```
 
-    class Foo {
-    private:
-      int pre_member_method_post();
-    }
+<div class="option">
 
-.. option:: ProtectedMemberCase
+ProtectedMemberCase
 
-    When defined, the check will ensure protected member names conform to the
-    selected casing.
+When defined, the check will ensure protected member names conform to
+the selected casing.
 
-.. option:: ProtectedMemberPrefix
+</div>
 
-    When defined, the check will ensure protected member names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ProtectedMemberSuffix
+ProtectedMemberPrefix
 
-    When defined, the check will ensure protected member names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure protected member names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ProtectedMemberSuffix
+
+When defined, the check will ensure protected member names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ProtectedMemberCase of `lower_case`
--   ProtectedMemberPrefix of `pre_`
--   ProtectedMemberSuffix of `_post`
+>   - ProtectedMemberCase of `lower_case`
+>   - ProtectedMemberPrefix of `pre_`
+>   - ProtectedMemberSuffix of `_post`
 
 Identifies and/or transforms protected member names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class Foo {
-    protected:
-      int Member_Variable;
-    }
+``` c++
+class Foo {
+protected:
+  int Member_Variable;
+}
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class Foo {
+protected:
+  int pre_member_variable_post;
+}
+```
 
-    class Foo {
-    protected:
-      int pre_member_variable_post;
-    }
+<div class="option">
 
-.. option:: ProtectedMethodCase
+ProtectedMethodCase
 
-    When defined, the check will ensure protect method names conform to the
-    selected casing.
+When defined, the check will ensure protect method names conform to the
+selected casing.
 
-.. option:: ProtectedMethodPrefix
+</div>
 
-    When defined, the check will ensure protect method names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ProtectedMethodSuffix
+ProtectedMethodPrefix
 
-    When defined, the check will ensure protect method names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure protect method names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ProtectedMethodSuffix
+
+When defined, the check will ensure protect method names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ProtectedMethodCase of `lower_case`
--   ProtectedMethodPrefix of `pre_`
--   ProtectedMethodSuffix of `_post`
+>   - ProtectedMethodCase of `lower_case`
+>   - ProtectedMethodPrefix of `pre_`
+>   - ProtectedMethodSuffix of `_post`
 
 Identifies and/or transforms protect method names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class Foo {
-    protected:
-      int Member_Method();
-    }
+``` c++
+class Foo {
+protected:
+  int Member_Method();
+}
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class Foo {
+protected:
+  int pre_member_method_post();
+}
+```
 
-    class Foo {
-    protected:
-      int pre_member_method_post();
-    }
+<div class="option">
 
-.. option:: PublicMemberCase
+PublicMemberCase
 
-    When defined, the check will ensure public member names conform to the
-    selected casing.
+When defined, the check will ensure public member names conform to the
+selected casing.
 
-.. option:: PublicMemberPrefix
+</div>
 
-    When defined, the check will ensure public member names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: PublicMemberSuffix
+PublicMemberPrefix
 
-    When defined, the check will ensure public member names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure public member names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+PublicMemberSuffix
+
+When defined, the check will ensure public member names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   PublicMemberCase of `lower_case`
--   PublicMemberPrefix of `pre_`
--   PublicMemberSuffix of `_post`
+>   - PublicMemberCase of `lower_case`
+>   - PublicMemberPrefix of `pre_`
+>   - PublicMemberSuffix of `_post`
 
 Identifies and/or transforms public member names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class Foo {
-    public:
-      int Member_Variable;
-    }
+``` c++
+class Foo {
+public:
+  int Member_Variable;
+}
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class Foo {
+public:
+  int pre_member_variable_post;
+}
+```
 
-    class Foo {
-    public:
-      int pre_member_variable_post;
-    }
+<div class="option">
 
-.. option:: PublicMethodCase
+PublicMethodCase
 
-    When defined, the check will ensure public method names conform to the
-    selected casing.
+When defined, the check will ensure public method names conform to the
+selected casing.
 
-.. option:: PublicMethodPrefix
+</div>
 
-    When defined, the check will ensure public method names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: PublicMethodSuffix
+PublicMethodPrefix
 
-    When defined, the check will ensure public method names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure public method names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+PublicMethodSuffix
+
+When defined, the check will ensure public method names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   PublicMethodCase of `lower_case`
--   PublicMethodPrefix of `pre_`
--   PublicMethodSuffix of `_post`
+>   - PublicMethodCase of `lower_case`
+>   - PublicMethodPrefix of `pre_`
+>   - PublicMethodSuffix of `_post`
 
 Identifies and/or transforms public method names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class Foo {
-    public:
-      int Member_Method();
-    }
+``` c++
+class Foo {
+public:
+  int Member_Method();
+}
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+class Foo {
+public:
+  int pre_member_method_post();
+}
+```
 
-    class Foo {
-    public:
-      int pre_member_method_post();
-    }
+<div class="option">
 
-.. option:: StaticConstantCase
+StaticConstantCase
 
-    When defined, the check will ensure static constant names conform to the
-    selected casing.
+When defined, the check will ensure static constant names conform to the
+selected casing.
 
-.. option:: StaticConstantPrefix
+</div>
 
-    When defined, the check will ensure static constant names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: StaticConstantSuffix
+StaticConstantPrefix
 
-    When defined, the check will ensure static constant names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure static constant names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+StaticConstantSuffix
+
+When defined, the check will ensure static constant names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   StaticConstantCase of `lower_case`
--   StaticConstantPrefix of `pre_`
--   StaticConstantSuffix of `_post`
+>   - StaticConstantCase of `lower_case`
+>   - StaticConstantPrefix of `pre_`
+>   - StaticConstantSuffix of `_post`
 
 Identifies and/or transforms static constant names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    static unsigned const MyConstStatic_array[] = {1, 2, 3};
+``` c++
+static unsigned const MyConstStatic_array[] = {1, 2, 3};
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+static unsigned const pre_myconststatic_array_post[] = {1, 2, 3};
+```
 
-    static unsigned const pre_myconststatic_array_post[] = {1, 2, 3};
+<div class="option">
 
-.. option:: StaticVariableCase
+StaticVariableCase
 
-    When defined, the check will ensure static variable names conform to the
-    selected casing.
+When defined, the check will ensure static variable names conform to the
+selected casing.
 
-.. option:: StaticVariablePrefix
+</div>
 
-    When defined, the check will ensure static variable names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: StaticVariableSuffix
+StaticVariablePrefix
 
-    When defined, the check will ensure static variable names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure static variable names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+StaticVariableSuffix
+
+When defined, the check will ensure static variable names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   StaticVariableCase of `lower_case`
--   StaticVariablePrefix of `pre_`
--   StaticVariableSuffix of `_post`
+>   - StaticVariableCase of `lower_case`
+>   - StaticVariablePrefix of `pre_`
+>   - StaticVariableSuffix of `_post`
 
 Identifies and/or transforms static variable names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    static unsigned MyStatic_array[] = {1, 2, 3};
+``` c++
+static unsigned MyStatic_array[] = {1, 2, 3};
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+static unsigned pre_mystatic_array_post[] = {1, 2, 3};
+```
 
-    static unsigned pre_mystatic_array_post[] = {1, 2, 3};
+<div class="option">
 
-.. option:: StructCase
+StructCase
 
-    When defined, the check will ensure struct names conform to the
-    selected casing.
+When defined, the check will ensure struct names conform to the selected
+casing.
 
-.. option:: StructPrefix
+</div>
 
-    When defined, the check will ensure struct names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: StructSuffix
+StructPrefix
 
-    When defined, the check will ensure struct names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure struct names will add the prefixed
+with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+StructSuffix
+
+When defined, the check will ensure struct names will add the suffix
+with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   StructCase of `lower_case`
--   StructPrefix of `pre_`
--   StructSuffix of `_post`
+>   - StructCase of `lower_case`
+>   - StructPrefix of `pre_`
+>   - StructSuffix of `_post`
 
 Identifies and/or transforms struct names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    struct FOO {
-      FOO();
-      ~FOO();
-    };
+``` c++
+struct FOO {
+  FOO();
+  ~FOO();
+};
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+struct pre_foo_post {
+  pre_foo_post();
+  ~pre_foo_post();
+};
+```
 
-    struct pre_foo_post {
-      pre_foo_post();
-      ~pre_foo_post();
-    };
+<div class="option">
 
-.. option:: TemplateParameterCase
+TemplateParameterCase
 
-    When defined, the check will ensure template parameter names conform to the
-    selected casing.
+When defined, the check will ensure template parameter names conform to
+the selected casing.
 
-.. option:: TemplateParameterPrefix
+</div>
 
-    When defined, the check will ensure template parameter names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: TemplateParameterSuffix
+TemplateParameterPrefix
 
-    When defined, the check will ensure template parameter names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure template parameter names will add
+the prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+TemplateParameterSuffix
+
+When defined, the check will ensure template parameter names will add
+the suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   TemplateParameterCase of `lower_case`
--   TemplateParameterPrefix of `pre_`
--   TemplateParameterSuffix of `_post`
+>   - TemplateParameterCase of `lower_case`
+>   - TemplateParameterPrefix of `pre_`
+>   - TemplateParameterSuffix of `_post`
 
 Identifies and/or transforms template parameter names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    template <typename T> class Foo {};
+``` c++
+template <typename T> class Foo {};
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+template <typename pre_t_post> class Foo {};
+```
 
-    template <typename pre_t_post> class Foo {};
+<div class="option">
 
-.. option:: TemplateTemplateParameterCase
+TemplateTemplateParameterCase
 
-    When defined, the check will ensure template template parameter names conform to the
-    selected casing.
+When defined, the check will ensure template template parameter names
+conform to the selected casing.
 
-.. option:: TemplateTemplateParameterPrefix
+</div>
 
-    When defined, the check will ensure template template parameter names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: TemplateTemplateParameterSuffix
+TemplateTemplateParameterPrefix
 
-    When defined, the check will ensure template template parameter names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure template template parameter names
+will add the prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+TemplateTemplateParameterSuffix
+
+When defined, the check will ensure template template parameter names
+will add the suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   TemplateTemplateParameterCase of `lower_case`
--   TemplateTemplateParameterPrefix of `pre_`
--   TemplateTemplateParameterSuffix of `_post`
+>   - TemplateTemplateParameterCase of `lower_case`
+>   - TemplateTemplateParameterPrefix of `pre_`
+>   - TemplateTemplateParameterSuffix of `_post`
 
 Identifies and/or transforms template template parameter names as
 follows:
 
 Before:
 
-.. code-block:: c++
-
-    template <template <typename> class TPL_parameter, int COUNT_params,
-              typename... TYPE_parameters>
+``` c++
+template <template <typename> class TPL_parameter, int COUNT_params,
+          typename... TYPE_parameters>
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+template <template <typename> class pre_tpl_parameter_post, int COUNT_params,
+          typename... TYPE_parameters>
+```
 
-    template <template <typename> class pre_tpl_parameter_post, int COUNT_params,
-              typename... TYPE_parameters>
+<div class="option">
 
-.. option:: TypeAliasCase
+TypeAliasCase
 
-    When defined, the check will ensure type alias names conform to the
-    selected casing.
+When defined, the check will ensure type alias names conform to the
+selected casing.
 
-.. option:: TypeAliasPrefix
+</div>
 
-    When defined, the check will ensure type alias names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: TypeAliasSuffix
+TypeAliasPrefix
 
-    When defined, the check will ensure type alias names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure type alias names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+TypeAliasSuffix
+
+When defined, the check will ensure type alias names will add the suffix
+with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   TypeAliasCase of `lower_case`
--   TypeAliasPrefix of `pre_`
--   TypeAliasSuffix of `_post`
+>   - TypeAliasCase of `lower_case`
+>   - TypeAliasPrefix of `pre_`
+>   - TypeAliasSuffix of `_post`
 
 Identifies and/or transforms type alias names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    using MY_STRUCT_TYPE = my_structure;
+``` c++
+using MY_STRUCT_TYPE = my_structure;
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+using pre_my_struct_type_post = my_structure;
+```
 
-    using pre_my_struct_type_post = my_structure;
+<div class="option">
 
-.. option:: TypedefCase
+TypedefCase
 
-    When defined, the check will ensure typedef names conform to the
-    selected casing.
+When defined, the check will ensure typedef names conform to the
+selected casing.
 
-.. option:: TypedefPrefix
+</div>
 
-    When defined, the check will ensure typedef names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: TypedefSuffix
+TypedefPrefix
 
-    When defined, the check will ensure typedef names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure typedef names will add the prefixed
+with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+TypedefSuffix
+
+When defined, the check will ensure typedef names will add the suffix
+with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   TypedefCase of `lower_case`
--   TypedefPrefix of `pre_`
--   TypedefSuffix of `_post`
+>   - TypedefCase of `lower_case`
+>   - TypedefPrefix of `pre_`
+>   - TypedefSuffix of `_post`
 
 Identifies and/or transforms typedef names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    typedef int MYINT;
+``` c++
+typedef int MYINT;
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+typedef int pre_myint_post;
+```
 
-    typedef int pre_myint_post;
+<div class="option">
 
-.. option:: TypeTemplateParameterCase
+TypeTemplateParameterCase
 
-    When defined, the check will ensure type template parameter names conform to the
-    selected casing.
+When defined, the check will ensure type template parameter names
+conform to the selected casing.
 
-.. option:: TypeTemplateParameterPrefix
+</div>
 
-    When defined, the check will ensure type template parameter names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: TypeTemplateParameterSuffix
+TypeTemplateParameterPrefix
 
-    When defined, the check will ensure type template parameter names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure type template parameter names will
+add the prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+TypeTemplateParameterSuffix
+
+When defined, the check will ensure type template parameter names will
+add the suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   TypeTemplateParameterCase of `lower_case`
--   TypeTemplateParameterPrefix of `pre_`
--   TypeTemplateParameterSuffix of `_post`
+>   - TypeTemplateParameterCase of `lower_case`
+>   - TypeTemplateParameterPrefix of `pre_`
+>   - TypeTemplateParameterSuffix of `_post`
 
 Identifies and/or transforms type template parameter names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    template <template <typename> class TPL_parameter, int COUNT_params,
-              typename... TYPE_parameters>
+``` c++
+template <template <typename> class TPL_parameter, int COUNT_params,
+          typename... TYPE_parameters>
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+template <template <typename> class TPL_parameter, int COUNT_params,
+          typename... pre_type_parameters_post>
+```
 
-    template <template <typename> class TPL_parameter, int COUNT_params,
-              typename... pre_type_parameters_post>
+<div class="option">
 
-.. option:: UnionCase
+UnionCase
 
-    When defined, the check will ensure union names conform to the
-    selected casing.
+When defined, the check will ensure union names conform to the selected
+casing.
 
-.. option:: UnionPrefix
+</div>
 
-    When defined, the check will ensure union names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: UnionSuffix
+UnionPrefix
 
-    When defined, the check will ensure union names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure union names will add the prefixed
+with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+UnionSuffix
+
+When defined, the check will ensure union names will add the suffix with
+the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   UnionCase of `lower_case`
--   UnionPrefix of `pre_`
--   UnionSuffix of `_post`
+>   - UnionCase of `lower_case`
+>   - UnionPrefix of `pre_`
+>   - UnionSuffix of `_post`
 
 Identifies and/or transforms union names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    union FOO {
-      int a;
-      char b;
-    };
+``` c++
+union FOO {
+  int a;
+  char b;
+};
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+union pre_foo_post {
+  int a;
+  char b;
+};
+```
 
-    union pre_foo_post {
-      int a;
-      char b;
-    };
+<div class="option">
 
-.. option:: ValueTemplateParameterCase
+ValueTemplateParameterCase
 
-    When defined, the check will ensure value template parameter names conform to the
-    selected casing.
+When defined, the check will ensure value template parameter names
+conform to the selected casing.
 
-.. option:: ValueTemplateParameterPrefix
+</div>
 
-    When defined, the check will ensure value template parameter names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: ValueTemplateParameterSuffix
+ValueTemplateParameterPrefix
 
-    When defined, the check will ensure value template parameter names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure value template parameter names will
+add the prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+ValueTemplateParameterSuffix
+
+When defined, the check will ensure value template parameter names will
+add the suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   ValueTemplateParameterCase of `lower_case`
--   ValueTemplateParameterPrefix of `pre_`
--   ValueTemplateParameterSuffix of `_post`
+>   - ValueTemplateParameterCase of `lower_case`
+>   - ValueTemplateParameterPrefix of `pre_`
+>   - ValueTemplateParameterSuffix of `_post`
 
 Identifies and/or transforms value template parameter names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    template <template <typename> class TPL_parameter, int COUNT_params,
-              typename... TYPE_parameters>
+``` c++
+template <template <typename> class TPL_parameter, int COUNT_params,
+          typename... TYPE_parameters>
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+template <template <typename> class TPL_parameter, int pre_count_params_post,
+          typename... TYPE_parameters>
+```
 
-    template <template <typename> class TPL_parameter, int pre_count_params_post,
-              typename... TYPE_parameters>
+<div class="option">
 
-.. option:: VariableCase
+VariableCase
 
-    When defined, the check will ensure variable names conform to the
-    selected casing.
+When defined, the check will ensure variable names conform to the
+selected casing.
 
-.. option:: VariablePrefix
+</div>
 
-    When defined, the check will ensure variable names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: VariableSuffix
+VariablePrefix
 
-    When defined, the check will ensure variable names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure variable names will add the prefixed
+with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+VariableSuffix
+
+When defined, the check will ensure variable names will add the suffix
+with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   VariableCase of `lower_case`
--   VariablePrefix of `pre_`
--   VariableSuffix of `_post`
+>   - VariableCase of `lower_case`
+>   - VariablePrefix of `pre_`
+>   - VariableSuffix of `_post`
 
 Identifies and/or transforms variable names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    unsigned MyVariable;
+``` c++
+unsigned MyVariable;
+```
 
 After:
 
-.. code-block:: c++
+``` c++
+unsigned pre_myvariable_post;
+```
 
-    unsigned pre_myvariable_post;
+<div class="option">
 
-.. option:: VirtualMethodCase
+VirtualMethodCase
 
-    When defined, the check will ensure virtual method names conform to the
-    selected casing.
+When defined, the check will ensure virtual method names conform to the
+selected casing.
 
-.. option:: VirtualMethodPrefix
+</div>
 
-    When defined, the check will ensure virtual method names will add the
-    prefixed with the given value (regardless of casing).
+<div class="option">
 
-.. option:: VirtualMethodSuffix
+VirtualMethodPrefix
 
-    When defined, the check will ensure virtual method names will add the
-    suffix with the given value (regardless of casing).
+When defined, the check will ensure virtual method names will add the
+prefixed with the given value (regardless of casing).
+
+</div>
+
+<div class="option">
+
+VirtualMethodSuffix
+
+When defined, the check will ensure virtual method names will add the
+suffix with the given value (regardless of casing).
+
+</div>
 
 For example using values of:
 
--   VirtualMethodCase of `lower_case`
--   VirtualMethodPrefix of `pre_`
--   VirtualMethodSuffix of `_post`
+>   - VirtualMethodCase of `lower_case`
+>   - VirtualMethodPrefix of `pre_`
+>   - VirtualMethodSuffix of `_post`
 
 Identifies and/or transforms virtual method names as follows:
 
 Before:
 
-.. code-block:: c++
-
-    class Foo {
-    public:
-      virtual int MemberFunction();
-    }
+``` c++
+class Foo {
+public:
+  virtual int MemberFunction();
+}
+```
 
 After:
 
-.. code-block:: c++
-
-    class Foo {
-    public:
-      virtual int pre_member_function_post();
-    }
+``` c++
+class Foo {
+public:
+  virtual int pre_member_function_post();
+}
+```

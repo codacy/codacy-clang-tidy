@@ -25,9 +25,9 @@ object Main extends App {
     Seq("git", "pull").!
   } */
 
-  def isNotSeparator(s: String) = !s.startsWith("====")
+  def isNotTitle(s: String) = !s.startsWith("#")
 
-  def prettifyLinks(s: String) = {
+  def prettifyLinks(s: String): String = {
     val linkRegex = """`(.+)<(.+)>`(?:\\_)?""".r("name", "link")
     linkRegex.replaceAllIn(s, matching => {
       val name = matching.group("name")
@@ -45,22 +45,11 @@ object Main extends App {
       file <- (clangExtraDir / "docs" / "clang-tidy" / "checks").children
       patternId = file.nameWithoutExtension(includeAll = false)
       if file.extension.exists(_ == ".rst") && file.nameWithoutExtension != "list"
-      linesSeq = file.lines.toSeq
-      content = linesSeq.dropWhile(isNotSeparator)
-      toCovert = (patternId +: content).mkString(System.lineSeparator)
-      converted = (Seq("pandoc", "-t", "markdown") #< toInputStream(toCovert)).!!
-      withPrettyLinks = prettifyLinks(converted)
-    } yield (patternId, withPrettyLinks)
+      markdownFile = Seq("pandoc", "-t", "gfm", file.pathAsString).!!
+      content = markdownFile.linesIterator.dropWhile(isNotTitle).mkString(System.lineSeparator())
+    } yield (patternId, content)
     iterator.toSeq
   }
-
-  val docsDir = pwd / "docs"
-  mkdirs(docsDir)
-  val descriptionDir = docsDir / "description"
-  rm(descriptionDir)
-  mkdirs(descriptionDir)
-
-  for ((pattern, markdown) <- patternsWithDocs) (descriptionDir / s"$pattern.md").writeText(markdown)
 
   def categoryFromPatternId(patternId: String): (Pattern.Category, Option[Subcategory]) = patternId match {
     case s"android-$_" => (Pattern.Category.Security, Some(Pattern.Subcategory.Android))
@@ -115,6 +104,14 @@ object Main extends App {
 
   val specificationJsonString = Json.prettyPrint(Json.toJson(specification))
   val descriptionsJsonString = Json.prettyPrint(Json.toJson(descriptions))
+
+  val docsDir = pwd / "docs"
+  mkdirs(docsDir)
+  val descriptionDir = docsDir / "description"
+  rm(descriptionDir)
+  mkdirs(descriptionDir)
+
+  for ((pattern, markdown) <- patternsWithDocs) (descriptionDir / s"$pattern.md").writeText(markdown + System.lineSeparator)
 
   val patternJsonFile = docsDir / "patterns.json"
   patternJsonFile.writeText(specificationJsonString)

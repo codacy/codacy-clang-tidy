@@ -1,5 +1,4 @@
-cppcoreguidelines-pro-type-vararg
-=================================
+# cppcoreguidelines-pro-type-vararg
 
 This check flags all calls to c-style vararg functions and all use of
 `va_arg`.
@@ -13,4 +12,4 @@ language and so relies on programmer discipline to get it right.
 
 This rule is part of the "Type safety" profile of the C++ Core
 Guidelines, see
-https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md\#Pro-type-varargs.
+<https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-varargs>.

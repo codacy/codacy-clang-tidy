@@ -1,5 +1,4 @@
-linuxkernel-must-use-errs
-=========================
+# linuxkernel-must-use-errs
 
 Checks Linux kernel code to see if it uses the results from the
 functions in `linux/err.h`. Also checks to see if code uses the results
@@ -15,12 +14,13 @@ have this warning enabled for clang.
 
 Examples:
 
-.. code-block:: c
+``` c
+/* Trivial unused call to an ERR function */
+PTR_ERR_OR_ZERO(some_function_call());
 
-/\* Trivial unused call to an ERR function \*/
-PTR\_ERR\_OR\_ZERO(some\_function\_call());
+/* A function that returns ERR_PTR. */
+void *fn() { ERR_PTR(-EINVAL); }
 
-/\* A function that returns ERR\_PTR. */ void *fn() { ERR\_PTR(-EINVAL);
-}
-
-/\* An invalid use of fn. \*/ fn();
+/* An invalid use of fn. */
+fn();
+```

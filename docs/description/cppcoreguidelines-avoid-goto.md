@@ -1,5 +1,4 @@
-cppcoreguidelines-avoid-goto
-============================
+# cppcoreguidelines-avoid-goto
 
 The usage of `goto` for control flow is error prone and should be
 replaced with looping constructs. Only forward jumps in nested loops are
@@ -7,32 +6,47 @@ accepted.
 
 This check implements
 [ES.76](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#es76-avoid-goto)
-from the CppCoreGuidelines and
-[6.3.1 from High Integrity C++](http://www.codingstandard.com/rule/6-3-1-ensure-that-the-labels-for-a-jump-statement-or-a-switch-condition-appear-later-in-the-same-or-an-enclosing-block/).
+from the CppCoreGuidelines and [6.3.1 from High Integrity
+C++](http://www.codingstandard.com/rule/6-3-1-ensure-that-the-labels-for-a-jump-statement-or-a-switch-condition-appear-later-in-the-same-or-an-enclosing-block/).
 
 For more information on why to avoid programming with `goto` you can
-read the famous paper
-[A Case against the GO TO Statement.](https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF).
+read the famous paper [A Case against the GO TO
+Statement.](https://www.cs.utexas.edu/users/EWD/ewd02xx/EWD215.PDF).
 
 The check diagnoses `goto` for backward jumps in every language mode.
-These should be replaced with `C/C++` looping constructs.
+These should be replaced with <span class="title-ref">C/C++</span>
+looping constructs.
 
-.. code-block:: c++
+``` c++
+// Bad, handwritten for loop.
+int i = 0;
+// Jump label for the loop
+loop_start:
+do_some_operation();
 
-// Bad, handwritten for loop. int i = 0; // Jump label for the loop
-loop\_start: do\_some\_operation();
+if (i < 100) {
+  ++i;
+  goto loop_start;
+}
 
-if (i \< 100) { ++i; goto loop\_start; }
-
-// Better for(int i = 0; i \< 100; ++i) do\_some\_operation();
+// Better
+for(int i = 0; i < 100; ++i)
+  do_some_operation();
+```
 
 Modern C++ needs `goto` only to jump out of nested loops.
 
-.. code-block:: c++
+``` c++
+for(int i = 0; i < 100; ++i) {
+  for(int j = 0; j < 100; ++j) {
+    if (i * j > 500)
+      goto early_exit;
+  }
+}
 
-for(int i = 0; i \< 100; ++i) { for(int j = 0; j \< 100; ++j) { if (i \*
-j \> 500) goto early\_exit; } }
+early_exit:
+some_operation();
+```
 
-early\_exit: some\_operation();
-
-All other uses of `goto` are diagnosed in `C++`.
+All other uses of `goto` are diagnosed in
+<span class="title-ref">C++</span>.

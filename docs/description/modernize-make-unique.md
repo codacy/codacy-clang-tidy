@@ -1,48 +1,64 @@
-modernize-make-unique
-=====================
+# modernize-make-unique
 
 This check finds the creation of `std::unique_ptr` objects by explicitly
 calling the constructor and a `new` expression, and replaces it with a
 call to `std::make_unique`, introduced in C++14.
 
-.. code-block:: c++
-
-auto my\_ptr = std::unique\_ptr`<MyPair>`{=html}(new MyPair(1, 2));
+``` c++
+auto my_ptr = std::unique_ptr<MyPair>(new MyPair(1, 2));
 
 // becomes
 
-auto my\_ptr = std::make\_unique`<MyPair>`{=html}(1, 2);
+auto my_ptr = std::make_unique<MyPair>(1, 2);
+```
 
 This check also finds calls to `std::unique_ptr::reset()` with a `new`
 expression, and replaces it with a call to `std::make_unique`.
 
-.. code-block:: c++
-
-my\_ptr.reset(new MyPair(1, 2));
+``` c++
+my_ptr.reset(new MyPair(1, 2));
 
 // becomes
 
-my\_ptr = std::make\_unique`<MyPair>`{=html}(1, 2);
+my_ptr = std::make_unique<MyPair>(1, 2);
+```
 
-Options
--------
+## Options
 
-.. option:: MakeSmartPtrFunction
+<div class="option">
+
+MakeSmartPtrFunction
 
 A string specifying the name of make-unique-ptr function. Default is
-`std::make_unique`.
+<span class="title-ref">std::make\_unique</span>.
 
-.. option:: MakeSmartPtrFunctionHeader
+</div>
+
+<div class="option">
+
+MakeSmartPtrFunctionHeader
 
 A string specifying the corresponding header of make-unique-ptr
-function. Default is `memory`.
+function. Default is <span class="title-ref">memory</span>.
 
-.. option:: IncludeStyle
+</div>
 
-A string specifying which include-style is used, `llvm` or `google`.
-Default is `llvm`.
+<div class="option">
 
-.. option:: IgnoreMacros
+IncludeStyle
+
+A string specifying which include-style is used,
+<span class="title-ref">llvm</span> or
+<span class="title-ref">google</span>. Default is
+<span class="title-ref">llvm</span>.
+
+</div>
+
+<div class="option">
+
+IgnoreMacros
 
 If set to non-zero, the check will not give warnings inside macros.
-Default is `1`.
+Default is <span class="title-ref">1</span>.
+
+</div>

@@ -1,5 +1,4 @@
-bugprone-macro-parentheses
-==========================
+# bugprone-macro-parentheses
 
 Finds macros that can have unexpected behaviour due to missing
 parentheses.

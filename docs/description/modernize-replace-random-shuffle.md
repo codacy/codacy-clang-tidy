@@ -1,5 +1,4 @@
-modernize-replace-random-shuffle
-================================
+# modernize-replace-random-shuffle
 
 This check will find occurrences of `std::random_shuffle` and replace it
 with `std::shuffle`. In C++17 `std::random_shuffle` will no longer be
@@ -8,21 +7,21 @@ available and thus we need to replace it.
 Below are two examples of what kind of occurrences will be found and two
 examples of what it will be replaced with.
 
-.. code-block:: c++
+``` c++
+std::vector<int> v;
 
-std::vector`<int>`{=html} v;
+// First example
+std::random_shuffle(vec.begin(), vec.end());
 
-// First example std::random\_shuffle(vec.begin(), vec.end());
-
-// Second example std::random\_shuffle(vec.begin(), vec.end(),
-randomFunc);
+// Second example
+std::random_shuffle(vec.begin(), vec.end(), randomFunc);
+```
 
 Both of these examples will be replaced with:
 
-.. code-block:: c++
-
-std::shuffle(vec.begin(), vec.end(),
-std::mt19937(std::random\_device()()));
+``` c++
+std::shuffle(vec.begin(), vec.end(), std::mt19937(std::random_device()()));
+```
 
 The second example will also receive a warning that `randomFunc` is no
 longer supported in the same way as before so if the user wants the same
@@ -37,11 +36,13 @@ thing is that the seeding quality of the suggested fix is quite poor:
 seeded with a single integer. So if you require higher quality
 randomness, you should consider seeding better, for example:
 
-.. code-block:: c++
-
-std::shuffle(v.begin(), v.end(), []() { std::mt19937::result\_type
-seeds\[std::mt19937::state\_size\]; std::random\_device device;
-std::uniform\_int\_distribution`<typename std::mt19937::result_type>`{=html}
-dist; std::generate(std::begin(seeds), std::end(seeds), \[&\] { return
-dist(device); }); std::seed\_seq seq(std::begin(seeds),
-std::end(seeds)); return std::mt19937(seq); }());
+``` c++
+std::shuffle(v.begin(), v.end(), []() {
+  std::mt19937::result_type seeds[std::mt19937::state_size];
+  std::random_device device;
+  std::uniform_int_distribution<typename std::mt19937::result_type> dist;
+  std::generate(std::begin(seeds), std::end(seeds), [&] { return dist(device); });
+  std::seed_seq seq(std::begin(seeds), std::end(seeds));
+  return std::mt19937(seq);
+}());
+```

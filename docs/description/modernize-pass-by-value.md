@@ -1,5 +1,4 @@
-modernize-pass-by-value
-=======================
+# modernize-pass-by-value
 
 With move semantics added to the language and the standard library
 updated with move constructors added for many types it is now
@@ -11,75 +10,84 @@ The transformation is usually beneficial when the calling code passes an
 *rvalue* and assumes the move construction is a cheap operation. This
 short example illustrates how the construction of the value happens:
 
-.. code-block:: c++
+``` c++
+void foo(std::string s);
+std::string get_str();
 
-    void foo(std::string s);
-    std::string get_str();
+void f(const std::string &str) {
+  foo(str);       // lvalue  -> copy construction
+  foo(get_str()); // prvalue -> move construction
+}
+```
 
-    void f(const std::string &str) {
-      foo(str);       // lvalue  -> copy construction
-      foo(get_str()); // prvalue -> move construction
-    }
+<div class="note">
 
-.. note::
+<div class="title">
+
+Note
+
+</div>
 
 Currently, only constructors are transformed to make use of
-pass-by-value. Contributions that handle other situations are welcome!
+pass-by-value. Contributions that handle other situations are welcome\!
 
-Pass-by-value in constructors
------------------------------
+</div>
+
+## Pass-by-value in constructors
 
 Replaces the uses of const-references constructor parameters that are
 copied into class fields. The parameter is then moved with
-`std::move()`.
+<span class="title-ref">std::move()</span>.
 
-Since [std::move()` is a library function declared in `](https://clang.llvm.org/extra/clang-tidy/checks/utility) it may
-be necessary to add this include. The check will add the include
-directive when necessary.
+Since `std::move()` is a library function declared in
+<span class="title-ref">\<utility\></span> it may be necessary to add
+this include. The check will add the include directive when necessary.
 
-.. code-block:: c++
+``` c++
+#include <string>
 
-     #include <string>
+class Foo {
+public:
+-  Foo(const std::string &Copied, const std::string &ReadOnly)
+-    : Copied(Copied), ReadOnly(ReadOnly)
++  Foo(std::string Copied, const std::string &ReadOnly)
++    : Copied(std::move(Copied)), ReadOnly(ReadOnly)
+  {}
 
-     class Foo {
-     public:
-    -  Foo(const std::string &Copied, const std::string &ReadOnly)
-    -    : Copied(Copied), ReadOnly(ReadOnly)
-    +  Foo(std::string Copied, const std::string &ReadOnly)
-    +    : Copied(std::move(Copied)), ReadOnly(ReadOnly)
-       {}
+private:
+  std::string Copied;
+  const std::string &ReadOnly;
+};
 
-     private:
-       std::string Copied;
-       const std::string &ReadOnly;
-     };
+std::string get_cwd();
 
-     std::string get_cwd();
-
-     void f(const std::string &Path) {
-       // The parameter corresponding to 'get_cwd()' is move-constructed. By
-       // using pass-by-value in the Foo constructor we managed to avoid a
-       // copy-construction.
-       Foo foo(get_cwd(), Path);
-     }
+void f(const std::string &Path) {
+  // The parameter corresponding to 'get_cwd()' is move-constructed. By
+  // using pass-by-value in the Foo constructor we managed to avoid a
+  // copy-construction.
+  Foo foo(get_cwd(), Path);
+}
+```
 
 If the parameter is used more than once no transformation is performed
 since moved objects have an undefined state. It means the following code
 will be left untouched:
 
-.. code-block:: c++
-
-\#include `<string>`{=html}
+``` c++
+#include <string>
 
 void pass(const std::string &S);
 
-struct Foo { Foo(const std::string &S) : Str(S) { pass(S); }
+struct Foo {
+  Foo(const std::string &S) : Str(S) {
+    pass(S);
+  }
 
-    std::string Str;
-
+  std::string Str;
 };
+```
 
-Known limitations \^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
+### Known limitations
 
 A situation where the generated code can be wrong is when the object
 referenced is modified before the assignment in the init-list through a
@@ -87,69 +95,83 @@ referenced is modified before the assignment in the init-list through a
 
 Example:
 
-.. code-block:: c++
-
+``` c++
 std::string s("foo");
 
-struct Base { Base() { s = "bar"; } };
-
-struct Derived : Base { - Derived(const std::string &S) : Field(S) +
-Derived(std::string S) : Field(std::move(S)) { }
-
-     std::string Field;
-
+struct Base {
+  Base() {
+    s = "bar";
+  }
 };
 
-void f() { - Derived d(s); // d.Field holds "bar" + Derived d(s); //
-d.Field holds "foo" }
+struct Derived : Base {
+-  Derived(const std::string &S) : Field(S)
++  Derived(std::string S) : Field(std::move(S))
+  { }
 
-Note about delayed template parsing
-\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^
+  std::string Field;
+};
+
+void f() {
+-  Derived d(s); // d.Field holds "bar"
++  Derived d(s); // d.Field holds "foo"
+}
+```
+
+### Note about delayed template parsing
 
 When delayed template parsing is enabled, constructors part of templated
 contexts; templated constructors, constructors in class templates,
 constructors of inner classes of template classes, etc., are not
 transformed. Delayed template parsing is enabled by default on Windows
-as a Microsoft extension:
-`Clang Compiler User’s Manual - Microsoft extensions`\_.
+as a Microsoft extension: [Clang Compiler User’s Manual - Microsoft
+extensions](https://clang.llvm.org/docs/UsersManual.html#microsoft-extensions).
 
 Delayed template parsing can be enabled using the
-`-fdelayed-template-parsing` flag and disabled using
-`-fno-delayed-template-parsing`.
+<span class="title-ref">-fdelayed-template-parsing</span> flag and
+disabled using
+<span class="title-ref">-fno-delayed-template-parsing</span>.
 
 Example:
 
-.. code-block:: c++
+``` c++
+template <typename T> class C {
+  std::string S;
 
-template `<typename T>`{=html} class C { std::string S;
+public:
+=  // using -fdelayed-template-parsing (default on Windows)
+=  C(const std::string &S) : S(S) {}
 
-public: = // using -fdelayed-template-parsing (default on Windows) =
-C(const std::string &S) : S(S) {}
++  // using -fno-delayed-template-parsing (default on non-Windows systems)
++  C(std::string S) : S(std::move(S)) {}
+};
+```
 
--   // using -fno-delayed-template-parsing (default on non-Windows
-    systems)
--   C(std::string S) : S(std::move(S)) {} };
+<div class="seealso">
 
-.. \_Clang Compiler User's Manual - Microsoft extensions:
-https://clang.llvm.org/docs/UsersManual.html\#microsoft-extensions
+For more information about the pass-by-value idiom, read: [Want Speed?
+Pass by Value]().
 
-.. seealso::
+</div>
 
-For more information about the pass-by-value idiom, read:
-`Want Speed? Pass by Value`\_.
+## Options
 
-.. \_Want Speed? Pass by Value:
-https://web.archive.org/web/20140205194657/http://cpp-next.com/archive/2009/08/want-speed-pass-by-value/
+<div class="option">
 
-Options
--------
+IncludeStyle
 
-.. option:: IncludeStyle
+A string specifying which include-style is used,
+<span class="title-ref">llvm</span> or
+<span class="title-ref">google</span>. Default is
+<span class="title-ref">llvm</span>.
 
-A string specifying which include-style is used, `llvm` or `google`.
-Default is `llvm`.
+</div>
 
-.. option:: ValuesOnly
+<div class="option">
+
+ValuesOnly
 
 When non-zero, the check only warns about copied parameters that are
-already passed by value. Default is `0`.
+already passed by value. Default is <span class="title-ref">0</span>.
+
+</div>

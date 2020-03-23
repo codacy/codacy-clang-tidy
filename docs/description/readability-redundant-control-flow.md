@@ -1,5 +1,4 @@
-readability-redundant-control-flow
-==================================
+# readability-redundant-control-flow
 
 This check looks for procedures (functions returning no value) with
 `return` statements at the end of the function. Such `return` statements
@@ -10,26 +9,42 @@ Loop statements (`for`, `while`, `do while`) are checked for redundant
 
 Examples:
 
-The following function `f` contains a redundant `return` statement:
+The following function <span class="title-ref">f</span> contains a
+redundant `return` statement:
 
-.. code-block:: c++
-
-extern void g(); void f() { g(); return; }
-
-becomes
-
-.. code-block:: c++
-
-extern void g(); void f() { g(); }
-
-The following function `k` contains a redundant `continue` statement:
-
-.. code-block:: c++
-
-void k() { for (int i = 0; i \< 10; ++i) { continue; } }
+``` c++
+extern void g();
+void f() {
+  g();
+  return;
+}
+```
 
 becomes
 
-.. code-block:: c++
+``` c++
+extern void g();
+void f() {
+  g();
+}
+```
 
-void k() { for (int i = 0; i \< 10; ++i) { } }
+The following function <span class="title-ref">k</span> contains a
+redundant `continue` statement:
+
+``` c++
+void k() {
+  for (int i = 0; i < 10; ++i) {
+    continue;
+  }
+}
+```
+
+becomes
+
+``` c++
+void k() {
+  for (int i = 0; i < 10; ++i) {
+  }
+}
+```

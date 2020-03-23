@@ -1,5 +1,4 @@
-cppcoreguidelines-pro-type-static-cast-downcast
-===============================================
+# cppcoreguidelines-pro-type-static-cast-downcast
 
 This check flags all usages of `static_cast`, where a base class is
 casted to a derived class. In those cases, a fix-it is provided to
@@ -11,4 +10,4 @@ were of an unrelated type `Z`.
 
 This rule is part of the "Type safety" profile of the C++ Core
 Guidelines, see
-https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md\#Pro-type-downcast.
+<https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-downcast>.

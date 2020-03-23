@@ -1,42 +1,72 @@
-readability-redundant-preprocessor
-==================================
+# readability-redundant-preprocessor
 
 Finds potentially redundant preprocessor directives. At the moment the
 following cases are detected:
 
--   `#ifdef` .. `#endif` pairs which are nested inside an outer pair
-    with the same condition. For example:
+  - <span class="title-ref">\#ifdef</span> ..
+    <span class="title-ref">\#endif</span> pairs which are nested inside
+    an outer pair with the same condition. For example:
 
-.. code-block:: c++
+<!-- end list -->
 
-\#ifdef FOO \#ifdef FOO // inner ifdef is considered redundant void f();
-\#endif \#endif
+``` c++
+#ifdef FOO
+#ifdef FOO // inner ifdef is considered redundant
+void f();
+#endif
+#endif
+```
 
--   Same for `#ifndef` .. `#endif` pairs. For example:
+  - Same for <span class="title-ref">\#ifndef</span> ..
+    <span class="title-ref">\#endif</span> pairs. For example:
 
-.. code-block:: c++
+<!-- end list -->
 
-\#ifndef FOO \#ifndef FOO // inner ifndef is considered redundant void
-f(); \#endif \#endif
+``` c++
+#ifndef FOO
+#ifndef FOO // inner ifndef is considered redundant
+void f();
+#endif
+#endif
+```
 
--   `#ifndef` inside an `#ifdef` with the same condition:
+  - <span class="title-ref">\#ifndef</span> inside an
+    <span class="title-ref">\#ifdef</span> with the same condition:
 
-.. code-block:: c++
+<!-- end list -->
 
-\#ifdef FOO \#ifndef FOO // inner ifndef is considered redundant void
-f(); \#endif \#endif
+``` c++
+#ifdef FOO
+#ifndef FOO // inner ifndef is considered redundant
+void f();
+#endif
+#endif
+```
 
--   `#ifdef` inside an `#ifndef` with the same condition:
+  - <span class="title-ref">\#ifdef</span> inside an
+    <span class="title-ref">\#ifndef</span> with the same condition:
 
-.. code-block:: c++
+<!-- end list -->
 
-\#ifndef FOO \#ifdef FOO // inner ifdef is considered redundant void
-f(); \#endif \#endif
+``` c++
+#ifndef FOO
+#ifdef FOO // inner ifdef is considered redundant
+void f();
+#endif
+#endif
+```
 
--   `#if` .. `#endif` pairs which are nested inside an outer pair with
-    the same condition. For example:
+  - <span class="title-ref">\#if</span> ..
+    <span class="title-ref">\#endif</span> pairs which are nested inside
+    an outer pair with the same condition. For example:
 
-.. code-block:: c++
+<!-- end list -->
 
-\#define FOO 4 \#if FOO == 4 \#if FOO == 4 // inner if is considered
-redundant void f(); \#endif \#endif
+``` c++
+#define FOO 4
+#if FOO == 4
+#if FOO == 4 // inner if is considered redundant
+void f();
+#endif
+#endif
+```

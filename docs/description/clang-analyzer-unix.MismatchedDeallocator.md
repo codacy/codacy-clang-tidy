@@ -1,7 +1,6 @@
-clang-analyzer-unix.MismatchedDeallocator
-=========================================
+# clang-analyzer-unix.MismatchedDeallocator
 
 The clang-analyzer-unix.MismatchedDeallocator check is an alias, please
-see
-[Clang Static Analyzer Available Checkers](https://clang.llvm.org/docs/analyzer/checkers.html#unix-mismatcheddeallocator)
+see [Clang Static Analyzer Available
+Checkers](https://clang.llvm.org/docs/analyzer/checkers.html#unix-mismatcheddeallocator)
 for more information.

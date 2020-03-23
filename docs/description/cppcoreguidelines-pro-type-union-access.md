@@ -1,5 +1,4 @@
-cppcoreguidelines-pro-type-union-access
-=======================================
+# cppcoreguidelines-pro-type-union-access
 
 This check flags all access to members of unions. Passing unions as a
 whole is not flagged.
@@ -12,4 +11,4 @@ on programmer discipline to get it right.
 
 This rule is part of the "Type safety" profile of the C++ Core
 Guidelines, see
-https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md\#Pro-type-unions.
+<https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-unions>.

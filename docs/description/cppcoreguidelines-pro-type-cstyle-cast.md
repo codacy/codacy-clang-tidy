@@ -1,5 +1,4 @@
-cppcoreguidelines-pro-type-cstyle-cast
-======================================
+# cppcoreguidelines-pro-type-cstyle-cast
 
 This check flags all use of C-style casts that perform a `static_cast`
 downcast, `const_cast`, or `reinterpret_cast`.
@@ -15,4 +14,4 @@ an unsafe cast.
 
 This rule is part of the "Type safety" profile of the C++ Core
 Guidelines, see
-https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md\#Pro-type-cstylecast.
+<https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-cstylecast>.

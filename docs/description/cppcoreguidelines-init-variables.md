@@ -1,5 +1,4 @@
-cppcoreguidelines-init-variables
-================================
+# cppcoreguidelines-init-variables
 
 Checks whether there are local variables that are declared without an
 initial value. These may lead to unexpected behaviour if there is a code
@@ -11,35 +10,49 @@ exception is float and double types, which are initialized to NaN.
 
 As an example a function that looks like this:
 
-.. code-block:: c++
+``` c++
+void function() {
+  int x;
+  char *txt;
+  double d;
 
-void function() { int x; char \*txt; double d;
-
-     // Rest of the function.
-
+  // Rest of the function.
 }
+```
 
 Would be rewritten to look like this:
 
-.. code-block:: c++
+``` c++
+#include <math.h>
 
-\#include \<math.h\>
+void function() {
+  int x = 0;
+  char *txt = nullptr;
+  double d = NAN;
 
-void function() { int x = 0; char \*txt = nullptr; double d = NAN;
-
-     // Rest of the function.
-
+  // Rest of the function.
 }
+```
 
-Options
--------
+## Options
 
-.. option:: IncludeStyle
+<div class="option">
 
-A string specifying which include-style is used, `llvm` or `google`.
-Default is `llvm`.
+IncludeStyle
 
-.. option:: MathHeader
+A string specifying which include-style is used,
+<span class="title-ref">llvm</span> or
+<span class="title-ref">google</span>. Default is
+<span class="title-ref">llvm</span>.
+
+</div>
+
+<div class="option">
+
+MathHeader
 
 A string specifying the header to include to get the definition of
-`NAN`. Default is `math.h`.
+<span class="title-ref">NAN</span>. Default is
+<span class="title-ref">math.h</span>.
+
+</div>

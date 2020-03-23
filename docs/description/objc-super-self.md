@@ -1,5 +1,4 @@
-objc-super-self
-===============
+# objc-super-self
 
 Finds invocations of `-self` on super instances in initializers of
 subclasses of `NSObject` and recommends calling a superclass initializer

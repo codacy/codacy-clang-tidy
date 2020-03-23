@@ -1,44 +1,68 @@
-readability-function-size
-=========================
+# readability-function-size
 
-`google-readability-function-size` redirects here as an alias for this
-check.
+<span class="title-ref">google-readability-function-size</span>
+redirects here as an alias for this check.
 
 Checks for large functions based on various metrics.
 
-Options
--------
+## Options
 
-.. option:: LineThreshold
+<div class="option">
 
-Flag functions exceeding this number of lines. The default is `-1`
-(ignore the number of lines).
+LineThreshold
 
-.. option:: StatementThreshold
+Flag functions exceeding this number of lines. The default is
+<span class="title-ref">-1</span> (ignore the number of lines).
+
+</div>
+
+<div class="option">
+
+StatementThreshold
 
 Flag functions exceeding this number of statements. This may differ
 significantly from the number of lines for macro-heavy code. The default
-is `800`.
+is <span class="title-ref">800</span>.
 
-.. option:: BranchThreshold
+</div>
+
+<div class="option">
+
+BranchThreshold
 
 Flag functions exceeding this number of control statements. The default
-is `-1` (ignore the number of branches).
+is <span class="title-ref">-1</span> (ignore the number of branches).
 
-.. option:: ParameterThreshold
+</div>
+
+<div class="option">
+
+ParameterThreshold
 
 Flag functions that exceed a specified number of parameters. The default
-is `-1` (ignore the number of parameters).
+is <span class="title-ref">-1</span> (ignore the number of parameters).
 
-.. option:: NestingThreshold
+</div>
 
-    Flag compound statements which create next nesting level after
-    `NestingThreshold`. This may differ significantly from the expected value
-    for macro-heavy code. The default is `-1` (ignore the nesting level).
+<div class="option">
 
-.. option:: VariableThreshold
+NestingThreshold
+
+Flag compound statements which create next nesting level after
+<span class="title-ref">NestingThreshold</span>. This may differ
+significantly from the expected value for macro-heavy code. The default
+is <span class="title-ref">-1</span> (ignore the nesting level).
+
+</div>
+
+<div class="option">
+
+VariableThreshold
 
 Flag functions exceeding this number of variables declared in the body.
-The default is `-1` (ignore the number of variables). Please note that
-function parameters and variables declared in lambdas, GNU Statement
-Expressions, and nested class inline functions are not counted.
+The default is <span class="title-ref">-1</span> (ignore the number of
+variables). Please note that function parameters and variables declared
+in lambdas, GNU Statement Expressions, and nested class inline functions
+are not counted.
+
+</div>
