@@ -28,14 +28,14 @@ object Main extends App {
   def isNotTitle(s: String) = !s.startsWith("#")
 
   def prettifyLinks(s: String): String = {
-    val linkRegex = """`(.+)<(.+)>`(?:\\_)?""".r("name", "link")
+    val linkRegex = """\[(.+)\]\((.+\.html)\)""".r("name", "link")
     linkRegex.replaceAllIn(s, matching => {
       val name = matching.group("name")
       val link = matching.group("link")
       val linkToClangTidy =
         if (link.matches("https?:\\/\\/.+")) link else s"https://clang.llvm.org/extra/clang-tidy/checks/${link.stripPrefix("/")}"
-      val linkEscaped = linkToClangTidy.replaceAllLiterally(")", "\\)").replaceAllLiterally(" ", "").trim
-      val nameEscaped = name.replaceAllLiterally("]", "\\]").trim
+      val linkEscaped = linkToClangTidy.replaceAllLiterally(" ", "").trim
+      val nameEscaped = name.trim
       s"[$nameEscaped]($linkEscaped)"
     })
   }
@@ -47,7 +47,8 @@ object Main extends App {
       if file.extension.exists(_ == ".rst") && file.nameWithoutExtension != "list"
       markdownFile = Seq("pandoc", "-t", "gfm", file.pathAsString).!!
       content = markdownFile.linesIterator.dropWhile(isNotTitle).mkString(System.lineSeparator())
-    } yield (patternId, content)
+      prettified = prettifyLinks(content)
+    } yield (patternId, prettified)
     iterator.toSeq
   }
 
