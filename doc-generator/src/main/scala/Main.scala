@@ -6,6 +6,7 @@ import com.codacy.plugins.api.results.Tool
 import play.api.libs.json.Json
 import com.codacy.plugins.api.results.Pattern.Subcategory
 import com.codacy.plugins.api.results.Pattern.Description
+import com.codacy.plugins.api.results.Pattern.DescriptionText
 
 object Main extends App {
 
@@ -27,7 +28,7 @@ object Main extends App {
 
   def isNotTitle(s: String) = !s.startsWith("#")
 
-  def prettifyLinks(s: String): String = {
+  def fixRepoLinks(s: String): String = {
     val linkRegex = """\[(.+)\]\((.+\.html)\)""".r("name", "link")
     linkRegex.replaceAllIn(s, matching => {
       val name = matching.group("name")
@@ -45,10 +46,10 @@ object Main extends App {
       file <- (clangExtraDir / "docs" / "clang-tidy" / "checks").children
       patternId = file.nameWithoutExtension(includeAll = false)
       if file.extension.exists(_ == ".rst") && file.nameWithoutExtension != "list"
-      markdownFile = Seq("pandoc", "-t", "gfm", file.pathAsString).!!
+      markdownFile = Seq("pandoc", "-t", "commonmark", file.pathAsString).!!
       content = markdownFile.linesIterator.dropWhile(isNotTitle).mkString(System.lineSeparator())
-      prettified = prettifyLinks(content)
-    } yield (patternId, prettified)
+      withRepoLinks = fixRepoLinks(content)
+    } yield (patternId, withRepoLinks)
     iterator.toSeq
   }
 
@@ -92,12 +93,22 @@ object Main extends App {
 
   val specification = Tool.Specification(Tool.Name("Clang Tidy"), Some(Tool.Version("10.0.0")), patterns.toSet)
 
+  def removeHtmlTags(s: String): String = {
+    s.replaceAll("""<[^>]*>""", "")
+  }
+
   val descriptions: Seq[Description] = patternsWithDocs.map {
     case (patternId, doc) =>
+      val descriptionText = {
+        val firstPeriod = doc.linesIterator.drop(2).take(3).mkString(" ").split("\\. ").head
+        val withoutLinks = removeHtmlTags(firstPeriod.replaceAll("""\[(.*)\]\(.*\)""", "$1"))
+        Some(DescriptionText(withoutLinks))
+      }
+
       Description(
         patternId = Pattern.Id(patternId),
         title = Pattern.Title(withoutFamily(patternId).split("[-\\.]").mkString(" ").capitalize),
-        description = None,
+        description = descriptionText,
         timeToFix = None,
         parameters = None
       )
