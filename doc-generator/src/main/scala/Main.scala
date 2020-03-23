@@ -126,8 +126,8 @@ object Main extends App {
   for ((pattern, markdown) <- patternsWithDocs) (descriptionDir / s"$pattern.md").writeText(markdown + System.lineSeparator)
 
   val patternJsonFile = docsDir / "patterns.json"
-  patternJsonFile.writeText(specificationJsonString)
+  patternJsonFile.writeText(specificationJsonString + System.lineSeparator)
 
   val descriptionJsonFile = docsDir / "description" / "description.json"
-  descriptionJsonFile.writeText(descriptionsJsonString)
+  descriptionJsonFile.writeText(descriptionsJsonString + System.lineSeparator)
 }
