@@ -1,7 +1,7 @@
 [ {
   "patternId" : "clang-analyzer-core.uninitialized.UndefReturn",
   "title" : "Clang analyzer core uninitialized UndefReturn",
-  "description" : "The clang-analyzer-core.uninitialized.UndefReturn check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-core.uninitialized.UndefReturn check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "bugprone-argument-comment",
   "title" : "Argument comment",
@@ -13,7 +13,7 @@
 }, {
   "patternId" : "clang-analyzer-deadcode.DeadStores",
   "title" : "Clang analyzer deadcode DeadStores",
-  "description" : "The clang-analyzer-deadcode.DeadStores check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-deadcode.DeadStores check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-osx.NumberObjectConversion",
   "title" : "Clang analyzer osx NumberObjectConversion",
@@ -29,7 +29,7 @@
 }, {
   "patternId" : "bugprone-swapped-arguments",
   "title" : "Swapped arguments",
-  "description" : "Finds potentially swapped arguments by looking at implicit conversions."
+  "description" : "Finds potentially swapped arguments by looking at implicit conversions"
 }, {
   "patternId" : "readability-redundant-member-init",
   "title" : "Redundant member init",
@@ -37,7 +37,7 @@
 }, {
   "patternId" : "misc-unconventional-assign-operator",
   "title" : "Unconventional assign operator",
-  "description" : "Finds declarations of assign operators with the wrong return and/or argument types and definitions with good return type but wrong `return` statements."
+  "description" : "Finds declarations of assign operators with the wrong return and/or argument types and definitions with good return type but wrong `return` statements"
 }, {
   "patternId" : "misc-non-private-member-variables-in-classes",
   "title" : "Non private member variables in classes",
@@ -109,11 +109,11 @@
 }, {
   "patternId" : "clang-analyzer-nullability.NullReturnedFromNonnull",
   "title" : "Clang analyzer nullability NullReturnedFromNonnull",
-  "description" : "The clang-analyzer-nullability.NullReturnedFromNonnull check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-nullability.NullReturnedFromNonnull check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "cppcoreguidelines-owning-memory",
   "title" : "Owning memory",
-  "description" : "This check implements the type-based semantics of `gsl::owner`, which allows static analysis on code, that uses raw pointers to handle resources like dynamic memory, but won't introduce RAII concepts."
+  "description" : "This check implements the type-based semantics of `gsl::owner`, which allows static analysis on code, that uses raw pointers to handle resources like dynamic memory, but won't introduce RAII concepts"
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.NonNilReturnValue",
   "title" : "Clang analyzer osx cocoa NonNilReturnValue",
@@ -129,7 +129,7 @@
 }, {
   "patternId" : "clang-analyzer-unix.Malloc",
   "title" : "Clang analyzer unix Malloc",
-  "description" : "The clang-analyzer-unix.Malloc check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-unix.Malloc check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "bugprone-exception-escape",
   "title" : "Exception escape",
@@ -153,7 +153,7 @@
 }, {
   "patternId" : "clang-analyzer-security.insecureAPI.gets",
   "title" : "Clang analyzer security insecureAPI gets",
-  "description" : "The clang-analyzer-security.insecureAPI.gets check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.insecureAPI.gets check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "fuchsia-default-arguments-calls",
   "title" : "Fuchsia default arguments calls",
@@ -165,11 +165,11 @@
 }, {
   "patternId" : "clang-analyzer-security.insecureAPI.getpw",
   "title" : "Clang analyzer security insecureAPI getpw",
-  "description" : "The clang-analyzer-security.insecureAPI.getpw check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.insecureAPI.getpw check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "misc-misplaced-const",
   "title" : "Misplaced const",
-  "description" : "This check diagnoses when a `const` qualifier is applied to a `typedef` to a pointer type rather than to the pointee, because such constructs are often misleading to developers because the `const` applies to the"
+  "description" : "This check diagnoses when a `const` qualifier is applied to a `typedef` to a pointer type rather than to the pointee, because such constructs are often misleading to developers because the `const` applies to the pointer rather than the pointee"
 }, {
   "patternId" : "readability-braces-around-statements",
   "title" : "Braces around statements",
@@ -185,11 +185,11 @@
 }, {
   "patternId" : "google-readability-namespace-comments",
   "title" : "Google readability namespace comments",
-  "description" : "The google-readability-namespace-comments check is an alias, please see llvm-namespace-comment for more information."
+  "description" : "The google-readability-namespace-comments check is an alias, please see llvm-namespace-comment for more information"
 }, {
   "patternId" : "readability-redundant-string-cstr",
   "title" : "Redundant string cstr",
-  "description" : "Finds unnecessary calls to `std::string::c_str()` and `std::string::data()`."
+  "description" : "Finds unnecessary calls to `std::string::c_str()` and `std::string::data()`"
 }, {
   "patternId" : "readability-container-size-empty",
   "title" : "Container size empty",
@@ -213,7 +213,7 @@
 }, {
   "patternId" : "modernize-make-shared",
   "title" : "Make shared",
-  "description" : "This check finds the creation of `std::shared_ptr` objects by explicitly calling the constructor and a `new` expression, and replaces it with a call to `std::make_shared`."
+  "description" : "This check finds the creation of `std::shared_ptr` objects by explicitly calling the constructor and a `new` expression, and replaces it with a call to `std::make_shared`"
 }, {
   "patternId" : "readability-string-compare",
   "title" : "String compare",
@@ -225,7 +225,7 @@
 }, {
   "patternId" : "modernize-use-default",
   "title" : "Use default",
-  "description" : "This check has been renamed to modernize-use-equals-default."
+  "description" : "This check has been renamed to modernize-use-equals-default"
 }, {
   "patternId" : "bugprone-multiple-statement-macro",
   "title" : "Multiple statement macro",
@@ -233,7 +233,7 @@
 }, {
   "patternId" : "modernize-use-nodiscard",
   "title" : "Use nodiscard",
-  "description" : "Adds `[[nodiscard]]` attributes (introduced in C++17) to member functions in order to highlight at compile time which return values should not be ignored."
+  "description" : "Adds `[[nodiscard]]` attributes (introduced in C++17) to member functions in order to highlight at compile time which return values should not be ignored"
 }, {
   "patternId" : "bugprone-string-integer-assignment",
   "title" : "String integer assignment",
@@ -241,11 +241,11 @@
 }, {
   "patternId" : "clang-analyzer-cplusplus.NewDelete",
   "title" : "Clang analyzer cplusplus NewDelete",
-  "description" : "The clang-analyzer-cplusplus.NewDelete check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-cplusplus.NewDelete check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "cert-err61-cpp",
   "title" : "Cert err61 cpp",
-  "description" : "The cert-err61-cpp check is an alias, please see misc-throw-by-value-catch-by-reference for more information."
+  "description" : "The cert-err61-cpp check is an alias, please see misc-throw-by-value-catch-by-reference for more information"
 }, {
   "patternId" : "abseil-no-internal-dependencies",
   "title" : "Abseil no internal dependencies",
@@ -253,7 +253,7 @@
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.SelfInit",
   "title" : "Clang analyzer osx cocoa SelfInit",
-  "description" : "The clang-analyzer-osx.cocoa.SelfInit check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.SelfInit check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "readability-redundant-preprocessor",
   "title" : "Redundant preprocessor",
@@ -277,7 +277,7 @@
 }, {
   "patternId" : "clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker",
   "title" : "Clang analyzer optin osx cocoa localizability NonLocalizedStringChecker",
-  "description" : "The clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker check is an alias, please see [Clang Static Analyzer Available"
+  "description" : "The clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "cppcoreguidelines-no-malloc",
   "title" : "No malloc",
@@ -333,7 +333,7 @@
 }, {
   "patternId" : "hicpp-avoid-c-arrays",
   "title" : "Avoid c arrays",
-  "description" : "The hicpp-avoid-c-arrays check is an alias, please see modernize-avoid-c-arrays for more information."
+  "description" : "The hicpp-avoid-c-arrays check is an alias, please see modernize-avoid-c-arrays for more information"
 }, {
   "patternId" : "modernize-use-auto",
   "title" : "Use auto",
@@ -349,11 +349,11 @@
 }, {
   "patternId" : "performance-unnecessary-value-param",
   "title" : "Unnecessary value param",
-  "description" : "Flags value parameter declarations of expensive to copy types that are copied for each invocation but it would suffice to pass them by const reference."
+  "description" : "Flags value parameter declarations of expensive to copy types that are copied for each invocation but it would suffice to pass them by const reference"
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.NilArg",
   "title" : "Clang analyzer osx cocoa NilArg",
-  "description" : "The clang-analyzer-osx.cocoa.NilArg check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.NilArg check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "misc-unused-parameters",
   "title" : "Unused parameters",
@@ -361,11 +361,11 @@
 }, {
   "patternId" : "clang-analyzer-nullability.NullPassedToNonnull",
   "title" : "Clang analyzer nullability NullPassedToNonnull",
-  "description" : "The clang-analyzer-nullability.NullPassedToNonnull check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-nullability.NullPassedToNonnull check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.NSAutoreleasePool",
   "title" : "Clang analyzer osx cocoa NSAutoreleasePool",
-  "description" : "The clang-analyzer-osx.cocoa.NSAutoreleasePool check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.NSAutoreleasePool check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "abseil-no-namespace",
   "title" : "Abseil no namespace",
@@ -373,11 +373,11 @@
 }, {
   "patternId" : "performance-implicit-cast-in-loop",
   "title" : "Implicit cast in loop",
-  "description" : "This check has been renamed to performance-implicit-conversion-in-loop."
+  "description" : "This check has been renamed to performance-implicit-conversion-in-loop"
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.ObjCGenerics",
   "title" : "Clang analyzer osx cocoa ObjCGenerics",
-  "description" : "The clang-analyzer-osx.cocoa.ObjCGenerics check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.ObjCGenerics check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "cppcoreguidelines-pro-bounds-pointer-arithmetic",
   "title" : "Pro bounds pointer arithmetic",
@@ -385,7 +385,7 @@
 }, {
   "patternId" : "bugprone-misplaced-operator-in-strlen-in-alloc",
   "title" : "Misplaced operator in strlen in alloc",
-  "description" : "Finds cases where `1` is added to the string in the argument to `strlen()`, `strnlen()`, `strnlen_s()`, `wcslen()`, `wcsnlen()`, and `wcsnlen_s()` instead of the result and the value is used as an argument"
+  "description" : "Finds cases where `1` is added to the string in the argument to `strlen()`, `strnlen()`, `strnlen_s()`, `wcslen()`, `wcsnlen()`, and `wcsnlen_s()` instead of the result and the value is used as an argument to a memory allocation function (`malloc()`, `calloc()`, `realloc()`, `alloca()`) or the `new[]` operator in C++"
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.MissingSuperCall",
   "title" : "Clang analyzer osx cocoa MissingSuperCall",
@@ -397,19 +397,19 @@
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.ClassRelease",
   "title" : "Clang analyzer osx cocoa ClassRelease",
-  "description" : "The clang-analyzer-osx.cocoa.ClassRelease check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.ClassRelease check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker",
   "title" : "Clang analyzer optin osx cocoa localizability EmptyLocalizationContextChecker",
-  "description" : "The clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker check is an alias, please see [Clang Static Analyzer Available"
+  "description" : "The clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "hicpp-vararg",
   "title" : "Vararg",
-  "description" : "The hicpp-vararg check is an alias, please see cppcoreguidelines-pro-type-vararg"
+  "description" : "The hicpp-vararg check is an alias, please see cppcoreguidelines-pro-type-vararg for more information"
 }, {
   "patternId" : "cert-msc51-cpp",
   "title" : "Cert msc51 cpp",
-  "description" : "This check flags all pseudo-random number engines, engine adaptor instantiations and `srand()` when initialized or seeded with default argument, constant expression or any user-configurable type."
+  "description" : "This check flags all pseudo-random number engines, engine adaptor instantiations and `srand()` when initialized or seeded with default argument, constant expression or any user-configurable type"
 }, {
   "patternId" : "abseil-str-cat-append",
   "title" : "Abseil str cat append",
@@ -429,7 +429,7 @@
 }, {
   "patternId" : "performance-inefficient-string-concatenation",
   "title" : "Inefficient string concatenation",
-  "description" : "This check warns about the performance overhead arising from concatenating strings using the `operator+`, for instance: "
+  "description" : "This check warns about the performance overhead arising from concatenating strings using the `operator+`, for instance:  ``` c++ std::string a(\"Foo\"), b(\"Bar\"); a = a + b; ```  Instead of this structure you should use `operator+=` or `std::string`'s (`std::basic_string`) class member function `append()`"
 }, {
   "patternId" : "performance-inefficient-vector-operation",
   "title" : "Inefficient vector operation",
@@ -441,7 +441,7 @@
 }, {
   "patternId" : "modernize-unary-static-assert",
   "title" : "Unary static assert",
-  "description" : "The check diagnoses any `static_assert` declaration with an empty string literal and provides a fix-it to replace the declaration with a single-argument `static_assert` declaration."
+  "description" : "The check diagnoses any `static_assert` declaration with an empty string literal and provides a fix-it to replace the declaration with a single-argument `static_assert` declaration"
 }, {
   "patternId" : "clang-analyzer-core.DynamicTypePropagation",
   "title" : "Clang analyzer core DynamicTypePropagation",
@@ -449,27 +449,27 @@
 }, {
   "patternId" : "bugprone-terminating-continue",
   "title" : "Terminating continue",
-  "description" : "Detects do while loops with a condition always evaluating to false that have a continue statement, as this"
+  "description" : "Detects do while loops with a condition always evaluating to false that have a continue statement, as this continue terminates the loop effectively"
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.UnusedIvars",
   "title" : "Clang analyzer osx cocoa UnusedIvars",
-  "description" : "The clang-analyzer-osx.cocoa.UnusedIvars check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.UnusedIvars check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "cppcoreguidelines-avoid-magic-numbers",
   "title" : "Avoid magic numbers",
-  "description" : "The cppcoreguidelines-avoid-magic-numbers check is an alias, please see readability-magic-numbers for more information."
+  "description" : "The cppcoreguidelines-avoid-magic-numbers check is an alias, please see readability-magic-numbers for more information"
 }, {
   "patternId" : "clang-analyzer-core.NonNullParamChecker",
   "title" : "Clang analyzer core NonNullParamChecker",
-  "description" : "The clang-analyzer-core.NonNullParamChecker check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-core.NonNullParamChecker check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-security.insecureAPI.mkstemp",
   "title" : "Clang analyzer security insecureAPI mkstemp",
-  "description" : "The clang-analyzer-security.insecureAPI.mkstemp check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.insecureAPI.mkstemp check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "google-readability-function-size",
   "title" : "Google readability function size",
-  "description" : "The google-readability-function-size check is an alias, please see readability-function-size for more information."
+  "description" : "The google-readability-function-size check is an alias, please see readability-function-size for more information"
 }, {
   "patternId" : "modernize-return-braced-init-list",
   "title" : "Return braced init list",
@@ -477,7 +477,7 @@
 }, {
   "patternId" : "clang-analyzer-nullability.NullableReturnedFromNonnull",
   "title" : "Clang analyzer nullability NullableReturnedFromNonnull",
-  "description" : "Warns when a nullable pointer is returned from a function that has \\_Nonnull return type."
+  "description" : "Warns when a nullable pointer is returned from a function that has \\_Nonnull return type"
 }, {
   "patternId" : "android-cloexec-inotify-init1",
   "title" : "Android cloexec inotify init1",
@@ -489,7 +489,7 @@
 }, {
   "patternId" : "clang-analyzer-valist.Unterminated",
   "title" : "Clang analyzer valist Unterminated",
-  "description" : "Check for va\\_lists which are not released by a va\\_end call."
+  "description" : "Check for va\\_lists which are not released by a va\\_end call"
 }, {
   "patternId" : "hicpp-no-assembler",
   "title" : "No assembler",
@@ -521,11 +521,11 @@
 }, {
   "patternId" : "clang-analyzer-unix.MallocSizeof",
   "title" : "Clang analyzer unix MallocSizeof",
-  "description" : "The clang-analyzer-unix.MallocSizeof check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-unix.MallocSizeof check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "bugprone-too-small-loop-variable",
   "title" : "Too small loop variable",
-  "description" : "Detects those `for` loops that have a loop variable with a \"too small\" type which means this type can't represent all values which are part of the iteration range."
+  "description" : "Detects those `for` loops that have a loop variable with a \"too small\" type which means this type can't represent all values which are part of the iteration range"
 }, {
   "patternId" : "fuchsia-virtual-inheritance",
   "title" : "Fuchsia virtual inheritance",
@@ -533,7 +533,7 @@
 }, {
   "patternId" : "cert-oop11-cpp",
   "title" : "Cert oop11 cpp",
-  "description" : "The cert-oop11-cpp check is an alias, please see performance-move-constructor-init for more information."
+  "description" : "The cert-oop11-cpp check is an alias, please see performance-move-constructor-init for more information"
 }, {
   "patternId" : "llvm-namespace-comment",
   "title" : "Llvm namespace comment",
@@ -553,11 +553,11 @@
 }, {
   "patternId" : "bugprone-undefined-memory-manipulation",
   "title" : "Undefined memory manipulation",
-  "description" : "Finds calls of memory manipulation functions `memset()`, `memcpy()` and `memmove()` on not TriviallyCopyable objects resulting in undefined behavior."
+  "description" : "Finds calls of memory manipulation functions `memset()`, `memcpy()` and `memmove()` on not TriviallyCopyable objects resulting in undefined behavior"
 }, {
   "patternId" : "google-readability-avoid-underscore-in-googletest-name",
   "title" : "Google readability avoid underscore in googletest name",
-  "description" : "Checks whether there are underscores in googletest test and test case names in test macros: "
+  "description" : "Checks whether there are underscores in googletest test and test case names in test macros:    - `TEST`   - `TEST_F`   - `TEST_P`   - `TYPED_TEST`   - `TYPED_TEST_P`  The `FRIEND_TEST` macro is not included"
 }, {
   "patternId" : "modernize-use-equals-default",
   "title" : "Use equals default",
@@ -565,7 +565,7 @@
 }, {
   "patternId" : "clang-analyzer-security.insecureAPI.bcopy",
   "title" : "Clang analyzer security insecureAPI bcopy",
-  "description" : "The clang-analyzer-security.insecureAPI.bcopy check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.insecureAPI.bcopy check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "readability-else-after-return",
   "title" : "Else after return",
@@ -589,7 +589,7 @@
 }, {
   "patternId" : "clang-analyzer-osx.coreFoundation.containers.PointerSizedValues",
   "title" : "Clang analyzer osx coreFoundation containers PointerSizedValues",
-  "description" : "The clang-analyzer-osx.coreFoundation.containers.PointerSizedValues check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.coreFoundation.containers.PointerSizedValues check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "bugprone-forward-declaration-namespace",
   "title" : "Forward declaration namespace",
@@ -601,15 +601,15 @@
 }, {
   "patternId" : "performance-noexcept-move-constructor",
   "title" : "Noexcept move constructor",
-  "description" : "The check flags user-defined move constructors and assignment operators not marked with `noexcept` or marked with `noexcept(expr)` where `expr` evaluates to `false` (but is not a `false` literal itself)."
+  "description" : "The check flags user-defined move constructors and assignment operators not marked with `noexcept` or marked with `noexcept(expr)` where `expr` evaluates to `false` (but is not a `false` literal itself)"
 }, {
   "patternId" : "clang-analyzer-core.UndefinedBinaryOperatorResult",
   "title" : "Clang analyzer core UndefinedBinaryOperatorResult",
-  "description" : "The clang-analyzer-core.UndefinedBinaryOperatorResult check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-core.UndefinedBinaryOperatorResult check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-nullability.NullableDereferenced",
   "title" : "Clang analyzer nullability NullableDereferenced",
-  "description" : "The clang-analyzer-nullability.NullableDereferenced check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-nullability.NullableDereferenced check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "google-runtime-operator",
   "title" : "Google runtime operator",
@@ -617,7 +617,7 @@
 }, {
   "patternId" : "clang-analyzer-security.insecureAPI.rand",
   "title" : "Clang analyzer security insecureAPI rand",
-  "description" : "The clang-analyzer-security.insecureAPI.rand check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.insecureAPI.rand check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "readability-implicit-bool-conversion",
   "title" : "Implicit bool conversion",
@@ -649,11 +649,11 @@
 }, {
   "patternId" : "cert-oop54-cpp",
   "title" : "Cert oop54 cpp",
-  "description" : "The cert-oop54-cpp check is an alias, please see bugprone-unhandled-self-assignment for more information."
+  "description" : "The cert-oop54-cpp check is an alias, please see bugprone-unhandled-self-assignment for more information"
 }, {
   "patternId" : "cert-dcl16-c",
   "title" : "Cert dcl16 c",
-  "description" : "The cert-dcl16-c check is an alias, please see readability-uppercase-literal-suffix for more information."
+  "description" : "The cert-dcl16-c check is an alias, please see readability-uppercase-literal-suffix for more information"
 }, {
   "patternId" : "bugprone-parent-virtual-call",
   "title" : "Parent virtual call",
@@ -661,11 +661,11 @@
 }, {
   "patternId" : "cert-dcl59-cpp",
   "title" : "Cert dcl59 cpp",
-  "description" : "The cert-dcl59-cpp check is an alias, please see google-build-namespaces for more information."
+  "description" : "The cert-dcl59-cpp check is an alias, please see google-build-namespaces for more information"
 }, {
   "patternId" : "objc-super-self",
   "title" : "Super self",
-  "description" : "Finds invocations of `-self` on super instances in initializers of subclasses of `NSObject` and recommends calling a superclass initializer instead."
+  "description" : "Finds invocations of `-self` on super instances in initializers of subclasses of `NSObject` and recommends calling a superclass initializer instead"
 }, {
   "patternId" : "hicpp-explicit-conversions",
   "title" : "Explicit conversions",
@@ -673,35 +673,35 @@
 }, {
   "patternId" : "clang-analyzer-optin.cplusplus.UninitializedObject",
   "title" : "Clang analyzer optin cplusplus UninitializedObject",
-  "description" : "The clang-analyzer-optin.cplusplus.UninitializedObject check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-optin.cplusplus.UninitializedObject check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "modernize-make-unique",
   "title" : "Make unique",
-  "description" : "This check finds the creation of `std::unique_ptr` objects by explicitly calling the constructor and a `new` expression, and replaces it with a call to `std::make_unique`, introduced in C++14."
+  "description" : "This check finds the creation of `std::unique_ptr` objects by explicitly calling the constructor and a `new` expression, and replaces it with a call to `std::make_unique`, introduced in C++14"
 }, {
   "patternId" : "hicpp-no-malloc",
   "title" : "No malloc",
-  "description" : "The hicpp-no-malloc check is an alias, please see cppcoreguidelines-no-malloc for more"
+  "description" : "The hicpp-no-malloc check is an alias, please see cppcoreguidelines-no-malloc for more information"
 }, {
   "patternId" : "cert-err09-cpp",
   "title" : "Cert err09 cpp",
-  "description" : "The cert-err09-cpp check is an alias, please see misc-throw-by-value-catch-by-reference for more information."
+  "description" : "The cert-err09-cpp check is an alias, please see misc-throw-by-value-catch-by-reference for more information"
 }, {
   "patternId" : "clang-analyzer-security.insecureAPI.vfork",
   "title" : "Clang analyzer security insecureAPI vfork",
-  "description" : "The clang-analyzer-security.insecureAPI.vfork check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.insecureAPI.vfork check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "google-readability-braces-around-statements",
   "title" : "Google readability braces around statements",
-  "description" : "The google-readability-braces-around-statements check is an alias, please see readability-braces-around-statements"
+  "description" : "The google-readability-braces-around-statements check is an alias, please see readability-braces-around-statements for more information"
 }, {
   "patternId" : "modernize-concat-nested-namespaces",
   "title" : "Concat nested namespaces",
-  "description" : "Checks for use of nested namespaces such as `namespace a { namespace b { .."
+  "description" : "Checks for use of nested namespaces such as `namespace a { namespace b { ."
 }, {
   "patternId" : "bugprone-fold-init-type",
   "title" : "Fold init type",
-  "description" : "The check flags type mismatches in folds like `std::accumulate` that might result in loss of precision."
+  "description" : "The check flags type mismatches in folds like `std::accumulate` that might result in loss of precision"
 }, {
   "patternId" : "android-cloexec-socket",
   "title" : "Android cloexec socket",
@@ -741,7 +741,7 @@
 }, {
   "patternId" : "clang-analyzer-unix.API",
   "title" : "Clang analyzer unix API",
-  "description" : "The clang-analyzer-unix.API check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-unix.API check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "modernize-use-bool-literals",
   "title" : "Use bool literals",
@@ -761,11 +761,11 @@
 }, {
   "patternId" : "cert-fio38-c",
   "title" : "Cert fio38 c",
-  "description" : "The cert-fio38-c check is an alias, please see misc-non-copyable-objects for more information."
+  "description" : "The cert-fio38-c check is an alias, please see misc-non-copyable-objects for more information"
 }, {
   "patternId" : "clang-analyzer-core.StackAddressEscape",
   "title" : "Clang analyzer core StackAddressEscape",
-  "description" : "The clang-analyzer-core.StackAddressEscape check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-core.StackAddressEscape check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "openmp-exception-escape",
   "title" : "Openmp exception escape",
@@ -773,7 +773,7 @@
 }, {
   "patternId" : "modernize-pass-by-value",
   "title" : "Pass by value",
-  "description" : "With move semantics added to the language and the standard library updated with move constructors added for many types it is now interesting to take an argument directly by value, instead of by"
+  "description" : "With move semantics added to the language and the standard library updated with move constructors added for many types it is now interesting to take an argument directly by value, instead of by const-reference, and then copy"
 }, {
   "patternId" : "hicpp-noexcept-move",
   "title" : "Noexcept move",
@@ -785,19 +785,19 @@
 }, {
   "patternId" : "modernize-use-uncaught-exceptions",
   "title" : "Use uncaught exceptions",
-  "description" : "This check will warn on calls to `std::uncaught_exception` and replace them with calls to `std::uncaught_exceptions`, since `std::uncaught_exception` was deprecated in C++17."
+  "description" : "This check will warn on calls to `std::uncaught_exception` and replace them with calls to `std::uncaught_exceptions`, since `std::uncaught_exception` was deprecated in C++17"
 }, {
   "patternId" : "clang-analyzer-nullability.NullablePassedToNonnull",
   "title" : "Clang analyzer nullability NullablePassedToNonnull",
-  "description" : "The clang-analyzer-nullability.NullablePassedToNonnull check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-nullability.NullablePassedToNonnull check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "cppcoreguidelines-non-private-member-variables-in-classes",
   "title" : "Non private member variables in classes",
-  "description" : "The cppcoreguidelines-non-private-member-variables-in-classes check is an alias, please see misc-non-private-member-variables-in-classes"
+  "description" : "The cppcoreguidelines-non-private-member-variables-in-classes check is an alias, please see misc-non-private-member-variables-in-classes for more information"
 }, {
   "patternId" : "misc-definitions-in-headers",
   "title" : "Definitions in headers",
-  "description" : "Finds non-extern non-inline function and variable definitions in header files, which can lead to potential ODR violations in case these headers are included from multiple translation units."
+  "description" : "Finds non-extern non-inline function and variable definitions in header files, which can lead to potential ODR violations in case these headers are included from multiple translation units"
 }, {
   "patternId" : "zircon-temporary-objects",
   "title" : "Temporary objects",
@@ -817,11 +817,11 @@
 }, {
   "patternId" : "cert-msc30-c",
   "title" : "Cert msc30 c",
-  "description" : "The cert-msc30-c check is an alias, please see cert-msc50-cpp for more information."
+  "description" : "The cert-msc30-c check is an alias, please see cert-msc50-cpp for more information"
 }, {
   "patternId" : "readability-implicit-bool-cast",
   "title" : "Implicit bool cast",
-  "description" : "This check has been renamed to readability-implicit-bool-conversion."
+  "description" : "This check has been renamed to readability-implicit-bool-conversion"
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.AutoreleaseWrite",
   "title" : "Clang analyzer osx cocoa AutoreleaseWrite",
@@ -857,11 +857,11 @@
 }, {
   "patternId" : "cppcoreguidelines-avoid-c-arrays",
   "title" : "Avoid c arrays",
-  "description" : "The cppcoreguidelines-avoid-c-arrays check is an alias, please see modernize-avoid-c-arrays for more information."
+  "description" : "The cppcoreguidelines-avoid-c-arrays check is an alias, please see modernize-avoid-c-arrays for more information"
 }, {
   "patternId" : "clang-analyzer-osx.coreFoundation.CFError",
   "title" : "Clang analyzer osx coreFoundation CFError",
-  "description" : "The clang-analyzer-osx.coreFoundation.CFError check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.coreFoundation.CFError check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "modernize-raw-string-literal",
   "title" : "Raw string literal",
@@ -877,7 +877,7 @@
 }, {
   "patternId" : "clang-analyzer-valist.Uninitialized",
   "title" : "Clang analyzer valist Uninitialized",
-  "description" : "Check for usages of uninitialized (or already released) va\\_lists."
+  "description" : "Check for usages of uninitialized (or already released) va\\_lists"
 }, {
   "patternId" : "readability-simplify-boolean-expr",
   "title" : "Simplify boolean expr",
@@ -889,7 +889,7 @@
 }, {
   "patternId" : "hicpp-uppercase-literal-suffix",
   "title" : "Uppercase literal suffix",
-  "description" : "The hicpp-uppercase-literal-suffix check is an alias, please see readability-uppercase-literal-suffix for more information."
+  "description" : "The hicpp-uppercase-literal-suffix check is an alias, please see readability-uppercase-literal-suffix for more information"
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.RunLoopAutoreleaseLeak",
   "title" : "Clang analyzer osx cocoa RunLoopAutoreleaseLeak",
@@ -897,7 +897,7 @@
 }, {
   "patternId" : "clang-analyzer-core.uninitialized.ArraySubscript",
   "title" : "Clang analyzer core uninitialized ArraySubscript",
-  "description" : "The clang-analyzer-core.uninitialized.ArraySubscript check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-core.uninitialized.ArraySubscript check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "misc-uniqueptr-reset-release",
   "title" : "Uniqueptr reset release",
@@ -905,11 +905,11 @@
 }, {
   "patternId" : "cert-dcl03-c",
   "title" : "Cert dcl03 c",
-  "description" : "The cert-dcl03-c check is an alias, please see misc-static-assert for more information."
+  "description" : "The cert-dcl03-c check is an alias, please see misc-static-assert for more information"
 }, {
   "patternId" : "abseil-duration-factory-float",
   "title" : "Abseil duration factory float",
-  "description" : "Checks for cases where the floating-point overloads of various `absl::Duration` factory functions are called when the more-efficient integer versions could be used instead."
+  "description" : "Checks for cases where the floating-point overloads of various `absl::Duration` factory functions are called when the more-efficient integer versions could be used instead"
 }, {
   "patternId" : "modernize-shrink-to-fit",
   "title" : "Shrink to fit",
@@ -929,7 +929,7 @@
 }, {
   "patternId" : "clang-analyzer-security.FloatLoopCounter",
   "title" : "Clang analyzer security FloatLoopCounter",
-  "description" : "The clang-analyzer-security.FloatLoopCounter check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.FloatLoopCounter check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "performance-type-promotion-in-math-fn",
   "title" : "Type promotion in math fn",
@@ -953,7 +953,7 @@
 }, {
   "patternId" : "clang-analyzer-optin.cplusplus.VirtualCall",
   "title" : "Clang analyzer optin cplusplus VirtualCall",
-  "description" : "The clang-analyzer-optin.cplusplus.VirtualCall check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-optin.cplusplus.VirtualCall check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "llvm-include-order",
   "title" : "Llvm include order",
@@ -969,7 +969,7 @@
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.RetainCount",
   "title" : "Clang analyzer osx cocoa RetainCount",
-  "description" : "The clang-analyzer-osx.cocoa.RetainCount check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.RetainCount check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-optin.portability.UnixAPI",
   "title" : "Clang analyzer optin portability UnixAPI",
@@ -977,15 +977,15 @@
 }, {
   "patternId" : "cert-msc32-c",
   "title" : "Cert msc32 c",
-  "description" : "The cert-msc32-c check is an alias, please see cert-msc51-cpp for more information."
+  "description" : "The cert-msc32-c check is an alias, please see cert-msc51-cpp for more information"
 }, {
   "patternId" : "clang-analyzer-optin.performance.Padding",
   "title" : "Clang analyzer optin performance Padding",
-  "description" : "Check for excessively padded structs."
+  "description" : "Check for excessively padded structs"
 }, {
   "patternId" : "bugprone-branch-clone",
   "title" : "Branch clone",
-  "description" : "Checks for repeated branches in `if/else if/else` chains, consecutive repeated branches in `switch` statements and indentical true and false branches in conditional operators."
+  "description" : "Checks for repeated branches in `if/else if/else` chains, consecutive repeated branches in `switch` statements and indentical true and false branches in conditional operators"
 }, {
   "patternId" : "objc-property-declaration",
   "title" : "Property declaration",
@@ -993,7 +993,7 @@
 }, {
   "patternId" : "clang-analyzer-osx.API",
   "title" : "Clang analyzer osx API",
-  "description" : "The clang-analyzer-osx.API check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.API check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-osx.ObjCProperty",
   "title" : "Clang analyzer osx ObjCProperty",
@@ -1017,7 +1017,7 @@
 }, {
   "patternId" : "clang-analyzer-core.NullDereference",
   "title" : "Clang analyzer core NullDereference",
-  "description" : "The clang-analyzer-core.NullDereference check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-core.NullDereference check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "cppcoreguidelines-pro-type-vararg",
   "title" : "Pro type vararg",
@@ -1033,7 +1033,7 @@
 }, {
   "patternId" : "fuchsia-header-anon-namespaces",
   "title" : "Fuchsia header anon namespaces",
-  "description" : "The fuchsia-header-anon-namespaces check is an alias, please see google-build-namespace for more information."
+  "description" : "The fuchsia-header-anon-namespaces check is an alias, please see google-build-namespace for more information"
 }, {
   "patternId" : "modernize-redundant-void-arg",
   "title" : "Redundant void arg",
@@ -1053,15 +1053,15 @@
 }, {
   "patternId" : "clang-analyzer-valist.CopyToSelf",
   "title" : "Clang analyzer valist CopyToSelf",
-  "description" : "Check for va\\_lists which are copied onto itself."
+  "description" : "Check for va\\_lists which are copied onto itself"
 }, {
   "patternId" : "clang-analyzer-unix.cstring.NullArg",
   "title" : "Clang analyzer unix cstring NullArg",
-  "description" : "The clang-analyzer-unix.cstring.NullArg check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-unix.cstring.NullArg check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling",
   "title" : "Clang analyzer security insecureAPI DeprecatedOrUnsafeBufferHandling",
-  "description" : "The clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "cert-env33-c",
   "title" : "Cert env33 c",
@@ -1077,11 +1077,11 @@
 }, {
   "patternId" : "cppcoreguidelines-c-copy-assignment-signature",
   "title" : "C copy assignment signature",
-  "description" : "The cppcoreguidelines-c-copy-assignment-signature check is an alias, please see misc-unconventional-assign-operator"
+  "description" : "The cppcoreguidelines-c-copy-assignment-signature check is an alias, please see misc-unconventional-assign-operator for more information"
 }, {
   "patternId" : "hicpp-deprecated-headers",
   "title" : "Deprecated headers",
-  "description" : "The hicpp-deprecated-headers check is an alias, please see modernize-deprecated-headers for"
+  "description" : "The hicpp-deprecated-headers check is an alias, please see modernize-deprecated-headers for more information"
 }, {
   "patternId" : "bugprone-lambda-function-name",
   "title" : "Lambda function name",
@@ -1089,11 +1089,11 @@
 }, {
   "patternId" : "cert-dcl54-cpp",
   "title" : "Cert dcl54 cpp",
-  "description" : "The cert-dcl54-cpp check is an alias, please see misc-new-delete-overloads for more information."
+  "description" : "The cert-dcl54-cpp check is an alias, please see misc-new-delete-overloads for more information"
 }, {
   "patternId" : "clang-analyzer-core.VLASize",
   "title" : "Clang analyzer core VLASize",
-  "description" : "The clang-analyzer-core.VLASize check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-core.VLASize check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "bugprone-macro-parentheses",
   "title" : "Macro parentheses",
@@ -1109,7 +1109,7 @@
 }, {
   "patternId" : "performance-move-const-arg",
   "title" : "Move const arg",
-  "description" : "The check warns    - if `std::move()` is called with a constant argument,"
+  "description" : "The check warns    - if `std::move()` is called with a constant argument,   - if `std::move()` is called with an argument of a trivially-copyable     type,   - if the result of `std::move()` is passed as a const reference     argument"
 }, {
   "patternId" : "bugprone-posix-return",
   "title" : "Posix return",
@@ -1125,11 +1125,11 @@
 }, {
   "patternId" : "clang-analyzer-security.insecureAPI.mktemp",
   "title" : "Clang analyzer security insecureAPI mktemp",
-  "description" : "The clang-analyzer-security.insecureAPI.mktemp check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.insecureAPI.mktemp check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-core.DivideZero",
   "title" : "Clang analyzer core DivideZero",
-  "description" : "The clang-analyzer-core.DivideZero check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-core.DivideZero check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "cppcoreguidelines-interfaces-global-init",
   "title" : "Interfaces global init",
@@ -1141,11 +1141,11 @@
 }, {
   "patternId" : "misc-unused-alias-decls",
   "title" : "Unused alias decls",
-  "description" : "Finds unused namespace alias declarations."
+  "description" : "Finds unused namespace alias declarations"
 }, {
   "patternId" : "google-objc-global-variable-declaration",
   "title" : "Google objc global variable declaration",
-  "description" : "Finds global variable declarations in Objective-C files that do not follow the pattern of variable names in Google's Objective-C Style Guide."
+  "description" : "Finds global variable declarations in Objective-C files that do not follow the pattern of variable names in Google's Objective-C Style Guide"
 }, {
   "patternId" : "cppcoreguidelines-pro-type-const-cast",
   "title" : "Pro type const cast",
@@ -1153,11 +1153,11 @@
 }, {
   "patternId" : "clang-analyzer-core.CallAndMessage",
   "title" : "Clang analyzer core CallAndMessage",
-  "description" : "The clang-analyzer-core.CallAndMessage check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-core.CallAndMessage check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-optin.mpi.MPI-Checker",
   "title" : "Clang analyzer optin mpi MPI Checker",
-  "description" : "The clang-analyzer-optin.mpi.MPI-Checker check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-optin.mpi.MPI-Checker check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "readability-const-return-type",
   "title" : "Const return type",
@@ -1165,15 +1165,15 @@
 }, {
   "patternId" : "clang-analyzer-osx.coreFoundation.CFNumber",
   "title" : "Clang analyzer osx coreFoundation CFNumber",
-  "description" : "The clang-analyzer-osx.coreFoundation.CFNumber check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.coreFoundation.CFNumber check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "bugprone-macro-repeated-side-effects",
   "title" : "Macro repeated side effects",
-  "description" : "Checks for repeated argument with side effects in macros."
+  "description" : "Checks for repeated argument with side effects in macros"
 }, {
   "patternId" : "openmp-use-default-none",
   "title" : "Openmp use default none",
-  "description" : "Finds OpenMP directives that are allowed to contain a `default` clause, but either don't specify it or the clause is specified but with the kind other than `none`, and suggests to use the `default(none)` clause."
+  "description" : "Finds OpenMP directives that are allowed to contain a `default` clause, but either don't specify it or the clause is specified but with the kind other than `none`, and suggests to use the `default(none)` clause"
 }, {
   "patternId" : "fuchsia-overloaded-operator",
   "title" : "Fuchsia overloaded operator",
@@ -1181,7 +1181,7 @@
 }, {
   "patternId" : "clang-analyzer-security.insecureAPI.bcmp",
   "title" : "Clang analyzer security insecureAPI bcmp",
-  "description" : "The clang-analyzer-security.insecureAPI.bcmp check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.insecureAPI.bcmp check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "abseil-duration-subtraction",
   "title" : "Abseil duration subtraction",
@@ -1189,11 +1189,11 @@
 }, {
   "patternId" : "fuchsia-trailing-return",
   "title" : "Fuchsia trailing return",
-  "description" : "Functions that have trailing returns are disallowed, except for those using `decltype` specifiers and lambda with otherwise unutterable return types."
+  "description" : "Functions that have trailing returns are disallowed, except for those using `decltype` specifiers and lambda with otherwise unutterable return types"
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.VariadicMethodTypes",
   "title" : "Clang analyzer osx cocoa VariadicMethodTypes",
-  "description" : "The clang-analyzer-osx.cocoa.VariadicMethodTypes check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.VariadicMethodTypes check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "android-cloexec-fopen",
   "title" : "Android cloexec fopen",
@@ -1205,15 +1205,15 @@
 }, {
   "patternId" : "bugprone-use-after-move",
   "title" : "Use after move",
-  "description" : "Warns if an object is used after it has been moved, for example:  ``` c++"
+  "description" : "Warns if an object is used after it has been moved, for example:  ``` c++ std::string str = \"Hello, world!\\n\"; std::vector messages; messages.emplace_back(std::move(str)); std::cout << str; ```  The last line will trigger a warning that `str` is used after it has been moved"
 }, {
   "patternId" : "clang-analyzer-core.uninitialized.Branch",
   "title" : "Clang analyzer core uninitialized Branch",
-  "description" : "The clang-analyzer-core.uninitialized.Branch check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-core.uninitialized.Branch check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "performance-unnecessary-copy-initialization",
   "title" : "Unnecessary copy initialization",
-  "description" : "Finds local variable declarations that are initialized using the copy constructor of a non-trivially-copyable type but it would suffice to obtain a const reference."
+  "description" : "Finds local variable declarations that are initialized using the copy constructor of a non-trivially-copyable type but it would suffice to obtain a const reference"
 }, {
   "patternId" : "cppcoreguidelines-init-variables",
   "title" : "Init variables",
@@ -1229,7 +1229,7 @@
 }, {
   "patternId" : "clang-analyzer-security.insecureAPI.UncheckedReturn",
   "title" : "Clang analyzer security insecureAPI UncheckedReturn",
-  "description" : "The clang-analyzer-security.insecureAPI.UncheckedReturn check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.insecureAPI.UncheckedReturn check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "readability-redundant-declaration",
   "title" : "Redundant declaration",
@@ -1245,7 +1245,7 @@
 }, {
   "patternId" : "clang-analyzer-unix.MismatchedDeallocator",
   "title" : "Clang analyzer unix MismatchedDeallocator",
-  "description" : "The clang-analyzer-unix.MismatchedDeallocator check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-unix.MismatchedDeallocator check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "hicpp-use-equals-delete",
   "title" : "Use equals delete",
@@ -1253,15 +1253,15 @@
 }, {
   "patternId" : "clang-analyzer-cplusplus.NewDeleteLeaks",
   "title" : "Clang analyzer cplusplus NewDeleteLeaks",
-  "description" : "The clang-analyzer-cplusplus.NewDeleteLeaks check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-cplusplus.NewDeleteLeaks check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-core.uninitialized.Assign",
   "title" : "Clang analyzer core uninitialized Assign",
-  "description" : "The clang-analyzer-core.uninitialized.Assign check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-core.uninitialized.Assign check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "hicpp-move-const-arg",
   "title" : "Move const arg",
-  "description" : "The hicpp-move-const-arg check is an alias, please see performance-move-const-arg for more"
+  "description" : "The hicpp-move-const-arg check is an alias, please see performance-move-const-arg for more information"
 }, {
   "patternId" : "bugprone-assert-side-effect",
   "title" : "Assert side effect",
@@ -1273,7 +1273,7 @@
 }, {
   "patternId" : "fuchsia-statically-constructed-objects",
   "title" : "Fuchsia statically constructed objects",
-  "description" : "Warns if global, non-trivial objects with static storage are constructed, unless the object is statically initialized with a `constexpr` constructor or has no explicit constructor."
+  "description" : "Warns if global, non-trivial objects with static storage are constructed, unless the object is statically initialized with a `constexpr` constructor or has no explicit constructor"
 }, {
   "patternId" : "abseil-time-comparison",
   "title" : "Abseil time comparison",
@@ -1285,7 +1285,7 @@
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.AtSync",
   "title" : "Clang analyzer osx cocoa AtSync",
-  "description" : "The clang-analyzer-osx.cocoa.AtSync check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.AtSync check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "readability-magic-numbers",
   "title" : "Magic numbers",
@@ -1301,27 +1301,27 @@
 }, {
   "patternId" : "clang-analyzer-osx.coreFoundation.CFRetainRelease",
   "title" : "Clang analyzer osx coreFoundation CFRetainRelease",
-  "description" : "The clang-analyzer-osx.coreFoundation.CFRetainRelease check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.coreFoundation.CFRetainRelease check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "hicpp-no-array-decay",
   "title" : "No array decay",
-  "description" : "The hicpp-no-array-decay check is an alias, please see cppcoreguidelines-pro-bounds-array-to-pointer-decay"
+  "description" : "The hicpp-no-array-decay check is an alias, please see cppcoreguidelines-pro-bounds-array-to-pointer-decay for more information"
 }, {
   "patternId" : "google-explicit-constructor",
   "title" : "Google explicit constructor",
-  "description" : "Checks that constructors callable with a single argument and conversion operators are marked explicit to avoid the risk of unintentional implicit conversions."
+  "description" : "Checks that constructors callable with a single argument and conversion operators are marked explicit to avoid the risk of unintentional implicit conversions"
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.NSError",
   "title" : "Clang analyzer osx cocoa NSError",
-  "description" : "The clang-analyzer-osx.cocoa.NSError check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.NSError check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "hicpp-braces-around-statements",
   "title" : "Braces around statements",
-  "description" : "The hicpp-braces-around-statements check is an alias, please see readability-braces-around-statements"
+  "description" : "The hicpp-braces-around-statements check is an alias, please see readability-braces-around-statements for more information"
 }, {
   "patternId" : "clang-analyzer-security.insecureAPI.bzero",
   "title" : "Clang analyzer security insecureAPI bzero",
-  "description" : "The clang-analyzer-security.insecureAPI.bzero check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.insecureAPI.bzero check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "android-cloexec-epoll-create1",
   "title" : "Android cloexec epoll create1",
@@ -1329,11 +1329,11 @@
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.IncompatibleMethodTypes",
   "title" : "Clang analyzer osx cocoa IncompatibleMethodTypes",
-  "description" : "The clang-analyzer-osx.cocoa.IncompatibleMethodTypes check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.IncompatibleMethodTypes check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.SuperDealloc",
   "title" : "Clang analyzer osx cocoa SuperDealloc",
-  "description" : "The clang-analyzer-osx.cocoa.SuperDealloc check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.SuperDealloc check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "modernize-use-default-member-init",
   "title" : "Use default member init",
@@ -1345,7 +1345,7 @@
 }, {
   "patternId" : "clang-analyzer-osx.coreFoundation.containers.OutOfBounds",
   "title" : "Clang analyzer osx coreFoundation containers OutOfBounds",
-  "description" : "The clang-analyzer-osx.coreFoundation.containers.OutOfBounds check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.coreFoundation.containers.OutOfBounds check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "readability-misplaced-array-index",
   "title" : "Misplaced array index",
@@ -1393,7 +1393,7 @@
 }, {
   "patternId" : "bugprone-move-forwarding-reference",
   "title" : "Move forwarding reference",
-  "description" : "Warns if `std::move` is called on a forwarding reference, for example:  ``` c++"
+  "description" : "Warns if `std::move` is called on a forwarding reference, for example:  ``` c++ template  void foo(T&& t) {   bar(std::move(t)); } ```  Forwarding references should typically be passed to `std::forward` instead of `std::move`, and this is the fix that will be suggested"
 }, {
   "patternId" : "modernize-deprecated-headers",
   "title" : "Deprecated headers",
@@ -1401,11 +1401,11 @@
 }, {
   "patternId" : "clang-analyzer-osx.cocoa.Dealloc",
   "title" : "Clang analyzer osx cocoa Dealloc",
-  "description" : "The clang-analyzer-osx.cocoa.Dealloc check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.cocoa.Dealloc check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "cppcoreguidelines-explicit-virtual-functions",
   "title" : "Explicit virtual functions",
-  "description" : "The cppcoreguidelines-explicit-virtual-functions check is an alias, please see modernize-use-override for more information."
+  "description" : "The cppcoreguidelines-explicit-virtual-functions check is an alias, please see modernize-use-override for more information"
 }, {
   "patternId" : "google-build-explicit-make-pair",
   "title" : "Google build explicit make pair",
@@ -1413,7 +1413,7 @@
 }, {
   "patternId" : "boost-use-to-string",
   "title" : "Boost use to string",
-  "description" : "This check finds conversion from integer type like `int` to `std::string` or `std::wstring` using `boost::lexical_cast`, and replace it with calls to `std::to_string` and `std::to_wstring`."
+  "description" : "This check finds conversion from integer type like `int` to `std::string` or `std::wstring` using `boost::lexical_cast`, and replace it with calls to `std::to_string` and `std::to_wstring`"
 }, {
   "patternId" : "bugprone-bool-pointer-implicit-conversion",
   "title" : "Bool pointer implicit conversion",
@@ -1441,7 +1441,7 @@
 }, {
   "patternId" : "clang-analyzer-unix.Vfork",
   "title" : "Clang analyzer unix Vfork",
-  "description" : "The clang-analyzer-unix.Vfork check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-unix.Vfork check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "hicpp-invalid-access-moved",
   "title" : "Invalid access moved",
@@ -1449,7 +1449,7 @@
 }, {
   "patternId" : "abseil-upgrade-duration-conversions",
   "title" : "Abseil upgrade duration conversions",
-  "description" : "Finds calls to `absl::Duration` arithmetic operators and factories whose argument needs an explicit cast to continue compiling after upcoming API changes."
+  "description" : "Finds calls to `absl::Duration` arithmetic operators and factories whose argument needs an explicit cast to continue compiling after upcoming API changes"
 }, {
   "patternId" : "android-cloexec-memfd-create",
   "title" : "Android cloexec memfd create",
@@ -1469,11 +1469,11 @@
 }, {
   "patternId" : "clang-analyzer-unix.cstring.BadSizeArg",
   "title" : "Clang analyzer unix cstring BadSizeArg",
-  "description" : "The clang-analyzer-unix.cstring.BadSizeArg check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-unix.cstring.BadSizeArg check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-cplusplus.Move",
   "title" : "Clang analyzer cplusplus Move",
-  "description" : "The clang-analyzer-cplusplus.Move check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-cplusplus.Move check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "readability-deleted-default",
   "title" : "Deleted default",
@@ -1493,11 +1493,11 @@
 }, {
   "patternId" : "clang-analyzer-osx.SecKeychainAPI",
   "title" : "Clang analyzer osx SecKeychainAPI",
-  "description" : "The clang-analyzer-osx.SecKeychainAPI check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-osx.SecKeychainAPI check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "clang-analyzer-security.insecureAPI.strcpy",
   "title" : "Clang analyzer security insecureAPI strcpy",
-  "description" : "The clang-analyzer-security.insecureAPI.strcpy check is an alias, please see Clang Static Analyzer Available Checkers"
+  "description" : "The clang-analyzer-security.insecureAPI.strcpy check is an alias, please see Clang Static Analyzer Available Checkers for more information"
 }, {
   "patternId" : "hicpp-named-parameter",
   "title" : "Named parameter",

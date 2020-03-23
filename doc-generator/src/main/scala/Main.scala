@@ -100,7 +100,7 @@ object Main extends App {
   val descriptions: Seq[Description] = patternsWithDocs.map {
     case (patternId, doc) =>
       val descriptionText = {
-        val firstPeriod = doc.linesIterator.drop(2).take(3).mkString(" ").split("\\. ").head
+        val firstPeriod = doc.linesIterator.drop(2).mkString(" ").split("\\. ").head.stripSuffix(".")
         val withoutLinks = removeHtmlTags(firstPeriod.replaceAll("""\[(.*)\]\(.*\)""", "$1"))
         Some(DescriptionText(withoutLinks))
       }
