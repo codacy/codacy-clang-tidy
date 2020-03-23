@@ -4,71 +4,71 @@
   "patterns" : [ {
     "patternId" : "abseil-duration-addition",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-comparison",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-conversion-cast",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-division",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-factory-float",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-factory-scale",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-subtraction",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-unnecessary-conversion",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-faster-strsplit-delimiter",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-no-internal-dependencies",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-no-namespace",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-redundant-strcat-calls",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-str-cat-append",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-string-find-startswith",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-time-comparison",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-time-subtraction",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-upgrade-duration-conversions",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "android-cloexec-accept",
     "level" : "Info",
@@ -147,7 +147,7 @@
   }, {
     "patternId" : "boost-use-to-string",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-argument-comment",
     "level" : "Info",
@@ -335,43 +335,43 @@
   }, {
     "patternId" : "cert-dcl03-c",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl16-c",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl21-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl50-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl54-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl58-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl59-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-env33-c",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-err09-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-err34-c",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-err52-cpp",
     "level" : "Info",
@@ -380,295 +380,295 @@
   }, {
     "patternId" : "cert-err58-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-err60-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-err61-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-fio38-c",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-flp30-c",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-msc30-c",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-msc32-c",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-msc50-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-msc51-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-oop11-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cert-oop54-cpp",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.CallAndMessage",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.DivideZero",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.DynamicTypePropagation",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.NonNullParamChecker",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.NullDereference",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.StackAddressEscape",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.UndefinedBinaryOperatorResult",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.VLASize",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.ArraySubscript",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.Assign",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.Branch",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.CapturedBlockVariable",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.UndefReturn",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-cplusplus.InnerPointer",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-cplusplus.Move",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-cplusplus.NewDelete",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-cplusplus.NewDeleteLeaks",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-deadcode.DeadStores",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-nullability.NullPassedToNonnull",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-nullability.NullReturnedFromNonnull",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-nullability.NullableDereferenced",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-nullability.NullablePassedToNonnull",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-nullability.NullableReturnedFromNonnull",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.cplusplus.UninitializedObject",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.cplusplus.VirtualCall",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.mpi.MPI-Checker",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.osx.OSObjectCStyleCast",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.performance.GCDAntipattern",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.performance.Padding",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.portability.UnixAPI",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.API",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.MIG",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.NumberObjectConversion",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.OSObjectRetainCount",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.ObjCProperty",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.SecKeychainAPI",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.AtSync",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.AutoreleaseWrite",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.ClassRelease",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.Dealloc",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.IncompatibleMethodTypes",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.Loops",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.MissingSuperCall",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.NSAutoreleasePool",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.NSError",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.NilArg",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.NonNilReturnValue",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.ObjCGenerics",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.RetainCount",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.RunLoopAutoreleaseLeak",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.SelfInit",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.SuperDealloc",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.UnusedIvars",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.VariadicMethodTypes",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.CFError",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.CFNumber",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.CFRetainRelease",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.containers.OutOfBounds",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.containers.PointerSizedValues",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-security.FloatLoopCounter",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling",
     "level" : "Info",
@@ -732,451 +732,451 @@
   }, {
     "patternId" : "clang-analyzer-unix.API",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-unix.Malloc",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-unix.MallocSizeof",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-unix.MismatchedDeallocator",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-unix.Vfork",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-unix.cstring.BadSizeArg",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-unix.cstring.NullArg",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-valist.CopyToSelf",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-valist.Uninitialized",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-valist.Unterminated",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-avoid-c-arrays",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-avoid-goto",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-avoid-magic-numbers",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-c-copy-assignment-signature",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-explicit-virtual-functions",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-init-variables",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-interfaces-global-init",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-macro-usage",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-narrowing-conversions",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-no-malloc",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-non-private-member-variables-in-classes",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-owning-memory",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-bounds-array-to-pointer-decay",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-bounds-constant-array-index",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-bounds-pointer-arithmetic",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-const-cast",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-cstyle-cast",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-member-init",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-reinterpret-cast",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-static-cast-downcast",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-union-access",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-vararg",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-slicing",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-special-member-functions",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "darwin-avoid-spinlock",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "darwin-dispatch-once-nonstatic",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-default-arguments-calls",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-default-arguments-declarations",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-header-anon-namespaces",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-multiple-inheritance",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-overloaded-operator",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-restrict-system-includes",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-statically-constructed-objects",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-trailing-return",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-virtual-inheritance",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-build-explicit-make-pair",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-build-namespaces",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-build-using-namespace",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-default-arguments",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-explicit-constructor",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-global-names-in-headers",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-objc-avoid-nsobject-new",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-objc-avoid-throwing-exception",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-objc-function-naming",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-objc-global-variable-declaration",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-readability-avoid-underscore-in-googletest-name",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-readability-braces-around-statements",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-readability-casting",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-readability-function-size",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-readability-namespace-comments",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-readability-todo",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-runtime-int",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-runtime-operator",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-runtime-references",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "google-upgrade-googletest-case",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-avoid-c-arrays",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-avoid-goto",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-braces-around-statements",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-deprecated-headers",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-exception-baseclass",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-explicit-conversions",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-function-size",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-invalid-access-moved",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-member-init",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-move-const-arg",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-multiway-paths-covered",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-named-parameter",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-new-delete-operators",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-no-array-decay",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-no-assembler",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-no-malloc",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-noexcept-move",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-signed-bitwise",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-special-member-functions",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-static-assert",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-undelegated-constructor",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-uppercase-literal-suffix",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-auto",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-emplace",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-equals-default",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-equals-delete",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-noexcept",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-nullptr",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-override",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-vararg",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "linuxkernel-must-use-errs",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "llvm-header-guard",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "llvm-include-order",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "llvm-namespace-comment",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "llvm-prefer-isa-or-dyn-cast-in-conditionals",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "llvm-prefer-register-over-unsigned",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "llvm-twine-local",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "misc-definitions-in-headers",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "misc-misplaced-const",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "misc-new-delete-overloads",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "misc-non-copyable-objects",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "misc-non-private-member-variables-in-classes",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "misc-redundant-expression",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "misc-static-assert",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "misc-throw-by-value-catch-by-reference",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "misc-unconventional-assign-operator",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "misc-uniqueptr-reset-release",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "misc-unused-alias-decls",
     "level" : "Info",
@@ -1184,171 +1184,171 @@
   }, {
     "patternId" : "misc-unused-parameters",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "misc-unused-using-decls",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-avoid-bind",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-avoid-c-arrays",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-concat-nested-namespaces",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-deprecated-headers",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-deprecated-ios-base-aliases",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-loop-convert",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-make-shared",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-make-unique",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-pass-by-value",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-raw-string-literal",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-redundant-void-arg",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-replace-auto-ptr",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-replace-random-shuffle",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-return-braced-init-list",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-shrink-to-fit",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-unary-static-assert",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-auto",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-bool-literals",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-default",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-default-member-init",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-emplace",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-equals-default",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-equals-delete",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-nodiscard",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-noexcept",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-nullptr",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-override",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-trailing-return-type",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-transparent-functors",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-uncaught-exceptions",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-using",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "mpi-buffer-deref",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "mpi-type-mismatch",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "objc-avoid-nserror-init",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "objc-forbidden-subclassing",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "objc-missing-hash",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "objc-property-declaration",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "objc-super-self",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "openmp-exception-escape",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "openmp-use-default-none",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   }, {
     "patternId" : "performance-faster-string-find",
     "level" : "Info",
@@ -1544,6 +1544,6 @@
   }, {
     "patternId" : "zircon-temporary-objects",
     "level" : "Info",
-    "category" : "CodeStyle"
+    "category" : "ErrorProne"
   } ]
 }

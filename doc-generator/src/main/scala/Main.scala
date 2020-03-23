@@ -73,7 +73,7 @@ object Main extends App {
     case s"readability-$_" => (Pattern.Category.Comprehensibility, None)
     case s"performance-$_" => (Pattern.Category.Performance, None)
     case s"portability-$_" => (Pattern.Category.Compatibility, None)
-    case _ => (Pattern.Category.CodeStyle, None)
+    case _ => (Pattern.Category.ErrorProne, None)
   }
 
   def withoutFamily(patternId: String): String = {
