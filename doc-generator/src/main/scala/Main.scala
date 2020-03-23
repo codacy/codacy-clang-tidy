@@ -34,7 +34,7 @@ object Main extends App {
       val link = matching.group("link")
       val linkToClangTidy =
         if (link.startsWith("http")) link else s"https://clang.llvm.org/extra/clang-tidy/checks/$link"
-      val linkEscaped = linkToClangTidy.replaceAllLiterally(")", "\\)").trim
+      val linkEscaped = linkToClangTidy.replaceAllLiterally(")", "\\)").replaceAllLiterally(" ", "").trim
       val nameEscaped = name.replaceAllLiterally("]", "\\]").trim
       s"[$nameEscaped]($linkEscaped)"
     })

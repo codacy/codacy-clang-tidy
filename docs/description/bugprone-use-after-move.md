@@ -154,7 +154,7 @@ An exception to this are objects of type `std::unique_ptr`,
 (objects of these classes are guaranteed to be empty after they have
 been moved from). Therefore, an object of these classes will only be
 considered to be used if it is dereferenced, i.e. if `operator*`,
-[operator->` or `operator[]` (in the case of `std::unique_ptr](https://clang.llvm.org/extra/clang-tidy/checks/T [])) is
+[operator->` or `operator[]` (in the case of `std::unique_ptr](https://clang.llvm.org/extra/clang-tidy/checks/T[])) is
 called on it.
 
 If multiple uses occur after a move, only the first of these is flagged.
