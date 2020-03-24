@@ -93,7 +93,7 @@ object Main extends App {
       Pattern.Specification(Pattern.Id(patternId), Level.Warn, category, subcategory, None)
   }
 
-  val specification = Tool.Specification(Tool.Name("Clang Tidy"), Some(Tool.Version("10.0.0")), patterns.toSet)
+  val specification = Tool.Specification(Tool.Name("Clang Tidy"), version = None, patterns.toSet)
 
   def removeHtmlTags(s: String): String = {
     s.replaceAll("""<[^>]*>""", "")

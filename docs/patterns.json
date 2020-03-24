@@ -1,6 +1,5 @@
 {
   "name" : "Clang Tidy",
-  "version" : "10.0.0",
   "patterns" : [ {
     "patternId" : "abseil-duration-addition",
     "level" : "Warning",
