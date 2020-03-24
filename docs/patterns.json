@@ -3,1547 +3,1547 @@
   "version" : "10.0.0",
   "patterns" : [ {
     "patternId" : "abseil-duration-addition",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-comparison",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-conversion-cast",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-division",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-factory-float",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-factory-scale",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-subtraction",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-duration-unnecessary-conversion",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-faster-strsplit-delimiter",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-no-internal-dependencies",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-no-namespace",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-redundant-strcat-calls",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-str-cat-append",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-string-find-startswith",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-time-comparison",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-time-subtraction",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "abseil-upgrade-duration-conversions",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "android-cloexec-accept",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-accept4",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-creat",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-dup",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-epoll-create",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-epoll-create1",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-fopen",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-inotify-init",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-inotify-init1",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-memfd-create",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-open",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-pipe",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-pipe2",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-cloexec-socket",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "android-comparison-in-temp-failure-retry",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android"
   }, {
     "patternId" : "boost-use-to-string",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-argument-comment",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-assert-side-effect",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-bool-pointer-implicit-conversion",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-branch-clone",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-copy-constructor-init",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-dangling-handle",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-dynamic-static-initializers",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-exception-escape",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-fold-init-type",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-forward-declaration-namespace",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-forwarding-reference-overload",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-inaccurate-erase",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-incorrect-roundings",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-infinite-loop",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-integer-division",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-lambda-function-name",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-macro-parentheses",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-macro-repeated-side-effects",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-misplaced-operator-in-strlen-in-alloc",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-misplaced-widening-cast",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-move-forwarding-reference",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-multiple-statement-macro",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-not-null-terminated-result",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-parent-virtual-call",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-posix-return",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-sizeof-container",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-sizeof-expression",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-string-constructor",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-string-integer-assignment",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-string-literal-with-embedded-nul",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-suspicious-enum-usage",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-suspicious-memset-usage",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-suspicious-missing-comma",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-suspicious-semicolon",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-suspicious-string-compare",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-swapped-arguments",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-terminating-continue",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-throw-keyword-missing",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-too-small-loop-variable",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-undefined-memory-manipulation",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-undelegated-constructor",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-unhandled-self-assignment",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-unused-raii",
-    "level" : "Info",
-    "category" : "ErrorProne"
+    "level" : "Warning",
+    "category" : "UnusedCode"
   }, {
     "patternId" : "bugprone-unused-return-value",
-    "level" : "Info",
-    "category" : "ErrorProne"
+    "level" : "Warning",
+    "category" : "UnusedCode"
   }, {
     "patternId" : "bugprone-use-after-move",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "bugprone-virtual-near-miss",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl03-c",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl16-c",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl21-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl50-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl54-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl58-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-dcl59-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-env33-c",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-err09-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-err34-c",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-err52-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "DoS"
   }, {
     "patternId" : "cert-err58-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-err60-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-err61-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-fio38-c",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-flp30-c",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-msc30-c",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-msc32-c",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-msc50-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-msc51-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-oop11-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cert-oop54-cpp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.CallAndMessage",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.DivideZero",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.DynamicTypePropagation",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.NonNullParamChecker",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.NullDereference",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.StackAddressEscape",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.UndefinedBinaryOperatorResult",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.VLASize",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.ArraySubscript",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.Assign",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.Branch",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.CapturedBlockVariable",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.UndefReturn",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-cplusplus.InnerPointer",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-cplusplus.Move",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-cplusplus.NewDelete",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-cplusplus.NewDeleteLeaks",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-deadcode.DeadStores",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-nullability.NullPassedToNonnull",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-nullability.NullReturnedFromNonnull",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-nullability.NullableDereferenced",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-nullability.NullablePassedToNonnull",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-nullability.NullableReturnedFromNonnull",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.cplusplus.UninitializedObject",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.cplusplus.VirtualCall",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.mpi.MPI-Checker",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.osx.OSObjectCStyleCast",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.performance.GCDAntipattern",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.performance.Padding",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-optin.portability.UnixAPI",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.API",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.MIG",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.NumberObjectConversion",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.OSObjectRetainCount",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.ObjCProperty",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.SecKeychainAPI",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.AtSync",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.AutoreleaseWrite",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.ClassRelease",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.Dealloc",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.IncompatibleMethodTypes",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.Loops",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.MissingSuperCall",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.NSAutoreleasePool",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.NSError",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.NilArg",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.NonNilReturnValue",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.ObjCGenerics",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.RetainCount",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.RunLoopAutoreleaseLeak",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.SelfInit",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.SuperDealloc",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.UnusedIvars",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.VariadicMethodTypes",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.CFError",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.CFNumber",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.CFRetainRelease",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.containers.OutOfBounds",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.containers.PointerSizedValues",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-security.FloatLoopCounter",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.UncheckedReturn",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.bcmp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.bcopy",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.bzero",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.getpw",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.gets",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.mkstemp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.mktemp",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.rand",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.strcpy",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.vfork",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries"
   }, {
     "patternId" : "clang-analyzer-unix.API",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-unix.Malloc",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-unix.MallocSizeof",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-unix.MismatchedDeallocator",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-unix.Vfork",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-unix.cstring.BadSizeArg",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-unix.cstring.NullArg",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-valist.CopyToSelf",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-valist.Uninitialized",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "clang-analyzer-valist.Unterminated",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-avoid-c-arrays",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-avoid-goto",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-avoid-magic-numbers",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-c-copy-assignment-signature",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-explicit-virtual-functions",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-init-variables",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-interfaces-global-init",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-macro-usage",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-narrowing-conversions",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-no-malloc",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-non-private-member-variables-in-classes",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-owning-memory",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-bounds-array-to-pointer-decay",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-bounds-constant-array-index",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-bounds-pointer-arithmetic",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-const-cast",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-cstyle-cast",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-member-init",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-reinterpret-cast",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-static-cast-downcast",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-union-access",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-pro-type-vararg",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-slicing",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "cppcoreguidelines-special-member-functions",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "darwin-avoid-spinlock",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "darwin-dispatch-once-nonstatic",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-default-arguments-calls",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-default-arguments-declarations",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-header-anon-namespaces",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-multiple-inheritance",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-overloaded-operator",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-restrict-system-includes",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-statically-constructed-objects",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-trailing-return",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "fuchsia-virtual-inheritance",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-build-explicit-make-pair",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-build-namespaces",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-build-using-namespace",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-default-arguments",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-explicit-constructor",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-global-names-in-headers",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-objc-avoid-nsobject-new",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-objc-avoid-throwing-exception",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-objc-function-naming",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-objc-global-variable-declaration",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-readability-avoid-underscore-in-googletest-name",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-readability-braces-around-statements",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-readability-casting",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-readability-function-size",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-readability-namespace-comments",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-readability-todo",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-runtime-int",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-runtime-operator",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-runtime-references",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "google-upgrade-googletest-case",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-avoid-c-arrays",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-avoid-goto",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-braces-around-statements",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-deprecated-headers",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-exception-baseclass",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-explicit-conversions",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-function-size",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-invalid-access-moved",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-member-init",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-move-const-arg",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-multiway-paths-covered",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-named-parameter",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-new-delete-operators",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-no-array-decay",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-no-assembler",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-no-malloc",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-noexcept-move",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-signed-bitwise",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-special-member-functions",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-static-assert",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-undelegated-constructor",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-uppercase-literal-suffix",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-auto",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-emplace",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-equals-default",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-equals-delete",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-noexcept",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-nullptr",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-use-override",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "hicpp-vararg",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "linuxkernel-must-use-errs",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "llvm-header-guard",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "llvm-include-order",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "llvm-namespace-comment",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "llvm-prefer-isa-or-dyn-cast-in-conditionals",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "llvm-prefer-register-over-unsigned",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "llvm-twine-local",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "misc-definitions-in-headers",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "misc-misplaced-const",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "misc-new-delete-overloads",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "misc-non-copyable-objects",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "misc-non-private-member-variables-in-classes",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "misc-redundant-expression",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "misc-static-assert",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "misc-throw-by-value-catch-by-reference",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "misc-unconventional-assign-operator",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "misc-uniqueptr-reset-release",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "misc-unused-alias-decls",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "UnusedCode"
   }, {
     "patternId" : "misc-unused-parameters",
-    "level" : "Info",
-    "category" : "ErrorProne"
+    "level" : "Warning",
+    "category" : "UnusedCode"
   }, {
     "patternId" : "misc-unused-using-decls",
-    "level" : "Info",
-    "category" : "ErrorProne"
+    "level" : "Warning",
+    "category" : "UnusedCode"
   }, {
     "patternId" : "modernize-avoid-bind",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-avoid-c-arrays",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-concat-nested-namespaces",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-deprecated-headers",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-deprecated-ios-base-aliases",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-loop-convert",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-make-shared",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-make-unique",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-pass-by-value",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-raw-string-literal",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-redundant-void-arg",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-replace-auto-ptr",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-replace-random-shuffle",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-return-braced-init-list",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-shrink-to-fit",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-unary-static-assert",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-auto",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-bool-literals",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-default",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-default-member-init",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-emplace",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-equals-default",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-equals-delete",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-nodiscard",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-noexcept",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-nullptr",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-override",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-trailing-return-type",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-transparent-functors",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-uncaught-exceptions",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "modernize-use-using",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "mpi-buffer-deref",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "mpi-type-mismatch",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "objc-avoid-nserror-init",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "objc-forbidden-subclassing",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "objc-missing-hash",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "objc-property-declaration",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "objc-super-self",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "openmp-exception-escape",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "openmp-use-default-none",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   }, {
     "patternId" : "performance-faster-string-find",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "performance-for-range-copy",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "performance-implicit-cast-in-loop",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "performance-implicit-conversion-in-loop",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "performance-inefficient-algorithm",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "performance-inefficient-string-concatenation",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "performance-inefficient-vector-operation",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "performance-move-const-arg",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "performance-move-constructor-init",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "performance-noexcept-move-constructor",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "performance-type-promotion-in-math-fn",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "performance-unnecessary-copy-initialization",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "performance-unnecessary-value-param",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Performance"
   }, {
     "patternId" : "portability-simd-intrinsics",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "Compatibility"
   }, {
     "patternId" : "readability-avoid-const-params-in-decls",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-braces-around-statements",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-const-return-type",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-container-size-empty",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-convert-member-functions-to-static",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-delete-null-pointer",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-deleted-default",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-else-after-return",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-function-size",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-identifier-naming",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-implicit-bool-cast",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-implicit-bool-conversion",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-inconsistent-declaration-parameter-name",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-isolate-declaration",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-magic-numbers",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-misleading-indentation",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-misplaced-array-index",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-named-parameter",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-non-const-parameter",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-redundant-control-flow",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-redundant-declaration",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-redundant-function-ptr-dereference",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-redundant-member-init",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-redundant-preprocessor",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-redundant-smartptr-get",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-redundant-string-cstr",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-redundant-string-init",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-simplify-boolean-expr",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-simplify-subscript-expr",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-static-accessed-through-instance",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-static-definition-in-anonymous-namespace",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-string-compare",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-uniqueptr-delete-release",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "readability-uppercase-literal-suffix",
-    "level" : "Info",
-    "category" : "Comprehensibility"
+    "level" : "Warning",
+    "category" : "CodeStyle"
   }, {
     "patternId" : "zircon-temporary-objects",
-    "level" : "Info",
+    "level" : "Warning",
     "category" : "ErrorProne"
   } ]
 }

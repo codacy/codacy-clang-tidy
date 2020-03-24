@@ -17,16 +17,17 @@ object Main extends App {
   val clangExtraDir = targetDir / "clang-tools-extra"
 
   if (!(clangExtraDir).exists && clangExtraDir.nonEmpty) {
-    val processBuilder = Process(
+    val pb = Process(
       command = Seq("git", "clone", "--depth", "1", "https://github.com/llvm-mirror/clang-tools-extra.git"),
       cwd = Some(targetDir.toJava)
     )
-    require(processBuilder.! == 0, "git clone failed")
-  } /* else {
-    Seq("git", "pull").!
-  } */
+    require(pb.! == 0, "git clone failed")
+  } else {
+    val pb = Process(command = Seq("git", "pull"), cwd = Some(clangExtraDir.toJava))
+    require(pb.! == 0, "git pull failed")
+  }
 
-  def isNotTitle(s: String) = !s.startsWith("#")
+  def isNotTitle(s: String): Boolean = !s.startsWith("#")
 
   def fixRepoLinks(s: String): String = {
     val linkRegex = """\[(.+)\]\((.+\.html)\)""".r("name", "link")
@@ -57,11 +58,12 @@ object Main extends App {
     case s"android-$_" => (Pattern.Category.Security, Some(Pattern.Subcategory.Android))
     case "cert-err52-cpp" => (Pattern.Category.Security, Some(Pattern.Subcategory.DoS))
     case s"clang-analyzer-security.insecureAPI$_" =>
-      (Pattern.Category.Security, Some(Pattern.Subcategory.InsecureModulesLibraries))
+    (Pattern.Category.Security, Some(Pattern.Subcategory.InsecureModulesLibraries))
     case "clang-analyzer-security" => (Pattern.Category.Security, None)
+    case s"${_}unused$_" => (Pattern.Category.UnusedCode, None)
     case "misc-unused-alias-decls" => (Pattern.Category.UnusedCode, None)
     case s"bugprone-$_" => (Pattern.Category.ErrorProne, None)
-    case s"readability-$_" => (Pattern.Category.Comprehensibility, None)
+    case s"readability-$_" => (Pattern.Category.CodeStyle, None)
     case s"performance-$_" => (Pattern.Category.Performance, None)
     case s"portability-$_" => (Pattern.Category.Compatibility, None)
     case _ => (Pattern.Category.ErrorProne, None)
@@ -88,7 +90,7 @@ object Main extends App {
   val patterns = patternsWithDocs.map {
     case (patternId, _) =>
       val (category, subcategory) = categoryFromPatternId(patternId)
-      Pattern.Specification(Pattern.Id(patternId), Level.Info, category, subcategory, None)
+      Pattern.Specification(Pattern.Id(patternId), Level.Warn, category, subcategory, None)
   }
 
   val specification = Tool.Specification(Tool.Name("Clang Tidy"), Some(Tool.Version("10.0.0")), patterns.toSet)
