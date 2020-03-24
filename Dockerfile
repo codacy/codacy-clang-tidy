@@ -4,4 +4,4 @@ COPY docs /docs
 COPY entry.sh /
 RUN chmod +x /entry.sh
 
-CMD [ "/entry.sh" ]
+ENTRYPOINT [ "sh", "/entry.sh" ]
