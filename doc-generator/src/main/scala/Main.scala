@@ -97,8 +97,11 @@ object Main extends App {
 
   val patterns = patternsWithDocs.map {
     case (patternId, _) =>
+      // Since level will be sent in the report
+      // we are using a default one here
+      val level = Level.Warn
       val (category, subcategory) = categoryFromPatternId(patternId)
-      Pattern.Specification(Pattern.Id(patternId), Level.Warn, category, subcategory, None)
+      Pattern.Specification(Pattern.Id(patternId), level, category, subcategory, None)
   }
 
   val specification = Tool.Specification(Tool.Name("Clang Tidy"), version = None, patterns.toSet)
