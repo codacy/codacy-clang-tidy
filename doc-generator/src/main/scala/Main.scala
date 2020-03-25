@@ -29,6 +29,14 @@ object Main extends App {
 
   def isNotTitle(s: String): Boolean = !s.startsWith("#")
 
+  /**
+    * Clang Tidy documentation contains relative links that link to
+    * other documentation files. We are making these links absolute
+    * prepending them with the clang tidy documentation website.
+    *
+    * @param s A String containing Commonmark documentation
+    * @return A String with Links relative to Clang tidy docs
+    */
   def fixRepoLinks(s: String): String = {
     val linkRegex = """\[(.+)\]\((.+\.html)\)""".r("name", "link")
     linkRegex.replaceAllIn(s, matching => {
