@@ -80,9 +80,3 @@ workflows:
           context: CodacyGitHub
           requires:
             - plugins_test
-      - codacy/tag_version:
-          name: tag_version
-          context: CodacyAWS
-          requires:
-            - publish_dockerhub
-            - publish_ghr
