@@ -61,6 +61,15 @@ workflows:
           run_pattern_tests: false
           requires:
             - docker_publish_local
+      - codacy/publish_docker:
+          name: publish_dockerhub
+          filters:
+            branches:
+              only:
+                - master
+          context: CodacyAWS
+          requires:
+            - plugins_test
       - codacy/publish_ghr:
           name: publish_ghr
           path: ~/workdir/artifacts/
@@ -71,3 +80,9 @@ workflows:
           context: CodacyGitHub
           requires:
             - plugins_test
+      - codacy/tag_version:
+          name: tag_version
+          context: CodacyAWS
+          requires:
+            - publish_dockerhub
+            - publish_ghr
