@@ -1,14 +1,16 @@
+import com.codacy.plugins.api.results.Pattern.{Description, DescriptionText, Subcategory}
+import com.codacy.plugins.api.results.Result.Level
+import com.codacy.plugins.api.results.{Pattern, Tool}
+
+import play.api.libs.json.Json
 import scala.sys.process._
 import better.files.Dsl._
-import com.codacy.plugins.api.results.Pattern
-import com.codacy.plugins.api.results.Result.Level
-import com.codacy.plugins.api.results.Tool
-import play.api.libs.json.Json
-import com.codacy.plugins.api.results.Pattern.Subcategory
-import com.codacy.plugins.api.results.Pattern.Description
-import com.codacy.plugins.api.results.Pattern.DescriptionText
+
+import scala.sys.process._
 
 object Main extends App {
+
+  val toolName = "Clang-tidy"
 
   def toInputStream(s: String) =
     new java.io.ByteArrayInputStream(s.getBytes(java.nio.charset.StandardCharsets.UTF_8.name))
@@ -16,7 +18,7 @@ object Main extends App {
   val targetDir = pwd / "doc-generator" / "target"
   val clangExtraDir = targetDir / "clang-tools-extra"
 
-  if (!(clangExtraDir).exists && clangExtraDir.nonEmpty) {
+  if (!clangExtraDir.exists) {
     val pb = Process(
       command = Seq("git", "clone", "--depth", "1", "https://github.com/llvm-mirror/clang-tools-extra.git"),
       cwd = Some(targetDir.toJava)
@@ -43,7 +45,8 @@ object Main extends App {
       val name = matching.group("name")
       val link = matching.group("link")
       val linkToClangTidy =
-        if (link.matches("https?:\\/\\/.+")) link else s"https://clang.llvm.org/extra/clang-tidy/checks/${link.stripPrefix("/")}"
+        if (link.matches("https?:\\/\\/.+")) link
+        else s"https://clang.llvm.org/extra/clang-tidy/checks/${link.stripPrefix("/")}"
       val linkEscaped = linkToClangTidy.replaceAllLiterally(" ", "").trim
       val nameEscaped = name.trim
       s"[$nameEscaped]($linkEscaped)"
@@ -66,7 +69,7 @@ object Main extends App {
     case s"android-$_" => (Pattern.Category.Security, Some(Pattern.Subcategory.Android))
     case "cert-err52-cpp" => (Pattern.Category.Security, Some(Pattern.Subcategory.DoS))
     case s"clang-analyzer-security.insecureAPI$_" =>
-    (Pattern.Category.Security, Some(Pattern.Subcategory.InsecureModulesLibraries))
+      (Pattern.Category.Security, Some(Pattern.Subcategory.InsecureModulesLibraries))
     case "clang-analyzer-security" => (Pattern.Category.Security, None)
     case s"${_}unused$_" => (Pattern.Category.UnusedCode, None)
     case "misc-unused-alias-decls" => (Pattern.Category.UnusedCode, None)
@@ -104,7 +107,7 @@ object Main extends App {
       Pattern.Specification(Pattern.Id(patternId), level, category, subcategory, None)
   }
 
-  val specification = Tool.Specification(Tool.Name("Clang Tidy"), version = None, patterns.toSet)
+  val specification = Tool.Specification(Tool.Name(toolName), version = None, patterns.toSet)
 
   def removeHtmlTags(s: String): String = {
     s.replaceAll("""<[^>]*>""", "")
@@ -136,7 +139,8 @@ object Main extends App {
   rm(descriptionDir)
   mkdirs(descriptionDir)
 
-  for ((pattern, markdown) <- patternsWithDocs) (descriptionDir / s"$pattern.md").writeText(markdown + System.lineSeparator)
+  for ((pattern, markdown) <- patternsWithDocs)
+    (descriptionDir / s"$pattern.md").writeText(markdown + System.lineSeparator)
 
   val patternJsonFile = docsDir / "patterns.json"
   patternJsonFile.writeText(specificationJsonString + System.lineSeparator)
