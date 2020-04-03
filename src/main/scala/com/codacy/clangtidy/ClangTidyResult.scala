@@ -7,10 +7,13 @@ import com.codacy.analysis.core.model.{FullLocation, Issue}
 case class ClangTidyResult(path: Path, line: Int, column: Int, level: String, message: String, check: String)
 
 object ClangTidyResult {
+  val toolPrefix = "ClangTidy_"
+
+  def withPrefix(patternId: String) = s"$toolPrefix$patternId"
 
   def toIssue(result: ClangTidyResult): Issue = {
     Issue(
-      results.Pattern.Id(result.check),
+      results.Pattern.Id(withPrefix(result.check)),
       result.path,
       Issue.Message(result.message),
       ClangTidyResult.convertLevel(result.level),
