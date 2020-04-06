@@ -1,0 +1,164 @@
+global:
+  imagePullSecrets:
+    - name: docker-credentials
+  codacy:
+    url: "https://localhost"
+    backendUrl: "https://localhost"
+  akka:
+    sessionSecret: "e4AsBnEgWjfREd88mhULwdBojmjLJXWU5xusNZOZXX5cOANonRzXauSgMMZWwjMWdaJnTu6rzrZnopiPvpKwGaI1qHXDdGe2iUZVufXB6D2nJaDXAwKxVYSJD5ww5OpK7M3VhQpgDB6LGhAh4hdfE9mIHWFuBMWcDrdonYo"
+  play:
+    cryptoSecret: "Dwy2xw0Ycv5G4tC68vW3v1W2nQaPJSfaRv09i5bKC1oeESfUkuj2uVVkngC0yVHM01J1wMlZRfW3hzH3SvLuhDXKuAOpOSF5kdlZFcKfYGzU808w0meS48YYDF8TN1SqpzSjvw9N5l0UbbIhg0rPbL9njB3qx9mbvTGU"
+  filestore:
+    contentsSecret: "s0inkqKFKM7jTw0ctUJEKz6HZHGdax6nTZFvNy2ADN47mS9QTghqy6QEwJcB7qiXITD3hLTqnLUpmMtCHTs2SfffgXxGPFpuiTj3XDiCG1sTKqykhdpoooCsBZpbqfySaWvQ21OdAfVFYkauC8cbsq8ezdKJud2nBI"
+    uuidSecret: "B7MrJaBp49IIB1wt4Yz31TPzj0hl24h0823Dge4Tn9pON9vjQl4OhsJNfsawRR0FG8mjm7aU4rEVD9fIupYBrGS5nD3fP7xfOX2wL6nYBVHh3pFLWIT7CwWHU9t5CDfJnmJsuwRNE3mhAIVkST4ZSCDERHXGj3S1p9JN40"
+  cacheSecret: "vlWdrGm0TKdv4X66kXurTi7IJ1gQ0VrGj4yajWaGPciwsAPVovAJuQKtWmiNAXPQ4G06IASNJMio3lEcI4QG8cgfDL1xqbvxxAhhoB1kUmZB6DOcRIeMbcfzHaXg22xamyP1IlrvSADakIvCPlZ6lzoHhiTDKtQoSkcRY"
+
+codacy-api:
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 500m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 1000Mi
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: "nginx"
+    hosts:
+    - host: 'localhost'
+      paths:
+        - /
+
+portal:
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 500m
+      memory: 750Mi
+    requests:
+      cpu: 100m
+      memory: 500Mi
+
+activities:
+  replicaCount: 0
+  activitiesdb:
+    replicaCount: 0
+    create: false
+
+remote-provider-service:
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 250m
+      memory: 750Mi
+    requests:
+      cpu: 100m
+      memory: 300Mi
+
+hotspots-api:
+  replicaCount: 0
+  hotspotsdb:
+    replicaCount: 0
+    create: false
+
+hotspots-worker:
+  replicaCount: 0
+
+listener:
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 250m
+      memory: 1Gi
+    requests:
+      cpu: 100m
+      memory: 500Mi
+  listenerdb:
+    persistence:
+      enabled: true
+      size: 50Gi
+
+  nfsserverprovisioner:
+    enabled: true
+    persistence:
+      enabled: true
+      size: 10Gi
+    resources:
+      limits:
+        cpu: 250m
+        memory: 200Mi
+      requests:
+        cpu: 100m
+        memory: 200Mi
+
+  persistence:
+    claim:
+      size: 50Gi
+
+core:
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 400m
+      memory: 500Mi
+    requests:
+      cpu: 100m
+      memory: 500Mi
+
+engine:
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 800m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 500Mi
+
+worker-manager:
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 750m
+      memory: 1000Mi
+    requests:
+      cpu: 100m
+      memory: 500Mi
+  config:
+    workers:
+      genericMax: 1
+      dedicatedMax: 1
+    workerResources:
+      limits:
+        cpu: 1
+        memory: "1Gi"
+    pluginResources:
+      requests:
+        cpu: 1
+        memory: 1000000000 # 1000000000 # 1000Mb
+
+crow:
+  replicaCount: 0
+  crowdb:
+    replicaCount: 0
+    create: false
+
+postgres:
+  persistence:
+    enabled: true
+    size: 100Gi
+
+rabbitmq-ha:
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 0.3
+      memory: 500Mi
+    requests:
+      cpu: 0.2
+      memory: 200Mi
+
+fluentdoperator:
+  enabled: false

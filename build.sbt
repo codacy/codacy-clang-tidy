@@ -30,3 +30,12 @@ lazy val root = (project in file("."))
 
 lazy val `doc-generator` = project
   .settings(libraryDependencies ++= Seq(codacyEngineScalaSeed, betterFiles))
+
+lazy val e2eTest = (project in file("e2e"))
+  .configs(IntegrationTest)
+  .settings(
+    name := "codacy-clang-tidy-e2e-test",
+    libraryDependencies ++= Seq(
+      scalaTest % Test
+    )
+  )
