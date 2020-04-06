@@ -16,33 +16,35 @@ jobs:
           command: |
             sudo apt update && sudo apt install nfs-common -y
             sudo snap install microk8s --classic --channel=1.15/stable
+            export PATH=/snap/bin/:$PATH
             sudo usermod -a -G microk8s $USER
             sudo su $USER -c "mkdir -p /var/snap/microk8s/current/args"
             sudo su $USER -c "echo '--allow-privileged=true' >> /var/snap/microk8s/current/args/kube-apiserver"
-            sudo su $USER -c "/snap/bin/microk8s.status --wait-ready --timeout 300"
-            sudo su $USER -c "/snap/bin/microk8s.enable dns"
-            sudo su $USER -c "/snap/bin/microk8s.enable storage"
-            sudo su $USER -c "/snap/bin/microk8s.enable ingress"
-            sudo su $USER -c "/snap/bin/microk8s.status --wait-ready --timeout 300"
-            sudo su $USER -c "/snap/bin/microk8s.stop"
-            sudo su $USER -c "/snap/bin/microk8s.start"
-            sudo su $USER -c "/snap/bin/microk8s.status --wait-ready --timeout 300"
+            sudo su $USER -c "microk8s.status --wait-ready --timeout 300"
+            sudo su $USER -c "microk8s.enable dns"
+            sudo su $USER -c "microk8s.enable storage"
+            sudo su $USER -c "microk8s.enable ingress"
+            sudo su $USER -c "microk8s.status --wait-ready --timeout 300"
+            sudo su $USER -c "microk8s.stop"
+            sudo su $USER -c "microk8s.start"
+            sudo su $USER -c "microk8s.status --wait-ready --timeout 300"
 
       - run:
           name: Install helm
           command: |
             sudo snap install helm --classic --channel=2.16/stable
+            export PATH=/snap/bin/:$PATH
 
-            sudo su $USER -c "/snap/bin/microk8s.kubectl create serviceaccount --namespace kube-system tiller"
-            sudo su $USER -c "/snap/bin/microk8s.kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller"
+            sudo su $USER -c "microk8s.kubectl create serviceaccount --namespace kube-system tiller"
+            sudo su $USER -c "microk8s.kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller"
             helm init --service-account tiller
       - run:
           name: Wait for the system to be operational
           command:
-            sudo su $USER -c "/snap/bin/microk8s.kubectl wait -n kube-system --for=condition=Ready pod -l k8s-app=kube-dns"
-            sudo su $USER -c "/snap/bin/microk8s.kubectl wait -n kube-system --for=condition=Ready pod -l k8s-app=hostpath-provisioner"
-            sudo su $USER -c "/snap/bin/microk8s.kubectl wait -n default --for=condition=Ready pod -l name=nginx-ingress-microk8s"
-            sudo su $USER -c "/snap/bin/microk8s.kubectl -n kube-system wait --for=condition=Ready pod -l name=tiller"
+            sudo su $USER -c "microk8s.kubectl wait -n kube-system --for=condition=Ready pod -l k8s-app=kube-dns"
+            sudo su $USER -c "microk8s.kubectl wait -n kube-system --for=condition=Ready pod -l k8s-app=hostpath-provisioner"
+            sudo su $USER -c "microk8s.kubectl wait -n default --for=condition=Ready pod -l name=nginx-ingress-microk8s"
+            sudo su $USER -c "microk8s.kubectl -n kube-system wait --for=condition=Ready pod -l name=tiller"
 
 workflows:
   version: 2
