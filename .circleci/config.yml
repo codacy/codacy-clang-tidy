@@ -23,6 +23,7 @@ jobs:
             sudo su $USER -c "/snap/bin/microk8s.enable dns"
             sudo su $USER -c "/snap/bin/microk8s.enable storage"
             sudo su $USER -c "/snap/bin/microk8s.enable ingress"
+            sudo su $USER -c "/snap/bin/microk8s.status --wait-ready --timeout 300"
             sudo su $USER -c "/snap/bin/microk8s.stop"
             sudo su $USER -c "/snap/bin/microk8s.start"
             sudo su $USER -c "/snap/bin/microk8s.status --wait-ready --timeout 300"
