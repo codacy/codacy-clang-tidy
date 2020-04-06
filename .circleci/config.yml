@@ -5,13 +5,13 @@ orbs:
   codacy_plugins_test: codacy/plugins-test@0.10.6
 
 jobs:
-  build:
+  e2e_test:
     machine:
       image: ubuntu-1604:201903-01
-      resource_class: large
-      working_directory: ~/workdir
-      steps:
-        - run:
+    resource_class: large
+    working_directory: ~/workdir/
+    steps:
+      - run:
           name: Prepare the machine
           command: |
             sudo apt update && sudo apt install nfs-common -y
@@ -32,6 +32,9 @@ workflows:
     jobs:
       - codacy/checkout_and_version:
           write_sbt_version: true
+      - e2e_test:
+          requires:
+            - codacy/checkout_and_version          
       # - codacy/sbt:
       #     name: populate_cache
       #     persist_to_workspace: true
