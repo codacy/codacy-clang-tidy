@@ -15,22 +15,24 @@ jobs:
           name: Prepare the machine
           command: |
             sudo apt update && sudo apt install nfs-common -y
+            echo "debug -1"
             sudo snap install microk8s --classic --channel=1.15/stable
+            echo "debug 0"
             sudo usermod -a -G microk8s $USER
             echo "debug 1"
-            sudo echo "--allow-privileged=true" >> /var/snap/microk8s/current/args/kube-apiserver
+            sudo -i -u $USER echo "--allow-privileged=true" >> /var/snap/microk8s/current/args/kube-apiserver
             echo "debug 2"
-            sudo microk8s.enable dns
+            sudo -i -u $USER microk8s.enable dns
             echo "debug 3"
-            sudo microk8s.enable storage
+            sudo -i -u $USER microk8s.enable storage
             echo "debug 4"
-            sudo microk8s.enable ingress
+            sudo -i -u $USER microk8s.enable ingress
             echo "debug 5"
-            sudo microk8s.stop
+            sudo -i -u $USER microk8s.stop
             echo "debug 6"
-            sudo microk8s.start
+            sudo -i -u $USER microk8s.start
             echo "debug 7"
-            sudo microk8s.status --wait-ready --timeout 300
+            sudo -i -u $USER microk8s.status --wait-ready --timeout 300
 
 workflows:
   version: 2
