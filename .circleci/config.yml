@@ -20,6 +20,7 @@ jobs:
             echo "debug 0"
             sudo usermod -a -G microk8s $USER
             echo "debug 1"
+            sudo -i -u $USER mkdir -p /var/snap/microk8s/current/args
             sudo -i -u $USER echo "--allow-privileged=true" >> /var/snap/microk8s/current/args/kube-apiserver
             echo "debug 2"
             sudo -i -u $USER microk8s.enable dns
