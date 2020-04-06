@@ -8,7 +8,7 @@ jobs:
   e2e_test:
     machine:
       image: ubuntu-1604:201903-01
-    resource_class: xlarge
+    resource_class: large
     working_directory: ~/workdir/
     steps:
       - run:
@@ -19,7 +19,6 @@ jobs:
             sudo usermod -a -G microk8s $USER
             sudo su $USER -c "mkdir -p /var/snap/microk8s/current/args"
             sudo su $USER -c "echo '--allow-privileged=true' >> /var/snap/microk8s/current/args/kube-apiserver"
-            sudo su $USER -c "/snap/bin/microk8s.status --wait-ready"
             sudo su $USER -c "/snap/bin/microk8s.enable dns"
             sudo su $USER -c "/snap/bin/microk8s.enable storage"
             sudo su $USER -c "/snap/bin/microk8s.enable ingress"
