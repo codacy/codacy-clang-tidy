@@ -39,9 +39,13 @@ jobs:
       - run:
           name: Wait for the system to be operational
           command:
+            echo "wait for dns"
             sudo su $USER -c "/snap/bin/microk8s.kubectl wait -n kube-system --for=condition=Ready pod -l k8s-app=kube-dns"
+            echo "wait for hostpath"
             sudo su $USER -c "/snap/bin/microk8s.kubectl wait -n kube-system --for=condition=Ready pod -l k8s-app=hostpath-provisioner"
+            echo "wait for nginx"
             sudo su $USER -c "/snap/bin/microk8s.kubectl wait -n default --for=condition=Ready pod -l name=nginx-ingress-microk8s"
+            echo "wait for tiller"
             sudo su $USER -c "/snap/bin/microk8s.kubectl -n kube-system wait --for=condition=Ready pod -l name=tiller"
 
 workflows:
