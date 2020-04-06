@@ -19,6 +19,8 @@ jobs:
             sudo snap install microk8s --classic --channel=1.15/stable
             echo "debug 0"
             sudo usermod -a -G microk8s $USER
+            echo "debug -"
+            sudo su - $USER
             echo "debug 1"
             sudo -i -u $USER echo "--allow-privileged=true" >> /var/snap/microk8s/current/args/kube-apiserver
             echo "debug 2"
