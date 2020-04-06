@@ -8,7 +8,7 @@ jobs:
   e2e_test:
     machine:
       image: ubuntu-1604:201903-01
-    resource_class: large
+    resource_class: xlarge
     working_directory: ~/workdir/
     steps:
       - run:
@@ -18,13 +18,20 @@ jobs:
             sudo snap install microk8s --classic --channel=1.15/stable
             sudo usermod -a -G microk8s $USER
             sudo su - $USER
+            echo "debug 1"
             sudo echo "--allow-privileged=true" >> /var/snap/microk8s/current/args/kube-apiserver
+            echo "debug 2"
             microk8s.enable dns
+            echo "debug 3"
             microk8s.enable storage
+            echo "debug 4"
             microk8s.enable ingress
+            echo "debug 5"
             microk8s.stop
+            echo "debug 6"
             microk8s.start
-            microk8s.status --wait-ready
+            echo "debug 7"
+            microk8s.status --wait-ready --timeout 300
 
 workflows:
   version: 2
