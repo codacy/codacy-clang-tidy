@@ -19,13 +19,13 @@ jobs:
             sudo usermod -a -G microk8s $USER
             sudo su $USER -c "mkdir -p /var/snap/microk8s/current/args"
             sudo su $USER -c "echo '--allow-privileged=true' >> /var/snap/microk8s/current/args/kube-apiserver"
-            sudo su $USER -c "microk8s.status --wait-ready"
-            sudo su $USER -c "microk8s.enable dns"
-            sudo su $USER -c "microk8s.enable storage"
-            sudo su $USER -c "microk8s.enable ingress"
-            sudo su $USER -c "microk8s.stop"
-            sudo su $USER -c "microk8s.start"
-            sudo su $USER -c "microk8s.status --wait-ready --timeout 300"
+            sudo su $USER -c "/snap/bin/microk8s.status --wait-ready"
+            sudo su $USER -c "/snap/bin/microk8s.enable dns"
+            sudo su $USER -c "/snap/bin/microk8s.enable storage"
+            sudo su $USER -c "/snap/bin/microk8s.enable ingress"
+            sudo su $USER -c "/snap/bin/microk8s.stop"
+            sudo su $USER -c "/snap/bin/microk8s.start"
+            sudo su $USER -c "/snap/bin/microk8s.status --wait-ready --timeout 300"
 
 workflows:
   version: 2
