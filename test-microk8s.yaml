@@ -36,7 +36,7 @@ portal:
   resources:
     limits:
       cpu: 500m
-      memory: 750Mi
+      memory: 1000Mi
     requests:
       cpu: 100m
       memory: 500Mi
@@ -52,7 +52,7 @@ remote-provider-service:
   resources:
     limits:
       cpu: 250m
-      memory: 750Mi
+      memory: 1000Mi
     requests:
       cpu: 100m
       memory: 300Mi
@@ -102,7 +102,7 @@ core:
   resources:
     limits:
       cpu: 400m
-      memory: 500Mi
+      memory: 1000Mi
     requests:
       cpu: 100m
       memory: 500Mi

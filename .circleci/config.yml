@@ -8,7 +8,8 @@ jobs:
   e2e_test:
     machine:
       image: ubuntu-1604:201903-01
-    resource_class: xlarge
+    resource_class: 2xlarge
+    # xlarge
     working_directory: ~/workdir/
     steps:
       - attach_workspace:
