@@ -60,7 +60,7 @@ jobs:
             # TODO set codacy version
             sudo su $USER -c "/snap/bin/helm repo add codacy-stable https://charts.codacy.com/stable/"
             sudo su $USER -c "/snap/bin/helm repo update"
-            sudo su $USER -c "/snap/bin/helm upgrade --install codacy codacy-stable/codacy --version '0.5.0' --namespace codacy --atomic --values values-production.yaml --values test-microk8s.yaml --timeout=1800"
+            sudo su $USER -c "/snap/bin/helm upgrade --install codacy codacy-stable/codacy --version '0.5.0' --namespace codacy --atomic --values values-production.yaml --values /home/circleci/workdir/test-microk8s.yaml --timeout=1800"
 
             # is everything running
             sudo su $USER -c "/snap/bin/microk8s.kubectl get pods"
