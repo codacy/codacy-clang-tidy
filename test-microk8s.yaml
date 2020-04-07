@@ -70,8 +70,8 @@ listener:
   replicaCount: 1
   resources:
     limits:
-      cpu: 250m
-      memory: 1Gi
+      cpu: 5000m
+      memory: 1000Mi
     requests:
       cpu: 100m
       memory: 500Mi
@@ -111,7 +111,7 @@ engine:
   replicaCount: 1
   resources:
     limits:
-      cpu: 800m
+      cpu: 1000m
       memory: 1000Mi
     requests:
       cpu: 100m
