@@ -28,17 +28,18 @@ jobs:
             sudo su $USER -c "/snap/bin/microk8s.start"
             sudo su $USER -c "/snap/bin/microk8s.status --wait-ready --timeout 300"
 
-      # - run:
-      #     name: Install helm
-      #     command: |
+            # - run:
+            #     name: Install helm
+            #     command: |
             sudo snap install helm --classic --channel=2.16/stable
 
             sudo su $USER -c "/snap/bin/microk8s.kubectl create serviceaccount --namespace kube-system tiller"
             sudo su $USER -c "/snap/bin/microk8s.kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller"
             sudo su $USER -c "/snap/bin/helm init --service-account tiller"
-      # - run:
-      #     name: Wait for the system to be operational
-      #     command:
+
+            # - run:
+            #     name: Wait for the system to be operational
+            #     command:
             echo "wait for dns" &&\
               sudo su $USER -c "/snap/bin/microk8s.kubectl wait -n kube-system --for=condition=Ready pod -l k8s-app=kube-dns" &&\
               echo "wait for hostpath" &&\
