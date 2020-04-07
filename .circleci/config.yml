@@ -35,10 +35,12 @@ jobs:
             # Install helm
             sudo snap install helm --classic --channel=2.16/stable
 
+            sleep 5
             sudo su $USER -c "/snap/bin/microk8s.kubectl create serviceaccount --namespace kube-system tiller"
             sudo su $USER -c "/snap/bin/microk8s.kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller"
-            sudo su $USER -c "/snap/bin/microk8s.status --wait-ready --timeout 300"
             sudo su $USER -c "/snap/bin/helm init --service-account tiller"
+
+            sleep 5
 
             # Final checks
             sudo su $USER -c "/snap/bin/microk8s.kubectl wait -n kube-system --for=condition=Ready pod -l k8s-app=kube-dns"
