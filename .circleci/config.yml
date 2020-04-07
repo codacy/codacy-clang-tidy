@@ -61,12 +61,14 @@ jobs:
             sudo su $USER -c "/snap/bin/microk8s.kubectl create secret docker-registry docker-credentials --docker-username=$DOCKER_USER --docker-password=$DOCKER_PASS --namespace codacy"
 
             # Get values-production.yaml
-            wget https://raw.githubusercontent.com/codacy/chart/master/codacy/values-production.yaml
+            # Note version here!
+            wget https://raw.githubusercontent.com/codacy/chart/0.5.0/codacy/values-production.yaml
 
             # Install Codacy!
             # TODO set codacy version
             sudo su $USER -c "/snap/bin/helm repo add codacy-stable https://charts.codacy.com/stable/"
             sudo su $USER -c "/snap/bin/helm repo update"
+            # Note version here!
             sudo su $USER -c "/snap/bin/helm upgrade --install codacy codacy-stable/codacy --version '0.5.0' --namespace codacy --atomic --debug --wait --values values-production.yaml --values /home/circleci/workdir/test-microk8s.yaml --timeout=1800"
 
             # is everything running?
