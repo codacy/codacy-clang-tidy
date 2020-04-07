@@ -41,6 +41,32 @@ jobs:
             sudo su $USER -c "/snap/bin/microk8s.kubectl wait -n default --for=condition=Ready pod -l name=nginx-ingress-microk8s"
             sudo su $USER -c "/snap/bin/microk8s.kubectl -n kube-system wait --for=condition=Ready pod -l name=tiller"
 
+            # Install kubectl
+            sudo apt-get update && sudo apt-get install -y apt-transport-https gnupg2
+            curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+            echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+            sudo apt-get update
+            sudo apt-get install -y kubectl
+
+            # Create codacy namespace
+            sudo su $USER -c "/snap/bin/microk8s.kubectl create namespace codacy"
+            # Set docker credentials
+            sudo su $USER -c "/snap/bin/microk8s.kubectl create secret docker-registry docker-credentials --docker-username=$DOCKER_USER --docker-password=$DOCKER_PASS --namespace codacy"
+
+            # Get values-production.yaml
+            wget https://raw.githubusercontent.com/codacy/chart/master/codacy/values-production.yaml
+
+            # Install Codacy!
+            # TODO set codacy version
+            sudo su $USER -c "/snap/bin/helm repo add codacy-stable https://charts.codacy.com/stable/"
+            sudo su $USER -c "/snap/bin/helm repo update"
+            sudo su $USER -c "/snap/bin/helm upgrade --install codacy codacy-stable/codacy --version '0.5.0' --namespace codacy --atomic --values values-production.yaml --values test-microk8s.yaml --timeout=1800"
+
+            # is everything running
+            sudo su $USER -c "/snap/bin/microk8s.kubectl get pods"
+
+            sleep 10
+            curl localhost
 workflows:
   version: 2
   compile_test_deploy:
@@ -48,6 +74,7 @@ workflows:
       - codacy/checkout_and_version:
           write_sbt_version: true
       - e2e_test:
+          context: CodacyDocker
           requires:
             - codacy/checkout_and_version          
       # - codacy/sbt:
