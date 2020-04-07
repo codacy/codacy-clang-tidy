@@ -11,6 +11,8 @@ jobs:
     resource_class: xlarge
     working_directory: ~/workdir/
     steps:
+      - attach_workspace:
+          at: ~/workdir
       - run:
           name: Prepare microk8s
           command: |
