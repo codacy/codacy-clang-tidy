@@ -15,6 +15,7 @@ jobs:
           at: ~/workdir
       - run:
           name: Prepare microk8s
+          no_output_timeout: 1200
           command: |
             sudo apt update && sudo apt install nfs-common -y
             sudo snap install microk8s --classic --channel=1.15/stable
@@ -62,13 +63,13 @@ jobs:
             # TODO set codacy version
             sudo su $USER -c "/snap/bin/helm repo add codacy-stable https://charts.codacy.com/stable/"
             sudo su $USER -c "/snap/bin/helm repo update"
-            sudo su $USER -c "/snap/bin/helm upgrade --install codacy codacy-stable/codacy --version '0.5.0' --namespace codacy --atomic --debug --values values-production.yaml --values /home/circleci/workdir/test-microk8s.yaml --timeout=1800"
+            sudo su $USER -c "/snap/bin/helm upgrade --install codacy codacy-stable/codacy --version '0.5.0' --namespace codacy --atomic --debug --wait --values values-production.yaml --values /home/circleci/workdir/test-microk8s.yaml --timeout=1800"
 
-            # is everything running
+            # is everything running?
             sudo su $USER -c "/snap/bin/microk8s.kubectl get pods"
 
-            sleep 10
             curl localhost
+
 workflows:
   version: 2
   compile_test_deploy:
