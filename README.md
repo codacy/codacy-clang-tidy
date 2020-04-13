@@ -6,18 +6,30 @@
 **Warning: This is a work in progress, it is not yet usable.**
 
 A standalone tool that converts [Clang-Tidy](https://clang.llvm.org/extra/clang-tidy/)
-diagnostics to Codacy's format. It allows the integration of Clang-Tidy into your Codacy workflow.
+diagnostics to Codacy's format.
 
-TODO CY-629: Add link explaining how custom tools integrate with codacy
+It allows running Clang-Tidy either locally or as part of your CI process and then integrating the results into your Codacy workflow. This way, Codacy will present the results coming from Clang-Tidy alongside all the other code quality information in the dashboards.
+
+Currently, you can only use codacy-clang-tidy on Codacy self-hosted installations.
 
 ## Usage
 
-The upload of results for a commit is done in two steps:
+### Requirements
 
--   uploading all results
--   telling Codacy that it can run the rest of the analysis
+To get your Clang-Tidy results into Codacy you'll need to:
+- Enable the setting “Run analysis through build server” under your repository Settings > General > Repository analysis
+- Obtain a [Project API token](https://support.codacy.com/hc/en-us/articles/207994675-Project-API)
+- Download [codacy-clang-tidy](https://github.com/codacy/codacy-clang-tidy/releases)
 
-For this a [project API](https://support.codacy.com/hc/en-us/articles/207994675-Project-API) token is required.
+### Sending the results to Codacy
+
+Sending the results of running Clang-Tidy to Codacy involves the steps below, which you can automate in your CI build process:
+
+1. Run Clang-Tidy
+1. Convert the Clang-Tidy output to a format that the Codacy API accepts
+1. Send the results to Codacy
+1. Finally, signal that Codacy can use the sent results and start a new analysis
+
 
 ```bash
 export PROJECT_TOKEN="YOUR-TOKEN"
