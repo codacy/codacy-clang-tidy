@@ -20,8 +20,8 @@ fi
 
 if [ -z "$CODACY_CLANG_TIDY_VERSION" ]
 then
-    echo "\$CODACY_CLANG_TIDY_VERSION not defined. Using $CODACY_CLANG_TIDY_VERSION as tool version"
     CODACY_CLANG_TIDY_VERSION="latest"
+    echo "\$CODACY_CLANG_TIDY_VERSION not defined. Using $CODACY_CLANG_TIDY_VERSION as tool version"
 fi
 
 ./codacy-clang-tidy-$CODACY_CLANG_TIDY_VERSION | \
