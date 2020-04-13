@@ -64,6 +64,13 @@ curl -XPOST -L -H "project_token: $PROJECT_TOKEN" \
 	"$CODACY_URL/2.0/commit/$COMMIT/resultsFinal"
 ```
 
+---
+**NOTE**
+
+When the option **“Run analysis through build server”** is enabled, the Codacy analysis will not start until you call the endpoint `/2.0/commit/{commitUuid}/resultsFinal` signalling that Codacy can use the sent results and start a new analysis.
+
+---
+
 ## Building
 
 ##### Compile
