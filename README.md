@@ -31,6 +31,19 @@ Sending the results of running Clang-Tidy to Codacy involves the steps below, wh
 3.  Send the results to Codacy
 4.  Finally, signal that Codacy can use the sent results and start a new analysis
 
+With script:
+
+```bash
+export PROJECT_TOKEN="YOUR-TOKEN"
+export COMMIT="COMMIT-UUID"
+export CODACY_URL="CODACY-INSTALLATION-URL" # if not defined https://api.codacy.com will be used
+export CODACY_CLANG_TIDY_VERSION=0.2.3 # if not defined, latest will be used
+
+clang-tidy "<clang-tidy-configs>" | \
+./<codacy-clang-tidy-path>/scripts/send-results.sh # requires a codacy-clang-tidy-"<version>" in the current directory
+```
+
+Without script (step-by-step):
 
 ```bash
 export PROJECT_TOKEN="YOUR-TOKEN"
