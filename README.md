@@ -17,18 +17,19 @@ Currently, you can only use codacy-clang-tidy on Codacy self-hosted installation
 ### Requirements
 
 To get your Clang-Tidy results into Codacy you'll need to:
-- Enable the setting “Run analysis through build server” under your repository Settings > General > Repository analysis
-- Obtain a [Project API token](https://support.codacy.com/hc/en-us/articles/207994675-Project-API)
-- Download [codacy-clang-tidy](https://github.com/codacy/codacy-clang-tidy/releases)
+
+-   Enable the setting “Run analysis through build server” under your repository Settings > General > Repository analysis
+-   Obtain a [Project API token](https://support.codacy.com/hc/en-us/articles/207994675-Project-API)
+-   Download [codacy-clang-tidy](https://github.com/codacy/codacy-clang-tidy/releases)
 
 ### Sending the results to Codacy
 
 Sending the results of running Clang-Tidy to Codacy involves the steps below, which you can automate in your CI build process:
 
-1. Run Clang-Tidy
-1. Convert the Clang-Tidy output to a format that the Codacy API accepts
-1. Send the results to Codacy
-1. Finally, signal that Codacy can use the sent results and start a new analysis
+1.  Run Clang-Tidy
+2.  Convert the Clang-Tidy output to a format that the Codacy API accepts
+3.  Send the results to Codacy
+4.  Finally, signal that Codacy can use the sent results and start a new analysis
 
 
 ```bash
@@ -64,12 +65,12 @@ curl -XPOST -L -H "project_token: $PROJECT_TOKEN" \
 	"$CODACY_URL/2.0/commit/$COMMIT/resultsFinal"
 ```
 
----
-**NOTE**
+***
+### NOTE
 
 When the option **“Run analysis through build server”** is enabled, the Codacy analysis will not start until you call the endpoint `/2.0/commit/{commitUuid}/resultsFinal` signalling that Codacy can use the sent results and start a new analysis.
 
----
+***
 
 ## Building
 
