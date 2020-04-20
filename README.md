@@ -54,12 +54,12 @@ clang-tidy "<clang-tidy-configs>" | \
 # 2. Convert the Clang-Tidy output to a format that the Codacy API accepts
 ./codacy-clang-tidy-"<version>" | \
 # 3. Send the results to Codacy
-curl -XPOST -L -H "project_token: $PROJECT_TOKEN" \
+curl -XPOST -L -H "project-token: $PROJECT_TOKEN" \
     -H "Content-type: application/json" -d @- \
     "https://api.codacy.com/2.0/commit/$COMMIT/issuesRemoteResults"
 
 # 4. Signal that Codacy can use the sent results and start a new analysis
-curl -XPOST -L -H "project_token: $PROJECT_TOKEN" \
+curl -XPOST -L -H "project-token: $PROJECT_TOKEN" \
 	-H "Content-type: application/json" \
 	"https://api.codacy.com/2.0/commit/$COMMIT/resultsFinal"
 ```
@@ -76,12 +76,12 @@ clang-tidy "<clang-tidy-configs>" | \
 # 2. Convert the Clang-Tidy output to a format that the Codacy API accepts
 ./codacy-clang-tidy-"<version>" | \
 # 3. Send the results to Codacy
-curl -XPOST -L -H "project_token: $PROJECT_TOKEN" \
+curl -XPOST -L -H "project-token: $PROJECT_TOKEN" \
     -H "Content-type: application/json" -d @- \
     "$CODACY_URL/2.0/commit/$COMMIT/issuesRemoteResults"
 
 # 4. Signal that Codacy can use the sent results and start a new analysis
-curl -XPOST -L -H "project_token: $PROJECT_TOKEN" \
+curl -XPOST -L -H "project-token: $PROJECT_TOKEN" \
 	-H "Content-type: application/json" \
 	"$CODACY_URL/2.0/commit/$COMMIT/resultsFinal"
 ```
