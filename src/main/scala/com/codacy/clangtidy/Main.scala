@@ -10,7 +10,8 @@ object Main {
 
     // TODO allow to read report from file
     val lines = scala.io.Source.stdin.getLines().to(LazyList)
-    val jsonString = new Converter(toolName).convert(lines)(pwd = Paths.get(System.getProperty("user.dir")))
+    val pwd = Paths.get(System.getProperty("user.dir"))
+    val jsonString = new Converter(toolName).convert(lines, relativizeTo = pwd)
     println(jsonString)
   }
 

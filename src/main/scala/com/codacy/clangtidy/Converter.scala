@@ -7,8 +7,8 @@ import java.nio.file.Path
 
 class Converter(toolName: String) {
 
-  def convert(lines: Seq[String])(implicit pwd: Path): String = {
-    val parsed = ClangTidyReportParser.parse(lines)
+  def convert(lines: Seq[String], relativizeTo: Path): String = {
+    val parsed = ClangTidyReportParser.parse(lines, relativizeTo)
 
     val grouped = parsed
       .groupBy(_.path)
