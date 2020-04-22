@@ -3,10 +3,11 @@ package com.codacy.clangtidy
 import com.codacy.analysis.core.model.{IssuesAnalysis, ToolResults}
 import com.codacy.analysis.core.model.IssuesAnalysis.FileResults
 import com.codacy.analysis.core.serializer.IssuesReportSerializer
+import java.nio.file.Path
 
 class Converter(toolName: String) {
 
-  def convert(lines: Seq[String]): String = {
+  def convert(lines: Seq[String])(implicit pwd: Path): String = {
     val parsed = ClangTidyReportParser.parse(lines)
 
     val grouped = parsed
