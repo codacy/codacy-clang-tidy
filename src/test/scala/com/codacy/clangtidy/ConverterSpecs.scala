@@ -2,6 +2,7 @@ package com.codacy.clangtidy
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
+import java.nio.file.Paths
 
 class ConverterSpecs extends AnyWordSpec with Matchers {
 
@@ -33,9 +34,9 @@ class ConverterSpecs extends AnyWordSpec with Matchers {
       val toolName = "definitely-not-clang-tidy"
 
       val expected =
-        s"""[{"tool":"$toolName","issues":{"Success":{"results":[{"filename":"/src/main.c","results":[{"Issue":{"patternId":{"value":"ClangTidy_clang-diagnostic-error"},"filename":"/src/main.c","message":{"text":"expected expression"},"level":"Error","location":{"FullLocation":{"line":10,"column":6}}}},{"Issue":{"patternId":{"value":"ClangTidy_readability-else-after-return"},"filename":"/src/main.c","message":{"text":"do not use 'else' after 'return'"},"level":"Error","location":{"FullLocation":{"line":13,"column":3}}}},{"Issue":{"patternId":{"value":"ClangTidy_clang-diagnostic-error"},"filename":"/src/main.c","message":{"text":"expected identifier or '('"},"level":"Error","location":{"FullLocation":{"line":17,"column":1}}}}]}]}}}]"""
+        s"""[{"tool":"$toolName","issues":{"Success":{"results":[{"filename":"main.c","results":[{"Issue":{"patternId":{"value":"ClangTidy_clang-diagnostic-error"},"filename":"main.c","message":{"text":"expected expression"},"level":"Error","location":{"FullLocation":{"line":10,"column":6}}}},{"Issue":{"patternId":{"value":"ClangTidy_readability-else-after-return"},"filename":"main.c","message":{"text":"do not use 'else' after 'return'"},"level":"Error","location":{"FullLocation":{"line":13,"column":3}}}},{"Issue":{"patternId":{"value":"ClangTidy_clang-diagnostic-error"},"filename":"main.c","message":{"text":"expected identifier or '('"},"level":"Error","location":{"FullLocation":{"line":17,"column":1}}}}]}]}}}]"""
 
-      new Converter(toolName).convert(lines) should be(expected)
+      new Converter(toolName).convert(lines, relativizeTo = Paths.get("/src")) should be(expected)
     }
   }
 

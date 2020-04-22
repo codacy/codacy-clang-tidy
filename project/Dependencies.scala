@@ -7,6 +7,5 @@ object Dependencies {
   val betterFiles = "com.github.pathikrit" %% "better-files" % "3.8.0"
 
   val circeVersion = "0.12.3"
-  val circe = List("io.circe" %% "circe-core" % circeVersion,
-                   "io.circe" %% "circe-generic" % circeVersion)
+  val circe = List("io.circe" %% "circe-core" % circeVersion, "io.circe" %% "circe-generic" % circeVersion)
 }
