@@ -16,7 +16,14 @@ class ClangTidyReportParserSpecs extends AnyWordSpec with Matchers {
 
       ClangTidyReportParser.parse(Seq(line)) should be(
         Seq(
-          ClangTidyResult(Paths.get("main.c"), 10, 6, "error", "expected expression", "readability-else-after-return")
+          ClangTidyResult(
+            Paths.get("main.c"),
+            10,
+            6,
+            "error",
+            "expected expression",
+            "readability-else-after-return"
+          )
         )
       )
     }
@@ -47,6 +54,14 @@ class ClangTidyReportParserSpecs extends AnyWordSpec with Matchers {
 
       val expected = Seq(
         ClangTidyResult(Paths.get("main.c"), 17, 1, "error", "expected identifier or '['", "clang-diagnostic-error"),
+        ClangTidyResult(
+          Paths.get("main.c"),
+          17,
+          1,
+          "error",
+          "expected identifier or '['",
+          "clang-diagnostic-error"
+        ),
         ClangTidyResult(
           Paths.get("main.c"),
           15,
@@ -104,7 +119,14 @@ class ClangTidyReportParserSpecs extends AnyWordSpec with Matchers {
           "do not use 'else' after 'return'",
           "readability-else-after-return"
         ),
-        ClangTidyResult(Paths.get("main.c"), 17, 1, "error", "expected identifier or '('", "clang-diagnostic-error")
+        ClangTidyResult(
+          Paths.get("main.c"),
+          17,
+          1,
+          "error",
+          "expected identifier or '('",
+          "clang-diagnostic-error"
+        )
       )
 
       ClangTidyReportParser.parse(output.split("\n").toSeq) should be(expected)

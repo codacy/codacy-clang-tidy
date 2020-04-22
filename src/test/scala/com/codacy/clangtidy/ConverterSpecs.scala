@@ -2,7 +2,7 @@ package com.codacy.clangtidy
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
-import java.nio.file.{Path, Paths}
+import java.nio.file.{ Path, Paths }
 
 class ConverterSpecs extends AnyWordSpec with Matchers {
   implicit val pwd: Path = Paths.get("/src")
