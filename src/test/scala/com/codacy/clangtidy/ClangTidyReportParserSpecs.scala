@@ -1,20 +1,18 @@
 package com.codacy.clangtidy
 
-import java.nio.file.Paths
-
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 import java.nio.file.{Path, Paths}
 
 class ClangTidyReportParserSpecs extends AnyWordSpec with Matchers {
-  implicit val pwd: Path = Paths.get("/src")
+  val pwd: Path = Paths.get("/src")
 
   "ReportParser::parse" should {
     "parse simple result" in {
       val line =
         "/src/main.c:10:6: error: expected expression [readability-else-after-return]"
 
-      ClangTidyReportParser.parse(Seq(line)) should be(
+      ClangTidyReportParser.parse(Seq(line), relativizeTo = pwd) should be(
         Seq(
           ClangTidyResult(Paths.get("main.c"), 10, 6, "error", "expected expression", "readability-else-after-return")
         )
@@ -25,7 +23,7 @@ class ClangTidyReportParserSpecs extends AnyWordSpec with Matchers {
       val line =
         "/src/main.c:15:3: error: do not use 'else' after 'return' [readability-else-after-return,-warnings-as-errors]"
 
-      ClangTidyReportParser.parse(Seq(line)) should be(
+      ClangTidyReportParser.parse(Seq(line), relativizeTo = pwd) should be(
         List(
           ClangTidyResult(
             Paths.get("main.c"),
@@ -57,7 +55,7 @@ class ClangTidyReportParserSpecs extends AnyWordSpec with Matchers {
         )
       )
 
-      ClangTidyReportParser.parse(line) should be(expected)
+      ClangTidyReportParser.parse(line, relativizeTo = pwd) should be(expected)
     }
 
     "ignore lines that don't match " in {
@@ -67,7 +65,7 @@ class ClangTidyReportParserSpecs extends AnyWordSpec with Matchers {
         "Suppressed 17 warnings (17 in non-user code)."
       )
 
-      ClangTidyReportParser.parse(line) should be(empty)
+      ClangTidyReportParser.parse(line, relativizeTo = pwd) should be(empty)
     }
 
     "parse a full output correctly" in {
@@ -107,7 +105,7 @@ class ClangTidyReportParserSpecs extends AnyWordSpec with Matchers {
         ClangTidyResult(Paths.get("main.c"), 17, 1, "error", "expected identifier or '('", "clang-diagnostic-error")
       )
 
-      ClangTidyReportParser.parse(output.split("\n").toSeq) should be(expected)
+      ClangTidyReportParser.parse(output.split("\n").toSeq, relativizeTo = pwd) should be(expected)
     }
   }
 

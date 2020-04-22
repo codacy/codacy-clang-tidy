@@ -7,10 +7,10 @@ object ClangTidyReportParser {
   private val ResultRegex =
     "(.+|[a-zA-Z]:\\\\.+):([0-9]+):([0-9]+): ([^:]+): (.+) \\[(.+?)\\]".r
 
-  def parse(lines: Seq[String])(implicit pwd: Path): Seq[ClangTidyResult] = {
+  def parse(lines: Seq[String], relativizeTo: Path): Seq[ClangTidyResult] = {
     lines.flatMap {
       case result @ ResultRegex(pathStr, line, column, level, txt, checksList) =>
-        val path = pwd.relativize(Paths.get(pathStr))
+        val path = relativizeTo.relativize(Paths.get(pathStr))
         val firstCheck = checksList.split(",").headOption
 
         firstCheck
