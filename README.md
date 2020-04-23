@@ -64,7 +64,7 @@ curl -XPOST -L -H "project-token: $PROJECT_TOKEN" \
 	"https://api.codacy.com/2.0/commit/$COMMIT/resultsFinal"
 ```
 
-For self-hosted instalations:
+For self-hosted installations:
 
 ```bash
 export PROJECT_TOKEN="YOUR-TOKEN"
