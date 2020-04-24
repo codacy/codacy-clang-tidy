@@ -3,14 +3,10 @@
 
 # codacy-clang-tidy
 
-**Warning: This is a work in progress, it is not yet usable.**
-
 A standalone tool that converts [Clang-Tidy](https://clang.llvm.org/extra/clang-tidy/)
 diagnostics to Codacy's format.
 
 It allows running Clang-Tidy either locally or as part of your CI process and then integrating the results into your Codacy workflow. This way, Codacy will present the results coming from Clang-Tidy alongside all the other code quality information in the dashboards.
-
-Currently, you can only use codacy-clang-tidy on Codacy self-hosted installations.
 
 ## Usage
 
@@ -86,10 +82,7 @@ curl -XPOST -L -H "project-token: $PROJECT_TOKEN" \
 	"$CODACY_URL/2.0/commit/$COMMIT/resultsFinal"
 ```
 
-***
-### NOTE
-
-When the option **“Run analysis through build server”** is enabled, the Codacy analysis will not start until you call the endpoint `/2.0/commit/{commitUuid}/resultsFinal` signalling that Codacy can use the sent results and start a new analysis.
+> When the option **“Run analysis through build server”** is enabled, the Codacy analysis will not start until you call the endpoint `/2.0/commit/{commitUuid}/resultsFinal` signalling that Codacy can use the sent results and start a new analysis.
 
 ***
 
