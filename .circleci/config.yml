@@ -61,6 +61,14 @@ workflows:
           run_pattern_tests: false
           requires:
             - docker_publish_local
+      - codacy/aws_deploy:
+          name: publish_docs_s3
+          aws_profile: integration
+          context: CodacyAWS
+          cmd: |
+            aws s3 sync docs s3://codacy-tools-docs/clang-tidy/$(cat .version)
+          requires:
+            - plugins_test
       - codacy/publish_docker:
           name: publish_dockerhub
           filters:
@@ -69,7 +77,7 @@ workflows:
                 - master
           context: CodacyAWS
           requires:
-            - plugins_test
+            - plugins_test      
       - codacy/publish_ghr:
           name: publish_ghr
           path: ~/workdir/artifacts/
