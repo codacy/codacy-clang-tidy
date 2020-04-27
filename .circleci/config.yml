@@ -66,9 +66,14 @@ workflows:
           aws_profile: integration
           context: CodacyAWS
           cmd: |
-            aws s3 sync docs s3://codacy-tools-docs/clang-tidy/$(cat .version)
+            BUCKET_NAME=$(aws ssm get-parameter --name /codacy/engine/TOOLS/BUCKET --query Parameter.Value --output text)
+            aws s3 sync docs s3://$BUCKET_NAME/clang-tidy/$(cat .version) --delete
           requires:
             - plugins_test
+          filters:
+            branches:
+              only:
+                - master
       - codacy/publish_docker:
           name: publish_dockerhub
           filters:
@@ -77,7 +82,7 @@ workflows:
                 - master
           context: CodacyAWS
           requires:
-            - plugins_test      
+            - plugins_test
       - codacy/publish_ghr:
           name: publish_ghr
           path: ~/workdir/artifacts/
