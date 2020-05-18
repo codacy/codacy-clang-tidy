@@ -10,7 +10,7 @@ object ClangTidyReportParser {
   def parse(lines: Seq[String], relativizeTo: Path): Seq[ClangTidyResult] = {
     lines.flatMap {
       case result @ ResultRegex(pathStr, line, column, level, txt, checksList) =>
-        val path = relativizeTo.relativize(Paths.get(pathStr))
+        val path = relativizeTo.relativize(Paths.get(pathStr).toAbsolutePath())
         val firstCheck = checksList.split(",").headOption
 
         firstCheck
