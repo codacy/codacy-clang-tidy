@@ -10,7 +10,7 @@ lazy val root = (project in file("."))
   .enablePlugins(GraalVMNativeImagePlugin)
   .settings(
     name := "codacy-clang-tidy",
-    libraryDependencies ++= codacyCliModel +: scalaTest % Test +: circe,
+    libraryDependencies ++= Seq(codacyCliModel, "com.github.scopt" %% "scopt" % "3.7.1", scalaTest % Test) ++ circe,
     scalacOptions += "-Ywarn-macros:after", // checks for unused implicits after macro expansion
     addCompilerPlugin("io.tryp" % "splain" % "0.5.0" cross CrossVersion.patch),
     test in assembly := {},

@@ -84,7 +84,18 @@ curl -XPOST -L -H "project-token: $PROJECT_TOKEN" \
 
 > When the option **“Run analysis through build server”** is enabled, the Codacy analysis will not start until you call the endpoint `/2.0/commit/{commitUuid}/resultsFinal` signalling that Codacy can use the sent results and start a new analysis.
 
-***
+* * *
+
+## Command line flags
+
+`codacy-clang-tidy` accepts as command line arguments:
+
+-   `--encoding <ENCODING>` or `-e <ENCODING>` - encoding to use when parsing the input (default: `UTF-8`). The encoding should be one of the possible [Java Charsets](https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html#java.nio.charset.Charset).
+    Example: 
+
+    ```bash
+    ./codacy-clang-tidy-"<version>" --encoding LATIN1
+    ```
 
 ## Building
 
@@ -107,6 +118,16 @@ curl -XPOST -L -H "project-token: $PROJECT_TOKEN" \
 ##### Build fat-jar
 
 `sbt assembly`
+
+## Troubleshooting
+
+### `java.nio.charset.MalformedInputException: Input length = 1` while calling codacy-clang-tidy
+
+Clang-Tidy may return a different encoding as output than the default used by codacy-clang-tidy. You can specify the encoding to use on codacy-clang-tidy:
+
+```bash
+./codacy-clang-tidy-"<version>" --encoding <ENCODING>
+```
 
 ## What is Codacy?
 
