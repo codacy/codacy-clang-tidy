@@ -12,7 +12,7 @@ lazy val root = (project in file("."))
     name := "codacy-clang-tidy",
     libraryDependencies ++= Seq(
       codacyCliModel,
-      "com.github.alexarchambault" %% "case-app" % "2.0.0-M16",
+      "com.github.scopt" %% "scopt" % "4.0.0-RC2",
       scalaTest % Test
     ) ++ circe,
     scalacOptions += "-Ywarn-macros:after", // checks for unused implicits after macro expansion
