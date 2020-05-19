@@ -2,14 +2,16 @@ package com.codacy.clangtidy
 
 import java.nio.file.Paths
 
-object Main {
+import caseapp.core.RemainingArgs
+import caseapp.core.app.CaseApp
 
-  def main(args: Array[String]): Unit = {
-    // TODO make this dynamic
-    val toolName = "clang-tidy"
+object Main extends CaseApp[ParserOptions] {
+  val toolName = "clang-tidy"
 
+  def run(options: ParserOptions, arg: RemainingArgs): Unit = {
     // TODO allow to read report from file
-    val lines = scala.io.Source.stdin.getLines().to(LazyList)
+    val stdin = scala.io.Source.fromInputStream(System.in)(options.codecEncoding)
+    val lines = stdin.getLines().to(LazyList)
     val pwd = Paths.get(System.getProperty("user.dir"))
     val jsonString = new Converter(toolName).convert(lines, relativizeTo = pwd)
     println(jsonString)
