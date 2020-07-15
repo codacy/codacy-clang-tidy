@@ -10,7 +10,7 @@ import scala.sys.process._
 
 object Main extends App {
 
-  val toolName = "Clang-tidy"
+  val toolName = "clang-tidy"
 
   def toInputStream(s: String) =
     new java.io.ByteArrayInputStream(s.getBytes(java.nio.charset.StandardCharsets.UTF_8.name))
