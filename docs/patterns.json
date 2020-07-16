@@ -1,5 +1,5 @@
 {
-  "name" : "Clang-tidy",
+  "name" : "clang-tidy",
   "patterns" : [ {
     "patternId" : "abseil-duration-addition",
     "level" : "Warning",
