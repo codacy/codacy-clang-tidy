@@ -1,4 +1,5 @@
-# abseil-upgrade-duration-conversions
+abseil-upgrade-duration-conversions
+===================================
 
 Finds calls to `absl::Duration` arithmetic operators and factories whose
 argument needs an explicit cast to continue compiling after upcoming API
@@ -23,19 +24,15 @@ type is implicitly convertible to an arithmetic type.
 
 Here are example fixes created by this check:
 
-``` c++
-std::atomic<int> a;
-absl::Duration d = absl::Milliseconds(a);
-d *= a;
-```
+    std::atomic<int> a;
+    absl::Duration d = absl::Milliseconds(a);
+    d *= a;
 
 becomes
 
-``` c++
-std::atomic<int> a;
-absl::Duration d = absl::Milliseconds(static_cast<int64_t>(a));
-d *= static_cast<int64_t>(a);
-```
+    std::atomic<int> a;
+    absl::Duration d = absl::Milliseconds(static_cast<int64_t>(a));
+    d *= static_cast<int64_t>(a);
 
 Note that this check always adds a cast to `int64_t` in order to
 preserve the current behavior of user code. It is possible that this

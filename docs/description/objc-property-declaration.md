@@ -1,4 +1,5 @@
-# objc-property-declaration
+objc-property-declaration
+=========================
 
 Finds property declarations in Objective-C files that do not follow the
 pattern of property names in Apple's programming guide. The property
@@ -6,15 +7,11 @@ name should be in the format of Lower Camel Case.
 
 For code:
 
-``` objc
-@property(nonatomic, assign) int LowerCamelCase;
-```
+    @property(nonatomic, assign) int LowerCamelCase;
 
 The fix will be:
 
-``` objc
-@property(nonatomic, assign) int lowerCamelCase;
-```
+    @property(nonatomic, assign) int lowerCamelCase;
 
 The check will only fix 'CamelCase' to 'camelCase'. In some other cases
 we will only provide warning messages since the property name could be
@@ -35,9 +32,7 @@ The check will also accept property declared in category with a prefix
 of lowercase letters followed by a '\_' to avoid naming conflict. For
 example:
 
-``` objc
-@property(nonatomic, assign) int abc_lowerCamelCase;
-```
+    @property(nonatomic, assign) int abc_lowerCamelCase;
 
 The corresponding style rule:
 <https://developer.apple.com/library/content/qa/qa1908/_index.html>

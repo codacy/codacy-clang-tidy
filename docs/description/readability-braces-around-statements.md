@@ -1,6 +1,8 @@
-# readability-braces-around-statements
+readability-braces-around-statements
+====================================
 
-<span class="title-ref">google-readability-braces-around-statements</span>
+<span
+class="title-ref">google-readability-braces-around-statements</span>
 redirects here as an alias for this check.
 
 Checks that bodies of `if` statements and loops (`for`, `do while`, and
@@ -8,22 +10,17 @@ Checks that bodies of `if` statements and loops (`for`, `do while`, and
 
 Before:
 
-``` c++
-if (condition)
-  statement;
-```
+    if (condition)
+      statement;
 
 After:
 
-``` c++
-if (condition) {
-  statement;
-}
-```
+    if (condition) {
+      statement;
+    }
 
-## Options
-
-<div class="option">
+Options
+-------
 
 ShortStatementLines
 
@@ -34,5 +31,3 @@ The number of lines is counted from the end of condition or initial
 keyword (`do`/`else`) until the last line of the inner statement.
 Default value <span class="title-ref">0</span> means that braces will be
 added to all statements (not having them already).
-
-</div>

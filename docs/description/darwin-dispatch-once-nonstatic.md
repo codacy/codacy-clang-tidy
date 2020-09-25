@@ -1,4 +1,5 @@
-# darwin-dispatch-once-nonstatic
+darwin-dispatch-once-nonstatic
+==============================
 
 Finds declarations of `dispatch_once_t` variables without static or
 global storage. The behavior of using `dispatch_once_t` predicates with

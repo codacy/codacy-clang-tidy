@@ -1,4 +1,5 @@
-# android-cloexec-open
+android-cloexec-open
+====================
 
 A common source of security bugs is code that opens a file without using
 the `O_CLOEXEC` flag. Without that flag, an opened sensitive file would
@@ -9,14 +10,12 @@ argument.
 
 Examples:
 
-``` c++
-open("filename", O_RDWR);
-open64("filename", O_RDWR);
-openat(0, "filename", O_RDWR);
+    open("filename", O_RDWR);
+    open64("filename", O_RDWR);
+    openat(0, "filename", O_RDWR);
 
-// becomes
+    // becomes
 
-open("filename", O_RDWR | O_CLOEXEC);
-open64("filename", O_RDWR | O_CLOEXEC);
-openat(0, "filename", O_RDWR | O_CLOEXEC);
-```
+    open("filename", O_RDWR | O_CLOEXEC);
+    open64("filename", O_RDWR | O_CLOEXEC);
+    openat(0, "filename", O_RDWR | O_CLOEXEC);

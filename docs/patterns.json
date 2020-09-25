@@ -1,1548 +1,2763 @@
 {
   "name" : "clang-tidy",
+  "version" : "10.0.1",
   "patterns" : [ {
     "patternId" : "abseil-duration-addition",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-duration-comparison",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-duration-conversion-cast",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-duration-division",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-duration-factory-float",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-duration-factory-scale",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-duration-subtraction",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-duration-unnecessary-conversion",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-faster-strsplit-delimiter",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-no-internal-dependencies",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-no-namespace",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-redundant-strcat-calls",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-str-cat-append",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-string-find-startswith",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-time-comparison",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-time-subtraction",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "abseil-upgrade-duration-conversions",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-accept",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-accept4",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-creat",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-dup",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-epoll-create",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-epoll-create1",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-fopen",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-inotify-init",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-inotify-init1",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-memfd-create",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-open",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-pipe",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-pipe2",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-cloexec-socket",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "android-comparison-in-temp-failure-retry",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "Android"
+    "subcategory" : "Android",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "boost-use-to-string",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-argument-comment",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-assert-side-effect",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-bad-signal-to-kill-thread",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-bool-pointer-implicit-conversion",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-branch-clone",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-copy-constructor-init",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-dangling-handle",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-dynamic-static-initializers",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-exception-escape",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-fold-init-type",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-forward-declaration-namespace",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-forwarding-reference-overload",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-inaccurate-erase",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-incorrect-roundings",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-infinite-loop",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-integer-division",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-lambda-function-name",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-macro-parentheses",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-macro-repeated-side-effects",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-misplaced-operator-in-strlen-in-alloc",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-misplaced-widening-cast",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-move-forwarding-reference",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-multiple-statement-macro",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-not-null-terminated-result",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-parent-virtual-call",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-posix-return",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-signed-char-misuse",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-sizeof-container",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-sizeof-expression",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-string-constructor",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-string-integer-assignment",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-string-literal-with-embedded-nul",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-suspicious-enum-usage",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-suspicious-memset-usage",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-suspicious-missing-comma",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-suspicious-semicolon",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-suspicious-string-compare",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-swapped-arguments",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-terminating-continue",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-throw-keyword-missing",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-too-small-loop-variable",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-undefined-memory-manipulation",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-undelegated-constructor",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-unhandled-self-assignment",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-unused-raii",
     "level" : "Warning",
-    "category" : "UnusedCode"
+    "category" : "UnusedCode",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-unused-return-value",
     "level" : "Warning",
-    "category" : "UnusedCode"
+    "category" : "UnusedCode",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-use-after-move",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "bugprone-virtual-near-miss",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-dcl03-c",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-dcl16-c",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-dcl21-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-dcl50-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-dcl54-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-dcl58-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-dcl59-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-env33-c",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-err09-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-err34-c",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-err52-cpp",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "DoS"
+    "subcategory" : "DoS",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-err58-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-err60-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-err61-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-fio38-c",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-flp30-c",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cert-mem57-cpp",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-msc30-c",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-msc32-c",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-msc50-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-msc51-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-oop11-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cert-oop54-cpp",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cert-oop58-cpp",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cert-pos44-c",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.CallAndMessage",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.DivideZero",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.DynamicTypePropagation",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.NonNullParamChecker",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.NullDereference",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.StackAddressEscape",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.UndefinedBinaryOperatorResult",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.VLASize",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.ArraySubscript",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.Assign",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.Branch",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.CapturedBlockVariable",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.uninitialized.UndefReturn",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-cplusplus.InnerPointer",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-cplusplus.Move",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-cplusplus.NewDelete",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-cplusplus.NewDeleteLeaks",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-deadcode.DeadStores",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-nullability.NullPassedToNonnull",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-nullability.NullReturnedFromNonnull",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-nullability.NullableDereferenced",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-nullability.NullablePassedToNonnull",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-nullability.NullableReturnedFromNonnull",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-optin.cplusplus.UninitializedObject",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-optin.cplusplus.VirtualCall",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-optin.mpi.MPI-Checker",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-optin.osx.OSObjectCStyleCast",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-optin.performance.GCDAntipattern",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-optin.performance.Padding",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-optin.portability.UnixAPI",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.API",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.MIG",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.NumberObjectConversion",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.OSObjectRetainCount",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.ObjCProperty",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.SecKeychainAPI",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.AtSync",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.AutoreleaseWrite",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.ClassRelease",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.Dealloc",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.IncompatibleMethodTypes",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.Loops",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.MissingSuperCall",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.NSAutoreleasePool",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.NSError",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.NilArg",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.NonNilReturnValue",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.ObjCGenerics",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.RetainCount",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.RunLoopAutoreleaseLeak",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.SelfInit",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.SuperDealloc",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.UnusedIvars",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.cocoa.VariadicMethodTypes",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.CFError",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.CFNumber",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.CFRetainRelease",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.containers.OutOfBounds",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-osx.coreFoundation.containers.PointerSizedValues",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.FloatLoopCounter",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "InsecureModulesLibraries"
+    "subcategory" : "InsecureModulesLibraries",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.UncheckedReturn",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "InsecureModulesLibraries"
+    "subcategory" : "InsecureModulesLibraries",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.bcmp",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "InsecureModulesLibraries"
+    "subcategory" : "InsecureModulesLibraries",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.bcopy",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "InsecureModulesLibraries"
+    "subcategory" : "InsecureModulesLibraries",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.bzero",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "InsecureModulesLibraries"
+    "subcategory" : "InsecureModulesLibraries",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.getpw",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "InsecureModulesLibraries"
+    "subcategory" : "InsecureModulesLibraries",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.gets",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "InsecureModulesLibraries"
+    "subcategory" : "InsecureModulesLibraries",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.mkstemp",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "InsecureModulesLibraries"
+    "subcategory" : "InsecureModulesLibraries",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.mktemp",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "InsecureModulesLibraries"
+    "subcategory" : "InsecureModulesLibraries",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.rand",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "InsecureModulesLibraries"
+    "subcategory" : "InsecureModulesLibraries",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.strcpy",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "InsecureModulesLibraries"
+    "subcategory" : "InsecureModulesLibraries",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-security.insecureAPI.vfork",
     "level" : "Warning",
     "category" : "Security",
-    "subcategory" : "InsecureModulesLibraries"
+    "subcategory" : "InsecureModulesLibraries",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-unix.API",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-unix.Malloc",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-unix.MallocSizeof",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-unix.MismatchedDeallocator",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-unix.Vfork",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-unix.cstring.BadSizeArg",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-unix.cstring.NullArg",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-valist.CopyToSelf",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-valist.Uninitialized",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "clang-analyzer-valist.Unterminated",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-avoid-c-arrays",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-avoid-goto",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-avoid-magic-numbers",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-c-copy-assignment-signature",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-explicit-virtual-functions",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-init-variables",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-interfaces-global-init",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-macro-usage",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-narrowing-conversions",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-no-malloc",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-non-private-member-variables-in-classes",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-owning-memory",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-pro-bounds-array-to-pointer-decay",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-pro-bounds-constant-array-index",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-pro-bounds-pointer-arithmetic",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-pro-type-const-cast",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-pro-type-cstyle-cast",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-pro-type-member-init",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-pro-type-reinterpret-cast",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-pro-type-static-cast-downcast",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-pro-type-union-access",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-pro-type-vararg",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-slicing",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-special-member-functions",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "darwin-avoid-spinlock",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "darwin-dispatch-once-nonstatic",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "fuchsia-default-arguments-calls",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "fuchsia-default-arguments-declarations",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "fuchsia-header-anon-namespaces",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "fuchsia-multiple-inheritance",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "fuchsia-overloaded-operator",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "fuchsia-restrict-system-includes",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "fuchsia-statically-constructed-objects",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "fuchsia-trailing-return",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "fuchsia-virtual-inheritance",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-build-explicit-make-pair",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-build-namespaces",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-build-using-namespace",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-default-arguments",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-explicit-constructor",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-global-names-in-headers",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-objc-avoid-nsobject-new",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-objc-avoid-throwing-exception",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-objc-function-naming",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-objc-global-variable-declaration",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-readability-avoid-underscore-in-googletest-name",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-readability-braces-around-statements",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-readability-casting",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-readability-function-size",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-readability-namespace-comments",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-readability-todo",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-runtime-int",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-runtime-operator",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-runtime-references",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "google-upgrade-googletest-case",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-avoid-c-arrays",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-avoid-goto",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-braces-around-statements",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-deprecated-headers",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-exception-baseclass",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-explicit-conversions",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-function-size",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-invalid-access-moved",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-member-init",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-move-const-arg",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-multiway-paths-covered",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-named-parameter",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-new-delete-operators",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-no-array-decay",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-no-assembler",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-no-malloc",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-noexcept-move",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-signed-bitwise",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-special-member-functions",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-static-assert",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-undelegated-constructor",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-uppercase-literal-suffix",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-use-auto",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-use-emplace",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-use-equals-default",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-use-equals-delete",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-use-noexcept",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-use-nullptr",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-use-override",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "hicpp-vararg",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "linuxkernel-must-use-errs",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "llvm-header-guard",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "llvm-include-order",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "llvm-namespace-comment",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "llvm-prefer-isa-or-dyn-cast-in-conditionals",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "llvm-prefer-register-over-unsigned",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "llvm-qualified-auto",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "llvm-twine-local",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-definitions-in-headers",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-misplaced-const",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-new-delete-overloads",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-non-copyable-objects",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-non-private-member-variables-in-classes",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-redundant-expression",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-static-assert",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-throw-by-value-catch-by-reference",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-unconventional-assign-operator",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-uniqueptr-reset-release",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-unused-alias-decls",
     "level" : "Warning",
-    "category" : "UnusedCode"
+    "category" : "UnusedCode",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-unused-parameters",
     "level" : "Warning",
-    "category" : "UnusedCode"
+    "category" : "UnusedCode",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "misc-unused-using-decls",
     "level" : "Warning",
-    "category" : "UnusedCode"
+    "category" : "UnusedCode",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-avoid-bind",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-avoid-c-arrays",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-concat-nested-namespaces",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-deprecated-headers",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-deprecated-ios-base-aliases",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-loop-convert",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-make-shared",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-make-unique",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-pass-by-value",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-raw-string-literal",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-redundant-void-arg",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-replace-auto-ptr",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-replace-random-shuffle",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-return-braced-init-list",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-shrink-to-fit",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-unary-static-assert",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-auto",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-bool-literals",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-default",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-default-member-init",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-emplace",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-equals-default",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-equals-delete",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-nodiscard",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-noexcept",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-nullptr",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-override",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-trailing-return-type",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-transparent-functors",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-uncaught-exceptions",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "modernize-use-using",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "mpi-buffer-deref",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "mpi-type-mismatch",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "objc-avoid-nserror-init",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "objc-forbidden-subclassing",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "objc-missing-hash",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "objc-property-declaration",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "objc-super-self",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "openmp-exception-escape",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "openmp-use-default-none",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-faster-string-find",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-for-range-copy",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-implicit-cast-in-loop",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-implicit-conversion-in-loop",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-inefficient-algorithm",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-inefficient-string-concatenation",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-inefficient-vector-operation",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-move-const-arg",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-move-constructor-init",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "performance-no-automatic-move",
+    "level" : "Warning",
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-noexcept-move-constructor",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "performance-trivially-destructible",
+    "level" : "Warning",
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-type-promotion-in-math-fn",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-unnecessary-copy-initialization",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "performance-unnecessary-value-param",
     "level" : "Warning",
-    "category" : "Performance"
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "portability-simd-intrinsics",
     "level" : "Warning",
-    "category" : "Compatibility"
+    "category" : "Compatibility",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-avoid-const-params-in-decls",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-braces-around-statements",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-const-return-type",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-container-size-empty",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-convert-member-functions-to-static",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-delete-null-pointer",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-deleted-default",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-else-after-return",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-function-size",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-identifier-naming",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-implicit-bool-cast",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-implicit-bool-conversion",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-inconsistent-declaration-parameter-name",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-isolate-declaration",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-magic-numbers",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-make-member-function-const",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-misleading-indentation",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-misplaced-array-index",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-named-parameter",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-non-const-parameter",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-qualified-auto",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-redundant-access-specifiers",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-redundant-control-flow",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-redundant-declaration",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-redundant-function-ptr-dereference",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-redundant-member-init",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-redundant-preprocessor",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-redundant-smartptr-get",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-redundant-string-cstr",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-redundant-string-init",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-simplify-boolean-expr",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-simplify-subscript-expr",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-static-accessed-through-instance",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-static-definition-in-anonymous-namespace",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-string-compare",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-uniqueptr-delete-release",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "readability-uppercase-literal-suffix",
     "level" : "Warning",
-    "category" : "CodeStyle"
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   }, {
     "patternId" : "zircon-temporary-objects",
     "level" : "Warning",
-    "category" : "ErrorProne"
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
   } ]
 }

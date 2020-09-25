@@ -1,4 +1,5 @@
-# clang-analyzer-osx.cocoa.SuperDealloc
+clang-analyzer-osx.cocoa.SuperDealloc
+=====================================
 
 The clang-analyzer-osx.cocoa.SuperDealloc check is an alias, please see
 [Clang Static Analyzer Available

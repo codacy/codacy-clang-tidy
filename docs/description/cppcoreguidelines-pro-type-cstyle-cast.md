@@ -1,4 +1,5 @@
-# cppcoreguidelines-pro-type-cstyle-cast
+cppcoreguidelines-pro-type-cstyle-cast
+======================================
 
 This check flags all use of C-style casts that perform a `static_cast`
 downcast, `const_cast`, or `reinterpret_cast`.

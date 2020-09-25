@@ -1,4 +1,5 @@
-# clang-analyzer-unix.Vfork
+clang-analyzer-unix.Vfork
+=========================
 
 The clang-analyzer-unix.Vfork check is an alias, please see [Clang
 Static Analyzer Available

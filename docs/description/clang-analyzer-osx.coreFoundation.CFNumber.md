@@ -1,4 +1,5 @@
-# clang-analyzer-osx.coreFoundation.CFNumber
+clang-analyzer-osx.coreFoundation.CFNumber
+==========================================
 
 The clang-analyzer-osx.coreFoundation.CFNumber check is an alias, please
 see [Clang Static Analyzer Available

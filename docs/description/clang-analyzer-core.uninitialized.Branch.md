@@ -1,4 +1,5 @@
-# clang-analyzer-core.uninitialized.Branch
+clang-analyzer-core.uninitialized.Branch
+========================================
 
 The clang-analyzer-core.uninitialized.Branch check is an alias, please
 see [Clang Static Analyzer Available

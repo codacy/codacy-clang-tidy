@@ -1,22 +1,21 @@
-# google-readability-avoid-underscore-in-googletest-name
+google-readability-avoid-underscore-in-googletest-name
+======================================================
 
 Checks whether there are underscores in googletest test and test case
 names in test macros:
 
-  - `TEST`
-  - `TEST_F`
-  - `TEST_P`
-  - `TYPED_TEST`
-  - `TYPED_TEST_P`
+-   `TEST`
+-   `TEST_F`
+-   `TEST_P`
+-   `TYPED_TEST`
+-   `TYPED_TEST_P`
 
 The `FRIEND_TEST` macro is not included.
 
 For example:
 
-``` c++
-TEST(TestCaseName, Illegal_TestName) {}
-TEST(Illegal_TestCaseName, TestName) {}
-```
+    TEST(TestCaseName, Illegal_TestName) {}
+    TEST(Illegal_TestCaseName, TestName) {}
 
 would trigger the check. [Underscores are not
 allowed](https://github.com/google/googletest/blob/master/googletest/docs/faq.md#why-should-test-suite-names-and-test-names-not-contain-underscore)

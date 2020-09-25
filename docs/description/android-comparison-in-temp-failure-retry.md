@@ -1,4 +1,5 @@
-# android-comparison-in-temp-failure-retry
+android-comparison-in-temp-failure-retry
+========================================
 
 Diagnoses comparisons that appear to be incorrectly placed in the
 argument to the `TEMP_FAILURE_RETRY` macro. Having such a use is
@@ -13,12 +14,10 @@ interrupted.
 
 Example buggy usage looks like:
 
-``` c
-char cs[1];
-while (TEMP_FAILURE_RETRY(read(STDIN_FILENO, cs, sizeof(cs)) != 0)) {
-  // Do something with cs.
-}
-```
+    char cs[1];
+    while (TEMP_FAILURE_RETRY(read(STDIN_FILENO, cs, sizeof(cs)) != 0)) {
+      // Do something with cs.
+    }
 
 Because TEMP\_FAILURE\_RETRY will check for whether the result *of the
 comparison* is `-1`, and retry if so.
@@ -26,9 +25,7 @@ comparison* is `-1`, and retry if so.
 If you encounter this, the fix is simple: lift the comparison out of the
 `TEMP_FAILURE_RETRY` argument, like so:
 
-``` c
-char cs[1];
-while (TEMP_FAILURE_RETRY(read(STDIN_FILENO, cs, sizeof(cs))) != 0) {
-  // Do something with cs.
-}
-```
+    char cs[1];
+    while (TEMP_FAILURE_RETRY(read(STDIN_FILENO, cs, sizeof(cs))) != 0) {
+      // Do something with cs.
+    }

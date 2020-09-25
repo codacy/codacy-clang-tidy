@@ -1,4 +1,5 @@
-# bugprone-incorrect-roundings
+bugprone-incorrect-roundings
+============================
 
 Checks the usage of patterns known to produce incorrect rounding.
 Programmers often use:

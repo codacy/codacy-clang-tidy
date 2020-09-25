@@ -1,4 +1,5 @@
-# performance-unnecessary-copy-initialization
+performance-unnecessary-copy-initialization
+===========================================
 
 Finds local variable declarations that are initialized using the copy
 constructor of a non-trivially-copyable type but it would suffice to
@@ -12,39 +13,33 @@ constructors or function calls.
 
 Example:
 
-``` c++
-const string& constReference();
-void Function() {
-  // The warning will suggest making this a const reference.
-  const string UnnecessaryCopy = constReference();
-}
+    const string& constReference();
+    void Function() {
+      // The warning will suggest making this a const reference.
+      const string UnnecessaryCopy = constReference();
+    }
 
-struct Foo {
-  const string& name() const;
-};
-void Function(const Foo& foo) {
-  // The warning will suggest making this a const reference.
-  string UnnecessaryCopy1 = foo.name();
-  UnnecessaryCopy1.find("bar");
+    struct Foo {
+      const string& name() const;
+    };
+    void Function(const Foo& foo) {
+      // The warning will suggest making this a const reference.
+      string UnnecessaryCopy1 = foo.name();
+      UnnecessaryCopy1.find("bar");
 
-  // The warning will suggest making this a const reference.
-  string UnnecessaryCopy2 = UnnecessaryCopy1;
-  UnnecessaryCopy2.find("bar");
-}
-```
+      // The warning will suggest making this a const reference.
+      string UnnecessaryCopy2 = UnnecessaryCopy1;
+      UnnecessaryCopy2.find("bar");
+    }
 
-## Options
-
-<div class="option">
+Options
+-------
 
 AllowedTypes
 
 A semicolon-separated list of names of types allowed to be initialized
-by copying. Regular expressions are accepted, e.g.
-<span class="title-ref">\[Rr\]ef(erence)?$</span> matches every type
-with suffix <span class="title-ref">Ref</span>,
-<span class="title-ref">ref</span>,
-<span class="title-ref">Reference</span> and
-<span class="title-ref">reference</span>. The default is empty.
-
-</div>
+by copying. Regular expressions are accepted, e.g. <span
+class="title-ref">\[Rr\]ef(erence)?$</span> matches every type with
+suffix <span class="title-ref">Ref</span>, <span
+class="title-ref">ref</span>, <span class="title-ref">Reference</span>
+and <span class="title-ref">reference</span>. The default is empty.

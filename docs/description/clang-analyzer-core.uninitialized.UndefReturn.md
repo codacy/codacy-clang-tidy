@@ -1,4 +1,5 @@
-# clang-analyzer-core.uninitialized.UndefReturn
+clang-analyzer-core.uninitialized.UndefReturn
+=============================================
 
 The clang-analyzer-core.uninitialized.UndefReturn check is an alias,
 please see [Clang Static Analyzer Available

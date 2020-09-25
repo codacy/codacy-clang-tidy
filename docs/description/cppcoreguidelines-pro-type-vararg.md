@@ -1,4 +1,5 @@
-# cppcoreguidelines-pro-type-vararg
+cppcoreguidelines-pro-type-vararg
+=================================
 
 This check flags all calls to c-style vararg functions and all use of
 `va_arg`.

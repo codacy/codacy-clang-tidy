@@ -1,4 +1,5 @@
-# clang-analyzer-security.insecureAPI.bcopy
+clang-analyzer-security.insecureAPI.bcopy
+=========================================
 
 The clang-analyzer-security.insecureAPI.bcopy check is an alias, please
 see [Clang Static Analyzer Available

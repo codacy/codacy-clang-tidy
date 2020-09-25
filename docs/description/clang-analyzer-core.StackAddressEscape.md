@@ -1,4 +1,5 @@
-# clang-analyzer-core.StackAddressEscape
+clang-analyzer-core.StackAddressEscape
+======================================
 
 The clang-analyzer-core.StackAddressEscape check is an alias, please see
 [Clang Static Analyzer Available

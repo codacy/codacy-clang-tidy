@@ -1,4 +1,6 @@
-# clang-analyzer-osx.coreFoundation.containers.PointerSizedValues
+
+clang-analyzer-osx.coreFoundation.containers.PointerSizedValues
+===============================================================
 
 The clang-analyzer-osx.coreFoundation.containers.PointerSizedValues
 check is an alias, please see [Clang Static Analyzer Available

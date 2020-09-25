@@ -1,4 +1,5 @@
-# cppcoreguidelines-pro-type-const-cast
+cppcoreguidelines-pro-type-const-cast
+=====================================
 
 This check flags all uses of `const_cast` in C++ code.
 

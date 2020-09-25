@@ -1,4 +1,5 @@
-# clang-analyzer-security.insecureAPI.rand
+clang-analyzer-security.insecureAPI.rand
+========================================
 
 The clang-analyzer-security.insecureAPI.rand check is an alias, please
 see [Clang Static Analyzer Available

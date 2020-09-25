@@ -1,15 +1,14 @@
-# bugprone-too-small-loop-variable
+bugprone-too-small-loop-variable
+================================
 
 Detects those `for` loops that have a loop variable with a "too small"
 type which means this type can't represent all values which are part of
 the iteration range.
 
-``` c++
-int main() {
-  long size = 294967296l;
-  for (short i = 0; i < size; ++i) {}
-}
-```
+    int main() {
+      long size = 294967296l;
+      for (short i = 0; i < size; ++i) {}
+    }
 
 This `for` loop is an infinite loop because the `short` type can't
 represent all values in the `[0..size]` interval.
@@ -17,16 +16,12 @@ represent all values in the `[0..size]` interval.
 In a real use case size means a container's size which depends on the
 user input.
 
-``` c++
-int doSomething(const std::vector& items) {
-  for (short i = 0; i < items.size(); ++i) {}
-}
-```
+    int doSomething(const std::vector& items) {
+      for (short i = 0; i < items.size(); ++i) {}
+    }
 
 This algorithm works for small amount of objects, but will lead to
 freeze for a a larger user input.
-
-<div class="option">
 
 MagnitudeBitsUpperLimit
 
@@ -37,12 +32,8 @@ more magnitude bits as the specified upper limit. The default value is
 32-bit `unsigend int` is ignored by the check, however a 32-bit `int` is
 not (A 32-bit `signed int` has 31 magnitude bits).
 
-</div>
-
-``` c++
-int main() {
-  long size = 294967296l;
-  for (unsigned i = 0; i < size; ++i) {} // no warning with MagnitudeBitsUpperLimit = 31 on a system where unsigned is 32-bit
-  for (int i = 0; i < size; ++i) {} // warning with MagnitudeBitsUpperLimit = 31 on a system where int is 32-bit
-}
-```
+    int main() {
+      long size = 294967296l;
+      for (unsigned i = 0; i < size; ++i) {} // no warning with MagnitudeBitsUpperLimit = 31 on a system where unsigned is 32-bit
+      for (int i = 0; i < size; ++i) {} // warning with MagnitudeBitsUpperLimit = 31 on a system where int is 32-bit
+    }

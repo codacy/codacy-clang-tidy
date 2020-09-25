@@ -1,4 +1,5 @@
-# llvm-include-order
+llvm-include-order
+==================
 
 Checks the correct order of `#includes`.
 

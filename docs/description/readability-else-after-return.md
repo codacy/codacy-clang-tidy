@@ -1,4 +1,5 @@
-# readability-else-after-return
+readability-else-after-return
+=============================
 
 [LLVM Coding Standards](https://llvm.org/docs/CodingStandards.html)
 advises to reduce indentation where possible and where it makes
@@ -10,52 +11,48 @@ something that interrupts control flow - like `return`, `break`,
 The following piece of code illustrates how the check works. This piece
 of code:
 
-``` c++
-void foo(int Value) {
-  int Local = 0;
-  for (int i = 0; i < 42; i++) {
-    if (Value == 1) {
-      return;
-    } else {
-      Local++;
-    }
+    void foo(int Value) {
+      int Local = 0;
+      for (int i = 0; i < 42; i++) {
+        if (Value == 1) {
+          return;
+        } else {
+          Local++;
+        }
 
-    if (Value == 2)
-      continue;
-    else
-      Local++;
+        if (Value == 2)
+          continue;
+        else
+          Local++;
 
-    if (Value == 3) {
-      throw 42;
-    } else {
-      Local++;
+        if (Value == 3) {
+          throw 42;
+        } else {
+          Local++;
+        }
+      }
     }
-  }
-}
-```
 
 Would be transformed into:
 
-``` c++
-void foo(int Value) {
-  int Local = 0;
-  for (int i = 0; i < 42; i++) {
-    if (Value == 1) {
-      return;
-    }
-    Local++;
+    void foo(int Value) {
+      int Local = 0;
+      for (int i = 0; i < 42; i++) {
+        if (Value == 1) {
+          return;
+        }
+        Local++;
 
-    if (Value == 2)
-      continue;
-    Local++;
+        if (Value == 2)
+          continue;
+        Local++;
 
-    if (Value == 3) {
-      throw 42;
+        if (Value == 3) {
+          throw 42;
+        }
+        Local++;
+      }
     }
-    Local++;
-  }
-}
-```
 
 This check helps to enforce this [LLVM Coding Standards
 recommendation](https://llvm.org/docs/CodingStandards.html#don-t-use-else-after-a-return).

@@ -1,4 +1,5 @@
-# clang-analyzer-security.insecureAPI.strcpy
+clang-analyzer-security.insecureAPI.strcpy
+==========================================
 
 The clang-analyzer-security.insecureAPI.strcpy check is an alias, please
 see [Clang Static Analyzer Available

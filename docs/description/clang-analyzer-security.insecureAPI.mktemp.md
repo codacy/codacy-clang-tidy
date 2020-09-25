@@ -1,4 +1,5 @@
-# clang-analyzer-security.insecureAPI.mktemp
+clang-analyzer-security.insecureAPI.mktemp
+==========================================
 
 The clang-analyzer-security.insecureAPI.mktemp check is an alias, please
 see [Clang Static Analyzer Available

@@ -1,4 +1,5 @@
-# clang-analyzer-security.insecureAPI.bzero
+clang-analyzer-security.insecureAPI.bzero
+=========================================
 
 The clang-analyzer-security.insecureAPI.bzero check is an alias, please
 see [Clang Static Analyzer Available

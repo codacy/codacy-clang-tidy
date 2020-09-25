@@ -1,4 +1,5 @@
-# clang-analyzer-core.VLASize
+clang-analyzer-core.VLASize
+===========================
 
 The clang-analyzer-core.VLASize check is an alias, please see [Clang
 Static Analyzer Available

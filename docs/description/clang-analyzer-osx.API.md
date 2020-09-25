@@ -1,4 +1,5 @@
-# clang-analyzer-osx.API
+clang-analyzer-osx.API
+======================
 
 The clang-analyzer-osx.API check is an alias, please see [Clang Static
 Analyzer Available

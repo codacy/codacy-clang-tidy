@@ -1,4 +1,5 @@
-# android-cloexec-inotify-init1
+android-cloexec-inotify-init1
+=============================
 
 `inotify_init1()` should include `IN_CLOEXEC` in its type argument to
 avoid the file descriptor leakage. Without this flag, an opened
@@ -7,10 +8,8 @@ lower-privileged SELinux domain.
 
 Examples:
 
-``` c++
-inotify_init1(IN_NONBLOCK);
+    inotify_init1(IN_NONBLOCK);
 
-// becomes
+    // becomes
 
-inotify_init1(IN_NONBLOCK | IN_CLOEXEC);
-```
+    inotify_init1(IN_NONBLOCK | IN_CLOEXEC);

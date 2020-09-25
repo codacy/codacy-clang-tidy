@@ -1,4 +1,5 @@
-# misc-static-assert
+misc-static-assert
+==================
 
 <span class="title-ref">cert-dcl03-c</span> redirects here as an alias
 for this check.

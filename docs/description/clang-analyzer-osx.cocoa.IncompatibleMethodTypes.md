@@ -1,4 +1,5 @@
-# clang-analyzer-osx.cocoa.IncompatibleMethodTypes
+clang-analyzer-osx.cocoa.IncompatibleMethodTypes
+================================================
 
 The clang-analyzer-osx.cocoa.IncompatibleMethodTypes check is an alias,
 please see [Clang Static Analyzer Available

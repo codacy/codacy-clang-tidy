@@ -1,4 +1,5 @@
-# clang-analyzer-osx.cocoa.RetainCount
+clang-analyzer-osx.cocoa.RetainCount
+====================================
 
 The clang-analyzer-osx.cocoa.RetainCount check is an alias, please see
 [Clang Static Analyzer Available

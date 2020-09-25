@@ -1,4 +1,5 @@
-# android-cloexec-pipe2
+android-cloexec-pipe2
+=====================
 
 This checks ensures that pipe2() is called with the O\_CLOEXEC flag. The
 check also adds the O\_CLOEXEC flag that marks the file descriptor to be
@@ -8,12 +9,8 @@ SELinux domain.
 
 Examples:
 
-``` c++
-pipe2(pipefd, O_NONBLOCK);
-```
+    pipe2(pipefd, O_NONBLOCK);
 
 Suggested replacement:
 
-``` c++
-pipe2(pipefd, O_NONBLOCK | O_CLOEXEC);
-```
+    pipe2(pipefd, O_NONBLOCK | O_CLOEXEC);

@@ -1,4 +1,5 @@
-# objc-missing-hash
+objc-missing-hash
+=================
 
 Finds Objective-C implementations that implement `-isEqual:` without
 also appropriately implementing `-hash`.

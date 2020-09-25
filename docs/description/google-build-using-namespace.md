@@ -1,4 +1,5 @@
-# google-build-using-namespace
+google-build-using-namespace
+============================
 
 Finds `using namespace` directives.
 
@@ -8,10 +9,8 @@ Guide](https://google.github.io/styleguide/cppguide.html#Namespaces):
 > You may not use a using-directive to make all names from a namespace
 > available.
 
-``` c++
-// Forbidden -- This pollutes the namespace.
-using namespace foo;
-```
+    // Forbidden -- This pollutes the namespace.
+    using namespace foo;
 
-Corresponding cpplint.py check name:
-<span class="title-ref">build/namespaces</span>.
+Corresponding cpplint.py check name: <span
+class="title-ref">build/namespaces</span>.

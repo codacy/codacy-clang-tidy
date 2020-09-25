@@ -1,4 +1,5 @@
-# modernize-deprecated-ios-base-aliases
+modernize-deprecated-ios-base-aliases
+=====================================
 
 Detects usage of the deprecated member types of `std::ios_base` and
 replaces those that have a non-deprecated equivalent.

@@ -1,4 +1,5 @@
-# clang-analyzer-core.UndefinedBinaryOperatorResult
+clang-analyzer-core.UndefinedBinaryOperatorResult
+=================================================
 
 The clang-analyzer-core.UndefinedBinaryOperatorResult check is an alias,
 please see [Clang Static Analyzer Available

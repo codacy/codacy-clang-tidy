@@ -1,4 +1,5 @@
-# cppcoreguidelines-interfaces-global-init
+cppcoreguidelines-interfaces-global-init
+========================================
 
 This check flags initializers of globals that access extern objects, and
 therefore can lead to order-of-initialization problems.

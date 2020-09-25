@@ -1,4 +1,5 @@
-# cert-err52-cpp
+cert-err52-cpp
+==============
 
 This check flags all call expressions involving `setjmp()` and
 `longjmp()`.
