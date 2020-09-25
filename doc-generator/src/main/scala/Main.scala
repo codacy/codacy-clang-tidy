@@ -34,7 +34,9 @@ object Main extends App {
   } else {
     val fetchProcess =
       Process(command = Seq("git", "fetch", "origin", "--depth", "1", llvmBranch), cwd = Some(clangExtraDir.toJava))
+    val resetProcess = Process(command = Seq("git", "reset", "--hard", "FETCH_HEAD"), cwd = Some(clangExtraDir.toJava))
     require(fetchProcess.! == 0, "git pull failed")
+    require(resetProcess.! == 0, "git reset failed")
   }
 
   /**
