@@ -1,4 +1,5 @@
-# android-cloexec-accept
+android-cloexec-accept
+======================
 
 The usage of `accept()` is not recommended, it's better to use
 `accept4()`. Without this flag, an opened sensitive file descriptor
@@ -7,10 +8,8 @@ domain.
 
 Examples:
 
-``` c++
-accept(sockfd, addr, addrlen);
+    accept(sockfd, addr, addrlen);
 
-// becomes
+    // becomes
 
-accept4(sockfd, addr, addrlen, SOCK_CLOEXEC);
-```
+    accept4(sockfd, addr, addrlen, SOCK_CLOEXEC);

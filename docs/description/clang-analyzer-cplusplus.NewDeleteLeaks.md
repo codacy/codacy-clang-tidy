@@ -1,4 +1,5 @@
-# clang-analyzer-cplusplus.NewDeleteLeaks
+clang-analyzer-cplusplus.NewDeleteLeaks
+=======================================
 
 The clang-analyzer-cplusplus.NewDeleteLeaks check is an alias, please
 see [Clang Static Analyzer Available

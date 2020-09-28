@@ -1,4 +1,5 @@
-# hicpp-no-assembler
+hicpp-no-assembler
+==================
 
 Check for assembler statements. No fix is offered.
 

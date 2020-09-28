@@ -1,4 +1,5 @@
-# clang-analyzer-unix.Malloc
+clang-analyzer-unix.Malloc
+==========================
 
 The clang-analyzer-unix.Malloc check is an alias, please see [Clang
 Static Analyzer Available

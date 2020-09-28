@@ -1,4 +1,5 @@
-# android-cloexec-pipe
+android-cloexec-pipe
+====================
 
 This check detects usage of `pipe()`. Using `pipe()` is not recommended,
 `pipe2()` is the suggested replacement. The check also adds the
@@ -8,12 +9,8 @@ to a child process, potentially into a lower-privileged SELinux domain.
 
 Examples:
 
-``` c++
-pipe(pipefd);
-```
+    pipe(pipefd);
 
 Suggested replacement:
 
-``` c++
-pipe2(pipefd, O_CLOEXEC);
-```
+    pipe2(pipefd, O_CLOEXEC);

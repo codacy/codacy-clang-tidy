@@ -1,4 +1,5 @@
-# readability-named-parameter
+readability-named-parameter
+===========================
 
 Find functions with unnamed arguments.
 
@@ -10,5 +11,5 @@ Style Guide:
 All parameters should be named, with identical names in the declaration
 and implementation.
 
-Corresponding cpplint.py check name:
-<span class="title-ref">readability/function</span>.
+Corresponding cpplint.py check name: <span
+class="title-ref">readability/function</span>.

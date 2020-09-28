@@ -1,4 +1,5 @@
-# clang-analyzer-security.insecureAPI.bcmp
+clang-analyzer-security.insecureAPI.bcmp
+========================================
 
 The clang-analyzer-security.insecureAPI.bcmp check is an alias, please
 see [Clang Static Analyzer Available

@@ -1,4 +1,5 @@
-# cert-oop11-cpp
+cert-oop11-cpp
+==============
 
 The cert-oop11-cpp check is an alias, please see
 [performance-move-constructor-init](https://clang.llvm.org/extra/clang-tidy/checks/performance-move-constructor-init.html)

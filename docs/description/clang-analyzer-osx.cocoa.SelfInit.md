@@ -1,4 +1,5 @@
-# clang-analyzer-osx.cocoa.SelfInit
+clang-analyzer-osx.cocoa.SelfInit
+=================================
 
 The clang-analyzer-osx.cocoa.SelfInit check is an alias, please see
 [Clang Static Analyzer Available

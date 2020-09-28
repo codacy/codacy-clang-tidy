@@ -1,4 +1,5 @@
-# readability-misleading-indentation
+readability-misleading-indentation
+==================================
 
 Correct indentation helps to understand code. Mismatch of the
 syntactical structure and the indentation of the code may hide serious
@@ -14,21 +15,20 @@ next statement in the same column with the `if`.
 
 Examples:
 
-``` c++
-// Dangling else:
-if (cond1)
-  if (cond2)
-    foo1();
-else
-  foo2();  // Wrong indentation: else belongs to if(cond2) statement.
+    // Dangling else:
+    if (cond1)
+      if (cond2)
+        foo1();
+    else
+      foo2();  // Wrong indentation: else belongs to if(cond2) statement.
 
-// Missing braces:
-if (cond1)
-  foo1();
-  foo2();  // Not guarded by if(cond1).
-```
+    // Missing braces:
+    if (cond1)
+      foo1();
+      foo2();  // Not guarded by if(cond1).
 
-## Limitations
+Limitations
+-----------
 
 Note that this check only works as expected when the tabs or spaces are
 used consistently and not mixed.

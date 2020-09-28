@@ -1,4 +1,5 @@
-# clang-analyzer-deadcode.DeadStores
+clang-analyzer-deadcode.DeadStores
+==================================
 
 The clang-analyzer-deadcode.DeadStores check is an alias, please see
 [Clang Static Analyzer Available

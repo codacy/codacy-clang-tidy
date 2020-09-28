@@ -1,4 +1,5 @@
-# abseil-duration-addition
+abseil-duration-addition
+========================
 
 Check for cases where addition should be performed in the `absl::Time`
 domain. When adding two values, and one is known to be an `absl::Time`,
@@ -7,12 +8,10 @@ of a similar scale, and make that inference explicit.
 
 Examples:
 
-``` c++
-// Original - Addition in the integer domain
-int x;
-absl::Time t;
-int result = absl::ToUnixSeconds(t) + x;
+    // Original - Addition in the integer domain
+    int x;
+    absl::Time t;
+    int result = absl::ToUnixSeconds(t) + x;
 
-// Suggestion - Addition in the absl::Time domain
-int result = absl::ToUnixSeconds(t + absl::Seconds(x));
-```
+    // Suggestion - Addition in the absl::Time domain
+    int result = absl::ToUnixSeconds(t + absl::Seconds(x));

@@ -1,4 +1,5 @@
-# clang-analyzer-optin.mpi.MPI-Checker
+clang-analyzer-optin.mpi.MPI-Checker
+====================================
 
 The clang-analyzer-optin.mpi.MPI-Checker check is an alias, please see
 [Clang Static Analyzer Available

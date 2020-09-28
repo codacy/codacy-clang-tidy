@@ -1,4 +1,5 @@
-# mpi-buffer-deref
+mpi-buffer-deref
+================
 
 This check verifies if a buffer passed to an MPI (Message Passing
 Interface) function is sufficiently dereferenced. Buffers should be
@@ -9,16 +10,14 @@ arrays, without a compiler warning emitted.
 
 Examples:
 
-``` c++
-// A double pointer is passed to the MPI function.
-char *buf;
-MPI_Send(&buf, 1, MPI_CHAR, 0, 0, MPI_COMM_WORLD);
+    // A double pointer is passed to the MPI function.
+    char *buf;
+    MPI_Send(&buf, 1, MPI_CHAR, 0, 0, MPI_COMM_WORLD);
 
-// A multidimensional array is passed to the MPI function.
-short buf[1][1];
-MPI_Send(buf, 1, MPI_SHORT, 0, 0, MPI_COMM_WORLD);
+    // A multidimensional array is passed to the MPI function.
+    short buf[1][1];
+    MPI_Send(buf, 1, MPI_SHORT, 0, 0, MPI_COMM_WORLD);
 
-// A pointer to an array is passed to the MPI function.
-short *buf[1];
-MPI_Send(buf, 1, MPI_SHORT, 0, 0, MPI_COMM_WORLD);
-```
+    // A pointer to an array is passed to the MPI function.
+    short *buf[1];
+    MPI_Send(buf, 1, MPI_SHORT, 0, 0, MPI_COMM_WORLD);

@@ -1,4 +1,5 @@
-# cert-err60-cpp
+cert-err60-cpp
+==============
 
 This check flags all throw expressions where the exception object is not
 nothrow copy constructible.

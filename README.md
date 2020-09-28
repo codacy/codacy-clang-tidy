@@ -119,6 +119,13 @@ curl -XPOST -L -H "project-token: $PROJECT_TOKEN" \
 
 `sbt assembly`
 
+##### Update documentation
+
+If you want to change versions before generating the docs you can do it by
+changing the `llvmVersion` value in `doc-generator/src/main/scala/Main.scala`
+
+`sbt doc-generator/run`
+
 ## Troubleshooting
 
 ### `java.nio.charset.MalformedInputException: Input length = 1` while calling codacy-clang-tidy

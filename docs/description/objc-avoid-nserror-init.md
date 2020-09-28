@@ -1,4 +1,5 @@
-# objc-avoid-nserror-init
+objc-avoid-nserror-init
+=======================
 
 Finds improper initialization of `NSError` objects.
 

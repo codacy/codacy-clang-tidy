@@ -1,4 +1,6 @@
-# clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling
+
+clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling
+====================================================================
 
 The clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling
 check is an alias, please see [Clang Static Analyzer Available

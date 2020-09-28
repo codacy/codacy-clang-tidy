@@ -1,4 +1,5 @@
-# clang-analyzer-cplusplus.Move
+clang-analyzer-cplusplus.Move
+=============================
 
 The clang-analyzer-cplusplus.Move check is an alias, please see [Clang
 Static Analyzer Available

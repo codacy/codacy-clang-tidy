@@ -1,4 +1,6 @@
-# clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker
+
+clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker
+=============================================================================
 
 The
 clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker

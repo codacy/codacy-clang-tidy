@@ -1,4 +1,5 @@
-# clang-analyzer-nullability.NullPassedToNonnull
+clang-analyzer-nullability.NullPassedToNonnull
+==============================================
 
 The clang-analyzer-nullability.NullPassedToNonnull check is an alias,
 please see [Clang Static Analyzer Available

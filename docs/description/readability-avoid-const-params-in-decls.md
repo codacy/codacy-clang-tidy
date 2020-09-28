@@ -1,4 +1,5 @@
-# readability-avoid-const-params-in-decls
+readability-avoid-const-params-in-decls
+=======================================
 
 Checks whether a function declaration has parameters that are top level
 `const`.
@@ -8,7 +9,5 @@ function, so they should not be put there.
 
 Examples:
 
-``` c++
-void f(const string);   // Bad: const is top level.
-void f(const string&);  // Good: const is not top level.
-```
+    void f(const string);   // Bad: const is top level.
+    void f(const string&);  // Good: const is not top level.

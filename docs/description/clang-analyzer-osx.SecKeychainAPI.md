@@ -1,4 +1,5 @@
-# clang-analyzer-osx.SecKeychainAPI
+clang-analyzer-osx.SecKeychainAPI
+=================================
 
 The clang-analyzer-osx.SecKeychainAPI check is an alias, please see
 [Clang Static Analyzer Available

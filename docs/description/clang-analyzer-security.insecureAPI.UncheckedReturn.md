@@ -1,4 +1,5 @@
-# clang-analyzer-security.insecureAPI.UncheckedReturn
+clang-analyzer-security.insecureAPI.UncheckedReturn
+===================================================
 
 The clang-analyzer-security.insecureAPI.UncheckedReturn check is an
 alias, please see [Clang Static Analyzer Available

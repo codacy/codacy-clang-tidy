@@ -1,4 +1,5 @@
-# modernize-use-emplace
+modernize-use-emplace
+=====================
 
 The check flags insertions to an STL-style container done by calling the
 `push_back` method with an explicitly-constructed temporary of the
@@ -15,26 +16,22 @@ This list can be modified using the `ContainersWithPushBack` option.
 
 Before:
 
-``` c++
-std::vector<MyClass> v;
-v.push_back(MyClass(21, 37));
+    std::vector<MyClass> v;
+    v.push_back(MyClass(21, 37));
 
-std::vector<std::pair<int, int>> w;
+    std::vector<std::pair<int, int>> w;
 
-w.push_back(std::pair<int, int>(21, 37));
-w.push_back(std::make_pair(21L, 37L));
-```
+    w.push_back(std::pair<int, int>(21, 37));
+    w.push_back(std::make_pair(21L, 37L));
 
 After:
 
-``` c++
-std::vector<MyClass> v;
-v.emplace_back(21, 37);
+    std::vector<MyClass> v;
+    v.emplace_back(21, 37);
 
-std::vector<std::pair<int, int>> w;
-w.emplace_back(21, 37);
-w.emplace_back(21L, 37L);
-```
+    std::vector<std::pair<int, int>> w;
+    w.emplace_back(21, 37);
+    w.emplace_back(21L, 37L);
 
 By default, the check is able to remove unnecessary `std::make_pair` and
 `std::make_tuple` calls from `push_back` calls on containers of
@@ -47,28 +44,22 @@ a type inside a container.
 
 Before:
 
-``` c++
-std::vector<boost::optional<std::string> > v;
-v.push_back("abc");
-```
+    std::vector<boost::optional<std::string> > v;
+    v.push_back("abc");
 
 After:
 
-``` c++
-std::vector<boost::optional<std::string> > v;
-v.emplace_back("abc");
-```
+    std::vector<boost::optional<std::string> > v;
+    v.emplace_back("abc");
 
 In some cases the transformation would be valid, but the code wouldn't
 be exception safe. In this case the calls of `push_back` won't be
 replaced.
 
-``` c++
-std::vector<std::unique_ptr<int>> v;
-v.push_back(std::unique_ptr<int>(new int(0)));
-auto *ptr = new int(1);
-v.push_back(std::unique_ptr<int>(ptr));
-```
+    std::vector<std::unique_ptr<int>> v;
+    v.push_back(std::unique_ptr<int>(new int(0)));
+    auto *ptr = new int(1);
+    v.push_back(std::unique_ptr<int>(ptr));
 
 This is because replacing it with `emplace_back` could cause a leak of
 this pointer if `emplace_back` would throw exception before emplacement
@@ -84,56 +75,37 @@ other classes use the `SmartPointers` option.
 Check also doesn't fire if any argument of the constructor call would
 be:
 
->   - a bit-field (bit-fields can't bind to rvalue/universal reference)
->   - a `new` expression (to avoid leak)
->   - if the argument would be converted via derived-to-base cast.
+> -   a bit-field (bit-fields can't bind to rvalue/universal reference)
+> -   a `new` expression (to avoid leak)
+> -   if the argument would be converted via derived-to-base cast.
 
 This check requires C++11 or higher to run.
 
-## Options
-
-<div class="option">
+Options
+-------
 
 ContainersWithPushBack
 
 Semicolon-separated list of class names of custom containers that
 support `push_back`.
 
-</div>
-
-<div class="option">
-
 IgnoreImplicitConstructors
 
 When non-zero, the check will ignore implicitly constructed arguments of
 `push_back`, e.g.
 
-``` c++
-std::vector<std::string> v;
-v.push_back("a"); // Ignored when IgnoreImplicitConstructors is ``1``.
-```
+    std::vector<std::string> v;
+    v.push_back("a"); // Ignored when IgnoreImplicitConstructors is ``1``.
 
 Default is `0`.
-
-</div>
-
-<div class="option">
 
 SmartPointers
 
 Semicolon-separated list of class names of custom smart pointers.
 
-</div>
-
-<div class="option">
-
 TupleTypes
 
 Semicolon-separated list of `std::tuple`-like class names.
-
-</div>
-
-<div class="option">
 
 TupleMakeFunctions
 
@@ -141,21 +113,15 @@ Semicolon-separated list of `std::make_tuple`-like function names. Those
 function calls will be removed from `push_back` calls and turned into
 `emplace_back`.
 
-</div>
-
 ### Example
 
-``` c++
-std::vector<MyTuple<int, bool, char>> x;
-x.push_back(MakeMyTuple(1, false, 'x'));
-```
+    std::vector<MyTuple<int, bool, char>> x;
+    x.push_back(MakeMyTuple(1, false, 'x'));
 
 transforms to:
 
-``` c++
-std::vector<MyTuple<int, bool, char>> x;
-x.emplace_back(1, false, 'x');
-```
+    std::vector<MyTuple<int, bool, char>> x;
+    x.emplace_back(1, false, 'x');
 
 when `TupleTypes` is set to `MyTuple` and `TupleMakeFunctions` is set to
 `MakeMyTuple`.

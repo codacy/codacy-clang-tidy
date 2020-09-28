@@ -1,4 +1,5 @@
-# cppcoreguidelines-non-private-member-variables-in-classes
+cppcoreguidelines-non-private-member-variables-in-classes
+=========================================================
 
 The cppcoreguidelines-non-private-member-variables-in-classes check is
 an alias, please see

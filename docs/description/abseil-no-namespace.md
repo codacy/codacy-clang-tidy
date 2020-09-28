@@ -1,4 +1,5 @@
-# abseil-no-namespace
+abseil-no-namespace
+===================
 
 Ensures code does not open `namespace absl` as that violates Abseil's
 compatibility guidelines. Code should not open `namespace absl` as that
@@ -7,13 +8,11 @@ breakage.
 
 Any code that uses:
 
-``` c++
-namespace absl {
- ...
-}
-```
+    namespace absl {
+     ...
+    }
 
 will be prompted with a warning.
 
-See [the full Abseil compatibility guidelines \<https://
-abseil.io/about/compatibility\>]() for more information.
+See [the full Abseil compatibility guidelines &lt;https://
+abseil.io/about/compatibility&gt;]() for more information.

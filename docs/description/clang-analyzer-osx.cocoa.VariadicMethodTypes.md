@@ -1,4 +1,5 @@
-# clang-analyzer-osx.cocoa.VariadicMethodTypes
+clang-analyzer-osx.cocoa.VariadicMethodTypes
+============================================
 
 The clang-analyzer-osx.cocoa.VariadicMethodTypes check is an alias,
 please see [Clang Static Analyzer Available

@@ -1,4 +1,5 @@
-# clang-analyzer-core.uninitialized.Assign
+clang-analyzer-core.uninitialized.Assign
+========================================
 
 The clang-analyzer-core.uninitialized.Assign check is an alias, please
 see [Clang Static Analyzer Available

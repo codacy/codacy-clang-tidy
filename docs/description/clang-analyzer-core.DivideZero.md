@@ -1,4 +1,5 @@
-# clang-analyzer-core.DivideZero
+clang-analyzer-core.DivideZero
+==============================
 
 The clang-analyzer-core.DivideZero check is an alias, please see [Clang
 Static Analyzer Available

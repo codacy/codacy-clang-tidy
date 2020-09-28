@@ -1,4 +1,5 @@
-# clang-analyzer-unix.cstring.BadSizeArg
+clang-analyzer-unix.cstring.BadSizeArg
+======================================
 
 The clang-analyzer-unix.cstring.BadSizeArg check is an alias, please see
 [Clang Static Analyzer Available

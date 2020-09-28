@@ -1,4 +1,5 @@
-# clang-analyzer-unix.cstring.NullArg
+clang-analyzer-unix.cstring.NullArg
+===================================
 
 The clang-analyzer-unix.cstring.NullArg check is an alias, please see
 [Clang Static Analyzer Available

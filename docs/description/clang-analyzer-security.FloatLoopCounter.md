@@ -1,4 +1,5 @@
-# clang-analyzer-security.FloatLoopCounter
+clang-analyzer-security.FloatLoopCounter
+========================================
 
 The clang-analyzer-security.FloatLoopCounter check is an alias, please
 see [Clang Static Analyzer Available

@@ -1,4 +1,5 @@
-# google-readability-braces-around-statements
+google-readability-braces-around-statements
+===========================================
 
 The google-readability-braces-around-statements check is an alias,
 please see

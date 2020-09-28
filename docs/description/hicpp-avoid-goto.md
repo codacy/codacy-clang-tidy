@@ -1,4 +1,5 @@
-# hicpp-avoid-goto
+hicpp-avoid-goto
+================
 
 The <span class="title-ref">hicpp-avoid-goto</span> check is an alias to
 [cppcoreguidelines-avoid-goto](https://clang.llvm.org/extra/clang-tidy/checks/cppcoreguidelines-avoid-goto.html). Rule

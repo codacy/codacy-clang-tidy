@@ -1,4 +1,5 @@
-# openmp-exception-escape
+openmp-exception-escape
+=======================
 
 Analyzes OpenMP Structured Blocks and checks that no exception escapes
 out of the Structured Block it was thrown in.
@@ -11,15 +12,12 @@ same structured block it was thrown in, the behaviour is undefined.
 
 FIXME: this check does not model SEH, `setjmp`/`longjmp`.
 
-WARNING\! This check may be expensive on large source files.
+WARNING! This check may be expensive on large source files.
 
-## Options
-
-<div class="option">
+Options
+-------
 
 IgnoredExceptions
 
 Comma-separated list containing type names which are not counted as
 thrown exceptions in the check. Default value is an empty string.
-
-</div>

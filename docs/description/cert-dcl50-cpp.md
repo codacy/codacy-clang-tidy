@@ -1,4 +1,5 @@
-# cert-dcl50-cpp
+cert-dcl50-cpp
+==============
 
 This check flags all function definitions (but not declarations) of
 C-style variadic functions.

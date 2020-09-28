@@ -1,4 +1,5 @@
-# clang-analyzer-optin.cplusplus.UninitializedObject
+clang-analyzer-optin.cplusplus.UninitializedObject
+==================================================
 
 The clang-analyzer-optin.cplusplus.UninitializedObject check is an
 alias, please see [Clang Static Analyzer Available

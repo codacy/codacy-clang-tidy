@@ -1,4 +1,5 @@
-# clang-analyzer-osx.cocoa.Dealloc
+clang-analyzer-osx.cocoa.Dealloc
+================================
 
 The clang-analyzer-osx.cocoa.Dealloc check is an alias, please see
 [Clang Static Analyzer Available

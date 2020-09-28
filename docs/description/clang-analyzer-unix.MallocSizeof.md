@@ -1,4 +1,5 @@
-# clang-analyzer-unix.MallocSizeof
+clang-analyzer-unix.MallocSizeof
+================================
 
 The clang-analyzer-unix.MallocSizeof check is an alias, please see
 [Clang Static Analyzer Available

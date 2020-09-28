@@ -1,4 +1,5 @@
-# cert-msc51-cpp
+cert-msc51-cpp
+==============
 
 This check flags all pseudo-random number engines, engine adaptor
 instantiations and `srand()` when initialized or seeded with default
@@ -12,28 +13,23 @@ generators](https://wiki.sei.cmu.edu/confluence/display/c/MSC32-C.+Properly+seed
 
 Examples:
 
-``` c++
-void foo() {
-  std::mt19937 engine1; // Diagnose, always generate the same sequence
-  std::mt19937 engine2(1); // Diagnose
-  engine1.seed(); // Diagnose
-  engine2.seed(1); // Diagnose
+    void foo() {
+      std::mt19937 engine1; // Diagnose, always generate the same sequence
+      std::mt19937 engine2(1); // Diagnose
+      engine1.seed(); // Diagnose
+      engine2.seed(1); // Diagnose
 
-  std::time_t t;
-  engine1.seed(std::time(&t)); // Diagnose, system time might be controlled by user
+      std::time_t t;
+      engine1.seed(std::time(&t)); // Diagnose, system time might be controlled by user
 
-  int x = atoi(argv[1]);
-  std::mt19937 engine3(x);  // Will not warn
-}
-```
+      int x = atoi(argv[1]);
+      std::mt19937 engine3(x);  // Will not warn
+    }
 
-## Options
-
-<div class="option">
+Options
+-------
 
 DisallowedSeedTypes
 
 A comma-separated list of the type names which are disallowed. Default
 values are `time_t`, `std::time_t`.
-
-</div>

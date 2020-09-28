@@ -10,26 +10,34 @@ import scala.sys.process._
 
 object Main extends App {
 
+  val llvmVersion = "10.0.1"
+
   val toolName = "clang-tidy"
 
   def toInputStream(s: String) =
     new java.io.ByteArrayInputStream(s.getBytes(java.nio.charset.StandardCharsets.UTF_8.name))
 
   val targetDir = pwd / "doc-generator" / "target"
-  val clangExtraDir = targetDir / "clang-tools-extra"
+  val llvmProjectDir = targetDir / "llvm-project"
+  val clangExtraDir = llvmProjectDir / "clang-tools-extra"
+
+  val llvmBranch = s"llvmorg-$llvmVersion"
 
   if (!clangExtraDir.exists) {
-    val pb = Process(
-      command = Seq("git", "clone", "--depth", "1", "https://github.com/llvm-mirror/clang-tools-extra.git"),
-      cwd = Some(targetDir.toJava)
-    )
+    val pb =
+      Process(
+        command =
+          Seq("git", "clone", "--depth", "1", "--branch", llvmBranch, "https://github.com/llvm/llvm-project.git"),
+        cwd = Some(targetDir.toJava)
+      )
     require(pb.! == 0, "git clone failed")
   } else {
-    val pb = Process(command = Seq("git", "pull"), cwd = Some(clangExtraDir.toJava))
-    require(pb.! == 0, "git pull failed")
+    val fetchProcess =
+      Process(command = Seq("git", "fetch", "origin", "--depth", "1", llvmBranch), cwd = Some(clangExtraDir.toJava))
+    val resetProcess = Process(command = Seq("git", "reset", "--hard", "FETCH_HEAD"), cwd = Some(clangExtraDir.toJava))
+    require(fetchProcess.! == 0, "git pull failed")
+    require(resetProcess.! == 0, "git reset failed")
   }
-
-  def isNotTitle(s: String): Boolean = !s.startsWith("#")
 
   /**
     * Clang Tidy documentation contains relative links that link to
@@ -59,7 +67,7 @@ object Main extends App {
       patternId = file.nameWithoutExtension(includeAll = false)
       if file.extension.exists(_ == ".rst") && file.nameWithoutExtension != "list"
       markdownFile = Seq("pandoc", "-t", "commonmark", file.pathAsString).!!
-      content = markdownFile.linesIterator.dropWhile(isNotTitle).mkString(System.lineSeparator())
+      content = markdownFile.linesIterator.drop(2).mkString(System.lineSeparator())
       withRepoLinks = fixRepoLinks(content)
     } yield (patternId, withRepoLinks)
     iterator.toSeq
@@ -104,10 +112,10 @@ object Main extends App {
       // we are using a default one here
       val level = Level.Warn
       val (category, subcategory) = categoryFromPatternId(patternId)
-      Pattern.Specification(Pattern.Id(patternId), level, category, subcategory, None)
+      Pattern.Specification(Pattern.Id(patternId), level, category, subcategory, Set.empty)
   }
 
-  val specification = Tool.Specification(Tool.Name(toolName), version = None, patterns.toSet)
+  val specification = Tool.Specification(Tool.Name(toolName), Some(Tool.Version(llvmVersion)), patterns.toSet)
 
   def removeHtmlTags(s: String): String = {
     s.replaceAll("""<[^>]*>""", "")
@@ -126,7 +134,7 @@ object Main extends App {
         title = Pattern.Title(withoutFamily(patternId).split("[-\\.]").mkString(" ").capitalize),
         description = descriptionText,
         timeToFix = None,
-        parameters = None
+        parameters = Set.empty
       )
   }
 

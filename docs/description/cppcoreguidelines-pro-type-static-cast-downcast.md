@@ -1,4 +1,5 @@
-# cppcoreguidelines-pro-type-static-cast-downcast
+cppcoreguidelines-pro-type-static-cast-downcast
+===============================================
 
 This check flags all usages of `static_cast`, where a base class is
 casted to a derived class. In those cases, a fix-it is provided to

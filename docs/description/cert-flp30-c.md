@@ -1,4 +1,5 @@
-# cert-flp30-c
+cert-flp30-c
+============
 
 This check flags `for` loops where the induction expression has a
 floating-point type.

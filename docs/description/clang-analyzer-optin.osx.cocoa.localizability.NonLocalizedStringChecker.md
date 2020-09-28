@@ -1,4 +1,6 @@
-# clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker
+
+clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker
+=======================================================================
 
 The
 clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker
