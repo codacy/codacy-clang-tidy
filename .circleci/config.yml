@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@2.9.3
+  codacy: codacy/base@5.4.1
   codacy_plugins_test: codacy/plugins-test@0.15.4
 
 workflows:
@@ -43,10 +43,19 @@ workflows:
 
             mkdir -p ~/workdir/artifacts/
             mv target/scala-2.13/codacy-clang-tidy-assembly-$(cat .version).jar ~/workdir/artifacts/codacy-clang-tidy-$(cat .version).jar
-            mv target/native-image/codacy-clang-tidy ~/workdir/artifacts/codacy-clang-tidy-$(cat .version)
+            mv target/native-image/codacy-clang-tidy ~/workdir/artifacts/codacy-clang-tidy-linux-$(cat .version)
           requires:
             - check_fmt
             - test_and_coverage
+      - codacy/sbt_osx:
+          name: package_artifacts_for_osx
+          cmd: |
+            sbt nativeImage
+
+            mv target/native-image/codacy-clang-tidy ~/workdir/artifacts/codacy-clang-tidy-darwin-$(cat .version)
+          persist_to_workspace: true
+          requires:
+            - package_artifacts
       - codacy/shell:
           name: docker_publish_local
           cmd: |

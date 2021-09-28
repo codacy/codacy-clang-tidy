@@ -113,7 +113,7 @@ curl -XPOST -L -H "project-token: $PROJECT_TOKEN" \
 
 ##### Build native image (requires docker)
 
-`sbt "graalvm-native-image:packageBin"`
+`sbt "nativeImage"`
 
 ##### Build fat-jar
 
