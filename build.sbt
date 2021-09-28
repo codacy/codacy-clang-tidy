@@ -19,8 +19,10 @@ lazy val root = (project in file("."))
       "--no-fallback",
       "--no-server",
       "--report-unsupported-elements-at-runtime",
-      "--static"
-    )
+    ) ++ {
+      if (sys.props.get("os.name").contains("Mac OS X")) Seq.empty
+      else Seq("--static")
+    }
   )
 
 lazy val `doc-generator` = project
