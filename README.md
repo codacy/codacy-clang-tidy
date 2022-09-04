@@ -14,7 +14,7 @@ It allows running Clang-Tidy either locally or as part of your CI process and th
 
 To get your Clang-Tidy results into Codacy you'll need to:
 
--   Enable Clang-Tidy and configure the corresponding code patterns on your repository **Code patterns** page
+-   [Enable Clang-Tidy](https://docs.codacy.com/repositories-configure/configuring-code-patterns/) and configure the corresponding code patterns on your repository **Code patterns** page
 -   Enable the setting **Run analysis through build server** on your repository **Settings**, tab **General**, **Repository analysis**
 -   Obtain a [project API token](https://docs.codacy.com/codacy-api/api-tokens/#project-api-tokens)
 -   Download [codacy-clang-tidy](https://github.com/codacy/codacy-clang-tidy/releases)
