@@ -5,3 +5,4 @@ target/
 .bloop/
 .vscode/
 /.bsp/
+.git/
