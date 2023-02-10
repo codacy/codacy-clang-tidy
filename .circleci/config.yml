@@ -88,3 +88,14 @@ workflows:
           context: CodacyGitHub
           requires:
             - plugins_test
+      - codacy/publish_s3:
+          name: publish_s3
+          path: bin/codacy-clang-tidy
+          files: artifacts/codacy-clang-tidy-linux-$(cat .version) artifacts/codacy-clang-tidy-darwin-$(cat .version) artifacts/codacy-clang-tidy-$(cat .version).jar
+          filters:
+            branches:
+              only:
+                - master
+          context: CodacyAWS
+          requires:
+            - plugins_test
