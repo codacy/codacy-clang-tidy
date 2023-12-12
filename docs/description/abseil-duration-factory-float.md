@@ -1,5 +1,8 @@
-abseil-duration-factory-float
-=============================
+clang-tidy - abseil-duration-factory-float
+
+</div>
+
+# abseil-duration-factory-float
 
 Checks for cases where the floating-point overloads of various
 `absl::Duration` factory functions are called when the more-efficient
@@ -11,15 +14,17 @@ superfluous casts.
 
 Examples:
 
-    // Original - Providing a floating-point literal.
-    absl::Duration d = absl::Seconds(10.0);
+``` c++
+// Original - Providing a floating-point literal.
+absl::Duration d = absl::Seconds(10.0);
 
-    // Suggested - Use an integer instead.
-    absl::Duration d = absl::Seconds(10);
+// Suggested - Use an integer instead.
+absl::Duration d = absl::Seconds(10);
 
 
-    // Original - Explicitly casting to a floating-point type.
-    absl::Duration d = absl::Seconds(static_cast<double>(10));
+// Original - Explicitly casting to a floating-point type.
+absl::Duration d = absl::Seconds(static_cast<double>(10));
 
-    // Suggested - Remove the explicit cast
-    absl::Duration d = absl::Seconds(10);
+// Suggested - Remove the explicit cast
+absl::Duration d = absl::Seconds(10);
+```

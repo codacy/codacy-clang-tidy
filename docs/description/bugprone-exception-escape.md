@@ -1,5 +1,8 @@
-bugprone-exception-escape
-=========================
+clang-tidy - bugprone-exception-escape
+
+</div>
+
+# bugprone-exception-escape
 
 Finds functions which may throw an exception directly or indirectly, but
 they should not. The functions which should not throw exceptions are the
@@ -18,8 +21,9 @@ termination.
 
 WARNING! This check may be expensive on large source files.
 
-Options
--------
+## Options
+
+<div class="option">
 
 FunctionsThatShouldNotThrow
 
@@ -28,7 +32,13 @@ An example value for this parameter can be `WinMain` which adds function
 `WinMain()` in the Windows API to the list of the functions which should
 not throw. Default value is an empty string.
 
+</div>
+
+<div class="option">
+
 IgnoredExceptions
 
 Comma separated list containing type names which are not counted as
 thrown exceptions in the check. Default value is an empty string.
+
+</div>

@@ -1,5 +1,8 @@
-objc-avoid-nserror-init
-=======================
+clang-tidy - objc-avoid-nserror-init
+
+</div>
+
+# objc-avoid-nserror-init
 
 Finds improper initialization of `NSError` objects.
 

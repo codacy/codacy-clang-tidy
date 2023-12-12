@@ -1,14 +1,19 @@
-cert-dcl58-cpp
-==============
+clang-tidy - cert-dcl58-cpp
+
+</div>
+
+# cert-dcl58-cpp
 
 Modification of the `std` or `posix` namespace can result in undefined
 behavior. This check warns for such modifications.
 
 Examples:
 
-    namespace std {
-      int x; // May cause undefined behavior.
-    }
+``` c++
+namespace std {
+  int x; // May cause undefined behavior.
+}
+```
 
 This check corresponds to the CERT C++ Coding Standard rule [DCL58-CPP.
 Do not modify the standard

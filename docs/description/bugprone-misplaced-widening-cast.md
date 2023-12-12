@@ -1,5 +1,8 @@
-bugprone-misplaced-widening-cast
-================================
+clang-tidy - bugprone-misplaced-widening-cast
+
+</div>
+
+# bugprone-misplaced-widening-cast
 
 This check will warn when there is a cast of a calculation result to a
 bigger type. If the intention of the cast is to avoid loss of precision
@@ -8,9 +11,11 @@ Otherwise the cast is ineffective.
 
 Example code:
 
-    long f(int x) {
-        return (long)(x * 1000);
-    }
+``` c++
+long f(int x) {
+    return (long)(x * 1000);
+}
+```
 
 The result `x * 1000` is first calculated using `int` precision. If the
 result exceeds `int` precision there is loss of precision. Then the
@@ -22,34 +27,41 @@ explicitly cast to `int` instead.
 If you want to avoid loss of precision then put the cast in a proper
 location, for instance:
 
-    long f(int x) {
-        return (long)x * 1000;
-    }
+``` c++
+long f(int x) {
+    return (long)x * 1000;
+}
+```
 
-Implicit casts
---------------
+## Implicit casts
 
 Forgetting to place the cast at all is at least as dangerous and at
 least as common as misplacing it. If `CheckImplicitCasts` is enabled the
 check also detects these cases, for instance:
 
-    long f(int x) {
-        return x * 1000;
-    }
+``` c++
+long f(int x) {
+    return x * 1000;
+}
+```
 
-Floating point
---------------
+## Floating point
 
 Currently warnings are only written for integer conversion. No warning
 is written for this code:
 
-    double f(float x) {
-        return (double)(x * 10.0f);
-    }
+``` c++
+double f(float x) {
+    return (double)(x * 10.0f);
+}
+```
 
-Options
--------
+## Options
+
+<div class="option">
 
 CheckImplicitCasts
 
 If non-zero, enables detection of implicit casts. Default is non-zero.
+
+</div>

@@ -1,5 +1,8 @@
-cert-dcl21-cpp
-==============
+clang-tidy - cert-dcl21-cpp
+
+</div>
+
+# cert-dcl21-cpp
 
 This check flags postfix `operator++` and `operator--` declarations if
 the return type is not a const object. This also warns if the return

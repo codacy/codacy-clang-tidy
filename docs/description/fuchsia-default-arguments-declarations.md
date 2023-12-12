@@ -1,11 +1,16 @@
-fuchsia-default-arguments-declarations
-======================================
+clang-tidy - fuchsia-default-arguments-declarations
+
+</div>
+
+# fuchsia-default-arguments-declarations
 
 Warns if a function or method is declared with default parameters.
 
 For example, the declaration:
 
-    int foo(int value = 5) { return value; }
+``` c++
+int foo(int value = 5) { return value; }
+```
 
 will cause a warning.
 

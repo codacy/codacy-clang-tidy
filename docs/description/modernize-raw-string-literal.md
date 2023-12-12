@@ -1,30 +1,37 @@
-modernize-raw-string-literal
-============================
+clang-tidy - modernize-raw-string-literal
+
+</div>
+
+# modernize-raw-string-literal
 
 This check selectively replaces string literals containing escaped
 characters with raw string literals.
 
 Example:
 
-    const char *const Quotes{"embedded \"quotes\""};
-    const char *const Paragraph{"Line one.\nLine two.\nLine three.\n"};
-    const char *const SingleLine{"Single line.\n"};
-    const char *const TrailingSpace{"Look here -> \n"};
-    const char *const Tab{"One\tTwo\n"};
-    const char *const Bell{"Hello!\a  And welcome!"};
-    const char *const Path{"C:\\Program Files\\Vendor\\Application.exe"};
-    const char *const RegEx{"\\w\\([a-z]\\)"};
+``` c++
+const char *const Quotes{"embedded \"quotes\""};
+const char *const Paragraph{"Line one.\nLine two.\nLine three.\n"};
+const char *const SingleLine{"Single line.\n"};
+const char *const TrailingSpace{"Look here -> \n"};
+const char *const Tab{"One\tTwo\n"};
+const char *const Bell{"Hello!\a  And welcome!"};
+const char *const Path{"C:\\Program Files\\Vendor\\Application.exe"};
+const char *const RegEx{"\\w\\([a-z]\\)"};
+```
 
 becomes
 
-    const char *const Quotes{R"(embedded "quotes")"};
-    const char *const Paragraph{"Line one.\nLine two.\nLine three.\n"};
-    const char *const SingleLine{"Single line.\n"};
-    const char *const TrailingSpace{"Look here -> \n"};
-    const char *const Tab{"One\tTwo\n"};
-    const char *const Bell{"Hello!\a  And welcome!"};
-    const char *const Path{R"(C:\Program Files\Vendor\Application.exe)"};
-    const char *const RegEx{R"(\w\([a-z]\))"};
+``` c++
+const char *const Quotes{R"(embedded "quotes")"};
+const char *const Paragraph{"Line one.\nLine two.\nLine three.\n"};
+const char *const SingleLine{"Single line.\n"};
+const char *const TrailingSpace{"Look here -> \n"};
+const char *const Tab{"One\tTwo\n"};
+const char *const Bell{"Hello!\a  And welcome!"};
+const char *const Path{R"(C:\Program Files\Vendor\Application.exe)"};
+const char *const RegEx{R"(\w\([a-z]\))"};
+```
 
 The presence of any of the following escapes can cause the string to be
 converted to a raw string literal: `\\`, `\'`, `\"`, `\?`, and octal or

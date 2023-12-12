@@ -1,5 +1,8 @@
-darwin-dispatch-once-nonstatic
-==============================
+clang-tidy - darwin-dispatch-once-nonstatic
+
+</div>
+
+# darwin-dispatch-once-nonstatic
 
 Finds declarations of `dispatch_once_t` variables without static or
 global storage. The behavior of using `dispatch_once_t` predicates with
@@ -16,6 +19,6 @@ members of structs or classes, with the intent to lazily perform some
 expensive struct or class member initialization only once; however, this
 violates the libdispatch requirements.
 
-See the discussion section of [Apple's dispatch\_once
+See the discussion section of [Apple's dispatch_once
 documentation](https://developer.apple.com/documentation/dispatch/1447169-dispatch_once)
 for more information.

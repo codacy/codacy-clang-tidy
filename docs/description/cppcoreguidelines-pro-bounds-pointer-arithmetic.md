@@ -1,5 +1,8 @@
-cppcoreguidelines-pro-bounds-pointer-arithmetic
-===============================================
+clang-tidy - cppcoreguidelines-pro-bounds-pointer-arithmetic
+
+</div>
+
+# cppcoreguidelines-pro-bounds-pointer-arithmetic
 
 This check flags all usage of pointer arithmetic, because it could lead
 to an invalid pointer. Subtraction of two pointers is not flagged by

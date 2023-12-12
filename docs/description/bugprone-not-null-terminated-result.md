@@ -1,5 +1,8 @@
-bugprone-not-null-terminated-result
-===================================
+clang-tidy - bugprone-not-null-terminated-result
+
+</div>
+
+# bugprone-not-null-terminated-result
 
 Finds function calls where it is possible to cause a not null-terminated
 result. Usually the proper length of a string is `strlen(src) + 1` or
@@ -18,26 +21,29 @@ increase the passed third argument, which is `size_t length`. That is
 why the length of the allocated memory is not enough to hold the null
 terminator.
 
->     static char *stringCpy(const std::string &str) {
->       char *result = reinterpret_cast<char *>(malloc(str.size()));
->       memcpy(result, str.data(), str.size());
->       return result;
->     }
+> ``` c
+> static char *stringCpy(const std::string &str) {
+>   char *result = reinterpret_cast<char *>(malloc(str.size()));
+>   memcpy(result, str.data(), str.size());
+>   return result;
+> }
+> ```
 
 In addition to issuing warnings, fix-it rewrites all the necessary code.
 It also tries to adjust the capacity of the destination array:
 
->     static char *stringCpy(const std::string &str) {
->       char *result = reinterpret_cast<char *>(malloc(str.size() + 1));
->       strcpy(result, str.data());
->       return result;
->     }
+> ``` c
+> static char *stringCpy(const std::string &str) {
+>   char *result = reinterpret_cast<char *>(malloc(str.size() + 1));
+>   strcpy(result, str.data());
+>   return result;
+> }
+> ```
 
 Note: It cannot guarantee to rewrite every of the path-sensitive memory  
 allocations.
 
-Transformation rules of 'memcpy()'
-----------------------------------
+## Transformation rules of 'memcpy()'
 
 It is possible to rewrite the `memcpy()` and `memcpy_s()` calls as the
 following four functions: `strcpy()`, `strncpy()`, `strcpy_s()`,
@@ -47,36 +53,33 @@ respectively.
 
 ### Rewrite based on the destination array
 
--   If copy to the destination array cannot overflow \[1\] the new
-    function should be the older copy function (ending with `cpy`),
-    because it is more efficient than the safe version.
--   If copy to the destination array can overflow \[1\] and
-    `AreSafeFunctionsAvailable` is set to `Yes`, `y` or non-zero and it
-    is possible to obtain the capacity of the destination array then the
-    new function could be the safe version (ending with `cpy_s`).
--   If the new function is could be safe version and C++ files are
-    analysed and the destination array is plain `char`/`wchar_t` without
-    `un/signed` then the length of the destination array can be omitted.
--   If the new function is could be safe version and the destination
-    array is `un/signed` it needs to be casted to plain
-    `char *`/`wchar_t *`.
+- If copy to the destination array cannot overflow \[1\] the new
+  function should be the older copy function (ending with `cpy`),
+  because it is more efficient than the safe version.
+- If copy to the destination array can overflow \[1\] and
+  `AreSafeFunctionsAvailable` is set to `Yes`, `y` or non-zero and it is
+  possible to obtain the capacity of the destination array then the new
+  function could be the safe version (ending with `cpy_s`).
+- If the new function is could be safe version and C++ files are
+  analysed and the destination array is plain `char`/`wchar_t` without
+  `un/signed` then the length of the destination array can be omitted.
+- If the new function is could be safe version and the destination array
+  is `un/signed` it needs to be casted to plain `char *`/`wchar_t *`.
 
 \[1\] It is possible to overflow:  
--   If the capacity of the destination array is unknown.
--   If the given length is equal to the destination array's capacity.
+- If the capacity of the destination array is unknown.
+- If the given length is equal to the destination array's capacity.
 
 ### Rewrite based on the length of the source string
 
--   If the given length is `strlen(source)` or equal length of this
-    expression then the new function should be the older copy function
-    (ending with `cpy`), as it is more efficient than the safe version
-    (ending with `cpy_s`).
--   Otherwise we assume that the programmer wanted to copy 'N'
-    characters, so the new function is `ncpy`-like which copies 'N'
-    characters.
+- If the given length is `strlen(source)` or equal length of this
+  expression then the new function should be the older copy function
+  (ending with `cpy`), as it is more efficient than the safe version
+  (ending with `cpy_s`).
+- Otherwise we assume that the programmer wanted to copy 'N' characters,
+  so the new function is `ncpy`-like which copies 'N' characters.
 
-Transformations with 'strlen()' or equal length of this expression
-------------------------------------------------------------------
+## Transformations with 'strlen()' or equal length of this expression
 
 It transforms the `wchar_t` based memory and string handler functions
 respectively (where only `strerror_s` does not have `wchar_t` based
@@ -108,12 +111,15 @@ length is incremented by one.
 
 `strxfrm` The given length is incremented by one.
 
-Options
--------
+## Options
+
+<div class="option">
 
 WantToUseSafeFunctions
 
 An integer non-zero value specifying if the target environment is
 considered to implement '\_s' suffixed memory and string handler
-functions which are safer than older versions (e.g. 'memcpy\_s()'). The
+functions which are safer than older versions (e.g. 'memcpy_s()'). The
 default value is `1`.
+
+</div>

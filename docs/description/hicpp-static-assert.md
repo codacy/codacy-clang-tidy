@@ -1,5 +1,12 @@
-hicpp-static-assert
-===================
+clang-tidy - hicpp-static-assert
+
+</div>
+
+<div class="meta" http-equiv=refresh="5;URL=misc-static-assert.html">
+
+</div>
+
+# hicpp-static-assert
 
 The <span class="title-ref">hicpp-static-assert</span> check is an
 alias, please see [misc-static-assert](https://clang.llvm.org/extra/clang-tidy/checks/misc-static-assert.html) for more

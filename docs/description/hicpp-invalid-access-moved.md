@@ -1,5 +1,13 @@
-hicpp-invalid-access-moved
-==========================
+clang-tidy - hicpp-invalid-access-moved
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=bugprone-use-after-move.html">
+
+</div>
+
+# hicpp-invalid-access-moved
 
 This check is an alias for
 [bugprone-use-after-move](https://clang.llvm.org/extra/clang-tidy/checks/bugprone-use-after-move.html).

@@ -1,5 +1,8 @@
-cert-mem57-cpp
-==============
+clang-tidy - cert-mem57-cpp
+
+</div>
+
+# cert-mem57-cpp
 
 This check flags uses of default `operator new` where the type has
 extended alignment (an alignment greater than the fundamental

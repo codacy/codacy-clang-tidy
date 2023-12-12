@@ -1,5 +1,8 @@
-readability-simplify-boolean-expr
-=================================
+clang-tidy - readability-simplify-boolean-expr
+
+</div>
+
+# readability-simplify-boolean-expr
 
 Looks for boolean expressions involving boolean constants and simplifies
 them to use the appropriate boolean expression directly.
@@ -157,17 +160,24 @@ Examples:
     `if (x) return true; return false;` becomes
     `return static_cast<bool>(x);`
 
-Options
--------
+## Options
+
+<div class="option">
 
 ChainedConditionalReturn
 
 If non-zero, conditional boolean return statements at the end of an
-`if/else if` chain will be transformed. Default is <span
-class="title-ref">0</span>.
+`if/else if` chain will be transformed. Default is
+<span class="title-ref">0</span>.
+
+</div>
+
+<div class="option">
 
 ChainedConditionalAssignment
 
 If non-zero, conditional boolean assignments at the end of an
-`if/else if` chain will be transformed. Default is <span
-class="title-ref">0</span>.
+`if/else if` chain will be transformed. Default is
+<span class="title-ref">0</span>.
+
+</div>

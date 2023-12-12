@@ -1,5 +1,13 @@
-google-readability-braces-around-statements
-===========================================
+clang-tidy - google-readability-braces-around-statements
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=readability-braces-around-statements.html">
+
+</div>
+
+# google-readability-braces-around-statements
 
 The google-readability-braces-around-statements check is an alias,
 please see

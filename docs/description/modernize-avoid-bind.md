@@ -1,5 +1,8 @@
-modernize-avoid-bind
-====================
+clang-tidy - modernize-avoid-bind
+
+</div>
+
+# modernize-avoid-bind
 
 The check finds uses of `std::bind` and `boost::bind` and replaces them
 with lambdas. Lambdas will use value-capture unless reference capture is
@@ -13,28 +16,35 @@ same placeholder is specified multiple times in the parameter list.
 
 Given:
 
-    int add(int x, int y) { return x + y; }
+``` c++
+int add(int x, int y) { return x + y; }
+```
 
 Then:
 
-    void f() {
-      int x = 2;
-      auto clj = std::bind(add, x, _1);
-    }
+``` c++
+void f() {
+  int x = 2;
+  auto clj = std::bind(add, x, _1);
+}
+```
 
 is replaced by:
 
-    void f() {
-      int x = 2;
-      auto clj = [=](auto && arg1) { return add(x, arg1); };
-    }
+``` c++
+void f() {
+  int x = 2;
+  auto clj = [=](auto && arg1) { return add(x, arg1); };
+}
+```
 
 `std::bind` can be hard to read and can result in larger object files
 and binaries due to type information that will not be produced by
 equivalent lambdas.
 
-Options
--------
+## Options
+
+<div class="option">
 
 PermissiveParameterList
 
@@ -45,31 +55,39 @@ where the result of the `bind` is used in the context of a type erased
 functor such as `std::function` which allows mismatched arguments. For
 example:
 
-    int add(int x, int y) { return x + y; }
-    int foo() {
-      std::function<int(int,int)> ignore_args = std::bind(add, 2, 2);
-      return ignore_args(3, 3);
-    }
+</div>
+
+``` c++
+int add(int x, int y) { return x + y; }
+int foo() {
+  std::function<int(int,int)> ignore_args = std::bind(add, 2, 2);
+  return ignore_args(3, 3);
+}
+```
 
 is valid code, and returns <span class="title-ref">4</span>. The actual
 values passed to `ignore_args` are simply ignored. Without
 `PermissiveParameterList`, this would be transformed into
 
-    int add(int x, int y) { return x + y; }
-    int foo() {
-      std::function<int(int,int)> ignore_args = [] { return add(2, 2); }
-      return ignore_args(3, 3);
-    }
+``` c++
+int add(int x, int y) { return x + y; }
+int foo() {
+  std::function<int(int,int)> ignore_args = [] { return add(2, 2); }
+  return ignore_args(3, 3);
+}
+```
 
 which will *not* compile, since the lambda does not contain an
 `operator()` that that accepts 2 arguments. With permissive parameter
 list, it instead generates
 
-    int add(int x, int y) { return x + y; }
-    int foo() {
-      std::function<int(int,int)> ignore_args = [](auto&&...) { return add(2, 2); }
-      return ignore_args(3, 3);
-    }
+``` c++
+int add(int x, int y) { return x + y; }
+int foo() {
+  std::function<int(int,int)> ignore_args = [](auto&&...) { return add(2, 2); }
+  return ignore_args(3, 3);
+}
+```
 
 which is correct.
 

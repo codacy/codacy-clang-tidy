@@ -1,5 +1,8 @@
-bugprone-inaccurate-erase
-=========================
+clang-tidy - bugprone-inaccurate-erase
+
+</div>
+
+# bugprone-inaccurate-erase
 
 Checks for inaccurate use of the `erase()` method.
 
@@ -11,12 +14,16 @@ removed due to using an inappropriate overload.
 
 For example, the following code erases only one element:
 
-    std::vector<int> xs;
-    ...
-    xs.erase(std::remove(xs.begin(), xs.end(), 10));
+``` c++
+std::vector<int> xs;
+...
+xs.erase(std::remove(xs.begin(), xs.end(), 10));
+```
 
 Call the two-argument overload of `erase()` to remove the subrange:
 
-    std::vector<int> xs;
-    ...
-    xs.erase(std::remove(xs.begin(), xs.end(), 10), xs.end());
+``` c++
+std::vector<int> xs;
+...
+xs.erase(std::remove(xs.begin(), xs.end(), 10), xs.end());
+```

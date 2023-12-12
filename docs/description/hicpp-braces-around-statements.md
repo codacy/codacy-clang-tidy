@@ -1,5 +1,13 @@
-hicpp-braces-around-statements
-==============================
+clang-tidy - hicpp-braces-around-statements
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=readability-braces-around-statements.html">
+
+</div>
+
+# hicpp-braces-around-statements
 
 The <span class="title-ref">hicpp-braces-around-statements</span> check
 is an alias, please see
