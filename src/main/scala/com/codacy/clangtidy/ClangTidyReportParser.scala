@@ -5,7 +5,7 @@ import java.nio.file.{Path, Paths}
 object ClangTidyReportParser {
 
   private val ResultRegex =
-    "(.+|[a-zA-Z]:\\\\.+):([0-9]+):([0-9]+): ([^:]+): (.+) \\[(.+?)\\]".r
+    raw"((?>[[:alpha:]]:\\)?[^:]+):(\d+):(\d+):\s?([^:]+)\s?:\s?(.+)\s\[([^\]]+)\]".r
 
   def parse(lines: Seq[String], relativizeTo: Path): Seq[ClangTidyResult] = {
     lines.flatMap {

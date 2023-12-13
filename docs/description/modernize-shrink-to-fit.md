@@ -1,5 +1,8 @@
-modernize-shrink-to-fit
-=======================
+clang-tidy - modernize-shrink-to-fit
+
+</div>
+
+# modernize-shrink-to-fit
 
 Replace copy and swap tricks on shrinkable containers with the
 `shrink_to_fit()` method call.

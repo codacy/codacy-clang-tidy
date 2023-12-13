@@ -1,5 +1,8 @@
-google-upgrade-googletest-case
-==============================
+clang-tidy - google-upgrade-googletest-case
+
+</div>
+
+# google-upgrade-googletest-case
 
 Finds uses of deprecated Google Test version 1.9 APIs with names
 containing `case` and replaces them with equivalent APIs with `suite`.
@@ -14,32 +17,36 @@ then use this check to remove deprecated names.
 
 The affected APIs are:
 
--   Member functions of `testing::Test`, `testing::TestInfo`,
-    `testing::TestEventListener`, `testing::UnitTest`, and any type
-    inheriting from these types
--   The macros `TYPED_TEST_CASE`, `TYPED_TEST_CASE_P`,
-    `REGISTER_TYPED_TEST_CASE_P`, and `INSTANTIATE_TYPED_TEST_CASE_P`
--   The type alias `testing::TestCase`
+- Member functions of `testing::Test`, `testing::TestInfo`,
+  `testing::TestEventListener`, `testing::UnitTest`, and any type
+  inheriting from these types
+- The macros `TYPED_TEST_CASE`, `TYPED_TEST_CASE_P`,
+  `REGISTER_TYPED_TEST_CASE_P`, and `INSTANTIATE_TYPED_TEST_CASE_P`
+- The type alias `testing::TestCase`
 
 Examples of fixes created by this check:
 
-    class FooTest : public testing::Test {
-    public:
-      static void SetUpTestCase();
-      static void TearDownTestCase();
-    };
+``` c++
+class FooTest : public testing::Test {
+public:
+  static void SetUpTestCase();
+  static void TearDownTestCase();
+};
 
-    TYPED_TEST_CASE(BarTest, BarTypes);
+TYPED_TEST_CASE(BarTest, BarTypes);
+```
 
 becomes
 
-    class FooTest : public testing::Test {
-    public:
-      static void SetUpTestSuite();
-      static void TearDownTestSuite();
-    };
+``` c++
+class FooTest : public testing::Test {
+public:
+  static void SetUpTestSuite();
+  static void TearDownTestSuite();
+};
 
-    TYPED_TEST_SUITE(BarTest, BarTypes);
+TYPED_TEST_SUITE(BarTest, BarTypes);
+```
 
 For better consistency of user code, the check renames both virtual and
 non-virtual member functions with matching names in derived types. The

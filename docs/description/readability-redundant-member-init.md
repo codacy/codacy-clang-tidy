@@ -1,23 +1,28 @@
-readability-redundant-member-init
-=================================
+clang-tidy - readability-redundant-member-init
+
+</div>
+
+# readability-redundant-member-init
 
 Finds member initializations that are unnecessary because the same
 default constructor would be called if they were not present.
 
-Example
--------
+## Example
 
-    // Explicitly initializing the member s is unnecessary.
-    class Foo {
-    public:
-      Foo() : s() {}
+``` c++
+// Explicitly initializing the member s is unnecessary.
+class Foo {
+public:
+  Foo() : s() {}
 
-    private:
-      std::string s;
-    };
+private:
+  std::string s;
+};
+```
 
-Options
--------
+## Options
+
+<div class="option">
 
 IgnoreBaseInCopyConstructors
 
@@ -31,9 +36,13 @@ issues warning or error
 `base class 'Bar' should be explicitly initialized in the copy constructor`
 if `Bar()` were removed in the following example:
 
-    // Explicitly initializing member s and base class Bar is unnecessary.
-    struct Foo : public Bar {
-      // Remove s() below. If IgnoreBaseInCopyConstructors!=0, keep Bar().
-      Foo(const Foo& foo) : Bar(), s() {}
-      std::string s;
-    };
+</div>
+
+``` c++
+// Explicitly initializing member s and base class Bar is unnecessary.
+struct Foo : public Bar {
+  // Remove s() below. If IgnoreBaseInCopyConstructors!=0, keep Bar().
+  Foo(const Foo& foo) : Bar(), s() {}
+  std::string s;
+};
+```

@@ -1,5 +1,8 @@
-cert-err60-cpp
-==============
+clang-tidy - cert-err60-cpp
+
+</div>
+
+# cert-err60-cpp
 
 This check flags all throw expressions where the exception object is not
 nothrow copy constructible.

@@ -1,5 +1,13 @@
-clang-analyzer-unix.cstring.NullArg
-===================================
+clang-tidy - clang-analyzer-unix.cstring.NullArg
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=https://clang.llvm.org/docs/analyzer/checkers.html#unix-cstring-nullarg">
+
+</div>
+
+# clang-analyzer-unix.cstring.NullArg
 
 The clang-analyzer-unix.cstring.NullArg check is an alias, please see
 [Clang Static Analyzer Available

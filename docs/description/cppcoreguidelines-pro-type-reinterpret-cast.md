@@ -1,5 +1,8 @@
-cppcoreguidelines-pro-type-reinterpret-cast
-===========================================
+clang-tidy - cppcoreguidelines-pro-type-reinterpret-cast
+
+</div>
+
+# cppcoreguidelines-pro-type-reinterpret-cast
 
 This check flags all uses of `reinterpret_cast` in C++ code.
 

@@ -1,22 +1,28 @@
-bugprone-argument-comment
-=========================
+clang-tidy - bugprone-argument-comment
+
+</div>
+
+# bugprone-argument-comment
 
 Checks that argument comments match parameter names.
 
 The check understands argument comments in the form
 `/*parameter_name=*/` that are placed right before the argument.
 
-    void f(bool foo);
+``` c++
+void f(bool foo);
 
-    ...
+...
 
-    f(/*bar=*/true);
-    // warning: argument name 'bar' in comment does not match parameter name 'foo'
+f(/*bar=*/true);
+// warning: argument name 'bar' in comment does not match parameter name 'foo'
+```
 
 The check tries to detect typos and suggest automated fixes for them.
 
-Options
--------
+## Options
+
+<div class="option">
 
 StrictMode
 
@@ -24,132 +30,194 @@ When zero (default value), the check will ignore leading and trailing
 underscores and case when comparing names -- otherwise they are taken
 into account.
 
+</div>
+
+<div class="option">
+
 IgnoreSingleArgument When true, the check will ignore the single
 argument.
+
+</div>
+
+<div class="option">
 
 CommentBoolLiterals
 
 When true, the check will add argument comments in the format
 `/*ParameterName=*/` right before the boolean literal argument.
 
+</div>
+
 Before:
 
-    void foo(bool TurnKey, bool PressButton);
+``` c++
+void foo(bool TurnKey, bool PressButton);
 
-    foo(true, false);
+foo(true, false);
+```
 
 After:
 
-    void foo(bool TurnKey, bool PressButton);
+``` c++
+void foo(bool TurnKey, bool PressButton);
 
-    foo(/*TurnKey=*/true, /*PressButton=*/false);
+foo(/*TurnKey=*/true, /*PressButton=*/false);
+```
+
+<div class="option">
 
 CommentIntegerLiterals
 
 When true, the check will add argument comments in the format
 `/*ParameterName=*/` right before the integer literal argument.
 
+</div>
+
 Before:
 
-    void foo(int MeaningOfLife);
+``` c++
+void foo(int MeaningOfLife);
 
-    foo(42);
+foo(42);
+```
 
 After:
 
-    void foo(int MeaningOfLife);
+``` c++
+void foo(int MeaningOfLife);
 
-    foo(/*MeaningOfLife=*/42);
+foo(/*MeaningOfLife=*/42);
+```
+
+<div class="option">
 
 CommentFloatLiterals
 
 When true, the check will add argument comments in the format
 `/*ParameterName=*/` right before the float/double literal argument.
 
+</div>
+
 Before:
 
-    void foo(float Pi);
+``` c++
+void foo(float Pi);
 
-    foo(3.14159);
+foo(3.14159);
+```
 
 After:
 
-    void foo(float Pi);
+``` c++
+void foo(float Pi);
 
-    foo(/*Pi=*/3.14159);
+foo(/*Pi=*/3.14159);
+```
+
+<div class="option">
 
 CommentStringLiterals
 
 When true, the check will add argument comments in the format
 `/*ParameterName=*/` right before the string literal argument.
 
+</div>
+
 Before:
 
-    void foo(const char *String);
-    void foo(const wchar_t *WideString);
+``` c++
+void foo(const char *String);
+void foo(const wchar_t *WideString);
 
-    foo("Hello World");
-    foo(L"Hello World");
+foo("Hello World");
+foo(L"Hello World");
+```
 
 After:
 
-    void foo(const char *String);
-    void foo(const wchar_t *WideString);
+``` c++
+void foo(const char *String);
+void foo(const wchar_t *WideString);
 
-    foo(/*String=*/"Hello World");
-    foo(/*WideString=*/L"Hello World");
+foo(/*String=*/"Hello World");
+foo(/*WideString=*/L"Hello World");
+```
+
+<div class="option">
 
 CommentCharacterLiterals
 
 When true, the check will add argument comments in the format
 `/*ParameterName=*/` right before the character literal argument.
 
+</div>
+
 Before:
 
-    void foo(char *Character);
+``` c++
+void foo(char *Character);
 
-    foo('A');
+foo('A');
+```
 
 After:
 
-    void foo(char *Character);
+``` c++
+void foo(char *Character);
 
-    foo(/*Character=*/'A');
+foo(/*Character=*/'A');
+```
+
+<div class="option">
 
 CommentUserDefinedLiterals
 
 When true, the check will add argument comments in the format
 `/*ParameterName=*/` right before the user defined literal argument.
 
+</div>
+
 Before:
 
-    void foo(double Distance);
+``` c++
+void foo(double Distance);
 
-    double operator"" _km(long double);
+double operator"" _km(long double);
 
-    foo(402.0_km);
+foo(402.0_km);
+```
 
 After:
 
-    void foo(double Distance);
+``` c++
+void foo(double Distance);
 
-    double operator"" _km(long double);
+double operator"" _km(long double);
 
-    foo(/*Distance=*/402.0_km);
+foo(/*Distance=*/402.0_km);
+```
+
+<div class="option">
 
 CommentNullPtrs
 
 When true, the check will add argument comments in the format
 `/*ParameterName=*/` right before the nullptr literal argument.
 
+</div>
+
 Before:
 
-    void foo(A* Value);
+``` c++
+void foo(A* Value);
 
-    foo(nullptr);
+foo(nullptr);
+```
 
 After:
 
-    void foo(A* Value);
+``` c++
+void foo(A* Value);
 
-    foo(/*Value=*/nullptr);
+foo(/*Value=*/nullptr);
+```

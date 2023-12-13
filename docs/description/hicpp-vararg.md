@@ -1,5 +1,13 @@
-hicpp-vararg
-============
+clang-tidy - hicpp-vararg
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=cppcoreguidelines-pro-type-vararg.html">
+
+</div>
+
+# hicpp-vararg
 
 The <span class="title-ref">hicpp-vararg</span> check is an alias,
 please see

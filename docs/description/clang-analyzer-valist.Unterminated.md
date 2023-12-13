@@ -1,4 +1,7 @@
-clang-analyzer-valist.Unterminated
-==================================
+clang-tidy - clang-analyzer-valist.Unterminated
 
-Check for va\_lists which are not released by a va\_end call.
+</div>
+
+# clang-analyzer-valist.Unterminated
+
+Check for va_lists which are not released by a va_end call.

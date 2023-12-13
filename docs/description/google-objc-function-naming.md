@@ -1,5 +1,8 @@
-google-objc-function-naming
-===========================
+clang-tidy - google-objc-function-naming
+
+</div>
+
+# google-objc-function-naming
 
 Finds function declarations in Objective-C files that do not follow the
 pattern described in the Google Objective-C Style Guide.
@@ -12,10 +15,14 @@ class is not static should have an appropriate prefix.
 
 The following code sample does not follow this pattern:
 
-    static bool is_positive(int i) { return i > 0; }
-    bool IsNegative(int i) { return i < 0; }
+``` objc
+static bool is_positive(int i) { return i > 0; }
+bool IsNegative(int i) { return i < 0; }
+```
 
 The sample above might be corrected to the following code:
 
-    static bool IsPositive(int i) { return i > 0; }
-    bool *ABCIsNegative(int i) { return i < 0; }
+``` objc
+static bool IsPositive(int i) { return i > 0; }
+bool *ABCIsNegative(int i) { return i < 0; }
+```

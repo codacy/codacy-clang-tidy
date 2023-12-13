@@ -1,5 +1,8 @@
-bugprone-suspicious-memset-usage
-================================
+clang-tidy - bugprone-suspicious-memset-usage
+
+</div>
+
+# bugprone-suspicious-memset-usage
 
 This check finds `memset()` calls with potential mistakes in their
 arguments. Considering the function as
@@ -29,22 +32,24 @@ Corresponding cpplint.py check name: `runtime/memset`.
 
 Examples:
 
-    void foo() {
-      int i[5] = {1, 2, 3, 4, 5};
-      int *ip = i;
-      char c = '1';
-      char *cp = &c;
-      int v = 0;
+``` c++
+void foo() {
+  int i[5] = {1, 2, 3, 4, 5};
+  int *ip = i;
+  char c = '1';
+  char *cp = &c;
+  int v = 0;
 
-      // Case 1
-      memset(ip, '0', 1); // suspicious
-      memset(cp, '0', 1); // OK
+  // Case 1
+  memset(ip, '0', 1); // suspicious
+  memset(cp, '0', 1); // OK
 
-      // Case 2
-      memset(ip, 0xabcd, 1); // fill value gets truncated
-      memset(ip, 0x00, 1);   // OK
+  // Case 2
+  memset(ip, 0xabcd, 1); // fill value gets truncated
+  memset(ip, 0x00, 1);   // OK
 
-      // Case 3
-      memset(ip, sizeof(int), v); // zero length, potentially swapped
-      memset(ip, 0, 1);           // OK
-    }
+  // Case 3
+  memset(ip, sizeof(int), v); // zero length, potentially swapped
+  memset(ip, 0, 1);           // OK
+}
+```

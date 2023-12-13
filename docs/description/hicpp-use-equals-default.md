@@ -1,5 +1,13 @@
-hicpp-use-equals-default
-========================
+clang-tidy - hicpp-use-equals-defaults
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=modernize-use-equals-default.html">
+
+</div>
+
+# hicpp-use-equals-default
 
 This check is an alias for
 [modernize-use-equals-default](https://clang.llvm.org/extra/clang-tidy/checks/modernize-use-equals-default.html).

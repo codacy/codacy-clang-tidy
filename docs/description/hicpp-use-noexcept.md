@@ -1,5 +1,13 @@
-hicpp-use-noexcept
-==================
+clang-tidy - hicpp-use-noexcept
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=modernize-use-noexcept.html">
+
+</div>
+
+# hicpp-use-noexcept
 
 The <span class="title-ref">hicpp-use-noexcept</span> check is an alias,
 please see [modernize-use-noexcept](https://clang.llvm.org/extra/clang-tidy/checks/modernize-use-noexcept.html) for

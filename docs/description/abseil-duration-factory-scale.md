@@ -1,5 +1,8 @@
-abseil-duration-factory-scale
-=============================
+clang-tidy - abseil-duration-factory-scale
+
+</div>
+
+# abseil-duration-factory-scale
 
 Checks for cases where arguments to `absl::Duration` factory functions
 are scaled internally and could be changed to a different factory
@@ -8,24 +11,26 @@ suggests using `absl::ZeroDuration()` instead.
 
 Examples:
 
-    // Original - Internal multiplication.
-    int x;
-    absl::Duration d = absl::Seconds(60 * x);
+``` c++
+// Original - Internal multiplication.
+int x;
+absl::Duration d = absl::Seconds(60 * x);
 
-    // Suggested - Use absl::Minutes instead.
-    absl::Duration d = absl::Minutes(x);
-
-
-    // Original - Internal division.
-    int y;
-    absl::Duration d = absl::Milliseconds(y / 1000.);
-
-    // Suggested - Use absl:::Seconds instead.
-    absl::Duration d = absl::Seconds(y);
+// Suggested - Use absl::Minutes instead.
+absl::Duration d = absl::Minutes(x);
 
 
-    // Original - Zero-value argument.
-    absl::Duration d = absl::Hours(0);
+// Original - Internal division.
+int y;
+absl::Duration d = absl::Milliseconds(y / 1000.);
 
-    // Suggested = Use absl::ZeroDuration instead
-    absl::Duration d = absl::ZeroDuration();
+// Suggested - Use absl:::Seconds instead.
+absl::Duration d = absl::Seconds(y);
+
+
+// Original - Zero-value argument.
+absl::Duration d = absl::Hours(0);
+
+// Suggested = Use absl::ZeroDuration instead
+absl::Duration d = absl::ZeroDuration();
+```

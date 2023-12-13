@@ -1,5 +1,8 @@
-google-global-names-in-headers
-==============================
+clang-tidy - google-global-names-in-headers
+
+</div>
+
+# google-global-names-in-headers
 
 Flag global namespace pollution in header files. Right now it only
 triggers on `using` declarations and directives.
@@ -7,8 +10,9 @@ triggers on `using` declarations and directives.
 The relevant style guide section is
 <https://google.github.io/styleguide/cppguide.html#Namespaces>.
 
-Options
--------
+## Options
+
+<div class="option">
 
 HeaderFileExtensions
 
@@ -17,3 +21,5 @@ filename extensions should not contain "." prefix). Default is "h". For
 header files without an extension, use an empty string (if there are no
 other desired extensions) or leave an empty element in the list. e.g.,
 "h,hh,hpp,hxx," (note the trailing comma).
+
+</div>

@@ -1,5 +1,8 @@
-cert-env33-c
-============
+clang-tidy - cert-env33-c
+
+</div>
+
+# cert-env33-c
 
 This check flags calls to `system()`, `popen()`, and `_popen()`, which
 execute a command processor. It does not flag calls to `system()` with a

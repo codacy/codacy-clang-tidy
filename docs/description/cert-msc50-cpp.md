@@ -1,5 +1,8 @@
-cert-msc50-cpp
-==============
+clang-tidy - cert-msc50-cpp
+
+</div>
+
+# cert-msc50-cpp
 
 Pseudorandom number generators use mathematical algorithms to produce a
 sequence of numbers with good statistical properties, but the numbers

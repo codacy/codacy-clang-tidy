@@ -1,5 +1,8 @@
-performance-no-automatic-move
-=============================
+clang-tidy - performance-no-automatic-move
+
+</div>
+
+# performance-no-automatic-move
 
 Finds local variables that cannot be automatically moved due to
 constness.
@@ -12,22 +15,23 @@ prevents the move.
 
 Example [\[1\]](https://godbolt.org/z/x7SYYA):
 
-    StatusOr<std::vector<int>> Cool() {
-      std::vector<int> obj = ...;
-      return obj;  // calls StatusOr::StatusOr(std::vector<int>&&)
-    }
+``` c++
+StatusOr<std::vector<int>> Cool() {
+  std::vector<int> obj = ...;
+  return obj;  // calls StatusOr::StatusOr(std::vector<int>&&)
+}
 
-    StatusOr<std::vector<int>> NotCool() {
-      const std::vector<int> obj = ...;
-      return obj;  // calls `StatusOr::StatusOr(const std::vector<int>&)`
-    }
+StatusOr<std::vector<int>> NotCool() {
+  const std::vector<int> obj = ...;
+  return obj;  // calls `StatusOr::StatusOr(const std::vector<int>&)`
+}
+```
 
 The former version (`Cool`) should be preferred over the latter
 (`Uncool`) as it will avoid allocations and potentially large memory
 copies.
 
-Semantics
----------
+## Semantics
 
 In the example above, `StatusOr::StatusOr(T&&)` have the same semantics
 as long as the copy and move constructors for `T` have the same
@@ -36,16 +40,17 @@ semantics. Note that there is no guarantee that `S::S(T&&)` and
 not providing automated fixes for this check, and judgement should be
 exerted when making the suggested changes.
 
--Wreturn-std-move
------------------
+## -Wreturn-std-move
 
 Another case where the move cannot happen is the following:
 
-    StatusOr<std::vector<int>> Uncool() {
-      std::vector<int>&& obj = ...;
-      return obj;  // calls `StatusOr::StatusOr(const std::vector<int>&)`
-    }
+``` c++
+StatusOr<std::vector<int>> Uncool() {
+  std::vector<int>&& obj = ...;
+  return obj;  // calls `StatusOr::StatusOr(const std::vector<int>&)`
+}
+```
 
-In that case the fix is more consensual: just <span
-class="title-ref">return std::move(obj)</span>. This is handled by the
-<span class="title-ref">-Wreturn-std-move</span> warning.
+In that case the fix is more consensual: just
+<span class="title-ref">return std::move(obj)</span>. This is handled by
+the <span class="title-ref">-Wreturn-std-move</span> warning.

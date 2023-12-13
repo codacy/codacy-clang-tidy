@@ -1,12 +1,17 @@
-bugprone-move-forwarding-reference
-==================================
+clang-tidy - bugprone-move-forwarding-reference
+
+</div>
+
+# bugprone-move-forwarding-reference
 
 Warns if `std::move` is called on a forwarding reference, for example:
 
-    template <typename T>
-    void foo(T&& t) {
-      bar(std::move(t));
-    }
+``` c++
+template <typename T>
+void foo(T&& t) {
+  bar(std::move(t));
+}
+```
 
 [Forwarding
 references](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4164.pdf)
@@ -18,18 +23,21 @@ deduced function template argument.)
 
 In this example, the suggested fix would be
 
-    bar(std::forward<T>(t));
+``` c++
+bar(std::forward<T>(t));
+```
 
-Background
-----------
+## Background
 
 Code like the example above is sometimes written with the expectation
 that `T&&` will always end up being an rvalue reference, no matter what
 type is deduced for `T`, and that it is therefore not possible to pass
 an lvalue to `foo()`. However, this is not true. Consider this example:
 
-    std::string s = "Hello, world";
-    foo(s);
+``` c++
+std::string s = "Hello, world";
+foo(s);
+```
 
 This code compiles and, after the call to `foo()`, `s` is left in an
 indeterminate state because it has been moved from. This may be
