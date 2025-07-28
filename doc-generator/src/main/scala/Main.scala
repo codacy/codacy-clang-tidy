@@ -3,14 +3,13 @@ import com.codacy.plugins.api.results.Result.Level
 import com.codacy.plugins.api.results.{Pattern, Tool}
 
 import play.api.libs.json.Json
-import scala.sys.process._
 import better.files.Dsl._
 
 import scala.sys.process._
 
 object Main extends App {
 
-  val llvmVersion = "10.0.1"
+  val llvmVersion = "20.1.8"
 
   val toolName = "clang-tidy"
 
@@ -55,6 +54,7 @@ object Main extends App {
       val linkToClangTidy =
         if (link.matches("https?:\\/\\/.+")) link
         else s"https://clang.llvm.org/extra/clang-tidy/checks/${link.stripPrefix("/")}"
+      
       val linkEscaped = linkToClangTidy.replaceAllLiterally(" ", "").trim
       val nameEscaped = name.trim
       s"[$nameEscaped]($linkEscaped)"
@@ -63,7 +63,7 @@ object Main extends App {
 
   val patternsWithDocs: Seq[(String, String)] = {
     val iterator = for {
-      file <- (clangExtraDir / "docs" / "clang-tidy" / "checks").children
+      file <- (clangExtraDir / "docs" / "clang-tidy" / "checks").listRecursively
       patternId = file.nameWithoutExtension(includeAll = false)
       if file.extension.exists(_ == ".rst") && file.nameWithoutExtension != "list"
       markdownFile = Seq("pandoc", "-t", "commonmark", file.pathAsString).!!
@@ -71,6 +71,8 @@ object Main extends App {
       withRepoLinks = fixRepoLinks(content)
     } yield (patternId, withRepoLinks)
     iterator.toSeq
+
+    
   }
 
   def categoryFromPatternId(patternId: String): (Pattern.Category, Option[Subcategory]) = patternId match {
@@ -114,7 +116,6 @@ object Main extends App {
       val (category, subcategory) = categoryFromPatternId(patternId)
       Pattern.Specification(Pattern.Id(patternId), level, category, subcategory, Set.empty)
   }
-
   val specification = Tool.Specification(Tool.Name(toolName), Some(Tool.Version(llvmVersion)), patterns.toSet)
 
   def removeHtmlTags(s: String): String = {

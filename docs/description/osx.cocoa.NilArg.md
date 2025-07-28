@@ -1,0 +1,17 @@
+clang-tidy - clang-analyzer-osx.cocoa.NilArg
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=https://clang.llvm.org/docs/analyzer/checkers.html#osx-cocoa-nilarg">
+
+</div>
+
+# clang-analyzer-osx.cocoa.NilArg
+
+Check for prohibited nil arguments to ObjC method calls.
+
+The <span class="title-ref">clang-analyzer-osx.cocoa.NilArg</span> check
+is an alias, please see [Clang Static Analyzer Available
+Checkers](https://clang.llvm.org/docs/analyzer/checkers.html#osx-cocoa-nilarg)
+for more information.

@@ -1,6 +1,6 @@
 import Dependencies._
 
-ThisBuild / scalaVersion := "2.13.1"
+ThisBuild / scalaVersion := "2.13.10"
 ThisBuild / organization := "com.codacy"
 ThisBuild / organizationName := "codacy"
 
@@ -8,9 +8,9 @@ lazy val root = (project in file("."))
   .enablePlugins(NativeImagePlugin)
   .settings(
     name := "codacy-clang-tidy",
-    libraryDependencies ++= Seq(codacyCliModel, "com.github.scopt" %% "scopt" % "3.7.1", scalaTest % Test) ++ circe,
+    libraryDependencies ++= Seq(codacyCliModel, "com.github.scopt" %% "scopt" % "4.1.0", scalaTest % Test) ++ circe,
     scalacOptions += "-Ywarn-macros:after", // checks for unused implicits after macro expansion
-    addCompilerPlugin("io.tryp" % "splain" % "0.5.0" cross CrossVersion.patch),
+    addCompilerPlugin("io.tryp" % "splain" % "1.1.0" cross CrossVersion.patch),
     test in assembly := {},
     // Graal vm build options
     nativeImageOptions ++= Seq(
