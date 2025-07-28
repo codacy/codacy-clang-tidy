@@ -1,7 +1,7 @@
 resolvers += Resolver.typesafeRepo("releases")
 resolvers += Resolver.JCenterRepository
 
-addSbtPlugin("com.codacy" % "codacy-sbt-plugin" % "25.3.0")
+addSbtPlugin("com.codacy" % "codacy-sbt-plugin" % "25.2.2")
 
 addSbtPlugin("org.scalameta" % "sbt-native-image" % "0.3.0")
 
