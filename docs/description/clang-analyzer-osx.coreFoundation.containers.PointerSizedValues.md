@@ -1,8 +1,20 @@
-
+clang-tidy -
 clang-analyzer-osx.coreFoundation.containers.PointerSizedValues
-===============================================================
 
-The clang-analyzer-osx.coreFoundation.containers.PointerSizedValues
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=https://clang.llvm.org/docs/analyzer/checkers.html#osx-corefoundation-containers-pointersizedvalues">
+
+</div>
+
+# clang-analyzer-osx.coreFoundation.containers.PointerSizedValues
+
+Warns if 'CFArray', 'CFDictionary', 'CFSet' are created with
+non-pointer-size values.
+
+The
+<span class="title-ref">clang-analyzer-osx.coreFoundation.containers.PointerSizedValues</span>
 check is an alias, please see [Clang Static Analyzer Available
 Checkers](https://clang.llvm.org/docs/analyzer/checkers.html#osx-corefoundation-containers-pointersizedvalues)
 for more information.

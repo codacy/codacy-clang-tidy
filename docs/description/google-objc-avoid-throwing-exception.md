@@ -1,5 +1,8 @@
-google-objc-avoid-throwing-exception
-====================================
+clang-tidy - google-objc-avoid-throwing-exception
+
+</div>
+
+# google-objc-avoid-throwing-exception
 
 Finds uses of throwing exceptions usages in Objective-C files.
 
@@ -14,21 +17,25 @@ success or failure.
 
 A counterexample:
 
-    - (void)readFile {
-      if ([self isError]) {
-        @throw [NSException exceptionWithName:...];
-      }
-    }
+``` objc
+- (void)readFile {
+  if ([self isError]) {
+    @throw [NSException exceptionWithName:...];
+  }
+}
+```
 
 Instead, returning an error via `NSError **` is preferred:
 
-    - (BOOL)readFileWithError:(NSError **)error {
-      if ([self isError]) {
-        *error = [NSError errorWithDomain:...];
-        return NO;
-      }
-      return YES;
-    }
+``` objc
+- (BOOL)readFileWithError:(NSError **)error {
+  if ([self isError]) {
+    *error = [NSError errorWithDomain:...];
+    return NO;
+  }
+  return YES;
+}
+```
 
 The corresponding style guide rule:
 <https://google.github.io/styleguide/objcguide.html#avoid-throwing-exceptions>

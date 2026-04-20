@@ -1,5 +1,8 @@
-cppcoreguidelines-pro-type-cstyle-cast
-======================================
+clang-tidy - cppcoreguidelines-pro-type-cstyle-cast
+
+</div>
+
+# cppcoreguidelines-pro-type-cstyle-cast
 
 This check flags all use of C-style casts that perform a `static_cast`
 downcast, `const_cast`, or `reinterpret_cast`.
@@ -13,6 +16,6 @@ means to perform the first of the following that is possible: a
 a `const_cast`. This rule bans `(T)expression` only when used to perform
 an unsafe cast.
 
-This rule is part of the "Type safety" profile of the C++ Core
-Guidelines, see
-<https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-cstylecast>.
+This rule is part of the [Type safety
+(Type.4)](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Pro-type-cstylecast)
+profile from the C++ Core Guidelines.

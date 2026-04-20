@@ -1,7 +1,15 @@
-hicpp-use-nullptr
-=================
+clang-tidy - hicpp-use-nullptr
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=../modernize/use-nullptr.html">
+
+</div>
+
+# hicpp-use-nullptr
 
 The <span class="title-ref">hicpp-use-nullptr</span> check is an alias,
-please see [modernize-use-nullptr](https://clang.llvm.org/extra/clang-tidy/checks/modernize-use-nullptr.html) for more
+please see `modernize-use-nullptr <../modernize/use-nullptr>` for more
 information. It enforces the [rule
-2.5.3](http://www.codingstandard.com/rule/2-5-3-use-nullptr-for-the-null-pointer-constant/).
+2.5.3](https://www.perforce.com/resources/qac/high-integrity-cpp-coding-standard/lexical-conventions).

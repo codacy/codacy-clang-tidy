@@ -1,6 +1,15 @@
-google-readability-function-size
-================================
+clang-tidy - google-readability-function-size
 
-The google-readability-function-size check is an alias, please see
-[readability-function-size](https://clang.llvm.org/extra/clang-tidy/checks/readability-function-size.html) for more
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=../readability/function-size.html">
+
+</div>
+
+# google-readability-function-size
+
+The <span class="title-ref">google-readability-function-size</span>
+check is an alias, please see
+`readability-function-size <../readability/function-size>` for more
 information.

@@ -1,113 +1,153 @@
-readability-simplify-boolean-expr
-=================================
+clang-tidy - readability-simplify-boolean-expr
+
+</div>
+
+# readability-simplify-boolean-expr
 
 Looks for boolean expressions involving boolean constants and simplifies
-them to use the appropriate boolean expression directly.
+them to use the appropriate boolean expression directly. Simplifies
+boolean expressions by application of DeMorgan's Theorem.
 
 Examples:
 
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>Initial expression</th>
 <th>Result</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td><code>if (b == true)</code></td>
 <td><blockquote>
 <p><code>if (b)</code></p>
 </blockquote></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>if (b == false)</code></td>
 <td><blockquote>
 <p><code>if (!b)</code></p>
 </blockquote></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>if (b &amp;&amp; true)</code></td>
 <td><blockquote>
 <p><code>if (b)</code></p>
 </blockquote></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>if (b &amp;&amp; false)</code></td>
 <td><blockquote>
 <p><code>if (false)</code></p>
 </blockquote></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>if (b || true)</code></td>
 <td><blockquote>
 <p><code>if (true)</code></p>
 </blockquote></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>if (b || false)</code></td>
 <td><blockquote>
 <p><code>if (b)</code></p>
 </blockquote></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>e ? true : false</code></td>
 <td><blockquote>
 <p><code>e</code></p>
 </blockquote></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>e ? false : true</code></td>
 <td><blockquote>
 <p><code>!e</code></p>
 </blockquote></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>if (true) t(); else f();</code></td>
 <td><blockquote>
 <p><code>t();</code></p>
 </blockquote></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>if (false) t(); else f();</code></td>
 <td><blockquote>
 <p><code>f();</code></p>
 </blockquote></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>if (e) return true; else return false;</code></td>
 <td><blockquote>
 <p><code>return e;</code></p>
 </blockquote></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>if (e) return false; else return true;</code></td>
 <td><blockquote>
 <p><code>return !e;</code></p>
 </blockquote></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>if (e) b = true; else b = false;</code></td>
 <td><blockquote>
 <p><code>b = e;</code></p>
 </blockquote></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>if (e) b = false; else b = true;</code></td>
 <td><blockquote>
 <p><code>b = !e;</code></p>
 </blockquote></td>
 </tr>
-<tr class="odd">
+<tr>
 <td><code>if (e) return true; return false;</code></td>
 <td><blockquote>
 <p><code>return e;</code></p>
 </blockquote></td>
 </tr>
-<tr class="even">
+<tr>
 <td><code>if (e) return false; return true;</code></td>
 <td><blockquote>
 <p><code>return !e;</code></p>
+</blockquote></td>
+</tr>
+<tr>
+<td><code>!(!a || b)</code></td>
+<td><blockquote>
+<p><code>a &amp;&amp; !b</code></p>
+</blockquote></td>
+</tr>
+<tr>
+<td><code>!(a || !b)</code></td>
+<td><blockquote>
+<p><code>!a &amp;&amp; b</code></p>
+</blockquote></td>
+</tr>
+<tr>
+<td><code>!(!a || !b)</code></td>
+<td><blockquote>
+<p><code>a &amp;&amp; b</code></p>
+</blockquote></td>
+</tr>
+<tr>
+<td><code>!(!a &amp;&amp; b)</code></td>
+<td><blockquote>
+<p><code>a || !b</code></p>
+</blockquote></td>
+</tr>
+<tr>
+<td><code>!(a &amp;&amp; !b)</code></td>
+<td><blockquote>
+<p><code>!a || b</code></p>
+</blockquote></td>
+</tr>
+<tr>
+<td><code>!(!a &amp;&amp; !b)</code></td>
+<td><blockquote>
+<p><code>a || b</code></p>
 </blockquote></td>
 </tr>
 </tbody>
@@ -157,17 +197,70 @@ Examples:
     `if (x) return true; return false;` becomes
     `return static_cast<bool>(x);`
 
-Options
--------
+## Options
+
+<div class="option">
+
+IgnoreMacros
+
+If <span class="title-ref">true</span>, ignore boolean expressions
+originating from expanded macros. Default is
+<span class="title-ref">false</span>.
+
+</div>
+
+<div class="option">
 
 ChainedConditionalReturn
 
-If non-zero, conditional boolean return statements at the end of an
-`if/else if` chain will be transformed. Default is <span
-class="title-ref">0</span>.
+If <span class="title-ref">true</span>, conditional boolean return
+statements at the end of an `if/else if` chain will be transformed.
+Default is <span class="title-ref">false</span>.
+
+</div>
+
+<div class="option">
 
 ChainedConditionalAssignment
 
-If non-zero, conditional boolean assignments at the end of an
-`if/else if` chain will be transformed. Default is <span
-class="title-ref">0</span>.
+If <span class="title-ref">true</span>, conditional boolean assignments
+at the end of an `if/else if` chain will be transformed. Default is
+<span class="title-ref">false</span>.
+
+</div>
+
+<div class="option">
+
+SimplifyDeMorgan
+
+If <span class="title-ref">true</span>, DeMorgan's Theorem will be
+applied to simplify negated conjunctions and disjunctions. Default is
+<span class="title-ref">true</span>.
+
+</div>
+
+<div class="option">
+
+SimplifyDeMorganRelaxed
+
+If <span class="title-ref">true</span>, `SimplifyDeMorgan` will also
+transform negated conjunctions and disjunctions where there is no
+negation on either operand. This option has no effect if
+`SimplifyDeMorgan` is <span class="title-ref">false</span>. Default is
+<span class="title-ref">false</span>.
+
+When Enabled:
+
+``` 
+bool X = !(A && B)
+bool Y = !(A || B)
+```
+
+Would be transformed to:
+
+``` 
+bool X = !A || !B
+bool Y = !A && !B
+```
+
+</div>

@@ -3,14 +3,13 @@ import com.codacy.plugins.api.results.Result.Level
 import com.codacy.plugins.api.results.{Pattern, Tool}
 
 import play.api.libs.json.Json
-import scala.sys.process._
 import better.files.Dsl._
 
 import scala.sys.process._
 
 object Main extends App {
 
-  val llvmVersion = "10.0.1"
+  val llvmVersion = "20.1.8"
 
   val toolName = "clang-tidy"
 
@@ -55,23 +54,32 @@ object Main extends App {
       val linkToClangTidy =
         if (link.matches("https?:\\/\\/.+")) link
         else s"https://clang.llvm.org/extra/clang-tidy/checks/${link.stripPrefix("/")}"
+      
       val linkEscaped = linkToClangTidy.replaceAllLiterally(" ", "").trim
       val nameEscaped = name.trim
       s"[$nameEscaped]($linkEscaped)"
     })
   }
 
+  val checksDir = clangExtraDir / "docs" / "clang-tidy" / "checks"
+
   val patternsWithDocs: Seq[(String, String)] = {
     val iterator = for {
-      file <- (clangExtraDir / "docs" / "clang-tidy" / "checks").children
-      patternId = file.nameWithoutExtension(includeAll = false)
-      if file.extension.exists(_ == ".rst") && file.nameWithoutExtension != "list"
+      file <- checksDir.listRecursively
+      if file.isRegularFile
+      if file.extension.contains(".rst")
+      if file.nameWithoutExtension != "list"
+
+      relativePath = file.pathAsString.stripPrefix(checksDir.pathAsString + "/")
+      patternId = relativePath.stripSuffix(".rst").replace('/', '-')
+
       markdownFile = Seq("pandoc", "-t", "commonmark", file.pathAsString).!!
       content = markdownFile.linesIterator.drop(2).mkString(System.lineSeparator())
       withRepoLinks = fixRepoLinks(content)
     } yield (patternId, withRepoLinks)
+
     iterator.toSeq
-  }
+}
 
   def categoryFromPatternId(patternId: String): (Pattern.Category, Option[Subcategory]) = patternId match {
     case s"android-$_" => (Pattern.Category.Security, Some(Pattern.Subcategory.Android))
@@ -112,9 +120,13 @@ object Main extends App {
       // we are using a default one here
       val level = Level.Warn
       val (category, subcategory) = categoryFromPatternId(patternId)
-      Pattern.Specification(Pattern.Id(patternId), level, category, subcategory, Set.empty)
+      val scanType = Some(Pattern.ScanType.SAST)
+      if (category == Pattern.Category.Security){
+        Pattern.Specification(Pattern.Id(patternId), level, category, subcategory, scanType, Set.empty, Set.empty, false)
+      }else{
+        Pattern.Specification(Pattern.Id(patternId), level, category, subcategory, Option.empty, Set.empty, Set.empty, false)
+      }
   }
-
   val specification = Tool.Specification(Tool.Name(toolName), Some(Tool.Version(llvmVersion)), patterns.toSet)
 
   def removeHtmlTags(s: String): String = {

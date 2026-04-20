@@ -1,7 +1,18 @@
-clang-analyzer-security.insecureAPI.gets
-========================================
+clang-tidy - clang-analyzer-security.insecureAPI.gets
 
-The clang-analyzer-security.insecureAPI.gets check is an alias, please
-see [Clang Static Analyzer Available
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=https://clang.llvm.org/docs/analyzer/checkers.html#security-insecureapi-gets">
+
+</div>
+
+# clang-analyzer-security.insecureAPI.gets
+
+Warn on uses of the 'gets' function.
+
+The
+<span class="title-ref">clang-analyzer-security.insecureAPI.gets</span>
+check is an alias, please see [Clang Static Analyzer Available
 Checkers](https://clang.llvm.org/docs/analyzer/checkers.html#security-insecureapi-gets)
 for more information.

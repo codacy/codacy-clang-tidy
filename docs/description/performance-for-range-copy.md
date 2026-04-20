@@ -1,5 +1,8 @@
-performance-for-range-copy
-==========================
+clang-tidy - performance-for-range-copy
+
+</div>
+
+# performance-for-range-copy
 
 Finds C++11 for ranges where the loop variable is copied in each
 iteration but it would suffice to obtain it by const reference.
@@ -16,20 +19,32 @@ following heuristic is employed:
     are invoked on it, or it is used as const reference or value
     argument in constructors or function calls.
 
-Options
--------
+## Options
+
+<div class="option">
 
 WarnOnAllAutoCopies
 
-When non-zero, warns on any use of <span class="title-ref">auto</span>
-as the type of the range-based for loop variable. Default is <span
-class="title-ref">0</span>.
+When <span class="title-ref">true</span>, warns on any use of
+<span class="title-ref">auto</span> as the type of the range-based for
+loop variable. Default is <span class="title-ref">false</span>.
+
+</div>
+
+<div class="option">
 
 AllowedTypes
 
 A semicolon-separated list of names of types allowed to be copied in
-each iteration. Regular expressions are accepted, e.g. <span
-class="title-ref">\[Rr\]ef(erence)?$</span> matches every type with
-suffix <span class="title-ref">Ref</span>, <span
-class="title-ref">ref</span>, <span class="title-ref">Reference</span>
-and <span class="title-ref">reference</span>. The default is empty.
+each iteration. Regular expressions are accepted, e.g.
+<span class="title-ref">\[Rr\]ef(erence)?$</span> matches every type
+with suffix <span class="title-ref">Ref</span>,
+<span class="title-ref">ref</span>,
+<span class="title-ref">Reference</span> and
+<span class="title-ref">reference</span>. The default is empty. If a
+name in the list contains the sequence <span class="title-ref">::</span>
+it is matched against the qualified typename (i.e.
+<span class="title-ref">namespace::Type</span>, otherwise it is matched
+against only the type name (i.e. <span class="title-ref">Type</span>).
+
+</div>

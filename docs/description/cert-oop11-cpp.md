@@ -1,8 +1,17 @@
-cert-oop11-cpp
-==============
+clang-tidy - cert-oop11-cpp
 
-The cert-oop11-cpp check is an alias, please see
-[performance-move-constructor-init](https://clang.llvm.org/extra/clang-tidy/checks/performance-move-constructor-init.html)
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=../performance/move-constructor-init.html">
+
+</div>
+
+# cert-oop11-cpp
+
+The <span class="title-ref">cert-oop11-cpp check</span> is an alias,
+please see
+`performance-move-constructor-init <../performance/move-constructor-init>`
 for more information.
 
 This check corresponds to the CERT C++ Coding Standard recommendation

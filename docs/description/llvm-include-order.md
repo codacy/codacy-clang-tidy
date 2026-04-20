@@ -1,5 +1,8 @@
-llvm-include-order
-==================
+clang-tidy - llvm-include-order
+
+</div>
+
+# llvm-include-order
 
 Checks the correct order of `#includes`.
 

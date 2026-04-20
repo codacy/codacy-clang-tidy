@@ -1,5 +1,8 @@
-readability-static-accessed-through-instance
-============================================
+clang-tidy - readability-static-accessed-through-instance
+
+</div>
+
+# readability-static-accessed-through-instance
 
 Checks for member expressions that access static members through
 instances, and replaces them with uses of the appropriate qualified-id.
@@ -8,17 +11,33 @@ Example:
 
 The following code:
 
-    struct C {
-      static void foo();
-      static int x;
-    };
+``` c++
+struct C {
+  static void foo();
+  static int x;
+  enum { E1 };
+  enum E { E2 };
+};
 
-    C *c1 = new C();
-    c1->foo();
-    c1->x;
+C *c1 = new C();
+c1->foo();
+c1->x;
+c1->E1;
+c1->E2;
+```
 
 is changed to:
 
-    C *c1 = new C();
-    C::foo();
-    C::x;
+``` c++
+C *c1 = new C();
+C::foo();
+C::x;
+C::E1;
+C::E2;
+```
+
+The <span class="title-ref">--fix</span> commandline option provides
+default support for safe fixes, whereas
+<span class="title-ref">--fix-notes</span> enables fixes that may
+replace expressions with side effects, potentially altering the
+program's behavior.

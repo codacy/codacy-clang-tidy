@@ -1,8 +1,16 @@
-hicpp-named-parameter
-=====================
+clang-tidy - hicpp-named-parameter
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=../readability/named-parameter.html">
+
+</div>
+
+# hicpp-named-parameter
 
 This check is an alias for
-[readability-named-parameter](https://clang.llvm.org/extra/clang-tidy/checks/readability-named-parameter.html).
+`readability-named-parameter <../readability/named-parameter>`.
 
 Implements [rule
-8.2.1](http://www.codingstandard.com/rule/8-2-1-make-parameter-names-absent-or-identical-in-all-declarations/).
+8.2.1](https://www.perforce.com/resources/qac/high-integrity-cpp-coding-standard/definitions).

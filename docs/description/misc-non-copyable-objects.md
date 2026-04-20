@@ -1,5 +1,8 @@
-misc-non-copyable-objects
-=========================
+clang-tidy - misc-non-copyable-objects
+
+</div>
+
+# misc-non-copyable-objects
 
 <span class="title-ref">cert-fio38-c</span> redirects here as an alias
 for this check.

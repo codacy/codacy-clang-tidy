@@ -1,5 +1,8 @@
-cert-oop58-cpp
-==============
+clang-tidy - cert-mutating-copy
+
+</div>
+
+# cert-oop58-cpp
 
 Finds assignments to the copied object and its direct or indirect
 members in copy constructors and copy assignment operators.

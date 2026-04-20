@@ -1,29 +1,46 @@
-readability-redundant-string-init
-=================================
+clang-tidy - readability-redundant-string-init
+
+</div>
+
+# readability-redundant-string-init
 
 Finds unnecessary string initializations.
 
-Examples
---------
+## Examples
 
-    // Initializing string with empty string literal is unnecessary.
-    std::string a = "";
-    std::string b("");
+``` c++
+// Initializing string with empty string literal is unnecessary.
+std::string a = "";
+std::string b("");
 
-    // becomes
+// becomes
 
-    std::string a;
-    std::string b;
+std::string a;
+std::string b;
 
-Options
--------
+// Initializing a string_view with an empty string literal produces an
+// instance that compares equal to string_view().
+std::string_view a = "";
+std::string_view b("");
+
+// becomes
+std::string_view a;
+std::string_view b;
+```
+
+## Options
+
+<div class="option">
 
 StringNames
 
-Default is <span class="title-ref">::std::basic\_string</span>.
+Default is
+<span class="title-ref">::std::basic_string;::std::basic_string_view</span>.
 
 Semicolon-delimited list of class names to apply this check to. By
-default <span class="title-ref">::std::basic\_string</span> applies to
-`std::string` and `std::wstring`. Set to e.g. <span
-class="title-ref">::std::basic\_string;llvm::StringRef;QString</span> to
-perform this check on custom classes.
+default <span class="title-ref">::std::basic_string</span> applies to
+`std::string` and `std::wstring`. Set to e.g.
+<span class="title-ref">::std::basic_string;llvm::StringRef;QString</span>
+to perform this check on custom classes.
+
+</div>

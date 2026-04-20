@@ -1,5 +1,8 @@
-cppcoreguidelines-pro-bounds-pointer-arithmetic
-===============================================
+clang-tidy - cppcoreguidelines-pro-bounds-pointer-arithmetic
+
+</div>
+
+# cppcoreguidelines-pro-bounds-pointer-arithmetic
 
 This check flags all usage of pointer arithmetic, because it could lead
 to an invalid pointer. Subtraction of two pointers is not flagged by
@@ -9,6 +12,6 @@ Pointers should only refer to single objects, and pointer arithmetic is
 fragile and easy to get wrong. `span<T>` is a bounds-checked, safe type
 for accessing arrays of data.
 
-This rule is part of the "Bounds safety" profile of the C++ Core
-Guidelines, see
-<https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-bounds-arithmetic>.
+This rule is part of the [Bounds safety (Bounds
+1)](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Pro-bounds-arithmetic)
+profile from the C++ Core Guidelines.

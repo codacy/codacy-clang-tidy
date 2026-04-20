@@ -1,11 +1,16 @@
-llvm-twine-local
-================
+clang-tidy - llvm-twine-local
+
+</div>
+
+# llvm-twine-local
 
 Looks for local `Twine` variables which are prone to use after frees and
 should be generally avoided.
 
-    static Twine Moo = Twine("bark") + "bah";
+``` c++
+static Twine Moo = Twine("bark") + "bah";
 
-    // becomes
+// becomes
 
-    static std::string Moo = (Twine("bark") + "bah").str();
+static std::string Moo = (Twine("bark") + "bah").str();
+```

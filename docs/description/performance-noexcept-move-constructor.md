@@ -1,5 +1,8 @@
-performance-noexcept-move-constructor
-=====================================
+clang-tidy - performance-noexcept-move-constructor
+
+</div>
+
+# performance-noexcept-move-constructor
 
 The check flags user-defined move constructors and assignment operators
 not marked with `noexcept` or marked with `noexcept(expr)` where `expr`

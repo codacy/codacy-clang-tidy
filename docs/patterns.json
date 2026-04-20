@@ -1,7 +1,14 @@
 {
   "name" : "clang-tidy",
-  "version" : "10.0.1",
+  "version" : "20.1.8",
   "patterns" : [ {
+    "patternId" : "abseil-cleanup-ctad",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "abseil-duration-addition",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -100,6 +107,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "abseil-string-find-str-contains",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "abseil-time-comparison",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -121,10 +135,46 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "altera-id-dependent-backward-branch",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "altera-kernel-name-restriction",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "altera-single-work-item-barrier",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "altera-struct-pack-align",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "altera-unroll-loops",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "android-cloexec-accept",
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -133,6 +183,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -141,6 +192,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -149,6 +201,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -157,6 +210,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -165,6 +219,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -173,6 +228,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -181,6 +237,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -189,6 +246,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -197,6 +255,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -205,6 +264,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -213,6 +273,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -221,6 +282,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -229,6 +291,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -237,6 +300,14 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "Android",
+    "scanType" : "SAST",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "boost-use-ranges",
+    "level" : "Warning",
+    "category" : "ErrorProne",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -262,7 +333,21 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-assignment-in-if-condition",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-bad-signal-to-kill-thread",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-bitwise-pointer-cast",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -283,7 +368,35 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-casting-through-void",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-chained-comparison",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-compare-pointer-to-member-virtual-function",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-copy-constructor-init",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-crtp-constructor-accessibility",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -298,6 +411,20 @@
     "enabled" : false
   }, {
     "patternId" : "bugprone-dynamic-static-initializers",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-easily-swappable-parameters",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-empty-catch",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -332,7 +459,35 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-implicit-widening-of-multiplication-result",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-inaccurate-erase",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-inc-dec-in-conditions",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-incorrect-enable-if",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-incorrect-enable-shared-from-this",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -388,6 +543,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-misplaced-pointer-arithmetic-in-alloc",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-misplaced-widening-cast",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -402,7 +564,49 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-multi-level-implicit-pointer-conversion",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-multiple-new-in-one-expression",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-multiple-statement-macro",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-narrowing-conversions",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-no-escape",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-non-zero-enum-to-bool-conversion",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-nondeterministic-pointer-iteration-order",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -416,6 +620,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-optional-value-conversion",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-parent-virtual-call",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -423,7 +634,49 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-pointer-arithmetic-on-polymorphic-object",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-posix-return",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-redundant-branch-condition",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-reserved-identifier",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-return-const-ref-from-parameter",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-shared-ptr-array-mismatch",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-signal-handler",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -451,6 +704,20 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-spuriously-wake-up-functions",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-standalone-empty",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-string-constructor",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -472,7 +739,28 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-stringview-nullptr",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-suspicious-enum-usage",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-suspicious-include",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-suspicious-memory-comparison",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -493,6 +781,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-suspicious-realloc-usage",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-suspicious-semicolon",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -507,7 +802,28 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-suspicious-stringview-data-usage",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-swapped-arguments",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-switch-missing-default-case",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-tagged-union-member-count",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -535,6 +851,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-unchecked-optional-access",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-undefined-memory-manipulation",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -549,9 +872,37 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "bugprone-unhandled-exception-at-new",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "bugprone-unhandled-self-assignment",
     "level" : "Warning",
     "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-unique-ptr-array-mismatch",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-unsafe-functions",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "bugprone-unused-local-non-trivial-variable",
+    "level" : "Warning",
+    "category" : "UnusedCode",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -584,6 +935,34 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "cert-arr39-c",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cert-con36-c",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cert-con54-cpp",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cert-ctr56-cpp",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "cert-dcl03-c",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -598,7 +977,7 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "cert-dcl21-cpp",
+    "patternId" : "cert-dcl37-c",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -606,6 +985,13 @@
     "enabled" : false
   }, {
     "patternId" : "cert-dcl50-cpp",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cert-dcl51-cpp",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -647,6 +1033,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "cert-err33-c",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "cert-err34-c",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -658,6 +1051,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "DoS",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -683,6 +1077,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "cert-exp42-c",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "cert-fio38-c",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -697,7 +1098,28 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "cert-flp37-c",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cert-int09-c",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "cert-mem57-cpp",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cert-msc24-c",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -718,6 +1140,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "cert-msc33-c",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "cert-msc50-cpp",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -726,6 +1155,13 @@
     "enabled" : false
   }, {
     "patternId" : "cert-msc51-cpp",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cert-msc54-cpp",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -746,6 +1182,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "cert-oop57-cpp",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "cert-oop58-cpp",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -760,6 +1203,34 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "cert-pos47-c",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cert-sig30-c",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cert-str34-c",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "clang-analyzer-core.BitwiseShift",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "clang-analyzer-core.CallAndMessage",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -768,13 +1239,6 @@
     "enabled" : false
   }, {
     "patternId" : "clang-analyzer-core.DivideZero",
-    "level" : "Warning",
-    "category" : "ErrorProne",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "clang-analyzer-core.DynamicTypePropagation",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -844,7 +1308,21 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "clang-analyzer-core.uninitialized.NewArraySize",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "clang-analyzer-core.uninitialized.UndefReturn",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "clang-analyzer-cplusplus.ArrayDelete",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -879,7 +1357,35 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "clang-analyzer-cplusplus.PlacementNew",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "clang-analyzer-cplusplus.SelfAssignment",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "clang-analyzer-cplusplus.StringChecker",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "clang-analyzer-deadcode.DeadStores",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "clang-analyzer-fuchsia.HandleChecker",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -921,6 +1427,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "clang-analyzer-optin.core.EnumCastOutOfRange",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "clang-analyzer-optin.cplusplus.UninitializedObject",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -936,13 +1449,6 @@
     "enabled" : false
   }, {
     "patternId" : "clang-analyzer-optin.mpi.MPI-Checker",
-    "level" : "Warning",
-    "category" : "ErrorProne",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "clang-analyzer-optin.osx.OSObjectCStyleCast",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -984,6 +1490,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "clang-analyzer-optin.taint.TaintedAlloc",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "clang-analyzer-osx.API",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -991,21 +1504,7 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "clang-analyzer-osx.MIG",
-    "level" : "Warning",
-    "category" : "ErrorProne",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "clang-analyzer-osx.NumberObjectConversion",
-    "level" : "Warning",
-    "category" : "ErrorProne",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "clang-analyzer-osx.OSObjectRetainCount",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -1194,10 +1693,32 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "clang-analyzer-security.PutenvStackArray",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "clang-analyzer-security.SetgidSetuidOrder",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "clang-analyzer-security.cert.env.InvalidPtr",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling",
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -1206,6 +1727,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -1214,6 +1736,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -1222,6 +1745,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -1230,6 +1754,16 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "clang-analyzer-security.insecureAPI.decodeValueOfObjCType",
+    "level" : "Warning",
+    "category" : "Security",
+    "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -1238,6 +1772,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -1246,6 +1781,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -1254,6 +1790,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -1262,6 +1799,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -1270,6 +1808,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -1278,6 +1817,7 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -1286,11 +1826,26 @@
     "level" : "Warning",
     "category" : "Security",
     "subcategory" : "InsecureModulesLibraries",
+    "scanType" : "SAST",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
     "patternId" : "clang-analyzer-unix.API",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "clang-analyzer-unix.BlockInCriticalSection",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "clang-analyzer-unix.Errno",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -1318,6 +1873,20 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "clang-analyzer-unix.StdCLibraryFunctions",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "clang-analyzer-unix.Stream",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "clang-analyzer-unix.Vfork",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -1339,21 +1908,35 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "clang-analyzer-valist.CopyToSelf",
+    "patternId" : "clang-analyzer-webkit.NoUncountedMemberChecker",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "clang-analyzer-valist.Uninitialized",
+    "patternId" : "clang-analyzer-webkit.RefCntblBaseVirtualDtor",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "clang-analyzer-valist.Unterminated",
+    "patternId" : "clang-analyzer-webkit.UncountedLambdaCapturesChecker",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "concurrency-mt-unsafe",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "concurrency-thread-canceltype-asynchronous",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -1361,6 +1944,27 @@
     "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-avoid-c-arrays",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-avoid-capturing-lambda-coroutines",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-avoid-const-or-ref-data-members",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-avoid-do-while",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -1375,6 +1979,20 @@
     "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-avoid-magic-numbers",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-avoid-non-const-global-variables",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-avoid-reference-coroutine-parameters",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -1409,7 +2027,28 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "cppcoreguidelines-macro-to-enum",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "cppcoreguidelines-macro-usage",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-misleading-capture-default-by-value",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-missing-std-forward",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -1430,6 +2069,34 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "cppcoreguidelines-no-suspend-with-lock",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-noexcept-destructor",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-noexcept-move-operations",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-noexcept-swap",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "cppcoreguidelines-non-private-member-variables-in-classes",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -1438,6 +2105,13 @@
     "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-owning-memory",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-prefer-member-initializer",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -1514,6 +2188,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "cppcoreguidelines-rvalue-reference-param-not-moved",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "cppcoreguidelines-slicing",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -1522,6 +2203,20 @@
     "enabled" : false
   }, {
     "patternId" : "cppcoreguidelines-special-member-functions",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-use-default-member-init",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "cppcoreguidelines-virtual-class-destructor",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -1571,13 +2266,6 @@
     "enabled" : false
   }, {
     "patternId" : "fuchsia-overloaded-operator",
-    "level" : "Warning",
-    "category" : "ErrorProne",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
-    "patternId" : "fuchsia-restrict-system-includes",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -1731,13 +2419,6 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "google-runtime-references",
-    "level" : "Warning",
-    "category" : "ErrorProne",
-    "parameters" : [ ],
-    "languages" : [ ],
-    "enabled" : false
-  }, {
     "patternId" : "google-upgrade-googletest-case",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -1788,6 +2469,13 @@
     "enabled" : false
   }, {
     "patternId" : "hicpp-function-size",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "hicpp-ignored-remove-result",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -1955,7 +2643,14 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "linuxkernel-must-use-errs",
+    "patternId" : "linuxkernel-must-check-errs",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "llvm-else-after-return",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -2011,7 +2706,84 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "llvmlibc-callee-namespace",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "llvmlibc-implementation-in-namespace",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "llvmlibc-inline-function-decl",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "llvmlibc-restrict-system-libc-headers",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "misc-confusable-identifiers",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "misc-const-correctness",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "misc-coroutine-hostile-raii",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "misc-definitions-in-headers",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "misc-header-include-cycle",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "misc-include-cleaner",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "misc-misleading-bidirectional",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "misc-misleading-identifier",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -2026,6 +2798,13 @@
     "enabled" : false
   }, {
     "patternId" : "misc-new-delete-overloads",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "misc-no-recursion",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -2102,6 +2881,20 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "misc-use-anonymous-namespace",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "misc-use-internal-linkage",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "modernize-avoid-bind",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -2144,6 +2937,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "modernize-macro-to-enum",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "modernize-make-shared",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -2152,6 +2952,13 @@
     "enabled" : false
   }, {
     "patternId" : "modernize-make-unique",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "modernize-min-max-use-initializer-list",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -2186,6 +2993,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "modernize-replace-disallow-copy-and-assign-macro",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "modernize-replace-random-shuffle",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -2201,6 +3015,13 @@
     "enabled" : false
   }, {
     "patternId" : "modernize-shrink-to-fit",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "modernize-type-traits",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -2228,6 +3049,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "modernize-use-constraints",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "modernize-use-default",
     "level" : "Warning",
     "category" : "ErrorProne",
@@ -2236,6 +3064,13 @@
     "enabled" : false
   }, {
     "patternId" : "modernize-use-default-member-init",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "modernize-use-designated-initializers",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -2257,6 +3092,13 @@
     "enabled" : false
   }, {
     "patternId" : "modernize-use-equals-delete",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "modernize-use-integer-sign-comparison",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -2285,6 +3127,41 @@
     "enabled" : false
   }, {
     "patternId" : "modernize-use-override",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "modernize-use-ranges",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "modernize-use-starts-ends-with",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "modernize-use-std-format",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "modernize-use-std-numbers",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "modernize-use-std-print",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -2333,7 +3210,21 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "objc-assert-equals",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "objc-avoid-nserror-init",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "objc-dealloc-in-category",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -2348,6 +3239,20 @@
     "enabled" : false
   }, {
     "patternId" : "objc-missing-hash",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "objc-nsdate-formatter",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "objc-nsinvocation-argument-lifetime",
     "level" : "Warning",
     "category" : "ErrorProne",
     "parameters" : [ ],
@@ -2378,6 +3283,20 @@
     "patternId" : "openmp-use-default-none",
     "level" : "Warning",
     "category" : "ErrorProne",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "performance-avoid-endl",
+    "level" : "Warning",
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "performance-enum-size",
+    "level" : "Warning",
+    "category" : "Performance",
     "parameters" : [ ],
     "languages" : [ ],
     "enabled" : false
@@ -2452,7 +3371,28 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "performance-no-int-to-ptr",
+    "level" : "Warning",
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "performance-noexcept-destructor",
+    "level" : "Warning",
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "performance-noexcept-move-constructor",
+    "level" : "Warning",
+    "category" : "Performance",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "performance-noexcept-swap",
     "level" : "Warning",
     "category" : "Performance",
     "parameters" : [ ],
@@ -2487,6 +3427,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "portability-restrict-system-includes",
+    "level" : "Warning",
+    "category" : "Compatibility",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "portability-simd-intrinsics",
     "level" : "Warning",
     "category" : "Compatibility",
@@ -2494,7 +3441,42 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "portability-std-allocator-const",
+    "level" : "Warning",
+    "category" : "Compatibility",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "portability-template-virtual-member-function",
+    "level" : "Warning",
+    "category" : "Compatibility",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "readability-avoid-const-params-in-decls",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-avoid-nested-conditional-operator",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-avoid-return-with-void-value",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-avoid-unconditional-preprocessor-if",
     "level" : "Warning",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -2509,6 +3491,20 @@
     "enabled" : false
   }, {
     "patternId" : "readability-const-return-type",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-container-contains",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-container-data-pointer",
     "level" : "Warning",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -2536,7 +3532,7 @@
     "languages" : [ ],
     "enabled" : false
   }, {
-    "patternId" : "readability-deleted-default",
+    "patternId" : "readability-duplicate-include",
     "level" : "Warning",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -2550,7 +3546,28 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "readability-enum-initial-value",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-function-cognitive-complexity",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "readability-function-size",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-identifier-length",
     "level" : "Warning",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -2606,6 +3623,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "readability-math-missing-parentheses",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "readability-misleading-indentation",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -2634,6 +3658,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "readability-operators-representation",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "readability-qualified-auto",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -2642,6 +3673,13 @@
     "enabled" : false
   }, {
     "patternId" : "readability-redundant-access-specifiers",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-redundant-casting",
     "level" : "Warning",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -2663,6 +3701,13 @@
     "enabled" : false
   }, {
     "patternId" : "readability-redundant-function-ptr-dereference",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-redundant-inline-specifier",
     "level" : "Warning",
     "category" : "CodeStyle",
     "parameters" : [ ],
@@ -2704,6 +3749,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "readability-reference-to-constructed-temporary",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "readability-simplify-boolean-expr",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -2739,6 +3791,13 @@
     "languages" : [ ],
     "enabled" : false
   }, {
+    "patternId" : "readability-suspicious-call-argument",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
     "patternId" : "readability-uniqueptr-delete-release",
     "level" : "Warning",
     "category" : "CodeStyle",
@@ -2747,6 +3806,20 @@
     "enabled" : false
   }, {
     "patternId" : "readability-uppercase-literal-suffix",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-use-anyofallof",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "parameters" : [ ],
+    "languages" : [ ],
+    "enabled" : false
+  }, {
+    "patternId" : "readability-use-std-min-max",
     "level" : "Warning",
     "category" : "CodeStyle",
     "parameters" : [ ],

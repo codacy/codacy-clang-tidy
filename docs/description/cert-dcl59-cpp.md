@@ -1,6 +1,14 @@
-cert-dcl59-cpp
-==============
+clang-tidy - cert-dcl59-cpp
 
-The cert-dcl59-cpp check is an alias, please see
-[google-build-namespaces](https://clang.llvm.org/extra/clang-tidy/checks/google-build-namespaces.html) for more
-information.
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=../google/build-namespaces.html">
+
+</div>
+
+# cert-dcl59-cpp
+
+The <span class="title-ref">cert-dcl59-cpp</span> check is an alias,
+please see `google-build-namespaces <../google/build-namespaces>` for
+more information.

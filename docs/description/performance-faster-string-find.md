@@ -1,5 +1,8 @@
-performance-faster-string-find
-==============================
+clang-tidy - performance-faster-string-find
+
+</div>
+
+# performance-faster-string-find
 
 Optimize calls to `std::string::find()` and friends when the needle
 passed is a single character string literal. The character literal
@@ -7,17 +10,24 @@ overload is more efficient.
 
 Examples:
 
-    str.find("A");
+``` c++
+str.find("A");
 
-    // becomes
+// becomes
 
-    str.find('A');
+str.find('A');
+```
 
-Options
--------
+## Options
+
+<div class="option">
 
 StringLikeClasses
 
 Semicolon-separated list of names of string-like classes. By default
-only `std::basic_string` is considered. The list of methods to consired
-is fixed.
+only `::std::basic_string` and `::std::basic_string_view` are
+considered. The check will only consider member functions named `find`,
+`rfind`, `find_first_of`, `find_first_not_of`, `find_last_of`, or
+`find_last_not_of` within these classes.
+
+</div>

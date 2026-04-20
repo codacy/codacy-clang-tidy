@@ -1,5 +1,8 @@
-google-objc-avoid-nsobject-new
-==============================
+clang-tidy - google-objc-avoid-nsobject-new
+
+</div>
+
+# google-objc-avoid-nsobject-new
 
 Finds calls to `+new` or overrides of it, which are prohibited by the
 Google Objective-C style guide.
@@ -10,13 +13,17 @@ instantiate objects.
 
 An example:
 
-    NSDate *now = [NSDate new];
-    Foo *bar = [Foo new];
+``` objc
+NSDate *now = [NSDate new];
+Foo *bar = [Foo new];
+```
 
 Instead, code should use `+alloc`/`-init` or class factory methods.
 
-    NSDate *now = [NSDate date];
-    Foo *bar = [[Foo alloc] init];
+``` objc
+NSDate *now = [NSDate date];
+Foo *bar = [[Foo alloc] init];
+```
 
 This check corresponds to the Google Objective-C Style Guide rule [Do
 Not Use

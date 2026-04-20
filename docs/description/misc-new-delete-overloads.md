@@ -1,5 +1,8 @@
-misc-new-delete-overloads
-=========================
+clang-tidy - misc-new-delete-overloads
+
+</div>
+
+# misc-new-delete-overloads
 
 <span class="title-ref">cert-dcl54-cpp</span> redirects here as an alias
 for this check.

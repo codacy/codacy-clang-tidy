@@ -1,5 +1,8 @@
-android-cloexec-memfd-create
-============================
+clang-tidy - android-cloexec-memfd-create
+
+</div>
+
+# android-cloexec-memfd-create
 
 `memfd_create()` should include `MFD_CLOEXEC` in its type argument to
 avoid the file descriptor leakage. Without this flag, an opened
@@ -8,8 +11,10 @@ lower-privileged SELinux domain.
 
 Examples:
 
-    memfd_create(name, MFD_ALLOW_SEALING);
+``` c++
+memfd_create(name, MFD_ALLOW_SEALING);
 
-    // becomes
+// becomes
 
-    memfd_create(name, MFD_ALLOW_SEALING | MFD_CLOEXEC);
+memfd_create(name, MFD_ALLOW_SEALING | MFD_CLOEXEC);
+```

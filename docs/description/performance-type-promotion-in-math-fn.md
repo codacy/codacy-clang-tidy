@@ -1,17 +1,22 @@
-performance-type-promotion-in-math-fn
-=====================================
+clang-tidy - performance-type-promotion-in-math-fn
+
+</div>
+
+# performance-type-promotion-in-math-fn
 
 Finds calls to C math library functions (from `math.h` or, in C++,
 `cmath`) with implicit `float` to `double` promotions.
 
-For example, warns on `::sin(0.f)`, because this funciton's parameter is
+For example, warns on `::sin(0.f)`, because this function's parameter is
 a double. You probably meant to call `std::sin(0.f)` (in C++), or
 `sinf(0.f)` (in C).
 
-    float a;
-    asin(a);
+``` c++
+float a;
+asin(a);
 
-    // becomes
+// becomes
 
-    float a;
-    std::asin(a);
+float a;
+std::asin(a);
+```

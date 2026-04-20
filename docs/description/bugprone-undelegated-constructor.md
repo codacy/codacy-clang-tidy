@@ -1,5 +1,8 @@
-bugprone-undelegated-constructor
-================================
+clang-tidy - bugprone-undelegated-constructor
+
+</div>
+
+# bugprone-undelegated-constructor
 
 Finds creation of temporary objects in constructors that look like a
 function call to another constructor of the same class.

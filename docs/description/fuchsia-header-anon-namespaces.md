@@ -1,6 +1,14 @@
-fuchsia-header-anon-namespaces
-==============================
+clang-tidy - fuchsia-header-anon-namespaces
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=../google/build-namespaces.html">
+
+</div>
+
+# fuchsia-header-anon-namespaces
 
 The fuchsia-header-anon-namespaces check is an alias, please see
-[google-build-namespace](https://clang.llvm.org/extra/clang-tidy/checks/google-build-namespaces.html) for more
+`google-build-namespace <../google/build-namespaces>` for more
 information.

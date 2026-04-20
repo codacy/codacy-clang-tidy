@@ -1,7 +1,16 @@
-google-readability-braces-around-statements
-===========================================
+clang-tidy - google-readability-braces-around-statements
 
-The google-readability-braces-around-statements check is an alias,
-please see
-[readability-braces-around-statements](https://clang.llvm.org/extra/clang-tidy/checks/readability-braces-around-statements.html)
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=../readability/braces-around-statements.html">
+
+</div>
+
+# google-readability-braces-around-statements
+
+The
+<span class="title-ref">google-readability-braces-around-statements</span>
+check is an alias, please see
+`readability-braces-around-statements <../readability/braces-around-statements>`
 for more information.

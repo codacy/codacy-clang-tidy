@@ -1,5 +1,8 @@
-android-cloexec-accept4
-=======================
+clang-tidy - android-cloexec-accept4
+
+</div>
+
+# android-cloexec-accept4
 
 `accept4()` should include `SOCK_CLOEXEC` in its type argument to avoid
 the file descriptor leakage. Without this flag, an opened sensitive file
@@ -8,8 +11,10 @@ domain.
 
 Examples:
 
-    accept4(sockfd, addr, addrlen, SOCK_NONBLOCK);
+``` c++
+accept4(sockfd, addr, addrlen, SOCK_NONBLOCK);
 
-    // becomes
+// becomes
 
-    accept4(sockfd, addr, addrlen, SOCK_NONBLOCK | SOCK_CLOEXEC);
+accept4(sockfd, addr, addrlen, SOCK_NONBLOCK | SOCK_CLOEXEC);
+```

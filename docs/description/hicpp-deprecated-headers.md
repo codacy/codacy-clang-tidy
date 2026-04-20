@@ -1,8 +1,16 @@
-hicpp-deprecated-headers
-========================
+clang-tidy - hicpp-deprecated-headers
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=../modernize/deprecated-headers.html">
+
+</div>
+
+# hicpp-deprecated-headers
 
 The <span class="title-ref">hicpp-deprecated-headers</span> check is an
 alias, please see
-[modernize-deprecated-headers](https://clang.llvm.org/extra/clang-tidy/checks/modernize-deprecated-headers.html) for
+`modernize-deprecated-headers <../modernize/deprecated-headers>` for
 more information. It enforces the [rule
-1.3.3](http://www.codingstandard.com/rule/1-3-3-do-not-use-the-c-standard-library-h-headers/).
+1.3.3](https://www.perforce.com/resources/qac/high-integrity-cpp-coding-standard/general).

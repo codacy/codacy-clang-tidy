@@ -1,6 +1,15 @@
-llvm-qualified-auto
-===================
+clang-tidy - llvm-qualified-auto
 
-The llvm-qualified-auto check is an alias, please see
-[readability-qualified-auto](https://clang.llvm.org/extra/clang-tidy/checks/readability-qualified-auto.html) for more
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=../readability/qualified-auto.html">
+
+</div>
+
+# llvm-qualified-auto
+
+The <span class="title-ref">llvm-qualified-auto check</span> is an
+alias, please see
+`readability-qualified-auto <../readability/qualified-auto>` for more
 information.
