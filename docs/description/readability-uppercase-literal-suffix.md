@@ -1,5 +1,8 @@
-readability-uppercase-literal-suffix
-====================================
+clang-tidy - readability-uppercase-literal-suffix
+
+</div>
+
+# readability-uppercase-literal-suffix
 
 <span class="title-ref">cert-dcl16-c</span> redirects here as an alias
 for this check. By default, only the suffixes that begin with `l` (`l`,
@@ -15,16 +18,19 @@ hint with the uppercase suffix.
 
 All valid combinations of suffixes are supported.
 
-    auto x = 1;  // OK, no suffix.
+``` c
+auto x = 1;  // OK, no suffix.
 
-    auto x = 1u; // warning: integer literal suffix 'u' is not upper-case
+auto x = 1u; // warning: integer literal suffix 'u' is not upper-case
 
-    auto x = 1U; // OK, suffix is uppercase.
+auto x = 1U; // OK, suffix is uppercase.
 
-    ...
+...
+```
 
-Options
--------
+## Options
+
+<div class="option">
 
 NewSuffixes
 
@@ -34,21 +40,27 @@ a replacement is found that is different from the current suffix, then
 the diagnostic is issued. This allows for fine-grained control of what
 suffixes to consider and what their replacements should be.
 
+</div>
+
 ### Example
 
 Given a list \`L;uL\`:
 
--   `l` -&gt; `L`
--   `L` will be kept as is.
--   `ul` -&gt; `uL`
--   `Ul` -&gt; `uL`
--   `UL` -&gt; `uL`
--   `uL` will be kept as is.
--   `ull` will be kept as is, since it is not in the list
--   and so on.
+- `l` -\> `L`
+- `L` will be kept as is.
+- `ul` -\> `uL`
+- `Ul` -\> `uL`
+- `UL` -\> `uL`
+- `uL` will be kept as is.
+- `ull` will be kept as is, since it is not in the list
+- and so on.
+
+<div class="option">
 
 IgnoreMacros
 
-If this option is set to non-zero (default is <span
-class="title-ref">1</span>), the check will not warn about literal
+If this option is set to non-zero (default is
+<span class="title-ref">1</span>), the check will not warn about literal
 suffixes inside macros.
+
+</div>

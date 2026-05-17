@@ -1,5 +1,8 @@
-readability-container-size-empty
-================================
+clang-tidy - readability-container-size-empty
+
+</div>
+
+# readability-container-size-empty
 
 Checks whether a call to the `size()` method can be replaced with a call
 to `empty()`.
@@ -15,8 +18,10 @@ switch to another container in the future.
 The check issues warning if a container has `size()` and `empty()`
 methods matching following signatures:
 
-    size_type size() const;
-    bool empty() const;
+``` c++
+size_type size() const;
+bool empty() const;
+```
 
-<span class="title-ref">size\_type</span> can be any kind of integer
+<span class="title-ref">size_type</span> can be any kind of integer
 type.

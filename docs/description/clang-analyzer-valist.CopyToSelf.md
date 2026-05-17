@@ -1,4 +1,7 @@
-clang-analyzer-valist.CopyToSelf
-================================
+clang-tidy - clang-analyzer-valist.CopyToSelf
 
-Check for va\_lists which are copied onto itself.
+</div>
+
+# clang-analyzer-valist.CopyToSelf
+
+Check for va_lists which are copied onto itself.

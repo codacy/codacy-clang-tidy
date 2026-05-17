@@ -1,5 +1,8 @@
-cppcoreguidelines-pro-type-union-access
-=======================================
+clang-tidy - cppcoreguidelines-pro-type-union-access
+
+</div>
+
+# cppcoreguidelines-pro-type-union-access
 
 This check flags all access to members of unions. Passing unions as a
 whole is not flagged.

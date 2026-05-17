@@ -1,4 +1,7 @@
-clang-analyzer-valist.Uninitialized
-===================================
+clang-tidy - clang-analyzer-valist.Uninitialized
 
-Check for usages of uninitialized (or already released) va\_lists.
+</div>
+
+# clang-analyzer-valist.Uninitialized
+
+Check for usages of uninitialized (or already released) va_lists.

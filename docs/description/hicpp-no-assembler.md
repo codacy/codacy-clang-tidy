@@ -1,5 +1,8 @@
-hicpp-no-assembler
-==================
+clang-tidy - hicpp-no-assembler
+
+</div>
+
+# hicpp-no-assembler
 
 Check for assembler statements. No fix is offered.
 

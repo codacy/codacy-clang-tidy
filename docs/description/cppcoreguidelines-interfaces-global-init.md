@@ -1,5 +1,8 @@
-cppcoreguidelines-interfaces-global-init
-========================================
+clang-tidy - cppcoreguidelines-interfaces-global-init
+
+</div>
+
+# cppcoreguidelines-interfaces-global-init
 
 This check flags initializers of globals that access extern objects, and
 therefore can lead to order-of-initialization problems.

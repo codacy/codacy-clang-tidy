@@ -1,5 +1,8 @@
-fuchsia-restrict-system-includes
-================================
+clang-tidy - fuchsia-restrict-system-includes
+
+</div>
+
+# fuchsia-restrict-system-includes
 
 Checks for allowed system includes and suggests removal of any others.
 
@@ -9,16 +12,19 @@ files, but not to system headers.
 
 For example, given the allowed system includes 'a.h,b\*':
 
-    #include <a.h>
-    #include <b.h>
-    #include <bar.h>
-    #include <c.h>    // Warning, as c.h is not explicitly allowed
+``` c++
+#include <a.h>
+#include <b.h>
+#include <bar.h>
+#include <c.h>    // Warning, as c.h is not explicitly allowed
+```
 
 All system includes can be allowed with '\*', and all can be disallowed
 with an empty string ('').
 
-Options
--------
+## Options
+
+<div class="option">
 
 Includes
 
@@ -27,3 +33,5 @@ filenames. Similar to the -checks glob list for running clang-tidy
 itself, the two wildcard characters are '*' and '-', to include and
 exclude globs, respectively.The default is '*', which allows all
 includes.
+
+</div>

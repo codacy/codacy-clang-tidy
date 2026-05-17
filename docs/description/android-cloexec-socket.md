@@ -1,5 +1,8 @@
-android-cloexec-socket
-======================
+clang-tidy - android-cloexec-socket
+
+</div>
+
+# android-cloexec-socket
 
 `socket()` should include `SOCK_CLOEXEC` in its type argument to avoid
 the file descriptor leakage. Without this flag, an opened sensitive file
@@ -8,8 +11,10 @@ domain.
 
 Examples:
 
-    socket(domain, type, SOCK_STREAM);
+``` c++
+socket(domain, type, SOCK_STREAM);
 
-    // becomes
+// becomes
 
-    socket(domain, type, SOCK_STREAM | SOCK_CLOEXEC);
+socket(domain, type, SOCK_STREAM | SOCK_CLOEXEC);
+```

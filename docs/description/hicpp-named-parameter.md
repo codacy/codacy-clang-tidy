@@ -1,5 +1,13 @@
-hicpp-named-parameter
-=====================
+clang-tidy - hicpp-named-parameter
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=readability-named-parameter.html">
+
+</div>
+
+# hicpp-named-parameter
 
 This check is an alias for
 [readability-named-parameter](https://clang.llvm.org/extra/clang-tidy/checks/readability-named-parameter.html).

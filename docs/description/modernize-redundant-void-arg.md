@@ -1,5 +1,8 @@
-modernize-redundant-void-arg
-============================
+clang-tidy - modernize-redundant-void-arg
+
+</div>
+
+# modernize-redundant-void-arg
 
 Find and remove redundant `void` argument lists.
 

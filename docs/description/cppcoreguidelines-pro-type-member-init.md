@@ -1,5 +1,8 @@
-cppcoreguidelines-pro-type-member-init
-======================================
+clang-tidy - cppcoreguidelines-pro-type-member-init
+
+</div>
+
+# cppcoreguidelines-pro-type-member-init
 
 The check flags user-defined constructor definitions that do not
 initialize all fields that would be left in an undefined state by
@@ -22,8 +25,9 @@ record types without a user-provided constructor and are not
 initialized. The suggested fix is to zero initialize the variable via
 `{}` for C++11 and beyond or `= {}` for older language versions.
 
-Options
--------
+## Options
+
+<div class="option">
 
 IgnoreArrays
 
@@ -32,10 +36,16 @@ not zero-initialized during construction. For performance critical code,
 it may be important to not initialize fixed-size array members. Default
 is <span class="title-ref">0</span>.
 
+</div>
+
+<div class="option">
+
 UseAssignment
 
 If set to non-zero, the check will provide fix-its with literal
 initializers ( `int i = 0;` ) instead of curly braces ( `int i{};` ).
+
+</div>
 
 This rule is part of the "Type safety" profile of the C++ Core
 Guidelines, corresponding to rule Type.6. See

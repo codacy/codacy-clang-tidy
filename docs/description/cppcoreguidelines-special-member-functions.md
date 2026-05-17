@@ -1,5 +1,8 @@
-cppcoreguidelines-special-member-functions
-==========================================
+clang-tidy - cppcoreguidelines-special-member-functions
+
+</div>
+
+# cppcoreguidelines-special-member-functions
 
 The check finds classes where some but not all of the special member
 functions are defined.
@@ -19,29 +22,40 @@ profile of the C++ Core Guidelines, corresponding to rule C.21. See
 
 <https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c21-if-you-define-or-delete-any-default-operation-define-or-delete-them-all>.
 
-Options
--------
+## Options
+
+<div class="option">
 
 AllowSoleDefaultDtor
 
-When set to <span class="title-ref">1</span> (default is <span
-class="title-ref">0</span>), this check doesn't flag classes with a
-sole, explicitly defaulted destructor. An example for such a class is:
+When set to <span class="title-ref">1</span> (default is
+<span class="title-ref">0</span>), this check doesn't flag classes with
+a sole, explicitly defaulted destructor. An example for such a class is:
 
-    struct A {
-      virtual ~A() = default;
-    };
+``` c++
+struct A {
+  virtual ~A() = default;
+};
+```
+
+</div>
+
+<div class="option">
 
 AllowMissingMoveFunctions
 
-When set to <span class="title-ref">1</span> (default is <span
-class="title-ref">0</span>), this check doesn't flag classes which
+When set to <span class="title-ref">1</span> (default is
+<span class="title-ref">0</span>), this check doesn't flag classes which
 define no move operations at all. It still flags classes which define
 only one of either move constructor or move assignment operator. With
 this option enabled, the following class won't be flagged:
 
-    struct A {
-      A(const A&);
-      A& operator=(const A&);
-      ~A();
-    }
+``` c++
+struct A {
+  A(const A&);
+  A& operator=(const A&);
+  ~A();
+}
+```
+
+</div>

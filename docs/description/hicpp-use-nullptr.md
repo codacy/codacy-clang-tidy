@@ -1,5 +1,12 @@
-hicpp-use-nullptr
-=================
+clang-tidy - hicpp-use-nullptr
+
+</div>
+
+<div class="meta" http-equiv=refresh="5;URL=modernize-use-nullptr.html">
+
+</div>
+
+# hicpp-use-nullptr
 
 The <span class="title-ref">hicpp-use-nullptr</span> check is an alias,
 please see [modernize-use-nullptr](https://clang.llvm.org/extra/clang-tidy/checks/modernize-use-nullptr.html) for more

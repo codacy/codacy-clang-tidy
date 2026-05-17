@@ -1,5 +1,13 @@
-hicpp-move-const-arg
-====================
+clang-tidy - hicpp-move-const-arg
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=performance-move-const-arg.html">
+
+</div>
+
+# hicpp-move-const-arg
 
 The <span class="title-ref">hicpp-move-const-arg</span> check is an
 alias, please see

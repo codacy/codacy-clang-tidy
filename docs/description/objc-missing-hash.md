@@ -1,5 +1,8 @@
-objc-missing-hash
-=================
+clang-tidy - objc-missing-hash
+
+</div>
+
+# objc-missing-hash
 
 Finds Objective-C implementations that implement `-isEqual:` without
 also appropriately implementing `-hash`.

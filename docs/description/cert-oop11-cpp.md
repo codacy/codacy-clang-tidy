@@ -1,5 +1,13 @@
-cert-oop11-cpp
-==============
+clang-tidy - cert-oop11-cpp
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=performance-move-constructor-init.html">
+
+</div>
+
+# cert-oop11-cpp
 
 The cert-oop11-cpp check is an alias, please see
 [performance-move-constructor-init](https://clang.llvm.org/extra/clang-tidy/checks/performance-move-constructor-init.html)

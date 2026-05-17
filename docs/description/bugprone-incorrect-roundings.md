@@ -1,5 +1,8 @@
-bugprone-incorrect-roundings
-============================
+clang-tidy - bugprone-incorrect-roundings
+
+</div>
+
+# bugprone-incorrect-roundings
 
 Checks the usage of patterns known to produce incorrect rounding.
 Programmers often use:

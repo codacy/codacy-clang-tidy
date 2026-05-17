@@ -1,5 +1,8 @@
-cert-err52-cpp
-==============
+clang-tidy - cert-err52-cpp
+
+</div>
+
+# cert-err52-cpp
 
 This check flags all call expressions involving `setjmp()` and
 `longjmp()`.

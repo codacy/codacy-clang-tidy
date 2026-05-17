@@ -1,5 +1,8 @@
-cppcoreguidelines-pro-bounds-array-to-pointer-decay
-===================================================
+clang-tidy - cppcoreguidelines-pro-bounds-array-to-pointer-decay
+
+</div>
+
+# cppcoreguidelines-pro-bounds-array-to-pointer-decay
 
 This check flags all array to pointer decays.
 

@@ -1,8 +1,10 @@
-readability-braces-around-statements
-====================================
+clang-tidy - readability-braces-around-statements
 
-<span
-class="title-ref">google-readability-braces-around-statements</span>
+</div>
+
+# readability-braces-around-statements
+
+<span class="title-ref">google-readability-braces-around-statements</span>
 redirects here as an alias for this check.
 
 Checks that bodies of `if` statements and loops (`for`, `do while`, and
@@ -10,17 +12,22 @@ Checks that bodies of `if` statements and loops (`for`, `do while`, and
 
 Before:
 
-    if (condition)
-      statement;
+``` c++
+if (condition)
+  statement;
+```
 
 After:
 
-    if (condition) {
-      statement;
-    }
+``` c++
+if (condition) {
+  statement;
+}
+```
 
-Options
--------
+## Options
+
+<div class="option">
 
 ShortStatementLines
 
@@ -31,3 +38,5 @@ The number of lines is counted from the end of condition or initial
 keyword (`do`/`else`) until the last line of the inner statement.
 Default value <span class="title-ref">0</span> means that braces will be
 added to all statements (not having them already).
+
+</div>

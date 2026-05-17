@@ -1,5 +1,8 @@
-modernize-use-override
-======================
+clang-tidy - modernize-use-override
+
+</div>
+
+# modernize-use-override
 
 Adds `override` (introduced in C++11) to overridden virtual functions
 and removes `virtual` from those functions as it is not required.
@@ -15,16 +18,21 @@ base class implementation.
 
 This can be useful as compilers can generate a compile time error when:
 
-> -   The base class implementation function signature changes.
-> -   The user has not created the override with the correct signature.
+> - The base class implementation function signature changes.
+> - The user has not created the override with the correct signature.
 
-Options
--------
+## Options
+
+<div class="option">
 
 IgnoreDestructors
 
 If set to non-zero, this check will not diagnose destructors. Default is
 <span class="title-ref">0</span>.
+
+</div>
+
+<div class="option">
 
 AllowOverrideAndFinal
 
@@ -35,11 +43,19 @@ overridden members, such as
 `gcc -Wsuggest-override`/`gcc -Werror=suggest-override`. Default is
 <span class="title-ref">0</span>.
 
+</div>
+
+<div class="option">
+
 OverrideSpelling
 
 Specifies a macro to use instead of `override`. This is useful when
 maintaining source code that also needs to compile with a pre-C++11
 compiler.
+
+</div>
+
+<div class="option">
 
 FinalSpelling
 
@@ -47,7 +63,17 @@ Specifies a macro to use instead of `final`. This is useful when
 maintaining source code that also needs to compile with a pre-C++11
 compiler.
 
+</div>
+
+<div class="note">
+
+<div class="title">
+
 Note
+
+</div>
 
 For more information on the use of `override` see
 <https://en.cppreference.com/w/cpp/language/override>
+
+</div>

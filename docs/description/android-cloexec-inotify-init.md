@@ -1,13 +1,18 @@
-android-cloexec-inotify-init
-============================
+clang-tidy - android-cloexec-inotify-init
+
+</div>
+
+# android-cloexec-inotify-init
 
 The usage of `inotify_init()` is not recommended, it's better to use
 `inotify_init1()`.
 
 Examples:
 
-    inotify_init();
+``` c++
+inotify_init();
 
-    // becomes
+// becomes
 
-    inotify_init1(IN_CLOEXEC);
+inotify_init1(IN_CLOEXEC);
+```

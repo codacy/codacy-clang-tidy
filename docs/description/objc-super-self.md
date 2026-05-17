@@ -1,5 +1,8 @@
-objc-super-self
-===============
+clang-tidy - objc-super-self
+
+</div>
+
+# objc-super-self
 
 Finds invocations of `-self` on super instances in initializers of
 subclasses of `NSObject` and recommends calling a superclass initializer

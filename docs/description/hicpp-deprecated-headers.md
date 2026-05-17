@@ -1,5 +1,13 @@
-hicpp-deprecated-headers
-========================
+clang-tidy - hicpp-deprecated-headers
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=modernize-deprecated-headers.html">
+
+</div>
+
+# hicpp-deprecated-headers
 
 The <span class="title-ref">hicpp-deprecated-headers</span> check is an
 alias, please see

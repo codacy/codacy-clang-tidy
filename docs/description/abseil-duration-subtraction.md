@@ -1,5 +1,8 @@
-abseil-duration-subtraction
-===========================
+clang-tidy - abseil-duration-subtraction
+
+</div>
+
+# abseil-duration-subtraction
 
 Checks for cases where subtraction should be performed in the
 `absl::Duration` domain. When subtracting two values, and the first one
@@ -9,20 +12,22 @@ inference explicit.
 
 Examples:
 
-    // Original - Subtraction in the double domain
-    double x;
-    absl::Duration d;
-    double result = absl::ToDoubleSeconds(d) - x;
+``` c++
+// Original - Subtraction in the double domain
+double x;
+absl::Duration d;
+double result = absl::ToDoubleSeconds(d) - x;
 
-    // Suggestion - Subtraction in the absl::Duration domain instead
-    double result = absl::ToDoubleSeconds(d - absl::Seconds(x));
+// Suggestion - Subtraction in the absl::Duration domain instead
+double result = absl::ToDoubleSeconds(d - absl::Seconds(x));
 
-    // Original - Subtraction of two Durations in the double domain
-    absl::Duration d1, d2;
-    double result = absl::ToDoubleSeconds(d1) - absl::ToDoubleSeconds(d2);
+// Original - Subtraction of two Durations in the double domain
+absl::Duration d1, d2;
+double result = absl::ToDoubleSeconds(d1) - absl::ToDoubleSeconds(d2);
 
-    // Suggestion - Subtraction in the absl::Duration domain instead
-    double result = absl::ToDoubleSeconds(d1 - d2);
+// Suggestion - Subtraction in the absl::Duration domain instead
+double result = absl::ToDoubleSeconds(d1 - d2);
+```
 
 Note: As with other `clang-tidy` checks, it is possible that multiple
 fixes may overlap (as in the case of nested expressions), so not all

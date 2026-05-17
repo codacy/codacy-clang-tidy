@@ -1,7 +1,10 @@
-bugprone-signed-char-misuse
-===========================
+clang-tidy - bugprone-signed-char-misuse
 
-Finds `signed char` -&gt; integer conversions which might indicate a
+</div>
+
+# bugprone-signed-char-misuse
+
+Finds `signed char` -\> integer conversions which might indicate a
 programming error. The basic problem with the `signed char`, that it
 might store the non-ASCII characters as negative values. The human
 programmer probably expects that after an integer conversion the
@@ -37,32 +40,38 @@ type. See a simple example of this bellow. This code stops not only when
 it reaches the end of the file, but also when it gets a character with
 the 255 code.
 
-    #define EOF (-1)
+``` c++
+#define EOF (-1)
 
-    int read(void) {
-      char CChar;
-      int IChar = EOF;
+int read(void) {
+  char CChar;
+  int IChar = EOF;
 
-      if (readChar(CChar)) {
-        IChar = CChar;
-      }
-      return IChar;
-    }
+  if (readChar(CChar)) {
+    IChar = CChar;
+  }
+  return IChar;
+}
+```
 
 A proper way to fix the code above is converting the `char` variable to
 an `unsigned char` value first.
 
-    #define EOF (-1)
+``` c++
+#define EOF (-1)
 
-    int read(void) {
-      char CChar;
-      int IChar = EOF;
+int read(void) {
+  char CChar;
+  int IChar = EOF;
 
-      if (readChar(CChar)) {
-        IChar = static_cast<unsigned char>(CChar);
-      }
-      return IChar;
-    }
+  if (readChar(CChar)) {
+    IChar = static_cast<unsigned char>(CChar);
+  }
+  return IChar;
+}
+```
+
+<div class="option">
 
 CharTypdefsToIgnore
 
@@ -71,3 +80,5 @@ typedefs for `char` or `signed char`, which will be ignored by the
 check. This is useful when a typedef introduces an integer alias like
 `sal_Int8` or `int8_t`. In this case, human misinterpretation is not an
 issue.
+
+</div>

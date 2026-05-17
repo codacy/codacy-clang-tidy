@@ -1,5 +1,8 @@
-google-default-arguments
-========================
+clang-tidy - google-default-arguments
+
+</div>
+
+# google-default-arguments
 
 Checks that default arguments are not given for virtual methods.
 

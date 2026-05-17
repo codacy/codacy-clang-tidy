@@ -1,5 +1,8 @@
-cppcoreguidelines-pro-type-cstyle-cast
-======================================
+clang-tidy - cppcoreguidelines-pro-type-cstyle-cast
+
+</div>
+
+# cppcoreguidelines-pro-type-cstyle-cast
 
 This check flags all use of C-style casts that perform a `static_cast`
 downcast, `const_cast`, or `reinterpret_cast`.

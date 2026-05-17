@@ -1,5 +1,8 @@
-bugprone-macro-parentheses
-==========================
+clang-tidy - bugprone-macro-parentheses
+
+</div>
+
+# bugprone-macro-parentheses
 
 Finds macros that can have unexpected behaviour due to missing
 parentheses.

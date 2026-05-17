@@ -1,5 +1,8 @@
-performance-unnecessary-value-param
-===================================
+clang-tidy - performance-unnecessary-value-param
+
+</div>
+
+# performance-unnecessary-value-param
 
 Flags value parameter declarations of expensive to copy types that are
 copied for each invocation but it would suffice to pass them by const
@@ -19,15 +22,17 @@ reference the following heuristic is employed:
 
 Example:
 
-    void f(const string Value) {
-      // The warning will suggest making Value a reference.
-    }
+``` c++
+void f(const string Value) {
+  // The warning will suggest making Value a reference.
+}
 
-    void g(ExpensiveToCopy Value) {
-      // The warning will suggest making Value a const reference.
-      Value.ConstMethd();
-      ExpensiveToCopy Copy(Value);
-    }
+void g(ExpensiveToCopy Value) {
+  // The warning will suggest making Value a const reference.
+  Value.ConstMethd();
+  ExpensiveToCopy Copy(Value);
+}
+```
 
 If the parameter is not const, only copied or assigned once and has a
 non-trivial move-constructor or move-assignment operator respectively
@@ -35,32 +40,45 @@ the check will suggest to move it.
 
 Example:
 
-    void setValue(string Value) {
-      Field = Value;
-    }
+``` c++
+void setValue(string Value) {
+  Field = Value;
+}
+```
 
 Will become:
 
-    #include <utility>
+``` c++
+#include <utility>
 
-    void setValue(string Value) {
-      Field = std::move(Value);
-    }
+void setValue(string Value) {
+  Field = std::move(Value);
+}
+```
 
-Options
--------
+## Options
+
+<div class="option">
 
 IncludeStyle
 
-A string specifying which include-style is used, <span
-class="title-ref">llvm</span> or <span class="title-ref">google</span>.
-Default is <span class="title-ref">llvm</span>.
+A string specifying which include-style is used,
+<span class="title-ref">llvm</span> or
+<span class="title-ref">google</span>. Default is
+<span class="title-ref">llvm</span>.
+
+</div>
+
+<div class="option">
 
 AllowedTypes
 
 A semicolon-separated list of names of types allowed to be passed by
-value. Regular expressions are accepted, e.g. <span
-class="title-ref">\[Rr\]ef(erence)?$</span> matches every type with
-suffix <span class="title-ref">Ref</span>, <span
-class="title-ref">ref</span>, <span class="title-ref">Reference</span>
-and <span class="title-ref">reference</span>. The default is empty.
+value. Regular expressions are accepted, e.g.
+<span class="title-ref">\[Rr\]ef(erence)?$</span> matches every type
+with suffix <span class="title-ref">Ref</span>,
+<span class="title-ref">ref</span>,
+<span class="title-ref">Reference</span> and
+<span class="title-ref">reference</span>. The default is empty.
+
+</div>

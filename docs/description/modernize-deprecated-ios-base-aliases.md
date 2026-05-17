@@ -1,5 +1,8 @@
-modernize-deprecated-ios-base-aliases
-=====================================
+clang-tidy - modernize-deprecated-ios-base-aliases
+
+</div>
+
+# modernize-deprecated-ios-base-aliases
 
 Detects usage of the deprecated member types of `std::ios_base` and
 replaces those that have a non-deprecated equivalent.
@@ -21,7 +24,9 @@ replaces those that have a non-deprecated equivalent.
 <td><code>std::ios_base::openmode</code></td>
 </tr>
 <tr class="odd">
-<td><p><code>std::ios_base::seek_dir</code> <code>std::ios_base::streamoff</code> <code>std::ios_base::streampos</code></p></td>
+<td><p><code>std::ios_base::seek_dir</code>
+<code>std::ios_base::streamoff</code>
+<code>std::ios_base::streampos</code></p></td>
 <td><p><code>std::ios_base::seekdir</code></p></td>
 </tr>
 </tbody>

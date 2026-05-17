@@ -1,5 +1,8 @@
-openmp-exception-escape
-=======================
+clang-tidy - openmp-exception-escape
+
+</div>
+
+# openmp-exception-escape
 
 Analyzes OpenMP Structured Blocks and checks that no exception escapes
 out of the Structured Block it was thrown in.
@@ -14,10 +17,13 @@ FIXME: this check does not model SEH, `setjmp`/`longjmp`.
 
 WARNING! This check may be expensive on large source files.
 
-Options
--------
+## Options
+
+<div class="option">
 
 IgnoredExceptions
 
 Comma-separated list containing type names which are not counted as
 thrown exceptions in the check. Default value is an empty string.
+
+</div>

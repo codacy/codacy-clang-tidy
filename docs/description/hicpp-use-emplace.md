@@ -1,5 +1,12 @@
-hicpp-use-emplace
-=================
+clang-tidy - hicpp-use-emplace
+
+</div>
+
+<div class="meta" http-equiv=refresh="5;URL=modernize-use-emplace.html">
+
+</div>
+
+# hicpp-use-emplace
 
 The <span class="title-ref">hicpp-use-emplace</span> check is an alias,
 please see [modernize-use-emplace](https://clang.llvm.org/extra/clang-tidy/checks/modernize-use-emplace.html) for more

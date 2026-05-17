@@ -1,5 +1,8 @@
-cppcoreguidelines-pro-type-const-cast
-=====================================
+clang-tidy - cppcoreguidelines-pro-type-const-cast
+
+</div>
+
+# cppcoreguidelines-pro-type-const-cast
 
 This check flags all uses of `const_cast` in C++ code.
 

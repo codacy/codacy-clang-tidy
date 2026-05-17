@@ -1,5 +1,8 @@
-modernize-concat-nested-namespaces
-==================================
+clang-tidy - modernize-concat-nested-namespaces
+
+</div>
+
+# modernize-concat-nested-namespaces
 
 Checks for use of nested namespaces such as
 `namespace a { namespace b { ... } }` and suggests changing to the more
@@ -8,36 +11,40 @@ namespaces are not modified.
 
 For example:
 
-    namespace n1 {
-    namespace n2 {
-    void t();
-    }
-    }
+``` c++
+namespace n1 {
+namespace n2 {
+void t();
+}
+}
 
-    namespace n3 {
-    namespace n4 {
-    namespace n5 {
-    void t();
-    }
-    }
-    namespace n6 {
-    namespace n7 {
-    void t();
-    }
-    }
-    }
+namespace n3 {
+namespace n4 {
+namespace n5 {
+void t();
+}
+}
+namespace n6 {
+namespace n7 {
+void t();
+}
+}
+}
+```
 
 Will be modified to:
 
-    namespace n1::n2 {
-    void t();
-    }
+``` c++
+namespace n1::n2 {
+void t();
+}
 
-    namespace n3 {
-    namespace n4::n5 {
-    void t();
-    }
-    namespace n6::n7 {
-    void t();
-    }
-    }
+namespace n3 {
+namespace n4::n5 {
+void t();
+}
+namespace n6::n7 {
+void t();
+}
+}
+```

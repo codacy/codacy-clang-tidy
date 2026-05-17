@@ -1,5 +1,13 @@
-hicpp-use-override
-==================
+clang-tidy - hicpp-use-override
+
+</div>
+
+<div class="meta"
+http-equiv=refresh="5;URL=modernize-use-override.html">
+
+</div>
+
+# hicpp-use-override
 
 This check is an alias for
 [modernize-use-override](https://clang.llvm.org/extra/clang-tidy/checks/modernize-use-override.html). Implements [rule

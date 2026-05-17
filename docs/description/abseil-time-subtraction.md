@@ -1,5 +1,8 @@
-abseil-time-subtraction
-=======================
+clang-tidy - abseil-time-subtraction
+
+</div>
+
+# abseil-time-subtraction
 
 Finds and fixes `absl::Time` subtraction expressions to do subtraction
 in the Time domain instead of the numeric domain.
@@ -7,9 +10,9 @@ in the Time domain instead of the numeric domain.
 There are two cases of Time subtraction in which deduce additional type
 information:
 
--   When the result is an `absl::Duration` and the first argument is an
-    `absl::Time`.
--   When the second argument is a `absl::Time`.
+- When the result is an `absl::Duration` and the first argument is an
+  `absl::Time`.
+- When the second argument is a `absl::Time`.
 
 In the first case, we must know the result of the operation, since
 without that the second operand could be either an `absl::Time` or an
@@ -19,18 +22,20 @@ without that the second operand could be either an `absl::Time` or an
 
 Examples:
 
-    int x;
-    absl::Time t;
+``` c++
+int x;
+absl::Time t;
 
-    // Original - absl::Duration result and first operand is a absl::Time.
-    absl::Duration d = absl::Seconds(absl::ToUnixSeconds(t) - x);
+// Original - absl::Duration result and first operand is a absl::Time.
+absl::Duration d = absl::Seconds(absl::ToUnixSeconds(t) - x);
 
-    // Suggestion - Perform subtraction in the Time domain instead.
-    absl::Duration d = t - absl::FromUnixSeconds(x);
+// Suggestion - Perform subtraction in the Time domain instead.
+absl::Duration d = t - absl::FromUnixSeconds(x);
 
 
-    // Original - Second operand is an absl::Time.
-    int i = x - absl::ToUnixSeconds(t);
+// Original - Second operand is an absl::Time.
+int i = x - absl::ToUnixSeconds(t);
 
-    // Suggestion - Perform subtraction in the Time domain instead.
-    int i = absl::ToInt64Seconds(absl::FromUnixSeconds(x) - t);
+// Suggestion - Perform subtraction in the Time domain instead.
+int i = absl::ToInt64Seconds(absl::FromUnixSeconds(x) - t);
+```

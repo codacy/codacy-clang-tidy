@@ -1,15 +1,20 @@
-readability-inconsistent-declaration-parameter-name
-===================================================
+clang-tidy - readability-inconsistent-declaration-parameter-name
+
+</div>
+
+# readability-inconsistent-declaration-parameter-name
 
 Find function declarations which differ in parameter names.
 
 Example:
 
-    // in foo.hpp:
-    void foo(int a, int b, int c);
+``` c++
+// in foo.hpp:
+void foo(int a, int b, int c);
 
-    // in foo.cpp:
-    void foo(int d, int e, int f); // warning
+// in foo.cpp:
+void foo(int d, int e, int f); // warning
+```
 
 This check should help to enforce consistency in large projects, where
 it often happens that a definition of function is refactored, changing
@@ -20,38 +25,52 @@ keeping declaration and definition always in sync.
 Unnamed parameters are allowed and are not taken into account when
 comparing function declarations, for example:
 
-    void foo(int a);
-    void foo(int); // no warning
+``` c++
+void foo(int a);
+void foo(int); // no warning
+```
 
 One name is also allowed to be a case-insensitive prefix/suffix of the
 other:
 
-    void foo(int count);
-    void foo(int count_input) { // no warning
-      int count = adjustCount(count_input);
-    }
+``` c++
+void foo(int count);
+void foo(int count_input) { // no warning
+  int count = adjustCount(count_input);
+}
+```
 
 To help with refactoring, in some cases fix-it hints are generated to
 align parameter names to a single naming convention. This works with the
 assumption that the function definition is the most up-to-date version,
 as it directly references parameter names in its body. Example:
 
-    void foo(int a); // warning and fix-it hint (replace "a" to "b")
-    int foo(int b) { return b + 2; } // definition with use of "b"
+``` c++
+void foo(int a); // warning and fix-it hint (replace "a" to "b")
+int foo(int b) { return b + 2; } // definition with use of "b"
+```
 
 In the case of multiple redeclarations or function template
 specializations, a warning is issued for every redeclaration or
 specialization inconsistent with the definition or the first declaration
 seen in a translation unit.
 
+<div class="option">
+
 IgnoreMacros
 
-If this option is set to non-zero (default is <span
-class="title-ref">1</span>), the check will not warn about names
+If this option is set to non-zero (default is
+<span class="title-ref">1</span>), the check will not warn about names
 declared inside macros.
+
+</div>
+
+<div class="option">
 
 Strict
 
-If this option is set to non-zero (default is <span
-class="title-ref">0</span>), then names must match exactly (or be
+If this option is set to non-zero (default is
+<span class="title-ref">0</span>), then names must match exactly (or be
 absent).
+
+</div>

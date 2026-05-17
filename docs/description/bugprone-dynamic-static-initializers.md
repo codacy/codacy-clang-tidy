@@ -1,5 +1,8 @@
-bugprone-dynamic-static-initializers
-====================================
+clang-tidy - bugprone-dynamic-static-initializers
+
+</div>
+
+# bugprone-dynamic-static-initializers
 
 Finds instances of static variables that are dynamically initialized in
 header files.
@@ -16,10 +19,12 @@ initialization will not cause problems.
 
 Consider the following code:
 
-    int foo() {
-      static int k = bar();
-      return k;
-    }
+``` c
+int foo() {
+  static int k = bar();
+  return k;
+}
+```
 
 When synchronization of static initialization is disabled, if two
 threads both call <span class="title-ref">foo</span> for the first time,
